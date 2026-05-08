@@ -3,7 +3,7 @@
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-const API = process.env.NEXT_PUBLIC_API_URL ?? "https://api.mistyvpn.com";
+const API = process.env.NEXT_PUBLIC_API_URL ?? "https://misty-be-staging.yasar.pk";
 
 type Stage = "form" | "loading" | "success" | "error" | "expired";
 
