@@ -1,35 +1,39 @@
 "use client";
 
-import { useEffect, useState, Suspense } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 const API = process.env.NEXT_PUBLIC_API_URL ?? "https://misty-be-staging.yasar.pk";
 
-type Stage = "form" | "loading" | "success" | "error" | "expired";
+type Stage = "code" | "login" | "granting" | "success" | "expired";
 
 function TvLoginInner() {
   const params = useSearchParams();
-  const code = params.get("code") ?? "";
 
-  const [stage, setStage] = useState<Stage>(code ? "form" : "expired");
+  const [stage, setStage] = useState<Stage>("code");
+  const [code, setCode] = useState((params.get("code") ?? "").toUpperCase());
+  const [token, setToken] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPw, setShowPw] = useState(false);
-  const [errorMsg, setErrorMsg] = useState("");
-  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (!code) { setStage("expired"); setErrorMsg("No code found. Please scan the QR code again from your TV."); }
-  }, [code]);
-
-  async function handleSubmit(e: React.FormEvent) {
+  // Step 1: user confirms the code and taps "Continue"
+  function handleCodeContinue(e: React.FormEvent) {
     e.preventDefault();
-    setErrorMsg("");
-    setSubmitting(true);
-    setStage("loading");
+    if (code.trim().length < 4) { setError("Please enter the code shown on your TV."); return; }
+    setError("");
+    setStage("login");
+  }
+
+  // Step 2: user signs in — on success store JWT and grant TV access
+  async function handleLogin(e: React.FormEvent) {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
 
     try {
-      // 1. Login to get JWT token
       const loginRes = await fetch(`${API}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -38,40 +42,38 @@ function TvLoginInner() {
       const loginData = await loginRes.json();
 
       if (!loginRes.ok) {
-        setStage("form");
-        setErrorMsg(loginData.error ?? "Invalid email or password");
-        setSubmitting(false);
+        setError(loginData.error ?? "Invalid email or password");
+        setLoading(false);
         return;
       }
 
-      // 2. Grant TV access using the device code
-      const grantRes = await fetch(`${API}/api/auth/tv/grant?code=${encodeURIComponent(code)}`, {
+      const jwt = loginData.token;
+      setToken(jwt);
+      setStage("granting");
+
+      const grantRes = await fetch(`${API}/api/auth/tv/grant?code=${encodeURIComponent(code.trim())}`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${loginData.token}`,
-        },
+        headers: { "Authorization": `Bearer ${jwt}` },
       });
       const grantData = await grantRes.json();
 
       if (grantRes.status === 404) {
+        setError("This code has expired or is invalid. Go back to your TV and get a new code.");
         setStage("expired");
-        setErrorMsg("This code has expired. Please go back to your TV and request a new QR code.");
         return;
       }
-
       if (!grantRes.ok) {
-        setStage("form");
-        setErrorMsg(grantData.error ?? "Something went wrong. Please try again.");
-        setSubmitting(false);
+        setError(grantData.error ?? "Could not authorize the TV. Please try again.");
+        setStage("login");
+        setLoading(false);
         return;
       }
 
       setStage("success");
     } catch {
-      setStage("form");
-      setErrorMsg("Could not reach the server. Check your connection and try again.");
-      setSubmitting(false);
+      setError("Could not reach the server. Check your connection and try again.");
+      setStage("login");
+      setLoading(false);
     }
   }
 
@@ -90,26 +92,63 @@ function TvLoginInner() {
           <p className="text-white/40 text-sm mt-1">TV Sign In</p>
         </div>
 
+        {/* Step indicator */}
+        {(stage === "code" || stage === "login" || stage === "granting") && (
+          <div className="flex items-center gap-2 mb-6">
+            <StepDot n={1} label="Enter Code" active={stage === "code"} done={stage !== "code"} />
+            <div className="flex-1 h-px bg-white/10" />
+            <StepDot n={2} label="Sign In" active={stage === "login" || stage === "granting"} done={false} />
+          </div>
+        )}
+
         {/* Card */}
         <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur">
 
-          {/* Form */}
-          {(stage === "form" || stage === "loading") && (
-            <form onSubmit={handleSubmit} className="space-y-5">
+          {/* Stage: code */}
+          {stage === "code" && (
+            <form onSubmit={handleCodeContinue} className="space-y-5">
               <div>
-                <h2 className="text-white font-semibold text-lg">Sign in to your TV</h2>
-                <p className="text-white/40 text-sm mt-1">
-                  Enter your MistyVPN credentials to authorize your TV.
+                <h2 className="text-white font-semibold text-lg">Enter TV Code</h2>
+                <p className="text-white/40 text-sm mt-1 leading-relaxed">
+                  Enter the code shown on your TV screen, or scan the QR code to pre-fill it automatically.
                 </p>
               </div>
 
-              {/* Code badge */}
-              <div className="flex items-center gap-2 bg-[#4FC3F7]/8 border border-[#4FC3F7]/20 rounded-xl px-4 py-3">
-                <svg className="w-4 h-4 text-[#4FC3F7] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                <span className="text-white/50 text-xs">Code: </span>
-                <span className="text-[#4FC3F7] font-mono font-bold text-sm tracking-widest">{code}</span>
+              <div>
+                <label className="text-white/60 text-xs font-medium mb-1.5 block">Code from your TV</label>
+                <input
+                  type="text"
+                  value={code}
+                  onChange={e => { setCode(e.target.value.toUpperCase()); setError(""); }}
+                  placeholder="e.g. FJLX8JYJ"
+                  maxLength={12}
+                  autoComplete="off"
+                  spellCheck={false}
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[#4FC3F7] placeholder-white/20 text-lg font-mono font-bold tracking-widest focus:outline-none focus:border-[#4FC3F7] focus:bg-white/8 transition text-center uppercase"
+                />
+              </div>
+
+              {error && <ErrorBox msg={error} />}
+
+              <button
+                type="submit"
+                disabled={!code.trim()}
+                className="w-full bg-[#4FC3F7] hover:bg-[#29b6f6] disabled:bg-white/10 disabled:text-white/20 text-[#0A1628] font-bold py-3.5 rounded-xl text-sm transition"
+              >
+                Continue
+              </button>
+            </form>
+          )}
+
+          {/* Stage: login */}
+          {(stage === "login" || stage === "granting") && (
+            <form onSubmit={handleLogin} className="space-y-5">
+              <div>
+                <h2 className="text-white font-semibold text-lg">Sign In</h2>
+                <p className="text-white/40 text-sm mt-1">
+                  Sign in with your MistyVPN account to authorize code{" "}
+                  <span className="text-[#4FC3F7] font-mono font-bold">{code}</span>.
+                </p>
               </div>
 
               <div className="space-y-3">
@@ -118,67 +157,59 @@ function TvLoginInner() {
                   <input
                     type="email"
                     value={email}
-                    onChange={e => { setEmail(e.target.value); setErrorMsg(""); }}
+                    onChange={e => { setEmail(e.target.value); setError(""); }}
                     placeholder="you@example.com"
                     required
                     autoComplete="email"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 text-sm focus:outline-none focus:border-[#4FC3F7] focus:bg-white/8 transition"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 text-sm focus:outline-none focus:border-[#4FC3F7] transition"
                   />
                 </div>
-
                 <div>
                   <label className="text-white/60 text-xs font-medium mb-1.5 block">Password</label>
                   <div className="relative">
                     <input
                       type={showPw ? "text" : "password"}
                       value={password}
-                      onChange={e => { setPassword(e.target.value); setErrorMsg(""); }}
+                      onChange={e => { setPassword(e.target.value); setError(""); }}
                       placeholder="••••••••"
                       required
                       autoComplete="current-password"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 pr-12 text-white placeholder-white/20 text-sm focus:outline-none focus:border-[#4FC3F7] focus:bg-white/8 transition"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 pr-12 text-white placeholder-white/20 text-sm focus:outline-none focus:border-[#4FC3F7] transition"
                     />
-                    <button
-                      type="button"
-                      onClick={() => setShowPw(p => !p)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 text-xs transition"
-                    >
+                    <button type="button" onClick={() => setShowPw(p => !p)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 text-xs transition">
                       {showPw ? "Hide" : "Show"}
                     </button>
                   </div>
                 </div>
               </div>
 
-              {errorMsg && (
-                <div className="flex items-start gap-2 bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3">
-                  <svg className="w-4 h-4 text-red-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <p className="text-red-400 text-xs leading-relaxed">{errorMsg}</p>
-                </div>
-              )}
+              {error && <ErrorBox msg={error} />}
 
               <button
                 type="submit"
-                disabled={submitting || !email || !password}
+                disabled={loading || !email || !password}
                 className="w-full bg-[#4FC3F7] hover:bg-[#29b6f6] disabled:bg-white/10 disabled:text-white/20 text-[#0A1628] font-bold py-3.5 rounded-xl text-sm transition flex items-center justify-center gap-2"
               >
-                {submitting ? (
+                {loading ? (
                   <>
                     <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
                     </svg>
-                    Signing in…
+                    {stage === "granting" ? "Authorizing TV…" : "Signing in…"}
                   </>
-                ) : (
-                  "Sign In & Authorize TV"
-                )}
+                ) : "Sign In & Authorize TV"}
+              </button>
+
+              <button type="button" onClick={() => { setStage("code"); setError(""); }}
+                className="w-full text-white/30 hover:text-white/60 text-xs transition py-1">
+                ← Change code
               </button>
             </form>
           )}
 
-          {/* Success */}
+          {/* Stage: success */}
           {stage === "success" && (
             <div className="text-center space-y-4 py-2">
               <div className="w-16 h-16 rounded-full bg-green-500/15 ring-1 ring-green-500/30 flex items-center justify-center mx-auto">
@@ -186,16 +217,14 @@ function TvLoginInner() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <div>
-                <p className="text-white font-bold text-lg">TV Signed In!</p>
-                <p className="text-white/50 text-sm mt-1 leading-relaxed">
-                  Your TV should update automatically in a few seconds. You can close this page.
-                </p>
-              </div>
+              <p className="text-white font-bold text-lg">TV Signed In!</p>
+              <p className="text-white/50 text-sm leading-relaxed">
+                Your TV will update automatically in a few seconds. You can close this page.
+              </p>
             </div>
           )}
 
-          {/* Expired / No Code */}
+          {/* Stage: expired */}
           {stage === "expired" && (
             <div className="text-center space-y-4 py-2">
               <div className="w-16 h-16 rounded-full bg-orange-500/15 ring-1 ring-orange-500/30 flex items-center justify-center mx-auto">
@@ -203,12 +232,14 @@ function TvLoginInner() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <div>
-                <p className="text-white font-bold text-lg">Code Expired</p>
-                <p className="text-white/50 text-sm mt-1 leading-relaxed">
-                  {errorMsg || "This QR code has expired. Go back to your TV and select Sign in with QR Code to get a new one."}
-                </p>
-              </div>
+              <p className="text-white font-bold text-lg">Code Expired</p>
+              <p className="text-white/50 text-sm leading-relaxed">
+                {error || "Go back to your TV and get a new code."}
+              </p>
+              <button onClick={() => { setStage("code"); setError(""); setCode(""); }}
+                className="text-[#4FC3F7] text-sm hover:underline">
+                Try again
+              </button>
             </div>
           )}
         </div>
@@ -221,10 +252,34 @@ function TvLoginInner() {
   );
 }
 
-export default function TvLoginPage() {
+function StepDot({ n, label, active, done }: { n: number; label: string; active: boolean; done: boolean }) {
   return (
-    <Suspense>
-      <TvLoginInner />
-    </Suspense>
+    <div className="flex flex-col items-center gap-1">
+      <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
+        done ? "bg-green-500 text-white" : active ? "bg-[#4FC3F7] text-[#0A1628]" : "bg-white/10 text-white/30"
+      }`}>
+        {done ? (
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+          </svg>
+        ) : n}
+      </div>
+      <span className={`text-[10px] font-medium ${active ? "text-white/70" : "text-white/25"}`}>{label}</span>
+    </div>
   );
+}
+
+function ErrorBox({ msg }: { msg: string }) {
+  return (
+    <div className="flex items-start gap-2 bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3">
+      <svg className="w-4 h-4 text-red-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <p className="text-red-400 text-xs leading-relaxed">{msg}</p>
+    </div>
+  );
+}
+
+export default function TvLoginPage() {
+  return <Suspense><TvLoginInner /></Suspense>;
 }
