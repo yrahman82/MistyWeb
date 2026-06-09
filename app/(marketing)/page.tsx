@@ -167,19 +167,20 @@ export default function HomePage() {
             <Card className="p-8">
               <Eyebrow>Restricted networks</Eyebrow>
               <h3 className="mt-4 text-2xl font-semibold text-white">
-                Made for China &amp; the UAE
+                Built for the strictest firewalls
               </h3>
               <p className="mt-3 text-slate-300">
                 Reality and Salamander-obfuscated Hysteria2 are engineered to
                 defeat the deep packet inspection and traffic shaping used by the
-                world&apos;s strictest firewalls.
+                world&apos;s most restrictive networks.
               </p>
-              <div className="mt-6 flex gap-3">
-                <Button href="/vpn-china" variant="secondary" className="h-10 px-5">
-                  VPN for China
-                </Button>
-                <Button href="/vpn-uae" variant="ghost" className="h-10 px-5">
-                  VPN for UAE →
+              <div className="mt-6">
+                <Button
+                  href="/strict-firewalls"
+                  variant="secondary"
+                  className="h-10 px-5"
+                >
+                  Beat strict firewalls →
                 </Button>
               </div>
             </Card>

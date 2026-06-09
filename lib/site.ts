@@ -24,8 +24,7 @@ export const nav: NavItem[] = [
   { label: "Features", href: "/features" },
   { label: "Pricing", href: "/pricing" },
   { label: "No-Logs", href: "/no-logs" },
-  { label: "China", href: "/vpn-china" },
-  { label: "UAE", href: "/vpn-uae" },
+  { label: "Strict Firewalls", href: "/strict-firewalls" },
 ];
 
 export const footerNav: { title: string; items: NavItem[] }[] = [
@@ -40,8 +39,8 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
   {
     title: "Use cases",
     items: [
-      { label: "VPN for China", href: "/vpn-china" },
-      { label: "VPN for the UAE", href: "/vpn-uae" },
+      { label: "Strict firewalls", href: "/strict-firewalls" },
+      { label: "Streaming", href: "/unblock-netflix" },
       { label: "No-logs privacy", href: "/no-logs" },
     ],
   },
@@ -59,7 +58,7 @@ export const protocols = [
   {
     name: "VLESS + Reality",
     blurb:
-      "Looks identical to a normal HTTPS visit to a major website. Undetectable by deep packet inspection — our strongest option for China and the UAE.",
+      "Looks identical to a normal HTTPS visit to a major website. Undetectable by deep packet inspection — our strongest option behind the strictest firewalls.",
   },
   {
     name: "Hysteria2",
@@ -129,8 +128,8 @@ export const faqs = [
     a: "No. MistyVPN is a strict no-logs service — we don't track your browsing, traffic, or IP address. See our No-Logs page for the full detail.",
   },
   {
-    q: "Will it work in China or the UAE?",
-    a: "Yes. MistyVPN's VLESS+Reality and Hysteria2 protocols are specifically designed to evade deep packet inspection and traffic shaping used in heavily censored networks.",
+    q: "Will it work behind strict firewalls?",
+    a: "Yes. MistyVPN's VLESS+Reality and Hysteria2 protocols are specifically designed to evade the deep packet inspection and traffic shaping used by the strictest national firewalls and restricted networks.",
   },
   {
     q: "How many devices can I use at once?",
@@ -155,11 +154,11 @@ export const plans = [
   {
     name: "Free",
     price: "$0",
-    cadence: "forever",
+    cadence: "to try",
     highlight: false,
-    blurb: "Try MistyVPN with free minutes every day. No account, no card.",
+    blurb: "Get a taste of MistyVPN with free minutes — no account, no card.",
     features: [
-      "Daily free minutes",
+      "Free minutes to get started",
       "All protocols",
       "Single device",
       "No credit card",

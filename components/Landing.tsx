@@ -7,7 +7,7 @@ export type LandingSection = { h2: string; body: string[] };
 export type LandingFaq = { q: string; a: string };
 
 export type LandingProps = {
-  slug: string; // e.g. "vpn-china"
+  slug: string; // e.g. "strict-firewalls"
   crumb: string; // breadcrumb + JSON-LD name
   eyebrow: string;
   h1: string;

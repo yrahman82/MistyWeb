@@ -26,8 +26,9 @@ export const metadata: Metadata = {
   keywords: [
     "VPN",
     "no-logs VPN",
-    "VPN for China",
-    "VPN for UAE",
+    "anti-censorship VPN",
+    "VPN for strict firewalls",
+    "bypass firewall VPN",
     "streaming VPN",
     "WireGuard",
     "VLESS Reality",
@@ -57,7 +58,6 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
-  icons: { icon: "/favicon.ico" },
   category: "technology",
 };
 
