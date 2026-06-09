@@ -102,9 +102,12 @@ export default function ComparePage() {
             </table>
           </div>
           <p className="mt-4 text-xs text-slate-500">
-            Competitor details reflect publicly listed features and pricing as of
-            June 2026 and may change — please verify on each provider&apos;s own
-            website. Comparisons are provided in good faith for general guidance.
+            Prices shown are standard <strong>month-to-month</strong> rates — the
+            headline prices competitors advertise typically require a 1–2 year
+            commitment. Competitor details reflect publicly listed features and
+            pricing as of June 2026 and may change — please verify on each
+            provider&apos;s own website. Comparisons are provided in good faith
+            for general guidance.
           </p>
         </Container>
       </section>
@@ -126,8 +129,8 @@ export default function ComparePage() {
                 "Stealth Mode uses next-generation anti-censorship technology, so MistyVPN keeps working on networks where mainstream VPNs are detected and blocked.",
               ],
               [
-                "Premium for less",
-                "Full-speed, all-features Premium from $2.50/month on the 6-month plan — typically less than the headline names.",
+                "A fraction of the price",
+                "Month-to-month, MistyVPN is $3.99 — versus roughly $13–15 the big names charge without a long contract. Go 6-month and it's just $2.50/mo.",
               ],
             ].map(([t, b]) => (
               <div

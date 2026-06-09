@@ -214,14 +214,14 @@ export const plans = [
 export const comparison = {
   providers: ["MistyVPN", "NordVPN", "ExpressVPN", "Surfshark"],
   rows: [
+    { label: "Monthly price", values: ["$3.99", "~$12.99", "~$12.95", "~$15.45"] },
     { label: "Free tier", values: ["Yes — earn free minutes", "No", "No", "No"] },
-    { label: "Price from", values: ["$2.50/mo", "~$3.39/mo", "~$4.99/mo", "~$2.19/mo"] },
+    { label: "Best rate without a 1–2 yr contract", values: [true, false, false, false] },
+    { label: "Next-gen anti-censorship (Reality / Hysteria2)", values: [true, "Limited", "Limited", "Limited"] },
     { label: "Stealth Mode (beats blocks)", values: [true, true, true, true] },
-    { label: "Next-gen anti-censorship protocols", values: [true, "Limited", "Limited", "Limited"] },
-    { label: "Split tunneling", values: [true, true, true, true] },
+    { label: "Split tunneling", values: [true, true, "Limited", true] },
     { label: "Kill switch", values: [true, true, true, true] },
     { label: "Strict no-logs", values: [true, true, true, true] },
-    { label: "Devices at once", values: ["10", "10", "8", "Unlimited"] },
     { label: "App languages", values: ["16", "varies", "varies", "varies"] },
   ] as { label: string; values: (boolean | string)[] }[],
 };
