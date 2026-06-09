@@ -12,6 +12,17 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* MistyVPN brand palette (used by the marketing site) */
+@theme {
+  --color-ink: #060d1a;
+  --color-ink-2: #0a1628;
+  --color-ink-3: #0f2138;
+  --color-brand: #38bdf8;
+  --color-brand-deep: #0ea5e9;
+  --color-accent: #818cf8;
+  --color-mint: #34d399;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +30,25 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  /* offset anchor targets so the sticky header doesn't cover them */
+  scroll-padding-top: 6rem;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-brand) 35%, transparent);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
