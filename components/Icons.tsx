@@ -86,6 +86,17 @@ export function PlayIcon(p: IconProps) {
   );
 }
 
+export function SplitIcon(p: IconProps) {
+  return (
+    <svg {...base} {...p}>
+      <path d="M4 7h4l3 5m9-5h-4l-3 5m0 0l-3 5H4m16 0h-4l-3-5" />
+      <circle cx="20" cy="7" r="1.4" />
+      <circle cx="20" cy="17" r="1.4" />
+      <circle cx="4" cy="12" r="1.4" />
+    </svg>
+  );
+}
+
 export function CheckIcon(p: IconProps) {
   return (
     <svg {...base} {...p}>
@@ -152,6 +163,7 @@ export const iconMap = {
   devices: DevicesIcon,
   server: ServerIcon,
   play: PlayIcon,
+  split: SplitIcon,
   check: CheckIcon,
   sparkle: SparkleIcon,
   apple: AppleIcon,

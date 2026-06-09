@@ -5,9 +5,9 @@ import JsonLd from "@/components/JsonLd";
 import { plans, faqs, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Pricing — free tier + Premium from $2/month",
+  title: "Pricing — free to start, Premium from $2.50/mo",
   description:
-    "Simple MistyVPN pricing. Start free with daily minutes, or go Premium for unlimited, full-speed access on up to 10 devices. Subscriptions are managed in the app.",
+    "Simple MistyVPN pricing. Start free and earn free minutes, or go Premium from $2.50/month for unlimited speed on up to 10 devices. Manage it all in the app.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -20,8 +20,6 @@ const breadcrumbLd = {
   ],
 };
 
-// Subscriptions are display-only on the web for now (handled in-app via the
-// App Store / Google Play), so every CTA points to the download section.
 export default function PricingPage() {
   return (
     <>
@@ -33,12 +31,12 @@ export default function PricingPage() {
             <Eyebrow>Pricing</Eyebrow>
           </div>
           <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            One plan. Every device. No surprises.
+            Simple pricing. Everything included.
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-            Try it free, upgrade when you&apos;re ready. Subscriptions are
-            purchased securely inside the app through the App Store or Google
-            Play.
+            Start free, upgrade when you&apos;re ready. Every plan includes the
+            full feature set — Stealth Mode, split tunneling and all 30+
+            locations.
           </p>
         </Container>
       </section>
@@ -57,7 +55,7 @@ export default function PricingPage() {
               >
                 {plan.highlight ? (
                   <span className="absolute -top-3 left-8 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-ink">
-                    Most popular
+                    Best value
                   </span>
                 ) : null}
                 <h2 className="text-lg font-semibold text-white">{plan.name}</h2>
@@ -65,10 +63,15 @@ export default function PricingPage() {
                   <span className="text-4xl font-bold tracking-tight text-white">
                     {plan.price}
                   </span>
-                  <span className="mb-1 text-sm text-slate-400">
-                    {plan.cadence}
-                  </span>
+                  {plan.cadence ? (
+                    <span className="mb-1 text-sm text-slate-400">
+                      {plan.cadence}
+                    </span>
+                  ) : null}
                 </div>
+                {plan.note ? (
+                  <p className="mt-1 text-xs font-medium text-brand">{plan.note}</p>
+                ) : null}
                 <p className="mt-3 text-sm text-slate-400">{plan.blurb}</p>
                 <ul className="mt-6 flex-1 space-y-3">
                   {plan.features.map((f) => (
@@ -91,8 +94,9 @@ export default function PricingPage() {
             ))}
           </div>
           <p className="mt-8 text-center text-sm text-slate-500">
-            Prices shown in USD. Local pricing and taxes are set by the App Store
-            and Google Play at checkout.
+            Prices in USD. Subscriptions are purchased and managed in the app via
+            the App Store or Google Play; taxes and local pricing are applied at
+            checkout. Cancel any time.
           </p>
         </Container>
       </section>
@@ -102,7 +106,12 @@ export default function PricingPage() {
           <SectionHeading center eyebrow="FAQ" title="Pricing questions" />
           <div className="mx-auto mt-10 max-w-3xl divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/[0.03]">
             {faqs
-              .filter((f) => f.q.includes("subscribe") || f.q.includes("devices") || f.q.includes("logs"))
+              .filter(
+                (f) =>
+                  f.q.includes("pay") ||
+                  f.q.includes("devices") ||
+                  f.q.includes("free"),
+              )
               .map((f) => (
                 <details key={f.q} className="group p-5 sm:p-6">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium text-white">

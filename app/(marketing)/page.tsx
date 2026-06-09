@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Container, SectionHeading, Button, Card, Eyebrow } from "@/components/ui";
 import { iconMap } from "@/components/Icons";
 import JsonLd from "@/components/JsonLd";
-import { features, protocols, platforms, faqs, site } from "@/lib/site";
+import { features, platforms, faqs, stats, steps, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `${site.name} — ${site.tagline}`,
+  title: `${site.name} — Private, unblocked, fast on every device`,
   description: site.description,
   alternates: { canonical: "/" },
 };
@@ -21,7 +21,7 @@ const softwareLd = {
     "@type": "Offer",
     price: "0",
     priceCurrency: "USD",
-    description: "Free tier available; Premium from $2/month.",
+    description: "Free to start; Premium from $2.50/month.",
   },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -55,65 +55,90 @@ export default function HomePage() {
       <JsonLd data={websiteLd} />
 
       {/* Hero */}
-      <section className="relative pt-20 pb-24 sm:pt-28">
+      <section className="relative pt-20 pb-20 sm:pt-28">
         <Container className="text-center">
           <div className="flex justify-center">
-            <Eyebrow>Works where other VPNs get blocked</Eyebrow>
+            <Eyebrow>Start free · No card required</Eyebrow>
           </div>
           <h1 className="mx-auto mt-6 max-w-4xl text-balance text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-            The VPN that stays{" "}
+            Private internet that{" "}
             <span className="bg-gradient-to-r from-brand via-cyan-300 to-accent bg-clip-text text-transparent">
-              invisible
-            </span>{" "}
-            and fast.
+              actually works
+            </span>
+            , everywhere.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            {site.name} disguises your connection as everyday web traffic with
-            modern censorship-resistant protocols — so streaming, browsing and
-            calls keep working, privately, on every device.
+            MistyVPN keeps you private and unblocked on every device — with
+            Stealth Mode that gets past blocks, blazing speed across 30+
+            locations, and a strict no-logs promise.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button href="/#get-started" className="px-8">
               Get MistyVPN free
             </Button>
-            <Button href="/features" variant="secondary">
-              Explore features
+            <Button href="/pricing" variant="secondary">
+              See plans
             </Button>
           </div>
-          <p className="mt-5 text-sm text-slate-400">
-            Free to start · No credit card · Strict no-logs
-          </p>
-        </Container>
 
-        {/* trust strip */}
-        <Container className="mt-16">
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {[
-              ["No-logs", "Nothing recorded, ever"],
-              ["16 languages", "Including RTL"],
-              ["All devices", "One subscription"],
-              ["Global fleet", "More locations weekly"],
-            ].map(([t, s]) => (
+          {/* stats */}
+          <dl className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
+            {stats.map((s) => (
               <div
-                key={t}
+                key={s.label}
                 className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-5 text-center"
               >
-                <div className="text-base font-semibold text-white">{t}</div>
-                <div className="mt-1 text-xs text-slate-400">{s}</div>
+                <dt className="text-3xl font-bold text-white">{s.value}</dt>
+                <dd className="mt-1 text-xs text-slate-400">{s.label}</dd>
               </div>
             ))}
+          </dl>
+        </Container>
+      </section>
+
+      {/* Spotlight: Stealth + Split Tunneling */}
+      <section className="py-16">
+        <Container>
+          <div className="grid gap-5 md:grid-cols-2">
+            <Card className="overflow-hidden p-8">
+              <Eyebrow>Stealth Mode</Eyebrow>
+              <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">
+                Invisible by design
+              </h2>
+              <p className="mt-3 text-slate-300">
+                Most VPNs get blocked because the network can <em>see</em> they&apos;re
+                a VPN. MistyVPN can&apos;t be spotted that way — Stealth Mode makes
+                your connection look like ordinary browsing, so it keeps working
+                where everything else fails.
+              </p>
+              <p className="mt-4 text-sm text-slate-400">On by default. One tap to connect.</p>
+            </Card>
+            <Card className="overflow-hidden p-8">
+              <Eyebrow>Split Tunneling</Eyebrow>
+              <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">
+                Protect only what you want
+              </h2>
+              <p className="mt-3 text-slate-300">
+                Route your streaming and browsing through the VPN while your bank
+                app, local sites and games stay on your normal connection — full
+                speed, no compromises.
+              </p>
+              <p className="mt-4 text-sm text-slate-400">
+                You decide, app by app.
+              </p>
+            </Card>
           </div>
         </Container>
       </section>
 
-      {/* Features */}
-      <section id="features" className="py-20">
+      {/* Features grid */}
+      <section id="features" className="py-16">
         <Container>
           <SectionHeading
             center
-            eyebrow="Why MistyVPN"
-            title="Everything you need to stay private and unblocked"
-            body="Built for the toughest networks in the world — and pleasant to use on every other one."
+            eyebrow="Everything included"
+            title="One app. Everything you need."
+            body="No add-ons, no upsells. Every plan comes with the full toolkit."
           />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f) => {
@@ -131,90 +156,63 @@ export default function HomePage() {
               );
             })}
           </div>
+          <div className="mt-10 text-center">
+            <Button href="/features" variant="secondary">
+              Explore all features
+            </Button>
+          </div>
         </Container>
       </section>
 
-      {/* Protocols */}
-      <section className="py-20">
+      {/* How it works */}
+      <section className="py-16">
         <Container>
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <SectionHeading
-              eyebrow="Protocols"
-              title="Disguised as ordinary HTTPS"
-              body="Deep packet inspection sees a normal visit to a major website. Auto mode picks the fastest protocol that gets through on your network — you never have to think about it."
-            />
-            <div className="space-y-4">
-              {protocols.map((p) => (
-                <div
-                  key={p.name}
-                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-5"
-                >
-                  <h3 className="font-mono text-sm font-semibold text-brand">
-                    {p.name}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-300">{p.blurb}</p>
-                </div>
-              ))}
+          <SectionHeading center eyebrow="How it works" title="Protected in three taps" />
+          <ol className="mt-14 grid gap-5 md:grid-cols-3">
+            {steps.map((s, i) => (
+              <li
+                key={s.title}
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+              >
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-sm font-bold text-ink">
+                  {i + 1}
+                </span>
+                <h3 className="mt-4 text-lg font-semibold text-white">{s.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-400">{s.body}</p>
+              </li>
+            ))}
+          </ol>
+        </Container>
+      </section>
+
+      {/* Comparison teaser */}
+      <section className="py-16">
+        <Container>
+          <Card className="flex flex-col items-center gap-6 px-6 py-12 text-center md:flex-row md:justify-between md:text-left">
+            <div>
+              <h2 className="text-2xl font-semibold text-white sm:text-3xl">
+                How does MistyVPN compare?
+              </h2>
+              <p className="mt-2 max-w-xl text-slate-300">
+                A free tier, next-gen anti-block tech, and premium for less than
+                the big names. See the side-by-side.
+              </p>
             </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Markets / streaming split */}
-      <section className="py-20">
-        <Container>
-          <div className="grid gap-5 md:grid-cols-2">
-            <Card className="p-8">
-              <Eyebrow>Restricted networks</Eyebrow>
-              <h3 className="mt-4 text-2xl font-semibold text-white">
-                Built for the strictest firewalls
-              </h3>
-              <p className="mt-3 text-slate-300">
-                Reality and Salamander-obfuscated Hysteria2 are engineered to
-                defeat the deep packet inspection and traffic shaping used by the
-                world&apos;s most restrictive networks.
-              </p>
-              <div className="mt-6">
-                <Button
-                  href="/strict-firewalls"
-                  variant="secondary"
-                  className="h-10 px-5"
-                >
-                  Beat strict firewalls →
-                </Button>
-              </div>
-            </Card>
-            <Card className="p-8">
-              <Eyebrow>Streaming</Eyebrow>
-              <h3 className="mt-4 text-2xl font-semibold text-white">
-                Your shows, wherever you are
-              </h3>
-              <p className="mt-3 text-slate-300">
-                Full-speed streaming with split tunneling — route only the apps
-                you choose through the tunnel and keep everything else local.
-              </p>
-              <div className="mt-6">
-                <Button
-                  href="/unblock-netflix"
-                  variant="secondary"
-                  className="h-10 px-5"
-                >
-                  Unblock streaming →
-                </Button>
-              </div>
-            </Card>
-          </div>
+            <Button href="/compare" className="shrink-0 px-8">
+              Compare VPNs
+            </Button>
+          </Card>
         </Container>
       </section>
 
       {/* Get started / platforms */}
-      <section id="get-started" className="scroll-mt-24 py-20">
+      <section id="get-started" className="scroll-mt-24 py-16">
         <Container>
           <SectionHeading
             center
             eyebrow="Get started"
             title="One account. Every device."
-            body="Download MistyVPN and connect in a couple of taps. Apps are rolling out across all major platforms."
+            body="Download MistyVPN and connect in seconds. Coming to all major platforms."
           />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {platforms.map((p) => {
@@ -227,9 +225,7 @@ export default function HomePage() {
                 >
                   <Icon className="h-8 w-8 text-white" />
                   <div>
-                    <div className="text-sm font-semibold text-white">
-                      {p.name}
-                    </div>
+                    <div className="text-sm font-semibold text-white">{p.name}</div>
                     <div className="text-xs text-slate-400">{p.store}</div>
                   </div>
                 </a>
@@ -242,10 +238,10 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* FAQ — native <details> so it's crawlable and works without JS */}
-      <section id="faq" className="py-20">
+      {/* FAQ */}
+      <section id="faq" className="py-16">
         <Container>
-          <SectionHeading center eyebrow="FAQ" title="Questions, answered" />
+          <SectionHeading center eyebrow="FAQ" title="Good questions" />
           <div className="mx-auto mt-12 max-w-3xl divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/[0.03]">
             {faqs.map((f) => (
               <details key={f.q} className="group p-5 sm:p-6">
@@ -263,14 +259,14 @@ export default function HomePage() {
       </section>
 
       {/* CTA band */}
-      <section className="py-20">
+      <section className="py-16">
         <Container>
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-brand/20 via-ink-3 to-accent/20 px-6 py-16 text-center">
             <h2 className="mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Take back your private internet.
+              Your private internet starts now.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-slate-300">
-              Start free in under a minute — no card, no logs, no fuss.
+              Free to try, no card, nothing logged. Be connected in under a minute.
             </p>
             <div className="mt-8 flex justify-center">
               <Button href="/#get-started" className="px-8">

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "VPN",
     "no-logs VPN",
     "anti-censorship VPN",
-    "VPN for strict firewalls",
+    "unblock websites VPN",
     "bypass firewall VPN",
     "streaming VPN",
     "WireGuard",
