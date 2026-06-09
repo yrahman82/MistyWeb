@@ -86,6 +86,24 @@ export function PlayIcon(p: IconProps) {
   );
 }
 
+export function PowerIcon(p: IconProps) {
+  return (
+    <svg {...base} {...p}>
+      <path d="M12 3v9" />
+      <path d="M7.5 6.5a8 8 0 109 0" />
+    </svg>
+  );
+}
+
+export function ClockIcon(p: IconProps) {
+  return (
+    <svg {...base} {...p}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </svg>
+  );
+}
+
 export function SplitIcon(p: IconProps) {
   return (
     <svg {...base} {...p}>
@@ -164,6 +182,8 @@ export const iconMap = {
   server: ServerIcon,
   play: PlayIcon,
   split: SplitIcon,
+  power: PowerIcon,
+  clock: ClockIcon,
   check: CheckIcon,
   sparkle: SparkleIcon,
   apple: AppleIcon,

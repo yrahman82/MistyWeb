@@ -107,6 +107,26 @@ export const features = [
     title: "In your language",
     body: "Use MistyVPN comfortably in 16 languages — and we add more without you ever needing to update the app.",
   },
+  {
+    icon: "sparkle",
+    title: "Auto mode",
+    body: "One tap and MistyVPN picks the fastest, most reliable connection for your network automatically — there's nothing to configure.",
+  },
+  {
+    icon: "server",
+    title: "30+ global locations",
+    body: "Connect through servers across the Americas, Europe, the Middle East and Asia — appear wherever you need to be.",
+  },
+  {
+    icon: "power",
+    title: "Auto-connect",
+    body: "Have MistyVPN connect the moment your device starts, so you're protected automatically — never accidentally exposed.",
+  },
+  {
+    icon: "clock",
+    title: "Earn free minutes",
+    body: "Out of free time? Top up your free minutes any time — no account and no credit card required.",
+  },
 ];
 
 export const platforms = [
