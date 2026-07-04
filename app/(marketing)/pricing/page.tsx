@@ -43,7 +43,7 @@ export default function PricingPage() {
 
       <section className="pb-16">
         <Container>
-          <div className="grid items-stretch gap-6 lg:grid-cols-3">
+          <div className="grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {plans.map((plan) => (
               <div
                 key={plan.name}

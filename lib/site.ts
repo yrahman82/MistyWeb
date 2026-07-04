@@ -197,7 +197,7 @@ export const plans = [
     cta: "Start free",
   },
   {
-    name: "Premium",
+    name: "Monthly",
     price: "$3.99",
     cadence: "/ month",
     note: "Billed monthly",
@@ -213,19 +213,34 @@ export const plans = [
     cta: "Get Premium",
   },
   {
-    name: "Premium 6 Months",
+    name: "6 Months",
     price: "$14.99",
     cadence: "/ 6 months",
-    note: "Just $2.50 / month — save 37%",
-    highlight: true,
-    blurb: "The same Premium, billed every six months — our best value.",
+    note: "Just $2.50 / month",
+    highlight: false,
+    blurb: "The same Premium, billed every six months.",
     features: [
       "Everything in Premium",
-      "Best value — save 37%",
+      "Save 37% vs monthly",
       "Up to 10 devices",
       "Priority support",
     ],
     cta: "Get 6 months",
+  },
+  {
+    name: "Annual",
+    price: "$18",
+    cadence: "/ year",
+    note: "Just $1.50 / month — best value",
+    highlight: true,
+    blurb: "Our lowest price, billed once a year.",
+    features: [
+      "Everything in Premium",
+      "Save 62% vs monthly",
+      "Up to 10 devices",
+      "Priority support",
+    ],
+    cta: "Get Annual",
   },
 ];
 

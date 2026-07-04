@@ -130,7 +130,7 @@ export default function ComparePage() {
               ],
               [
                 "A fraction of the price",
-                "Month-to-month, MistyVPN is $3.99 — versus roughly $13–15 the big names charge without a long contract. Go 6-month and it's just $2.50/mo.",
+                "Month-to-month, MistyVPN is $3.99 — versus roughly $13–15 the big names charge without a long contract. On the annual plan it's just $1.50/mo.",
               ],
             ].map(([t, b]) => (
               <div
