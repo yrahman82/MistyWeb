@@ -1,12 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { login, saveCreds, forgotPassword } from "@/lib/api";
 
-export default function LoginPage() {
+function LoginInner() {
   const router = useRouter();
+  const params = useSearchParams();
+  const next = params.get("next") || "/account";
+  const registerHref = `/register?next=${encodeURIComponent(next)}`;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [show, setShow] = useState(false);
@@ -22,7 +25,7 @@ export default function LoginPage() {
     try {
       const r = await login(email.trim(), password);
       saveCreds(r);
-      router.push("/account");
+      router.push(next);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong");
     } finally {
@@ -108,10 +111,18 @@ export default function LoginPage() {
 
       <p className="mt-6 text-center text-sm text-slate-400">
         New to MistyVPN?{" "}
-        <Link href="/register" className="text-brand hover:underline">
+        <Link href={registerHref} className="text-brand hover:underline">
           Create an account
         </Link>
       </p>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<p className="text-slate-400">Loading…</p>}>
+      <LoginInner />
+    </Suspense>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { nav, site } from "@/lib/site";
 import { Button } from "@/components/ui";
@@ -9,6 +10,8 @@ import { Logo } from "@/components/Logo";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const signInHref = `/login?next=${encodeURIComponent(pathname || "/")}`;
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/70 backdrop-blur-xl">
@@ -38,7 +41,7 @@ export default function Header() {
 
         <div className="hidden items-center gap-5 md:flex">
           <Link
-            href="/login"
+            href={signInHref}
             className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
           >
             Sign in
@@ -75,7 +78,7 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/login"
+              href={signInHref}
               className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 hover:bg-white/5"
               onClick={() => setOpen(false)}
             >

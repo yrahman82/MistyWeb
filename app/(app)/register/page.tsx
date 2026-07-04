@@ -1,12 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { webRegister, saveCreds } from "@/lib/api";
 
-export default function RegisterPage() {
+function RegisterInner() {
   const router = useRouter();
+  const params = useSearchParams();
+  const next = params.get("next") || "/account";
+  const loginHref = `/login?next=${encodeURIComponent(next)}`;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [show, setShow] = useState(false);
@@ -20,7 +23,7 @@ export default function RegisterPage() {
     try {
       const r = await webRegister(email.trim(), password);
       saveCreds(r);
-      router.push("/account");
+      router.push(next);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong");
     } finally {
@@ -84,10 +87,18 @@ export default function RegisterPage() {
 
       <p className="mt-6 text-center text-sm text-slate-400">
         Already have an account?{" "}
-        <Link href="/login" className="text-brand hover:underline">
+        <Link href={loginHref} className="text-brand hover:underline">
           Sign in
         </Link>
       </p>
     </div>
+  );
+}
+
+export default function RegisterPage() {
+  return (
+    <Suspense fallback={<p className="text-slate-400">Loading…</p>}>
+      <RegisterInner />
+    </Suspense>
   );
 }
