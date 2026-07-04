@@ -36,7 +36,13 @@ export default function Header() {
           ))}
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-5 md:flex">
+          <Link
+            href="/login"
+            className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
+          >
+            Sign in
+          </Link>
           <Button href="/#get-started" variant="primary" className="h-10 px-5">
             Get MistyVPN
           </Button>
@@ -68,6 +74,13 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              href="/login"
+              className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 hover:bg-white/5"
+              onClick={() => setOpen(false)}
+            >
+              Sign in
+            </Link>
             <Button href="/#get-started" variant="primary" className="mt-3 w-full">
               Get MistyVPN
             </Button>

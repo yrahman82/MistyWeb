@@ -83,7 +83,7 @@ export default function PricingPage() {
                 </ul>
                 <div className="mt-8">
                   <Button
-                    href="/#get-started"
+                    href={plan.name === "Free" ? "/register" : "/account"}
                     variant={plan.highlight ? "primary" : "secondary"}
                     className="w-full"
                   >
