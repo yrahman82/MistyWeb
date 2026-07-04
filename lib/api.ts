@@ -77,6 +77,7 @@ export type SubStatus = {
   subscribed: boolean;
   platform: string | null;
   expiresAt: string | null;
+  willCancel: boolean;
   freeMinutes: number;
 };
 
@@ -110,6 +111,10 @@ export function cancelSubscription() {
     auth: true,
     body: {},
   });
+}
+
+export function resumeSubscription() {
+  return req<{ message: string }>("/api/stripe/resume", { auth: true, body: {} });
 }
 
 // VPN credentials come back from login/register; stash for the account page.

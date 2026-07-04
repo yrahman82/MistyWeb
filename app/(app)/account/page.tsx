@@ -10,6 +10,7 @@ import {
   getStatus,
   createSubscription,
   cancelSubscription,
+  resumeSubscription,
   changePassword,
   deleteAccount,
   logout,
@@ -112,6 +113,13 @@ function AccountInner() {
     finally { setBusy(false); }
   }
 
+  async function onResume() {
+    setBusy(true); setErr("");
+    try { await resumeSubscription(); await refresh(); }
+    catch (e) { setErr(e instanceof Error ? e.message : "Could not resume"); }
+    finally { setBusy(false); }
+  }
+
   function backFromCheckout() {
     setClientSecret(null);
     if (cameFromPricing) router.push("/pricing");
@@ -202,23 +210,39 @@ function AccountInner() {
         ) : status?.subscribed ? (
           <div>
             <div className="flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-mint" />
+              <span className={`h-2.5 w-2.5 rounded-full ${status.willCancel ? "bg-amber-400" : "bg-mint"}`} />
               <span className="font-semibold text-white">Premium Active</span>
               <span className="rounded-full bg-white/10 px-2 py-0.5 text-[11px] text-slate-300">
                 {PLATFORM_LABEL[status.platform ?? ""] ?? status.platform}
               </span>
             </div>
-            <p className="mt-1 text-sm text-slate-400">Unlimited access to all servers</p>
             {status.expiresAt ? (
-              <p className="mt-2 text-sm text-slate-400">
-                Valid until {new Date(status.expiresAt).toLocaleDateString(undefined, { dateStyle: "long" })}
-              </p>
-            ) : null}
+              status.willCancel ? (
+                <p className="mt-2 text-sm text-amber-400/90">
+                  Won&apos;t renew — access until{" "}
+                  {new Date(status.expiresAt).toLocaleDateString(undefined, { dateStyle: "long" })}
+                </p>
+              ) : (
+                <p className="mt-2 text-sm text-slate-400">
+                  Renews automatically on{" "}
+                  {new Date(status.expiresAt).toLocaleDateString(undefined, { dateStyle: "long" })}
+                </p>
+              )
+            ) : (
+              <p className="mt-1 text-sm text-slate-400">Unlimited access to all servers</p>
+            )}
             {canManage ? (
-              <button onClick={onCancel} disabled={busy}
-                className="mt-4 rounded-full border border-white/15 px-5 py-2 text-sm text-white hover:bg-white/5 disabled:opacity-50">
-                Cancel Subscription
-              </button>
+              status.willCancel ? (
+                <button onClick={onResume} disabled={busy}
+                  className="mt-4 rounded-full bg-brand px-5 py-2 text-sm font-semibold text-ink hover:bg-white disabled:opacity-50">
+                  Resume Subscription
+                </button>
+              ) : (
+                <button onClick={onCancel} disabled={busy}
+                  className="mt-4 rounded-full border border-white/15 px-5 py-2 text-sm text-white hover:bg-white/5 disabled:opacity-50">
+                  Cancel Subscription
+                </button>
+              )
             ) : (
               <p className="mt-3 text-xs text-slate-500">
                 Manage this subscription in {PLATFORM_LABEL[status.platform ?? ""] ?? "the store where you bought it"}.
