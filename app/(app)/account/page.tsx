@@ -3,12 +3,12 @@
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Elements, PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { EmbeddedCheckout, EmbeddedCheckoutProvider } from "@stripe/react-stripe-js";
 import { getStripe } from "@/lib/stripe";
 import {
   auth,
   getStatus,
-  createSubscription,
+  createCheckoutSession,
   cancelSubscription,
   resumeSubscription,
   changePassword,
@@ -22,11 +22,6 @@ const PAID_PLANS = [
   { key: "sixmonth", name: "6 Months", price: "$14.99", cadence: "billed every 6 months", per: "$2.50/mo", unit: "/6mo" },
   { key: "annual", name: "Annual", price: "$18", cadence: "billed yearly", per: "$1.50/mo · best value", unit: "/yr" },
 ];
-
-const appearance = {
-  theme: "night" as const,
-  variables: { colorPrimary: "#38bdf8", colorBackground: "#0f2138", borderRadius: "12px" },
-};
 
 const PLATFORM_LABEL: Record<string, string> = {
   web: "Web", apple: "App Store", google: "Google Play",
@@ -50,15 +45,13 @@ function AccountInner() {
   const [activating, setActivating] = useState(false);
   const autoStarted = useRef(false);
 
-  const selected = PAID_PLANS.find((p) => p.key === plan);
-
   const choosePlan = useCallback(async (planKey: string) => {
     setErr("");
     setBusy(true);
     setPlan(planKey);
     setView("checkout");
     try {
-      const { clientSecret } = await createSubscription(planKey);
+      const { clientSecret } = await createCheckoutSession(planKey);
       setClientSecret(clientSecret);
     } catch (e) {
       setErr(e instanceof Error ? e.message : "Could not start checkout");
@@ -128,32 +121,23 @@ function AccountInner() {
 
   if (loading) return <p className="text-slate-400">Loading…</p>;
 
-  // ── Checkout ───────────────────────────────────────────────────────
+  // ── Checkout (Stripe Embedded Checkout: address + VAT + 3DS + invoice) ──
   if (view === "checkout") {
     return (
       <div className="w-full max-w-lg">
         <button onClick={backFromCheckout} className="text-sm text-slate-400 hover:text-white">
           {cameFromPricing ? "← Back to plans" : "← Change plan"}
         </button>
-        <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-          <div className="flex items-baseline justify-between border-b border-white/10 pb-4">
-            <div>
-              <div className="font-semibold text-white">MistyVPN Premium · {selected?.name}</div>
-              <div className="text-xs text-slate-400">{selected?.cadence}</div>
-            </div>
-            <div className="text-xl font-bold text-white">{selected?.price}</div>
-          </div>
-          <div className="mt-5">
-            {clientSecret ? (
-              <Elements stripe={getStripe()} options={{ clientSecret, appearance }}>
-                <CheckoutForm onPaid={onPaid} />
-              </Elements>
-            ) : err ? (
-              <p className="text-sm text-red-400">{err}</p>
-            ) : (
-              <p className="text-sm text-slate-400">Preparing secure checkout…</p>
-            )}
-          </div>
+        <div className="mt-4 overflow-hidden rounded-2xl bg-white">
+          {clientSecret ? (
+            <EmbeddedCheckoutProvider stripe={getStripe()} options={{ clientSecret, onComplete: onPaid }}>
+              <EmbeddedCheckout />
+            </EmbeddedCheckoutProvider>
+          ) : err ? (
+            <p className="p-6 text-sm text-red-600">{err}</p>
+          ) : (
+            <p className="p-6 text-sm text-slate-500">Preparing secure checkout…</p>
+          )}
         </div>
       </div>
     );
@@ -365,43 +349,5 @@ function AccountActions({ onDeleted }: { onDeleted: () => void }) {
       </div>
       {err && !pwOpen ? <p className="mt-1 text-sm text-red-400">{err}</p> : null}
     </Section>
-  );
-}
-
-function CheckoutForm({ onPaid }: { onPaid: () => void }) {
-  const stripe = useStripe();
-  const elements = useElements();
-  const [err, setErr] = useState("");
-  const [ready, setReady] = useState(false);
-  const [paying, setPaying] = useState(false);
-
-  async function pay(e: React.FormEvent) {
-    e.preventDefault();
-    if (!stripe || !elements) return;
-    setErr(""); setPaying(true);
-    try {
-      const { error, paymentIntent } = await stripe.confirmPayment({
-        elements,
-        confirmParams: { return_url: `${window.location.origin}/account` },
-        redirect: "if_required",
-      });
-      if (error) { setErr(error.message ?? "Payment failed"); setPaying(false); return; }
-      if (paymentIntent && (paymentIntent.status === "succeeded" || paymentIntent.status === "processing")) { onPaid(); return; }
-      setPaying(false);
-    } catch (ex) {
-      setErr(ex instanceof Error ? ex.message : "Payment could not be completed");
-      setPaying(false);
-    }
-  }
-
-  return (
-    <form onSubmit={pay} className="space-y-4">
-      <PaymentElement onReady={() => setReady(true)} onLoadError={() => setErr("Couldn't load the payment form. Please refresh and try again.")} />
-      {err ? <p className="text-sm text-red-400">{err}</p> : null}
-      <button type="submit" disabled={!stripe || !ready || paying}
-        className="w-full rounded-full bg-brand py-3 text-sm font-semibold text-ink transition-colors hover:bg-white disabled:opacity-50">
-        {paying ? "Processing…" : "Subscribe"}
-      </button>
-    </form>
   );
 }

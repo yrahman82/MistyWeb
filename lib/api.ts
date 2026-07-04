@@ -99,11 +99,11 @@ export function deleteAccount() {
   });
 }
 
-export function createSubscription(plan: string) {
-  return req<{ subscriptionId: string; clientSecret: string }>(
-    "/api/stripe/create-subscription",
-    { auth: true, body: { plan } },
-  );
+export function createCheckoutSession(plan: string) {
+  return req<{ clientSecret: string }>("/api/stripe/create-checkout-session", {
+    auth: true,
+    body: { plan },
+  });
 }
 
 export function cancelSubscription() {
