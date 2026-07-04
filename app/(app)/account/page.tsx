@@ -228,9 +228,33 @@ function AccountInner() {
                 </button>
               )
             ) : (
-              <p className="mt-3 text-xs text-slate-500">
-                Manage this subscription in {PLATFORM_LABEL[status.platform ?? ""] ?? "the store where you bought it"}.
-              </p>
+              // Store-bought subs (iOS/Android) can only be cancelled in the store.
+              <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-sm text-slate-300">
+                  {status.platform === "apple"
+                    ? "You subscribed through the App Store on your Apple device."
+                    : status.platform === "google"
+                    ? "You subscribed through Google Play on your Android device."
+                    : "You subscribed through a mobile app store."}
+                </p>
+                <p className="mt-1 text-xs text-slate-500">
+                  To change or cancel, manage it where you bought it — it can&apos;t be cancelled here.
+                </p>
+                {(status.platform === "apple" || status.platform === "google") && (
+                  <a
+                    href={
+                      status.platform === "apple"
+                        ? "https://apps.apple.com/account/subscriptions"
+                        : "https://play.google.com/store/account/subscriptions"
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex rounded-full border border-white/15 px-5 py-2 text-sm text-white hover:bg-white/5"
+                  >
+                    Manage in {status.platform === "apple" ? "App Store" : "Google Play"} ↗
+                  </a>
+                )}
+              </div>
             )}
             {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
           </div>
