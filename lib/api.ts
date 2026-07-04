@@ -99,6 +99,21 @@ export function deleteAccount() {
   });
 }
 
+// ── Plans (DB-driven — same source the mobile apps use) ─────────────────────
+export type Plan = {
+  key: string;
+  title: string;
+  price: string;
+  perMonth: string;
+  unit: string;
+  badge?: string | null;
+};
+
+export async function getPlans(): Promise<Plan[]> {
+  const cfg = await req<{ plans?: Plan[] }>("/api/config/paywall");
+  return cfg.plans ?? [];
+}
+
 export function createCheckoutSession(plan: string) {
   return req<{ clientSecret: string }>("/api/stripe/create-checkout-session", {
     auth: true,

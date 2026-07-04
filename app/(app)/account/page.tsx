@@ -8,6 +8,7 @@ import { getStripe } from "@/lib/stripe";
 import {
   auth,
   getStatus,
+  getPlans,
   createCheckoutSession,
   cancelSubscription,
   resumeSubscription,
@@ -15,13 +16,8 @@ import {
   deleteAccount,
   logout,
   type SubStatus,
+  type Plan,
 } from "@/lib/api";
-
-const PAID_PLANS = [
-  { key: "monthly", name: "Monthly", price: "$3.99", cadence: "billed monthly", per: "$3.99/mo", unit: "/mo" },
-  { key: "sixmonth", name: "6 Months", price: "$14.99", cadence: "billed every 6 months", per: "$2.50/mo", unit: "/6mo" },
-  { key: "annual", name: "Annual", price: "$18", cadence: "billed yearly", per: "$1.50/mo · best value", unit: "/yr" },
-];
 
 const PLATFORM_LABEL: Record<string, string> = {
   web: "Web", apple: "App Store", google: "Google Play",
@@ -33,8 +29,9 @@ function AccountInner() {
   const router = useRouter();
   const params = useSearchParams();
   const planParam = params.get("plan");
-  const cameFromPricing = !!planParam && PAID_PLANS.some((p) => p.key === planParam);
+  const cameFromPricing = !!planParam;
 
+  const [plans, setPlans] = useState<Plan[]>([]);
   const [status, setStatus] = useState<SubStatus | null>(null);
   const [loading, setLoading] = useState(true);
   const [view, setView] = useState<View>("overview");
@@ -83,6 +80,11 @@ function AccountInner() {
       .catch(() => { logout(); router.replace("/login?next=/account"); })
       .finally(() => setLoading(false));
   }, [router, refresh, planParam, cameFromPricing, choosePlan]);
+
+  // DB-driven plan list — same source the mobile apps use (add a plan in the DB, no deploy).
+  useEffect(() => {
+    getPlans().then(setPlans).catch(() => {});
+  }, []);
 
   const onPaid = useCallback(async () => {
     setClientSecret(null);
@@ -158,12 +160,14 @@ function AccountInner() {
             </Link>
           </div>
           <div className="mt-5 space-y-3">
-            {PAID_PLANS.map((p) => (
+            {plans.map((p) => (
               <button key={p.key} onClick={() => choosePlan(p.key)} disabled={busy}
                 className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left transition-colors hover:border-brand/50 disabled:opacity-50">
                 <div>
-                  <div className="font-semibold text-white">{p.name}</div>
-                  <div className="text-xs text-slate-400">{p.per}</div>
+                  <div className="font-semibold text-white">{p.title}</div>
+                  <div className="text-xs text-slate-400">
+                    {p.badge ? `${p.perMonth} · ${p.badge.toLowerCase()}` : p.perMonth}
+                  </div>
                 </div>
                 <div className="text-lg font-bold text-white">
                   {p.price}<span className="ml-1 text-xs font-normal text-slate-400">{p.unit}</span>
