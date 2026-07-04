@@ -9,6 +9,8 @@ import {
   getStatus,
   createSubscription,
   cancelSubscription,
+  changePassword,
+  deleteAccount,
   logout,
   type SubStatus,
 } from "@/lib/api";
@@ -24,14 +26,20 @@ const appearance = {
   variables: { colorPrimary: "#38bdf8", colorBackground: "#0f2138", borderRadius: "12px" },
 };
 
+const PLATFORM_LABEL: Record<string, string> = {
+  web: "Web (card)",
+  apple: "App Store",
+  google: "Google Play",
+};
+
+type View = "overview" | "plans" | "payment";
+
 function AccountInner() {
   const router = useRouter();
   const params = useSearchParams();
   const [status, setStatus] = useState<SubStatus | null>(null);
   const [loading, setLoading] = useState(true);
-  // Only show the plan chooser when the user actively chose to upgrade
-  // (via the "Buy" CTA which lands here with ?checkout=1), never on plain sign-in.
-  const [showPlans, setShowPlans] = useState(params.get("checkout") === "1");
+  const [view, setView] = useState<View>(params.get("checkout") === "1" ? "plans" : "overview");
   const [plan, setPlan] = useState<string | null>(null);
   const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [err, setErr] = useState("");
@@ -65,6 +73,7 @@ function AccountInner() {
       const { clientSecret } = await createSubscription(planKey);
       setPlan(planKey);
       setClientSecret(clientSecret);
+      setView("payment");
     } catch (e) {
       setErr(e instanceof Error ? e.message : "Could not start checkout");
     } finally {
@@ -75,7 +84,7 @@ function AccountInner() {
   const onPaid = useCallback(async () => {
     setClientSecret(null);
     setPlan(null);
-    setShowPlans(false);
+    setView("overview");
     setActivating(true);
     for (let i = 0; i < 12; i++) {
       await new Promise((r) => setTimeout(r, 2000));
@@ -93,6 +102,7 @@ function AccountInner() {
   async function onCancel() {
     if (!confirm("Cancel your subscription? You'll keep access until the current period ends.")) return;
     setBusy(true);
+    setErr("");
     try {
       await cancelSubscription();
       await refresh();
@@ -103,74 +113,23 @@ function AccountInner() {
     }
   }
 
+  function signOut() {
+    logout();
+    router.replace("/");
+  }
+
   if (loading) return <p className="text-slate-400">Loading…</p>;
 
-  return (
-    <div className="w-full max-w-lg space-y-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-semibold tracking-tight">Account</h1>
-        <button
-          onClick={() => { logout(); router.replace("/login"); }}
-          className="text-sm text-slate-400 hover:text-white"
-        >
-          Sign out
+  // ── Focused checkout sub-flow ──────────────────────────────────────
+  if (view === "plans") {
+    return (
+      <div className="w-full max-w-lg">
+        <button onClick={() => setView("overview")} className="text-sm text-slate-400 hover:text-white">
+          ← Back to account
         </button>
-      </div>
-
-      {status?.subscribed ? (
-        // ── Subscribed ──────────────────────────────────────────────
-        <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-          <div className="flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-mint" />
-            <h2 className="text-lg font-semibold text-white">Premium active</h2>
-          </div>
-          {status.expiresAt ? (
-            <p className="mt-2 text-sm text-slate-400">
-              Valid until {new Date(status.expiresAt).toLocaleDateString(undefined, { dateStyle: "long" })}
-            </p>
-          ) : null}
-          <button
-            onClick={onCancel}
-            disabled={busy}
-            className="mt-5 rounded-full border border-white/15 px-5 py-2 text-sm text-white hover:bg-white/5 disabled:opacity-50"
-          >
-            Cancel subscription
-          </button>
-          {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
-        </section>
-      ) : activating ? (
-        // ── Just paid, waiting for webhook ──────────────────────────
-        <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center">
-          <p className="text-lg font-semibold text-white">Activating your subscription…</p>
-          <p className="mt-2 text-sm text-slate-400">This takes a few seconds. Hang tight.</p>
-        </section>
-      ) : clientSecret ? (
-        // ── Payment ─────────────────────────────────────────────────
-        <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-          <button
-            onClick={() => { setClientSecret(null); setPlan(null); }}
-            className="text-sm text-slate-400 hover:text-white"
-          >
-            ← Change plan
-          </button>
-          <div className="mt-4 flex items-baseline justify-between border-b border-white/10 pb-4">
-            <div>
-              <div className="font-semibold text-white">MistyVPN Premium · {selected?.name}</div>
-              <div className="text-xs text-slate-400">{selected?.cadence}</div>
-            </div>
-            <div className="text-xl font-bold text-white">{selected?.price}</div>
-          </div>
-          <div className="mt-5">
-            <Elements stripe={getStripe()} options={{ clientSecret, appearance }}>
-              <CheckoutForm onPaid={onPaid} />
-            </Elements>
-          </div>
-        </section>
-      ) : showPlans ? (
-        // ── Choose a plan ───────────────────────────────────────────
-        <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-          <h2 className="text-lg font-semibold text-white">Choose your plan</h2>
-          <p className="mt-1 text-sm text-slate-400">Cancel anytime.</p>
+        <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <h1 className="text-xl font-semibold">Go Premium</h1>
+          <p className="mt-1 text-sm text-slate-400">Unlimited, full-speed access. Cancel anytime.</p>
           <div className="mt-5 space-y-3">
             {PAID_PLANS.map((p) => (
               <button
@@ -192,23 +151,110 @@ function AccountInner() {
           </div>
           {busy ? <p className="mt-4 text-sm text-slate-400">Preparing checkout…</p> : null}
           {err ? <p className="mt-4 text-sm text-red-400">{err}</p> : null}
-        </section>
-      ) : (
-        // ── Overview (free tier) ────────────────────────────────────
-        <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-          <h2 className="text-sm font-medium uppercase tracking-wider text-slate-400">Subscription</h2>
-          <p className="mt-2 text-white">You&apos;re on the <span className="font-semibold">Free</span> tier.</p>
-          <p className="mt-1 text-sm text-slate-400">
-            Upgrade for unlimited, full-speed access on all your devices.
-          </p>
-          <button
-            onClick={() => setShowPlans(true)}
-            className="mt-5 rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-white"
-          >
-            Upgrade to Premium
-          </button>
-        </section>
-      )}
+        </div>
+      </div>
+    );
+  }
+
+  if (view === "payment" && clientSecret) {
+    return (
+      <div className="w-full max-w-lg">
+        <button onClick={() => { setClientSecret(null); setView("plans"); }} className="text-sm text-slate-400 hover:text-white">
+          ← Change plan
+        </button>
+        <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <div className="flex items-baseline justify-between border-b border-white/10 pb-4">
+            <div>
+              <div className="font-semibold text-white">MistyVPN Premium · {selected?.name}</div>
+              <div className="text-xs text-slate-400">{selected?.cadence}</div>
+            </div>
+            <div className="text-xl font-bold text-white">{selected?.price}</div>
+          </div>
+          <div className="mt-5">
+            <Elements stripe={getStripe()} options={{ clientSecret, appearance }}>
+              <CheckoutForm onPaid={onPaid} />
+            </Elements>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── Account dashboard ──────────────────────────────────────────────
+  const canManage = status?.platform === "web";
+  return (
+    <div className="w-full max-w-lg space-y-5">
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-semibold tracking-tight">Account</h1>
+        <button onClick={signOut} className="text-sm text-slate-400 hover:text-white">
+          Sign out
+        </button>
+      </div>
+
+      {/* Profile */}
+      <Section title="Profile">
+        <Row label="Email" value={status?.email ?? "—"} />
+      </Section>
+
+      {/* Subscription */}
+      <Section title="Subscription">
+        {activating ? (
+          <p className="text-slate-300">Activating your subscription… this takes a few seconds.</p>
+        ) : status?.subscribed ? (
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="h-2.5 w-2.5 rounded-full bg-mint" />
+              <span className="font-semibold text-white">Premium</span>
+              <span className="rounded-full bg-white/10 px-2 py-0.5 text-[11px] text-slate-300">
+                {PLATFORM_LABEL[status.platform ?? ""] ?? status.platform}
+              </span>
+            </div>
+            {status.expiresAt ? (
+              <p className="mt-2 text-sm text-slate-400">
+                Valid until {new Date(status.expiresAt).toLocaleDateString(undefined, { dateStyle: "long" })}
+              </p>
+            ) : null}
+            {canManage ? (
+              <button
+                onClick={onCancel}
+                disabled={busy}
+                className="mt-4 rounded-full border border-white/15 px-5 py-2 text-sm text-white hover:bg-white/5 disabled:opacity-50"
+              >
+                Cancel subscription
+              </button>
+            ) : (
+              <p className="mt-3 text-xs text-slate-500">
+                Manage this subscription in {PLATFORM_LABEL[status.platform ?? ""] ?? "the store where you bought it"}.
+              </p>
+            )}
+            {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
+          </div>
+        ) : (
+          <div>
+            <p className="text-white">You&apos;re on the <span className="font-semibold">Free</span> tier.</p>
+            <p className="mt-1 text-sm text-slate-400">Upgrade for unlimited, full-speed access on all your devices.</p>
+            <button
+              onClick={() => setView("plans")}
+              className="mt-4 rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-white"
+            >
+              Upgrade to Premium
+            </button>
+          </div>
+        )}
+      </Section>
+
+      {/* VPN credentials */}
+      <Section title="VPN credentials">
+        <p className="mb-3 text-xs text-slate-500">Use these to sign in to the MistyVPN apps.</p>
+        <CopyRow label="Username" value={status?.vpnUsername ?? ""} />
+        <CopyRow label="Password" value={status?.vpnPassword ?? ""} />
+      </Section>
+
+      {/* Security */}
+      <ChangePasswordSection />
+
+      {/* Danger */}
+      <DeleteAccountSection onDeleted={() => { logout(); router.replace("/"); }} />
     </div>
   );
 }
@@ -218,6 +264,135 @@ export default function AccountPage() {
     <Suspense fallback={<p className="text-slate-400">Loading…</p>}>
       <AccountInner />
     </Suspense>
+  );
+}
+
+// ── UI bits ───────────────────────────────────────────────────────────
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+      <h2 className="text-xs font-medium uppercase tracking-wider text-slate-400">{title}</h2>
+      <div className="mt-3">{children}</div>
+    </section>
+  );
+}
+
+function Row({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex items-center justify-between gap-4 text-sm">
+      <span className="text-slate-400">{label}</span>
+      <span className="text-white">{value}</span>
+    </div>
+  );
+}
+
+function CopyRow({ label, value }: { label: string; value: string }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <div className="flex items-center justify-between gap-4 py-1.5">
+      <span className="text-sm text-slate-400">{label}</span>
+      <div className="flex items-center gap-3">
+        <span className="font-mono text-sm text-white">{value || "—"}</span>
+        <button
+          onClick={async () => {
+            if (!value) return;
+            await navigator.clipboard.writeText(value);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 1200);
+          }}
+          className="text-xs text-brand hover:underline"
+        >
+          {copied ? "Copied" : "Copy"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function ChangePasswordSection() {
+  const [open, setOpen] = useState(false);
+  const [cur, setCur] = useState("");
+  const [next, setNext] = useState("");
+  const [msg, setMsg] = useState("");
+  const [err, setErr] = useState("");
+  const [busy, setBusy] = useState(false);
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    setErr(""); setMsg(""); setBusy(true);
+    try {
+      await changePassword(cur, next);
+      setMsg("Password updated.");
+      setCur(""); setNext(""); setOpen(false);
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : "Could not update password");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <Section title="Security">
+      {!open ? (
+        <div className="flex items-center justify-between">
+          <span className="text-sm text-slate-300">Password</span>
+          <button onClick={() => setOpen(true)} className="text-sm text-brand hover:underline">
+            Change
+          </button>
+        </div>
+      ) : (
+        <form onSubmit={submit} className="space-y-3">
+          <input
+            type="password" required value={cur} onChange={(e) => setCur(e.target.value)}
+            placeholder="Current password" autoComplete="current-password"
+            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white outline-none focus:border-brand"
+          />
+          <input
+            type="password" required minLength={8} value={next} onChange={(e) => setNext(e.target.value)}
+            placeholder="New password (min 8 chars)" autoComplete="new-password"
+            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white outline-none focus:border-brand"
+          />
+          {err ? <p className="text-sm text-red-400">{err}</p> : null}
+          <div className="flex gap-2">
+            <button type="button" onClick={() => setOpen(false)} className="rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5">
+              Cancel
+            </button>
+            <button type="submit" disabled={busy} className="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-ink hover:bg-white disabled:opacity-50">
+              {busy ? "Saving…" : "Update password"}
+            </button>
+          </div>
+        </form>
+      )}
+      {msg ? <p className="mt-2 text-sm text-mint">{msg}</p> : null}
+    </Section>
+  );
+}
+
+function DeleteAccountSection({ onDeleted }: { onDeleted: () => void }) {
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+  async function onDelete() {
+    if (!confirm("Delete your account permanently? This cannot be undone.")) return;
+    setBusy(true); setErr("");
+    try {
+      await deleteAccount();
+      onDeleted();
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : "Could not delete account");
+      setBusy(false);
+    }
+  }
+  return (
+    <section className="rounded-2xl border border-red-500/20 bg-red-500/[0.04] p-6">
+      <h2 className="text-xs font-medium uppercase tracking-wider text-red-400/80">Danger zone</h2>
+      <div className="mt-3 flex items-center justify-between gap-4">
+        <span className="text-sm text-slate-300">Delete account</span>
+        <button onClick={onDelete} disabled={busy} className="rounded-full border border-red-500/40 px-5 py-2 text-sm text-red-300 hover:bg-red-500/10 disabled:opacity-50">
+          {busy ? "Deleting…" : "Delete"}
+        </button>
+      </div>
+      {err ? <p className="mt-2 text-sm text-red-400">{err}</p> : null}
+    </section>
   );
 }
 

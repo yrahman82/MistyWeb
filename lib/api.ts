@@ -69,8 +69,11 @@ export async function forgotPassword(email: string) {
   return req<{ message: string }>("/api/auth/forgot-password", { body: { email } });
 }
 
-// ── Subscription ──────────────────────────────────────────────────────────
+// ── Account / subscription ─────────────────────────────────────────────────
 export type SubStatus = {
+  email: string;
+  vpnUsername: string;
+  vpnPassword: string;
   subscribed: boolean;
   platform: string | null;
   expiresAt: string | null;
@@ -79,6 +82,20 @@ export type SubStatus = {
 
 export function getStatus() {
   return req<SubStatus>("/api/subscription/status", { auth: true });
+}
+
+export function changePassword(currentPassword: string, newPassword: string) {
+  return req<{ message: string }>("/api/auth/change-password", {
+    auth: true,
+    body: { currentPassword, newPassword },
+  });
+}
+
+export function deleteAccount() {
+  return req<Record<string, unknown>>("/api/auth/account", {
+    auth: true,
+    method: "DELETE",
+  });
 }
 
 export function createSubscription(plan: string) {

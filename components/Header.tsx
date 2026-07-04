@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { nav, site } from "@/lib/site";
+import { auth } from "@/lib/api";
 import { Button } from "@/components/ui";
 import { MenuIcon, CloseIcon } from "@/components/Icons";
 import { Logo } from "@/components/Logo";
@@ -12,6 +13,13 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const signInHref = `/login?next=${encodeURIComponent(pathname || "/")}`;
+
+  // Reflect auth state (localStorage). Re-check on navigation so it updates
+  // after sign-in/out. Starts false to match SSR, then corrects on mount.
+  const [loggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    setLoggedIn(auth.isLoggedIn);
+  }, [pathname]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/70 backdrop-blur-xl">
@@ -40,12 +48,21 @@ export default function Header() {
         </div>
 
         <div className="hidden items-center gap-5 md:flex">
-          <Link
-            href={signInHref}
-            className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
-          >
-            Sign in
-          </Link>
+          {loggedIn ? (
+            <Link
+              href="/account"
+              className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
+            >
+              Account
+            </Link>
+          ) : (
+            <Link
+              href={signInHref}
+              className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
+            >
+              Sign in
+            </Link>
+          )}
           <Button href="/#get-started" variant="primary" className="h-10 px-5">
             Get MistyVPN
           </Button>
@@ -78,11 +95,11 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href={signInHref}
+              href={loggedIn ? "/account" : signInHref}
               className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 hover:bg-white/5"
               onClick={() => setOpen(false)}
             >
-              Sign in
+              {loggedIn ? "Account" : "Sign in"}
             </Link>
             <Button href="/#get-started" variant="primary" className="mt-3 w-full">
               Get MistyVPN
