@@ -182,6 +182,7 @@ export const faqs = [
 // Pricing — purchases happen inside the apps (no web checkout yet).
 export const plans = [
   {
+    key: "free",
     name: "Free",
     price: "$0",
     cadence: "",
@@ -197,6 +198,7 @@ export const plans = [
     cta: "Start free",
   },
   {
+    key: "monthly",
     name: "Monthly",
     price: "$3.99",
     cadence: "/ month",
@@ -213,6 +215,7 @@ export const plans = [
     cta: "Get Premium",
   },
   {
+    key: "sixmonth",
     name: "6 Months",
     price: "$14.99",
     cadence: "/ 6 months",
@@ -228,6 +231,7 @@ export const plans = [
     cta: "Get 6 months",
   },
   {
+    key: "annual",
     name: "Annual",
     price: "$18",
     cadence: "/ year",
