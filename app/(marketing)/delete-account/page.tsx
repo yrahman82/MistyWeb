@@ -51,13 +51,23 @@ export default function DeleteAccountPage() {
               This is available on iPhone, iPad, Android, Mac, and Android TV.
             </p>
 
-            <h2>Can&apos;t access the app?</h2>
+            <h2>Or request deletion by email</h2>
             <p>
-              If you are unable to use the in-app option, email us from the address
-              associated with your account at{" "}
-              <a href={`mailto:${site.email}`}>{site.email}</a> with the subject
-              &quot;Delete my account&quot;. We will verify your request and delete
-              your account within <strong>30 days</strong>.
+              If you cannot use the in-app option, request deletion by email. From
+              the address associated with your account, send us a message and we
+              will verify your request and delete your account within{" "}
+              <strong>30 days</strong>.
+            </p>
+            <p>
+              <a
+                href={`mailto:${site.email}?subject=${encodeURIComponent(
+                  "Delete my account",
+                )}&body=${encodeURIComponent(
+                  "Please delete my MistyVPN account and associated data.\n\nAccount email: \n",
+                )}`}
+              >
+                <strong>Email {site.email} to delete your account</strong>
+              </a>
             </p>
 
             <h2>What data is deleted</h2>
