@@ -8,6 +8,14 @@ export const site = {
   url: "https://mistyvpn.com",
   email: "support@mistyvpn.com",
   twitter: "@mistyvpn",
+  // Owning legal entity — shown in the footer so the domain is verifiably associated with the
+  // organization (e.g. for Apple Developer org enrollment). Fill `number` with the Companies House
+  // registration number; leave "" to hide the "(company no. …)" clause until confirmed.
+  company: {
+    legalName: "Misty Tech Ltd",
+    registeredIn: "England & Wales",
+    number: "17269421", // Companies House number
+  },
   locations: "30+",
   languages: 16,
   // Store links are placeholders until the apps are published.

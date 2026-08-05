@@ -52,6 +52,12 @@ export default function Footer() {
             </a>
           </p>
         </div>
+
+        <p className="mt-4 text-xs leading-5 text-slate-500">
+          {site.name} is a trading name of {site.company.legalName}, a company registered in{" "}
+          {site.company.registeredIn}
+          {site.company.number ? ` (company no. ${site.company.number})` : ""}.
+        </p>
       </div>
     </footer>
   );
