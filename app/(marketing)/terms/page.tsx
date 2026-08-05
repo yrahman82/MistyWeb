@@ -24,9 +24,11 @@ export default function TermsPage() {
         <div className="mt-10">
           <Prose>
             <p>
-              These Terms govern your use of {site.name}. By using the service you
-              agree to them. This is a template and should be reviewed by counsel
-              before launch.
+              These Terms govern your use of {site.name}, a service operated by{" "}
+              {site.company.legalName}, a company registered in{" "}
+              {site.company.registeredIn} (company no. {site.company.number}), with its
+              registered office at {site.company.registeredOffice}. By using the service
+              you agree to these Terms.
             </p>
 
             <h2>Acceptable use</h2>

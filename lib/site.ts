@@ -15,6 +15,7 @@ export const site = {
     legalName: "Misty Tech Ltd",
     registeredIn: "England & Wales",
     number: "17269421", // Companies House number
+    registeredOffice: "Siu Offices, 4–6 Greatorex Street, London, E1 5NF, United Kingdom",
   },
   locations: "30+",
   languages: 16,

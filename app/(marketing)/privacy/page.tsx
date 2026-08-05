@@ -26,11 +26,15 @@ export default function PrivacyPage() {
             <p>
               {site.name} (&quot;{site.name}&quot;, &quot;we&quot;, &quot;us&quot;,
               or &quot;our&quot;) provides a no-logs virtual private network (VPN)
-              service across iPhone, iPad, Android, Mac, and Android TV. This
-              Privacy Policy explains what we collect, the things we deliberately
-              do <strong>not</strong> collect, how we use and share information,
-              and the rights you have over your data. It applies to our apps, our
-              website, and our account and subscription systems.
+              service across iPhone, iPad, Android, Mac, and Android TV. {site.name}{" "}
+              is a trading name of {site.company.legalName}, a company registered in{" "}
+              {site.company.registeredIn} (company no. {site.company.number}), with its
+              registered office at {site.company.registeredOffice}.{" "}
+              {site.company.legalName} is the data controller for the purposes of this
+              Privacy Policy. This policy explains what we collect, the things we
+              deliberately do <strong>not</strong> collect, how we use and share
+              information, and the rights you have over your data. It applies to our
+              apps, our website, and our account and subscription systems.
             </p>
             <p>
               Our guiding principle is simple: we cannot lose, leak, or be
