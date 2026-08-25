@@ -8,6 +8,9 @@ export const site = {
   url: "https://mistyvpn.com",
   email: "support@mistyvpn.com",
   twitter: "@mistyvpn",
+  // Support contact — WhatsApp is the fastest channel. `number` is E.164 without "+" for wa.me/web links;
+  // `display` is the human-readable form shown on the page.
+  whatsapp: { number: "17206049798", display: "+1 720 604 9798" },
   // Owning legal entity — shown in the footer so the domain is verifiably associated with the
   // organization (e.g. for Apple Developer org enrollment). Fill `number` with the Companies House
   // registration number; leave "" to hide the "(company no. …)" clause until confirmed.
@@ -53,6 +56,7 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
       { label: "No-logs promise", href: "/no-logs" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
+      { label: "Help & Support", href: "/support" },
     ],
   },
   {
