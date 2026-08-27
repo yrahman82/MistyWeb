@@ -334,6 +334,12 @@ function AccountInner() {
               className="mt-4 rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-white">
               Upgrade to Premium
             </button>
+            {status?.hasSavedCard ? (
+              <p className="mt-4 text-xs text-slate-500">
+                Saved card on file: {brandLabel(status.savedCardBrand)} ••••{" "}
+                {status.savedCardLast4} — it&apos;ll be used automatically when you resubscribe.
+              </p>
+            ) : null}
           </div>
         )}
       </Section>
