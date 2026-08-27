@@ -105,3 +105,53 @@ export function Card({
     </div>
   );
 }
+
+// ── One standard loader for the whole site ────────────────────────────────
+// `tone="light"` → white spinner for dark surfaces (the app); `tone="dark"` → slate spinner for the
+// white Stripe surfaces. Use <Spinner> inline (buttons, rows) and <Loader> to fill an area.
+export function Spinner({
+  label,
+  tone = "light",
+  size = "md",
+  className = "",
+}: {
+  label?: string;
+  tone?: "light" | "dark";
+  size?: "sm" | "md" | "lg";
+  className?: string;
+}) {
+  const dim = size === "sm" ? "h-4 w-4" : size === "lg" ? "h-8 w-8" : "h-5 w-5";
+  const ring =
+    tone === "dark"
+      ? "border-slate-300 border-t-slate-600"
+      : "border-white/20 border-t-white/80";
+  const text = tone === "dark" ? "text-slate-500" : "text-slate-300";
+  return (
+    <span className={`inline-flex items-center gap-2.5 text-sm ${text} ${className}`}>
+      <span
+        aria-hidden
+        className={`shrink-0 animate-spin rounded-full border-2 ${dim} ${ring}`}
+      />
+      {label ? <span>{label}</span> : null}
+    </span>
+  );
+}
+
+// Centers a Spinner in a min-height block — the standard "loading a whole view" state.
+export function Loader({
+  label,
+  tone = "light",
+  className = "",
+  minH = "min-h-[200px]",
+}: {
+  label?: string;
+  tone?: "light" | "dark";
+  className?: string;
+  minH?: string;
+}) {
+  return (
+    <div className={`flex items-center justify-center ${minH} ${className}`}>
+      <Spinner label={label} tone={tone} />
+    </div>
+  );
+}

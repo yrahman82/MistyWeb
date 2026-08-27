@@ -10,6 +10,7 @@ import {
 import type { StripeElementsOptions } from "@stripe/stripe-js";
 import { getStripe } from "@/lib/stripe";
 import { createSetupIntent, updatePaymentMethod } from "@/lib/api";
+import { Spinner } from "@/components/ui";
 
 type Card = { cardBrand: string | null; cardLast4: string | null };
 
@@ -52,7 +53,11 @@ export default function ChangeCardForm({
 
   if (err && !clientSecret) return <p className="text-sm text-red-400">{err}</p>;
   if (!options)
-    return <p className="text-sm text-slate-500">Loading secure card form…</p>;
+    return (
+      <div className="flex min-h-[120px] items-center justify-center">
+        <Spinner label="Loading secure card form…" />
+      </div>
+    );
 
   return (
     <Elements stripe={stripePromise} options={options}>
@@ -116,9 +121,8 @@ function Inner({
           can't yet type into. */}
       <div className="relative min-h-[200px] rounded-xl border border-white/10 bg-white/[0.03] p-4">
         {!ready ? (
-          <div className="absolute inset-0 flex items-center justify-center gap-2 text-sm text-slate-400">
-            <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/20 border-t-white/70" />
-            Loading secure card form…
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Spinner label="Loading secure card form…" />
           </div>
         ) : null}
         <div className={ready ? "" : "pointer-events-none opacity-0"}>

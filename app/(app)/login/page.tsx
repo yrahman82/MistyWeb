@@ -4,6 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { login, saveCreds, forgotPassword, auth } from "@/lib/api";
+import { Loader } from "@/components/ui";
 
 function LoginInner() {
   const router = useRouter();
@@ -126,7 +127,7 @@ function LoginInner() {
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={<p className="text-slate-400">Loading…</p>}>
+    <Suspense fallback={<Loader label="Loading…" />}>
       <LoginInner />
     </Suspense>
   );

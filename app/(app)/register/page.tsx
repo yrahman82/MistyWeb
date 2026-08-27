@@ -4,6 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { webRegister, saveCreds, auth } from "@/lib/api";
+import { Loader } from "@/components/ui";
 
 function RegisterInner() {
   const router = useRouter();
@@ -102,7 +103,7 @@ function RegisterInner() {
 
 export default function RegisterPage() {
   return (
-    <Suspense fallback={<p className="text-slate-400">Loading…</p>}>
+    <Suspense fallback={<Loader label="Loading…" />}>
       <RegisterInner />
     </Suspense>
   );

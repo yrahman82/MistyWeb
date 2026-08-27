@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { EmbeddedCheckout, EmbeddedCheckoutProvider } from "@stripe/react-stripe-js";
 import { getStripe } from "@/lib/stripe";
 import ChangeCardForm from "@/components/ChangeCardForm";
+import { Spinner, Loader } from "@/components/ui";
 import {
   auth,
   getStatus,
@@ -159,7 +160,7 @@ function AccountInner() {
     else setView("plans");
   }
 
-  if (loading) return <p className="text-slate-400">Loading…</p>;
+  if (loading) return <Loader label="Loading your account…" />;
 
   // ── Checkout (Stripe Embedded Checkout: address + VAT + 3DS + invoice) ──
   if (view === "checkout") {
@@ -170,23 +171,11 @@ function AccountInner() {
         </button>
         <div className="relative mt-4 min-h-[480px] overflow-hidden rounded-2xl bg-white">
           {clientSecret ? (
-            <>
-              {/* Spinner sits behind the checkout iframe; Stripe's opaque widget covers it once loaded. */}
-              <div className="pointer-events-none absolute inset-0 flex items-center justify-center gap-2 text-sm text-slate-500">
-                <span className="h-4 w-4 animate-spin rounded-full border-2 border-slate-300 border-t-slate-500" />
-                Loading secure checkout…
-              </div>
-              <EmbeddedCheckoutProvider stripe={getStripe()} options={{ clientSecret, onComplete: onPaid }}>
-                <EmbeddedCheckout />
-              </EmbeddedCheckoutProvider>
-            </>
+            <CheckoutFrame clientSecret={clientSecret} onComplete={onPaid} />
           ) : err ? (
             <p className="p-6 text-sm text-red-600">{err}</p>
           ) : (
-            <div className="flex min-h-[480px] items-center justify-center gap-2 text-sm text-slate-500">
-              <span className="h-4 w-4 animate-spin rounded-full border-2 border-slate-300 border-t-slate-500" />
-              Preparing secure checkout…
-            </div>
+            <Loader tone="dark" minH="min-h-[480px]" label="Preparing secure checkout…" />
           )}
         </div>
       </div>
@@ -248,7 +237,7 @@ function AccountInner() {
 
       <Section title="Subscription">
         {activating ? (
-          <p className="text-slate-300">Activating your subscription… this takes a few seconds.</p>
+          <Spinner label="Activating your subscription… this takes a few seconds." />
         ) : status?.subscribed ? (
           <div>
             <div className="flex items-center gap-2">
@@ -404,9 +393,65 @@ function AccountInner() {
 
 export default function AccountPage() {
   return (
-    <Suspense fallback={<p className="text-slate-400">Loading…</p>}>
+    <Suspense fallback={<Loader label="Loading…" />}>
       <AccountInner />
     </Suspense>
+  );
+}
+
+// Stripe Embedded Checkout renders inside an iframe with a transparent middle band, so a spinner
+// placed BEHIND it bleeds through the card fields and never looks "done". Instead show an OPAQUE
+// white overlay on top and remove it the moment the iframe finishes loading (with safety fallbacks so
+// it can never get stuck). One standard <Spinner>, same as everywhere else.
+function CheckoutFrame({
+  clientSecret,
+  onComplete,
+}: {
+  clientSecret: string;
+  onComplete: () => void;
+}) {
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    let done = false;
+    const reveal = () => {
+      if (done) return;
+      done = true;
+      setReady(true);
+    };
+    // Reveal once Stripe's iframe has mounted + fired `load`.
+    const obs = new MutationObserver(() => {
+      const iframe = el.querySelector("iframe");
+      if (iframe) {
+        obs.disconnect();
+        iframe.addEventListener("load", reveal, { once: true });
+        // If it loaded before we attached (or `load` never fires), reveal shortly after mount.
+        setTimeout(reveal, 1200);
+      }
+    });
+    obs.observe(el, { childList: true, subtree: true });
+    // Ultimate fallback — never leave the user staring at a spinner.
+    const t = setTimeout(reveal, 5000);
+    return () => {
+      obs.disconnect();
+      clearTimeout(t);
+    };
+  }, []);
+
+  return (
+    <div ref={wrapRef} className="relative min-h-[480px]">
+      {!ready ? (
+        <div className="absolute inset-0 z-10 flex items-center justify-center bg-white">
+          <Spinner tone="dark" label="Loading secure checkout…" />
+        </div>
+      ) : null}
+      <EmbeddedCheckoutProvider stripe={getStripe()} options={{ clientSecret, onComplete }}>
+        <EmbeddedCheckout />
+      </EmbeddedCheckoutProvider>
+    </div>
   );
 }
 
