@@ -72,6 +72,7 @@ function Inner({
   const elements = useElements();
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
+  const [ready, setReady] = useState(false); // Stripe's card fields have finished loading
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -109,27 +110,42 @@ function Inner({
 
   return (
     <form onSubmit={submit} className="space-y-4">
+      {/* Keep the PaymentElement always mounted + visible so it loads reliably (Stripe shows its own
+          loading shimmer inside). Only our own controls are gated on `ready`, so the shell buttons
+          never appear before Stripe's card fields. */}
+      {!ready ? (
+        <div className="flex items-center gap-2 text-sm text-slate-500">
+          <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/20 border-t-white/70" />
+          Loading secure card form…
+        </div>
+      ) : null}
+
       <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-        <PaymentElement options={PE_OPTIONS} />
+        <PaymentElement options={PE_OPTIONS} onReady={() => setReady(true)} />
       </div>
-      {err ? <p className="text-sm text-red-400">{err}</p> : null}
-      <div className="flex gap-2">
-        <button
-          type="button"
-          onClick={onCancel}
-          disabled={busy}
-          className="rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5 disabled:opacity-50"
-        >
-          Cancel
-        </button>
-        <button
-          type="submit"
-          disabled={busy || !stripe}
-          className="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-ink hover:bg-white disabled:opacity-50"
-        >
-          {busy ? "Saving…" : "Save card"}
-        </button>
-      </div>
+
+      {ready ? (
+        <>
+          {err ? <p className="text-sm text-red-400">{err}</p> : null}
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={onCancel}
+              disabled={busy}
+              className="rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5 disabled:opacity-50"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              disabled={busy || !stripe}
+              className="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-ink hover:bg-white disabled:opacity-50"
+            >
+              {busy ? "Saving…" : "Save card"}
+            </button>
+          </div>
+        </>
+      ) : null}
     </form>
   );
 }
