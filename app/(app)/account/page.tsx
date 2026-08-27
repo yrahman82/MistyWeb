@@ -12,7 +12,6 @@ import {
   getPlans,
   createCheckoutSession,
   resubscribe,
-  removeCard,
   renew,
   cancelSubscription,
   resumeSubscription,
@@ -467,36 +466,16 @@ function PaymentMethodSection({
   onChanged: () => void;
 }) {
   const [changing, setChanging] = useState(false);
-  const [busy, setBusy] = useState(false);
-  const [err, setErr] = useState("");
 
   if (!status) return null;
 
   const brand = status.savedCardBrand ?? status.cardBrand;
   const last4 = status.savedCardLast4 ?? status.cardLast4;
   const hasCard = !!last4;
-  // Can't remove the card an active auto-renewing sub — or a failed renewal still being retried — depends on.
-  const lockedBySub = (!!status.subscribed && !status.willCancel) || !!status.pastDue;
-  const canRemove = hasCard && !lockedBySub;
 
-  async function onRemove() {
-    const msg =
-      status?.subscribed && !status.willCancel
-        ? "Remove your card? Your subscription won't be able to renew without one."
-        : "Remove your saved card?";
-    if (!confirm(msg)) return;
-    setBusy(true);
-    setErr("");
-    try {
-      await removeCard();
-      onChanged();
-    } catch (e) {
-      setErr(e instanceof Error ? e.message : "Could not remove card");
-    } finally {
-      setBusy(false);
-    }
-  }
-
+  // NOTE: no "Remove card" for now — we keep the last payment method on file (like most subscription
+  // products) to avoid the "cancel → remove card → re-enable auto-renew = renewing sub with no card"
+  // hole. Removing a card needs a proper design pass (only when safe, add-another-first, etc.).
   return (
     <Section title="Payment Method">
       {changing ? (
@@ -505,38 +484,17 @@ function PaymentMethodSection({
           onCancel={() => setChanging(false)}
         />
       ) : (
-        <>
-          <div className="flex items-center justify-between gap-4">
-            <p className="text-sm text-white">
-              {hasCard ? `${brandLabel(brand)} •••• ${last4}` : "No card on file"}
-            </p>
-            <div className="flex gap-2">
-              <button
-                onClick={() => setChanging(true)}
-                disabled={busy}
-                className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5 disabled:opacity-50"
-              >
-                {hasCard ? "Change" : "Add card"}
-              </button>
-              {canRemove ? (
-                <button
-                  onClick={onRemove}
-                  disabled={busy}
-                  className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-sm text-red-400 hover:bg-white/5 disabled:opacity-50"
-                >
-                  {busy ? "…" : "Remove"}
-                </button>
-              ) : null}
-            </div>
-          </div>
-          {hasCard && lockedBySub ? (
-            <p className="mt-3 text-xs text-slate-500">
-              Your card can&apos;t be removed while your subscription is active or a payment is being
-              retried.
-            </p>
-          ) : null}
-          {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
-        </>
+        <div className="flex items-center justify-between gap-4">
+          <p className="text-sm text-white">
+            {hasCard ? `${brandLabel(brand)} •••• ${last4}` : "No card on file"}
+          </p>
+          <button
+            onClick={() => setChanging(true)}
+            className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5"
+          >
+            {hasCard ? "Change" : "Add card"}
+          </button>
+        </div>
       )}
     </Section>
   );

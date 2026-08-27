@@ -146,11 +146,6 @@ export function resubscribe(plan: string) {
   });
 }
 
-// Remove the saved card (detach + clear default).
-export function removeCard() {
-  return req<{ removed: boolean }>("/api/stripe/remove-card", { auth: true, body: {} });
-}
-
 // Manually retry a failed renewal (dunning "Renew"). status:"active" → recovered; needsCard → update card.
 export function renew() {
   return req<{ status?: string; needsCard?: boolean }>("/api/stripe/renew", { auth: true, body: {} });
