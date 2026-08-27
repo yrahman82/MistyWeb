@@ -354,7 +354,7 @@ function AccountInner() {
         <CopyRow label="Password" value={status?.vpnPassword ?? ""} />
       </Section>
 
-      <AccountActions onDeleted={() => { logout(); router.replace("/"); }} />
+      <AccountActions email={status?.email} onDeleted={() => { logout(); router.replace("/"); }} />
     </div>
   );
 }
@@ -400,7 +400,7 @@ function CopyRow({ label, value }: { label: string; value: string }) {
   );
 }
 
-function AccountActions({ onDeleted }: { onDeleted: () => void }) {
+function AccountActions({ email, onDeleted }: { email?: string; onDeleted: () => void }) {
   const [pwOpen, setPwOpen] = useState(false);
   const [cur, setCur] = useState("");
   const [next, setNext] = useState("");
@@ -425,6 +425,12 @@ function AccountActions({ onDeleted }: { onDeleted: () => void }) {
 
   return (
     <Section title="Account">
+      {email ? (
+        <div className="mb-1 flex items-center justify-between gap-4 border-b border-white/5 py-2">
+          <span className="text-sm text-slate-400">Email</span>
+          <span className="text-sm text-white">{email}</span>
+        </div>
+      ) : null}
       {!pwOpen ? (
         <button onClick={() => setPwOpen(true)} className="flex w-full items-center justify-between py-2 text-left">
           <span className="text-sm text-white">Change Password</span>
