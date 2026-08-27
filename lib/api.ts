@@ -86,6 +86,8 @@ export type SubStatus = {
   willCancel: boolean;
   // A failed renewal still inside the dunning window: no access, but show a "Renew" state + block buy-new.
   pastDue?: boolean;
+  amount?: number | null;
+  currency?: string | null;
   freeMinutes: number;
   cardBrand?: string | null;
   cardLast4?: string | null;

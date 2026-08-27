@@ -340,9 +340,26 @@ function AccountInner() {
               <span className="font-semibold text-white">Payment issue</span>
             </div>
             <p className="mt-2 text-sm text-amber-400/90">
-              We couldn&apos;t renew your subscription. We&apos;re retrying automatically — or renew
-              now to restore access right away.
+              We couldn&apos;t renew your MistyVPN Premium subscription. We&apos;re retrying
+              automatically — or renew now to restore access right away.
             </p>
+            <div className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] p-4 text-sm">
+              <div className="flex items-center justify-between gap-4">
+                <span className="text-slate-400">Plan</span>
+                <span className="text-white">
+                  MistyVPN Premium{status.amount != null ? ` · ${fmtMoney(status.amount, status.currency)}` : ""}
+                </span>
+              </div>
+              {status.savedCardLast4 ?? status.cardLast4 ? (
+                <div className="mt-2 flex items-center justify-between gap-4">
+                  <span className="text-slate-400">Card</span>
+                  <span className="text-white">
+                    {brandLabel(status.savedCardBrand ?? status.cardBrand)} ••••{" "}
+                    {status.savedCardLast4 ?? status.cardLast4}
+                  </span>
+                </div>
+              ) : null}
+            </div>
             <div className="mt-4">
               <button
                 onClick={onRenew}
@@ -399,6 +416,19 @@ export default function AccountPage() {
 function brandLabel(brand?: string | null): string {
   if (!brand) return "Card";
   return brand.charAt(0).toUpperCase() + brand.slice(1);
+}
+
+// Format a ledger amount + currency, e.g. 3.99 + "usd" → "$3.99".
+function fmtMoney(amount?: number | null, currency?: string | null): string {
+  if (amount == null) return "";
+  try {
+    return new Intl.NumberFormat(undefined, {
+      style: "currency",
+      currency: (currency || "USD").toUpperCase(),
+    }).format(amount);
+  } catch {
+    return `${amount}`;
+  }
 }
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
