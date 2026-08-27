@@ -37,7 +37,13 @@ async function req<T>(path: string, opts: Opts = {}): Promise<T> {
   const text = await res.text();
   const data = text ? JSON.parse(text) : {};
   if (!res.ok) {
-    throw new Error(data?.error || `Request failed (${res.status})`);
+    // Attach the HTTP status so callers can tell a real 401 (log out) from a transient
+    // network/5xx error (keep the session, retry) — never log a user out on a blip.
+    const err = new Error(data?.error || `Request failed (${res.status})`) as Error & {
+      status?: number;
+    };
+    err.status = res.status;
+    throw err;
   }
   return data as T;
 }

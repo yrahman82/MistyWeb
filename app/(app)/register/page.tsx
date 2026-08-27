@@ -1,14 +1,19 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { webRegister, saveCreds } from "@/lib/api";
+import { webRegister, saveCreds, auth } from "@/lib/api";
 
 function RegisterInner() {
   const router = useRouter();
   const params = useSearchParams();
   const next = params.get("next") || "/account";
+
+  // Already signed in? Don't show a "create account" form — go where they were headed.
+  useEffect(() => {
+    if (auth.isLoggedIn) router.replace(next);
+  }, [router, next]);
   const loginHref = `/login?next=${encodeURIComponent(next)}`;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

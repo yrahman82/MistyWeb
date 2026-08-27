@@ -79,7 +79,17 @@ function AccountInner() {
           choosePlan(planParam!);
         }
       })
-      .catch(() => { logout(); router.replace("/login?next=/account"); })
+      .catch((e) => {
+        // Only log out on a genuine 401 (token invalid/expired). A network blip or 5xx must NOT
+        // sign the user out — otherwise buying/refreshing during a hiccup bounces them to login.
+        if ((e as { status?: number })?.status === 401) {
+          logout();
+          const back = planParam ? `/account?plan=${planParam}` : "/account";
+          router.replace(`/login?next=${encodeURIComponent(back)}`);
+        } else {
+          setErr("Couldn't load your account. Check your connection and try again.");
+        }
+      })
       .finally(() => setLoading(false));
   }, [router, refresh, planParam, cameFromPricing, choosePlan]);
 

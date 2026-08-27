@@ -1,14 +1,19 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { login, saveCreds, forgotPassword } from "@/lib/api";
+import { login, saveCreds, forgotPassword, auth } from "@/lib/api";
 
 function LoginInner() {
   const router = useRouter();
   const params = useSearchParams();
   const next = params.get("next") || "/account";
+
+  // Already signed in? Skip the login form and continue to where they were going.
+  useEffect(() => {
+    if (auth.isLoggedIn) router.replace(next);
+  }, [router, next]);
   const registerHref = `/register?next=${encodeURIComponent(next)}`;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
