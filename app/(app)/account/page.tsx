@@ -13,6 +13,7 @@ import {
   createCheckoutSession,
   resubscribe,
   removeCard,
+  renew,
   cancelSubscription,
   resumeSubscription,
   changePassword,
@@ -137,6 +138,20 @@ function AccountInner() {
     try { await resumeSubscription(); await refresh(); }
     catch (e) { setErr(e instanceof Error ? e.message : "Could not resume"); }
     finally { setBusy(false); }
+  }
+
+  async function onRenew() {
+    setBusy(true); setErr("");
+    try {
+      const r = await renew();
+      if (r.status === "active") { onPaid(); return; }   // recovered — poll to Premium Active
+      if (r.needsCard) setErr("We couldn't charge your saved card — update it below, then try Renew again.");
+      else await refresh();
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : "Could not renew");
+    } finally {
+      setBusy(false);
+    }
   }
 
   function backFromCheckout() {
@@ -318,6 +333,30 @@ function AccountInner() {
             )}
             {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
           </div>
+        ) : status?.pastDue ? (
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+              <span className="font-semibold text-white">Payment issue</span>
+            </div>
+            <p className="mt-2 text-sm text-amber-400/90">
+              We couldn&apos;t renew your subscription. We&apos;re retrying automatically — or renew
+              now to restore access right away.
+            </p>
+            <div className="mt-4">
+              <button
+                onClick={onRenew}
+                disabled={busy}
+                className="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-ink hover:bg-white disabled:opacity-50"
+              >
+                {busy ? "Retrying…" : "Renew now"}
+              </button>
+            </div>
+            <p className="mt-3 text-xs text-slate-500">
+              If your card keeps failing, update it below and we&apos;ll retry with the new card.
+            </p>
+            {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
+          </div>
         ) : (
           <div>
             <p className="font-semibold text-white">Free Plan</p>
@@ -406,8 +445,8 @@ function PaymentMethodSection({
   const brand = status.savedCardBrand ?? status.cardBrand;
   const last4 = status.savedCardLast4 ?? status.cardLast4;
   const hasCard = !!last4;
-  // Can't remove the card an active, auto-renewing subscription depends on.
-  const lockedBySub = !!status.subscribed && !status.willCancel;
+  // Can't remove the card an active auto-renewing sub — or a failed renewal still being retried — depends on.
+  const lockedBySub = (!!status.subscribed && !status.willCancel) || !!status.pastDue;
   const canRemove = hasCard && !lockedBySub;
 
   async function onRemove() {
@@ -462,8 +501,8 @@ function PaymentMethodSection({
           </div>
           {hasCard && lockedBySub ? (
             <p className="mt-3 text-xs text-slate-500">
-              Your card can&apos;t be removed while your subscription is set to renew — turn off
-              auto-renewal first.
+              Your card can&apos;t be removed while your subscription is active or a payment is being
+              retried.
             </p>
           ) : null}
           {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
