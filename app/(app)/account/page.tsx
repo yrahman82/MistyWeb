@@ -3,8 +3,7 @@
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { EmbeddedCheckout, EmbeddedCheckoutProvider } from "@stripe/react-stripe-js";
-import { getStripe } from "@/lib/stripe";
+import CheckoutForm from "@/components/CheckoutForm";
 import ChangeCardForm from "@/components/ChangeCardForm";
 import { Spinner, Loader } from "@/components/ui";
 import {
@@ -34,6 +33,8 @@ function AccountInner() {
   const params = useSearchParams();
   const planParam = params.get("plan");
   const cameFromPricing = !!planParam;
+  // Redirect-based payment methods (PayPal / some 3DS) come back to returnUrl with ?checkout=complete.
+  const returnedFromCheckout = params.get("checkout") === "complete";
 
   const [plans, setPlans] = useState<Plan[]>([]);
   const [status, setStatus] = useState<SubStatus | null>(null);
@@ -125,6 +126,16 @@ function AccountInner() {
     getPlans().then(setPlans).catch(() => {});
   }, []);
 
+  // Came back from a redirect-based payment (PayPal / 3DS) → poll to Premium Active, then clean the URL.
+  const handledReturn = useRef(false);
+  useEffect(() => {
+    if (returnedFromCheckout && auth.isLoggedIn && !handledReturn.current) {
+      handledReturn.current = true;
+      onPaid();
+      router.replace("/account");
+    }
+  }, [returnedFromCheckout, onPaid, router]);
+
   async function onCancel() {
     if (!confirm("Cancel your subscription? You'll keep access until the current period ends.")) return;
     setBusy(true); setErr("");
@@ -169,9 +180,14 @@ function AccountInner() {
         <button onClick={backFromCheckout} className="text-sm text-slate-400 hover:text-white">
           {cameFromPricing ? "← Back to plans" : "← Change plan"}
         </button>
-        <div className="relative mt-4 min-h-[480px] overflow-hidden rounded-2xl bg-white">
+        <div className="mt-4 overflow-hidden rounded-2xl bg-white">
           {clientSecret ? (
-            <CheckoutFrame clientSecret={clientSecret} onComplete={onPaid} />
+            <CheckoutForm
+              clientSecret={clientSecret}
+              returnUrl={`${typeof window !== "undefined" ? window.location.origin : ""}/account?checkout=complete`}
+              priceLabel={plans.find((p) => p.key === plan)?.price ?? undefined}
+              onPaid={onPaid}
+            />
           ) : err ? (
             <p className="p-6 text-sm text-red-600">{err}</p>
           ) : (
@@ -396,62 +412,6 @@ export default function AccountPage() {
     <Suspense fallback={<Loader label="Loading…" />}>
       <AccountInner />
     </Suspense>
-  );
-}
-
-// Stripe Embedded Checkout renders inside an iframe with a transparent middle band, so a spinner
-// placed BEHIND it bleeds through the card fields and never looks "done". Instead show an OPAQUE
-// white overlay on top and remove it the moment the iframe finishes loading (with safety fallbacks so
-// it can never get stuck). One standard <Spinner>, same as everywhere else.
-function CheckoutFrame({
-  clientSecret,
-  onComplete,
-}: {
-  clientSecret: string;
-  onComplete: () => void;
-}) {
-  const wrapRef = useRef<HTMLDivElement>(null);
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    const el = wrapRef.current;
-    if (!el) return;
-    let done = false;
-    const reveal = () => {
-      if (done) return;
-      done = true;
-      setReady(true);
-    };
-    // Reveal once Stripe's iframe has mounted + fired `load`.
-    const obs = new MutationObserver(() => {
-      const iframe = el.querySelector("iframe");
-      if (iframe) {
-        obs.disconnect();
-        iframe.addEventListener("load", reveal, { once: true });
-        // If it loaded before we attached (or `load` never fires), reveal shortly after mount.
-        setTimeout(reveal, 1200);
-      }
-    });
-    obs.observe(el, { childList: true, subtree: true });
-    // Ultimate fallback — never leave the user staring at a spinner.
-    const t = setTimeout(reveal, 5000);
-    return () => {
-      obs.disconnect();
-      clearTimeout(t);
-    };
-  }, []);
-
-  return (
-    <div ref={wrapRef} className="relative min-h-[480px]">
-      {!ready ? (
-        <div className="absolute inset-0 z-10 flex items-center justify-center bg-white">
-          <Spinner tone="dark" label="Loading secure checkout…" />
-        </div>
-      ) : null}
-      <EmbeddedCheckoutProvider stripe={getStripe()} options={{ clientSecret, onComplete }}>
-        <EmbeddedCheckout />
-      </EmbeddedCheckoutProvider>
-    </div>
   );
 }
 
