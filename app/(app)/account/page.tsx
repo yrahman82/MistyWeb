@@ -154,15 +154,25 @@ function AccountInner() {
         <button onClick={backFromCheckout} className="text-sm text-slate-400 hover:text-white">
           {cameFromPricing ? "← Back to plans" : "← Change plan"}
         </button>
-        <div className="mt-4 overflow-hidden rounded-2xl bg-white">
+        <div className="relative mt-4 min-h-[480px] overflow-hidden rounded-2xl bg-white">
           {clientSecret ? (
-            <EmbeddedCheckoutProvider stripe={getStripe()} options={{ clientSecret, onComplete: onPaid }}>
-              <EmbeddedCheckout />
-            </EmbeddedCheckoutProvider>
+            <>
+              {/* Spinner sits behind the checkout iframe; Stripe's opaque widget covers it once loaded. */}
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center gap-2 text-sm text-slate-500">
+                <span className="h-4 w-4 animate-spin rounded-full border-2 border-slate-300 border-t-slate-500" />
+                Loading secure checkout…
+              </div>
+              <EmbeddedCheckoutProvider stripe={getStripe()} options={{ clientSecret, onComplete: onPaid }}>
+                <EmbeddedCheckout />
+              </EmbeddedCheckoutProvider>
+            </>
           ) : err ? (
             <p className="p-6 text-sm text-red-600">{err}</p>
           ) : (
-            <p className="p-6 text-sm text-slate-500">Preparing secure checkout…</p>
+            <div className="flex min-h-[480px] items-center justify-center gap-2 text-sm text-slate-500">
+              <span className="h-4 w-4 animate-spin rounded-full border-2 border-slate-300 border-t-slate-500" />
+              Preparing secure checkout…
+            </div>
           )}
         </div>
       </div>
@@ -351,10 +361,30 @@ function AccountInner() {
               Upgrade to Premium
             </button>
             {status?.hasSavedCard ? (
-              <p className="mt-4 text-xs text-slate-500">
-                Saved card on file: {brandLabel(status.savedCardBrand)} ••••{" "}
-                {status.savedCardLast4} — it&apos;ll be used automatically when you resubscribe.
-              </p>
+              <div className="mt-5 border-t border-white/5 pt-4">
+                {changingCard ? (
+                  <ChangeCardForm
+                    onDone={() => { setChangingCard(false); refresh().catch(() => {}); }}
+                    onCancel={() => setChangingCard(false)}
+                  />
+                ) : (
+                  <div className="flex items-center justify-between gap-4">
+                    <div>
+                      <p className="text-xs uppercase tracking-wider text-slate-400">Saved card</p>
+                      <p className="mt-1 text-sm text-white">
+                        {brandLabel(status.savedCardBrand)} •••• {status.savedCardLast4}
+                      </p>
+                      <p className="mt-1 text-xs text-slate-500">Used automatically when you resubscribe.</p>
+                    </div>
+                    <button
+                      onClick={() => setChangingCard(true)}
+                      className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5"
+                    >
+                      Change
+                    </button>
+                  </div>
+                )}
+              </div>
             ) : null}
           </div>
         )}
