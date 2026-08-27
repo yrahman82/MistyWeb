@@ -128,7 +128,7 @@ export default function FeaturesPage() {
               The full toolkit, free to start — no credit card.
             </p>
             <div className="mt-8 flex justify-center gap-3">
-              <Button href="/#get-started" className="px-8">
+              <Button href="/download" className="px-8">
                 Get MistyVPN free
               </Button>
               <Button href="/pricing" variant="secondary">

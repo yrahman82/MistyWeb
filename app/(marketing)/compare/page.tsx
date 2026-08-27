@@ -3,11 +3,12 @@ import { Container, SectionHeading, Button, Eyebrow } from "@/components/ui";
 import { CheckIcon, CloseIcon } from "@/components/Icons";
 import JsonLd from "@/components/JsonLd";
 import { comparison, site } from "@/lib/site";
+import { getMonthlyPrice, getAnnualPerMonth } from "@/lib/pricing";
 
 export const metadata: Metadata = {
-  title: "MistyVPN vs NordVPN, ExpressVPN & Surfshark",
+  title: "MistyVPN vs NordVPN, ExpressVPN & PureVPN",
   description:
-    "See how MistyVPN compares to NordVPN, ExpressVPN and Surfshark — a free tier, next-gen anti-block technology, and premium for less. Honest side-by-side.",
+    "See how MistyVPN compares to NordVPN, ExpressVPN and PureVPN — a free tier, a built-in password manager & authenticator, next-gen anti-block technology, and premium for less. Honest side-by-side.",
   alternates: { canonical: "/compare" },
 };
 
@@ -35,8 +36,17 @@ function Cell({ value, isUs }: { value: boolean | string; isUs: boolean }) {
   );
 }
 
-export default function ComparePage() {
-  const { providers, rows } = comparison;
+export default async function ComparePage() {
+  const { providers } = comparison;
+  // MistyVPN's monthly price is DB-driven — override the static value so the table can't drift
+  // from what checkout charges (see lib/pricing.ts).
+  const monthlyPrice = await getMonthlyPrice();
+  const annualPerMonth = await getAnnualPerMonth();
+  const rows = comparison.rows.map((row) =>
+    row.label === "Monthly price"
+      ? { ...row, values: [monthlyPrice, ...row.values.slice(1)] }
+      : row,
+  );
 
   return (
     <>
@@ -105,7 +115,7 @@ export default function ComparePage() {
             Prices shown are standard <strong>month-to-month</strong> rates — the
             headline prices competitors advertise typically require a 1–2 year
             commitment. Competitor details reflect publicly listed features and
-            pricing as of June 2026 and may change — please verify on each
+            pricing as of August 2026 and may change — please verify on each
             provider&apos;s own website. Comparisons are provided in good faith
             for general guidance.
           </p>
@@ -118,19 +128,23 @@ export default function ComparePage() {
             eyebrow="Why people switch"
             title="What actually sets MistyVPN apart"
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
               [
                 "A real free tier",
                 "Most premium VPNs have no free option at all. MistyVPN lets you start for free and earn free minutes — no card, no commitment.",
               ],
               [
+                "Password manager + 2FA, free",
+                "A full encrypted password manager and a built-in authenticator come free on every plan. NordVPN, ExpressVPN and PureVPN gate these behind a pricier tier or sell them as paid add-ons.",
+              ],
+              [
                 "Built to beat blocks",
-                "Stealth Mode uses next-generation anti-censorship technology, so MistyVPN keeps working on networks where mainstream VPNs are detected and blocked.",
+                "Stealth Mode uses next-generation anti-censorship tech (Reality + Hysteria2), so MistyVPN keeps working in China and behind strict firewalls where mainstream VPNs get detected and blocked.",
               ],
               [
                 "A fraction of the price",
-                "Month-to-month, MistyVPN is $3.99 — versus roughly $13–15 the big names charge without a long contract. On the annual plan it's just $1.50/mo.",
+                `Month-to-month, MistyVPN is ${monthlyPrice} — versus roughly $12–13 the big names charge without a long contract. On the annual plan it's just ${annualPerMonth}.`,
               ],
             ].map(([t, b]) => (
               <div
@@ -152,10 +166,11 @@ export default function ComparePage() {
               See the difference yourself
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-slate-300">
-              Free to start — no card, nothing logged.
+              Free to start — no card, nothing logged. Premium is covered by a
+              14-day money-back guarantee.
             </p>
             <div className="mt-8 flex justify-center">
-              <Button href="/#get-started" className="px-8">
+              <Button href="/download" className="px-8">
                 Get MistyVPN free
               </Button>
             </div>

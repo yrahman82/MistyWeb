@@ -113,7 +113,7 @@ export default function NoLogsPage() {
               Privacy you don&apos;t have to take on faith
             </h2>
             <div className="mt-8 flex justify-center">
-              <Button href="/#get-started" className="px-8">
+              <Button href="/download" className="px-8">
                 Get MistyVPN free
               </Button>
             </div>

@@ -131,6 +131,32 @@ export function SparkleIcon(p: IconProps) {
   );
 }
 
+export function KeyIcon(p: IconProps) {
+  return (
+    <svg {...base} {...p}>
+      <circle cx="7.5" cy="15.5" r="3.5" />
+      <path d="M10 13l7-7m0 0l2.5 2.5M17 6l2 2" />
+    </svg>
+  );
+}
+
+export function OtpIcon(p: IconProps) {
+  return (
+    <svg {...base} {...p}>
+      <rect x="6" y="3" width="12" height="18" rx="2.5" />
+      <path d="M9.5 12.5l1.7 1.7 3.3-3.4" />
+    </svg>
+  );
+}
+
+export function DownloadIcon(p: IconProps) {
+  return (
+    <svg {...base} {...p}>
+      <path d="M12 4v10m0 0l-4-4m4 4l4-4M5 19h14" />
+    </svg>
+  );
+}
+
 export function MenuIcon(p: IconProps) {
   return (
     <svg {...base} {...p}>
@@ -186,6 +212,9 @@ export const iconMap = {
   clock: ClockIcon,
   check: CheckIcon,
   sparkle: SparkleIcon,
+  key: KeyIcon,
+  otp: OtpIcon,
+  download: DownloadIcon,
   apple: AppleIcon,
   android: AndroidIcon,
   tv: TvIcon,

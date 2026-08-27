@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Container, SectionHeading, Button, Eyebrow } from "@/components/ui";
 import { CheckIcon } from "@/components/Icons";
 import JsonLd from "@/components/JsonLd";
-import { plans, faqs, site } from "@/lib/site";
+import { faqs, site, moneyBack } from "@/lib/site";
+import { getPlans } from "@/lib/pricing";
 
 export const metadata: Metadata = {
   title: "Pricing — free to start, Premium from $2.50/mo",
@@ -20,7 +21,10 @@ const breadcrumbLd = {
   ],
 };
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  // Prices come from the DB paywall (same source as the apps + checkout) — see lib/pricing.ts.
+  const plans = await getPlans();
+
   return (
     <>
       <JsonLd data={breadcrumbLd} />
@@ -93,9 +97,20 @@ export default function PricingPage() {
               </div>
             ))}
           </div>
+          {/* Money-back guarantee */}
+          <div className="mx-auto mt-10 flex max-w-2xl flex-col items-center gap-3 rounded-2xl border border-mint/30 bg-mint/[0.06] px-6 py-6 text-center sm:flex-row sm:gap-4 sm:text-left">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-mint/15 text-mint">
+              <CheckIcon className="h-6 w-6" />
+            </span>
+            <div>
+              <p className="font-semibold text-white">{moneyBack.headline}</p>
+              <p className="mt-1 text-sm text-slate-300">{moneyBack.fineprint}</p>
+            </div>
+          </div>
+
           <p className="mt-8 text-center text-sm text-slate-500">
-            Prices in USD. Subscriptions are purchased and managed in the app via
-            the App Store or Google Play; taxes and local pricing are applied at
+            Prices in USD, billed through secure checkout on the web or via the
+            App Store / Google Play; taxes and local pricing are applied at
             checkout. Cancel any time.
           </p>
         </Container>

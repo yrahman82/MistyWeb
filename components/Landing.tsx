@@ -58,7 +58,7 @@ export function Landing({
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">{lede}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/#get-started" className="px-8">
+            <Button href="/download" className="px-8">
               Get MistyVPN free
             </Button>
             <Button href="/features" variant="secondary">
@@ -134,7 +134,7 @@ export function Landing({
               Free to start, no credit card, strict no-logs.
             </p>
             <div className="mt-8 flex justify-center">
-              <Button href="/#get-started" className="px-8">
+              <Button href="/download" className="px-8">
                 Get MistyVPN free
               </Button>
             </div>

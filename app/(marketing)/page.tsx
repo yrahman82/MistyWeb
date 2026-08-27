@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container, SectionHeading, Button, Card, Eyebrow } from "@/components/ui";
 import { iconMap } from "@/components/Icons";
 import JsonLd from "@/components/JsonLd";
-import { features, platforms, faqs, stats, steps, site } from "@/lib/site";
+import { features, faqs, stats, steps, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: `${site.name} — Private, unblocked, fast on every device`,
@@ -73,13 +73,16 @@ export default function HomePage() {
             locations, and a strict no-logs promise.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button href="/#get-started" className="px-8">
+            <Button href="/download" className="px-8">
               Get MistyVPN free
             </Button>
             <Button href="/pricing" variant="secondary">
               See plans
             </Button>
           </div>
+          <p className="mt-4 text-sm text-slate-400">
+            Password manager &amp; authenticator included · 14-day money-back guarantee
+          </p>
 
           {/* stats */}
           <dl className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
@@ -205,39 +208,6 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Get started / platforms */}
-      <section id="get-started" className="scroll-mt-24 py-16">
-        <Container>
-          <SectionHeading
-            center
-            eyebrow="Get started"
-            title="One account. Every device."
-            body="Download MistyVPN and connect in seconds. Coming to all major platforms."
-          />
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {platforms.map((p) => {
-              const Icon = iconMap[p.icon as keyof typeof iconMap];
-              return (
-                <a
-                  key={p.name}
-                  href={p.href}
-                  className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition-colors hover:border-brand/40 hover:bg-white/[0.07]"
-                >
-                  <Icon className="h-8 w-8 text-white" />
-                  <div>
-                    <div className="text-sm font-semibold text-white">{p.name}</div>
-                    <div className="text-xs text-slate-400">{p.store}</div>
-                  </div>
-                </a>
-              );
-            })}
-          </div>
-          <p className="mt-6 text-center text-sm text-slate-400">
-            Coming soon to the App Store and Google Play.
-          </p>
-        </Container>
-      </section>
-
       {/* FAQ */}
       <section id="faq" className="py-16">
         <Container>
@@ -266,10 +236,11 @@ export default function HomePage() {
               Your private internet starts now.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-slate-300">
-              Free to try, no card, nothing logged. Be connected in under a minute.
+              Free to try, no card, nothing logged. Premium is backed by a 14-day
+              money-back guarantee — be connected in under a minute.
             </p>
             <div className="mt-8 flex justify-center">
-              <Button href="/#get-started" className="px-8">
+              <Button href="/download" className="px-8">
                 Get MistyVPN free
               </Button>
             </div>

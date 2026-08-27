@@ -22,12 +22,12 @@ export const site = {
   },
   locations: "30+",
   languages: 16,
-  // Store links are placeholders until the apps are published.
+  // Store links point at the /download hub until the real App Store / Play Store URLs are live.
   stores: {
-    ios: "#get-started",
-    android: "#get-started",
-    mac: "#get-started",
-    tv: "#get-started",
+    ios: "/download",
+    android: "/download",
+    mac: "/download",
+    tv: "/download",
   },
 } as const;
 
@@ -62,13 +62,25 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
   {
     title: "Get the app",
     items: [
-      { label: "iPhone & iPad", href: "/#get-started" },
-      { label: "Android", href: "/#get-started" },
-      { label: "Mac", href: "/#get-started" },
-      { label: "Android TV", href: "/#get-started" },
+      { label: "Download", href: "/download" },
+      { label: "iPhone & iPad", href: "/download" },
+      { label: "Android", href: "/download" },
+      { label: "Mac", href: "/download" },
+      { label: "Android TV", href: "/download" },
     ],
   },
 ];
+
+// 14-day money-back guarantee — the trust promise, referenced across the site so the
+// wording (and the day count) live in exactly one place.
+export const moneyBack = {
+  days: 14,
+  short: "14-day money-back guarantee",
+  headline: "14-day money-back guarantee — no questions asked",
+  // Fine print: web (card) purchases are refunded by us directly; store purchases follow the store's flow.
+  fineprint:
+    "Not happy in your first 14 days? Email us for a full refund — no questions asked. Purchases made through the App Store or Google Play are refunded via the store.",
+} as const;
 
 // Headline stats for the hero trust strip.
 export const stats = [
@@ -109,6 +121,16 @@ export const features = [
     icon: "lock",
     title: "Kill switch",
     body: "If the connection ever drops, MistyVPN instantly blocks traffic so nothing slips out unprotected.",
+  },
+  {
+    icon: "key",
+    title: "Password Manager",
+    body: "A full, encrypted password manager built right into the app — save logins, generate strong passwords and autofill everywhere. The big VPNs lock this behind a pricier tier or charge extra for it. With MistyVPN it's simply included, free.",
+  },
+  {
+    icon: "otp",
+    title: "Authenticator (2FA)",
+    body: "Built-in two-factor code generator — replace Google Authenticator and keep your one-time codes in the same secure, encrypted vault as your passwords. No other subscription, no add-on. Included free.",
   },
   {
     icon: "devices",
@@ -188,7 +210,15 @@ export const faqs = [
   },
   {
     q: "How do I pay?",
-    a: "Subscriptions are handled securely inside the app through the App Store or Google Play. Cancel any time from your store account.",
+    a: "Pay securely by card on the web, or inside the app through the App Store or Google Play. Cancel any time — from your account here or from your store account.",
+  },
+  {
+    q: "Is there a money-back guarantee?",
+    a: "Yes — every paid plan is covered by a 14-day money-back guarantee, no questions asked. Not happy in your first two weeks? Email us for a full refund. Purchases made through the App Store or Google Play are refunded via the store's standard process.",
+  },
+  {
+    q: "Does MistyVPN include a password manager?",
+    a: "Yes — a full encrypted password manager and a built-in two-factor authenticator are included free on every plan, even the free tier. Most other VPNs either don't offer this or charge extra for it on a higher tier.",
   },
 ];
 
@@ -261,19 +291,25 @@ export const plans = [
   },
 ];
 
-// Comparison page data. Competitor info reflects publicly listed features as of
-// June 2026 and should be verified on each provider's site (note shown on page).
+// Comparison page data. Competitor info reflects publicly listed features and pricing as of
+// August 2026 and should be verified on each provider's site (note shown on page).
+// MistyVPN's "Monthly price" value is overridden at render time from the DB paywall so it never
+// drifts from what checkout actually charges (see compare/page.tsx).
 export const comparison = {
-  providers: ["MistyVPN", "NordVPN", "ExpressVPN", "Surfshark"],
+  providers: ["MistyVPN", "NordVPN", "ExpressVPN", "PureVPN"],
   rows: [
-    { label: "Monthly price", values: ["$3.99", "~$12.99", "~$12.95", "~$15.45"] },
+    { label: "Monthly price", values: ["$3.99", "~$12.99", "~$12.99", "~$11.95"] },
     { label: "Free tier", values: ["Yes — earn free minutes", "No", "No", "No"] },
     { label: "Best rate without a 1–2 yr contract", values: [true, false, false, false] },
+    { label: "Password manager included free", values: ["Yes — every plan", "Higher tier", "Higher tier", "Add-on"] },
+    { label: "Built-in authenticator (2FA codes)", values: [true, "Higher tier", "Higher tier", false] },
     { label: "Next-gen anti-censorship (Reality / Hysteria2)", values: [true, "Limited", "Limited", "Limited"] },
-    { label: "Stealth Mode (beats blocks)", values: [true, true, true, true] },
+    { label: "Works in China & strict firewalls", values: ["Built for it", "Limited", "Limited", "Limited"] },
+    { label: "Stealth Mode (beats blocks)", values: [true, true, true, "Limited"] },
     { label: "Split tunneling", values: [true, true, "Limited", true] },
     { label: "Kill switch", values: [true, true, true, true] },
     { label: "Strict no-logs", values: [true, true, true, true] },
+    { label: "Devices at once", values: ["10", "10", "8", "10"] },
     { label: "App languages", values: ["16", "varies", "varies", "varies"] },
   ] as { label: string; values: (boolean | string)[] }[],
 };

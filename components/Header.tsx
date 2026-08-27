@@ -63,7 +63,7 @@ export default function Header() {
               Sign in
             </Link>
           )}
-          <Button href="/#get-started" variant="primary" className="h-10 px-5">
+          <Button href="/download" variant="primary" className="h-10 px-5">
             Get MistyVPN
           </Button>
         </div>
@@ -101,7 +101,7 @@ export default function Header() {
             >
               {loggedIn ? "Account" : "Sign in"}
             </Link>
-            <Button href="/#get-started" variant="primary" className="mt-3 w-full">
+            <Button href="/download" variant="primary" className="mt-3 w-full">
               Get MistyVPN
             </Button>
           </div>

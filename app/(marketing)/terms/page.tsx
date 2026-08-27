@@ -49,10 +49,24 @@ export default function TermsPage() {
 
             <h2>Subscriptions and billing</h2>
             <p>
-              Subscriptions are sold and managed through the Apple App Store and
-              Google Play. Billing, renewals, and refunds are subject to the
-              policies of those stores. Manage or cancel your subscription through
-              your store account.
+              Subscriptions are sold by card through secure checkout on this
+              website, or through the Apple App Store and Google Play. For store
+              purchases, billing, renewals, and refunds are subject to the
+              policies of those stores — manage or cancel through your store
+              account. For purchases made on this website, manage or cancel any
+              time from your account page.
+            </p>
+
+            <h2>14-day money-back guarantee</h2>
+            <p>
+              Every paid plan is covered by a 14-day money-back guarantee. If you
+              are not satisfied within 14 days of your initial purchase, contact
+              us at {site.email} for a full refund — no questions asked. For
+              purchases made on this website we refund the original payment method
+              directly. For purchases made through the Apple App Store or Google
+              Play, refunds are processed through the respective store&apos;s
+              refund process, which we will help you with. The guarantee applies
+              to your first purchase and not to subsequent renewals.
             </p>
 
             <h2>Service availability</h2>
