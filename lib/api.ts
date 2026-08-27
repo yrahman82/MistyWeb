@@ -142,6 +142,11 @@ export function resubscribe(plan: string) {
   });
 }
 
+// Remove the saved card (detach + clear default).
+export function removeCard() {
+  return req<{ removed: boolean }>("/api/stripe/remove-card", { auth: true, body: {} });
+}
+
 export function cancelSubscription() {
   return req<{ message: string; expiresAt: string }>("/api/stripe/cancel", {
     auth: true,

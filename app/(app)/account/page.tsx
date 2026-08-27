@@ -12,6 +12,7 @@ import {
   getPlans,
   createCheckoutSession,
   resubscribe,
+  removeCard,
   cancelSubscription,
   resumeSubscription,
   changePassword,
@@ -42,7 +43,6 @@ function AccountInner() {
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
   const [activating, setActivating] = useState(false);
-  const [changingCard, setChangingCard] = useState(false);
   const autoStarted = useRef(false);
 
   // Latest status kept in a ref so choosePlan can read `hasSavedCard` without depending on `status`
@@ -316,40 +316,6 @@ function AccountInner() {
                 )}
               </div>
             )}
-            {canManage ? (
-              <div className="mt-5 border-t border-white/5 pt-4">
-                {changingCard ? (
-                  <ChangeCardForm
-                    onDone={(card) => {
-                      setChangingCard(false);
-                      setStatus((s) =>
-                        s ? { ...s, cardBrand: card.cardBrand, cardLast4: card.cardLast4 } : s,
-                      );
-                    }}
-                    onCancel={() => setChangingCard(false)}
-                  />
-                ) : (
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
-                      <p className="text-xs uppercase tracking-wider text-slate-400">
-                        Payment method
-                      </p>
-                      <p className="mt-1 text-sm text-white">
-                        {status.cardLast4
-                          ? `${brandLabel(status.cardBrand)} •••• ${status.cardLast4}`
-                          : "No card on file"}
-                      </p>
-                    </div>
-                    <button
-                      onClick={() => setChangingCard(true)}
-                      className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5"
-                    >
-                      {status.cardLast4 ? "Change" : "Add card"}
-                    </button>
-                  </div>
-                )}
-              </div>
-            ) : null}
             {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
           </div>
         ) : (
@@ -360,35 +326,11 @@ function AccountInner() {
               className="mt-4 rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-white">
               Upgrade to Premium
             </button>
-            {status?.hasSavedCard ? (
-              <div className="mt-5 border-t border-white/5 pt-4">
-                {changingCard ? (
-                  <ChangeCardForm
-                    onDone={() => { setChangingCard(false); refresh().catch(() => {}); }}
-                    onCancel={() => setChangingCard(false)}
-                  />
-                ) : (
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
-                      <p className="text-xs uppercase tracking-wider text-slate-400">Saved card</p>
-                      <p className="mt-1 text-sm text-white">
-                        {brandLabel(status.savedCardBrand)} •••• {status.savedCardLast4}
-                      </p>
-                      <p className="mt-1 text-xs text-slate-500">Used automatically when you resubscribe.</p>
-                    </div>
-                    <button
-                      onClick={() => setChangingCard(true)}
-                      className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5"
-                    >
-                      Change
-                    </button>
-                  </div>
-                )}
-              </div>
-            ) : null}
           </div>
         )}
       </Section>
+
+      <PaymentMethodSection status={status} onChanged={() => refresh().catch(() => {})} />
 
       <Section title="OpenVPN Credentials">
         <p className="mb-3 text-xs text-slate-500">
@@ -443,6 +385,91 @@ function CopyRow({ label, value }: { label: string; value: string }) {
         </button>
       </div>
     </div>
+  );
+}
+
+// Always-present payment method management — add / change / remove a card in ANY subscription state
+// (active, lapsed, expired, or never subscribed). Reads the customer's default card from status.
+function PaymentMethodSection({
+  status,
+  onChanged,
+}: {
+  status: SubStatus | null;
+  onChanged: () => void;
+}) {
+  const [changing, setChanging] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+
+  if (!status) return null;
+
+  const brand = status.savedCardBrand ?? status.cardBrand;
+  const last4 = status.savedCardLast4 ?? status.cardLast4;
+  const hasCard = !!last4;
+  // Can't remove the card an active, auto-renewing subscription depends on.
+  const lockedBySub = !!status.subscribed && !status.willCancel;
+  const canRemove = hasCard && !lockedBySub;
+
+  async function onRemove() {
+    const msg =
+      status?.subscribed && !status.willCancel
+        ? "Remove your card? Your subscription won't be able to renew without one."
+        : "Remove your saved card?";
+    if (!confirm(msg)) return;
+    setBusy(true);
+    setErr("");
+    try {
+      await removeCard();
+      onChanged();
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : "Could not remove card");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <Section title="Payment Method">
+      {changing ? (
+        <ChangeCardForm
+          onDone={() => { setChanging(false); onChanged(); }}
+          onCancel={() => setChanging(false)}
+        />
+      ) : (
+        <>
+          <div className="flex items-center justify-between gap-4">
+            <p className="text-sm text-white">
+              {hasCard ? `${brandLabel(brand)} •••• ${last4}` : "No card on file"}
+            </p>
+            <div className="flex gap-2">
+              <button
+                onClick={() => setChanging(true)}
+                disabled={busy}
+                className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5 disabled:opacity-50"
+              >
+                {hasCard ? "Change" : "Add card"}
+              </button>
+              {canRemove ? (
+                <button
+                  onClick={onRemove}
+                  disabled={busy}
+                  className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-sm text-red-400 hover:bg-white/5 disabled:opacity-50"
+                >
+                  {busy ? "…" : "Remove"}
+                </button>
+              ) : null}
+            </div>
+          </div>
+          {hasCard && lockedBySub ? (
+            <p className="mt-3 text-xs text-slate-500">
+              Your card can&apos;t be removed while your subscription is set to renew — turn off
+              auto-renewal first.
+            </p>
+          ) : null}
+          {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
+        </>
+      )}
+    </Section>
   );
 }
 
