@@ -4,7 +4,7 @@ export const site = {
   name: "MistyVPN",
   tagline: "Secure. Private. Fast.",
   description:
-    "MistyVPN keeps you private and unblocked on every device. Stealth technology that beats blocks, split tunneling, a strict no-logs promise, and 30+ global locations — starting free.",
+    "MistyVPN keeps you private and unblocked on every device. Stealth technology that beats blocks, split tunneling, a strict no-logs promise, and 40+ global locations — starting free.",
   url: "https://mistyvpn.com",
   email: "support@mistyvpn.com",
   twitter: "@mistyvpn",
@@ -20,7 +20,7 @@ export const site = {
     number: "17269421", // Companies House number
     registeredOffice: "Siu Offices, 4–6 Greatorex Street, London, E1 5NF, United Kingdom",
   },
-  locations: "30+",
+  locations: "40+",
   languages: 16,
   // Store links point at the /download hub until the real App Store / Play Store URLs are live.
   stores: {
@@ -34,10 +34,13 @@ export const site = {
 export type NavItem = { label: string; href: string };
 
 export const nav: NavItem[] = [
+  { label: "Home", href: "/" },
   { label: "Features", href: "/features" },
   { label: "Pricing", href: "/pricing" },
   { label: "Compare", href: "/compare" },
   { label: "No-Logs", href: "/no-logs" },
+  { label: "Download", href: "/download" },
+  { label: "Support", href: "/support" },
 ];
 
 export const footerNav: { title: string; items: NavItem[] }[] = [
@@ -84,7 +87,7 @@ export const moneyBack = {
 
 // Headline stats for the hero trust strip.
 export const stats = [
-  { value: "30+", label: "Global locations" },
+  { value: "40+", label: "Global locations" },
   { value: "0", label: "Logs kept" },
   { value: "10", label: "Devices at once" },
   { value: "16", label: "Languages" },
@@ -110,7 +113,7 @@ export const features = [
   {
     icon: "bolt",
     title: "Seriously fast",
-    body: "Modern protocols and 30+ optimized locations mean buffer-free streaming, lag-free calls and quick downloads — even on a busy network.",
+    body: "Modern protocols and 40+ optimized locations mean buffer-free streaming, lag-free calls and quick downloads — even on a busy network.",
   },
   {
     icon: "play",
@@ -149,7 +152,7 @@ export const features = [
   },
   {
     icon: "server",
-    title: "30+ global locations",
+    title: "40+ global locations",
     body: "Connect through servers across the Americas, Europe, the Middle East and Asia — appear wherever you need to be.",
   },
   {
@@ -250,7 +253,7 @@ export const plans = [
     blurb: "Unlimited, full-speed protection on all your devices.",
     features: [
       "Unlimited data & speed",
-      "All 30+ locations",
+      "All 40+ locations",
       "Stealth Mode & Split Tunneling",
       "Up to 10 devices",
       "Priority support",
@@ -306,7 +309,7 @@ export const comparison = {
     { label: "Next-gen anti-censorship (Reality / Hysteria2)", values: [true, "Limited", "Limited", "Limited"] },
     { label: "Works in China & strict firewalls", values: ["Built for it", "Limited", "Limited", "Limited"] },
     { label: "Stealth Mode (beats blocks)", values: [true, true, true, "Limited"] },
-    { label: "Split tunneling", values: [true, true, "Limited", true] },
+    { label: "Split tunneling on every platform", values: [true, "Limited", "Limited", "Limited"] },
     { label: "Kill switch", values: [true, true, true, true] },
     { label: "Strict no-logs", values: [true, true, true, true] },
     { label: "Devices at once", values: ["10", "10", "8", "10"] },

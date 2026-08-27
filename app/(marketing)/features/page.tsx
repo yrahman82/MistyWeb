@@ -1,29 +1,20 @@
 import type { Metadata } from "next";
 import { Container, SectionHeading, Button, Card, Eyebrow } from "@/components/ui";
 import { iconMap } from "@/components/Icons";
-import JsonLd from "@/components/JsonLd";
-import { features, site } from "@/lib/site";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { features } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Features — Stealth Mode, Split Tunneling, no-logs & more",
   description:
-    "Everything in MistyVPN: Stealth Mode that beats blocks, split tunneling, a strict no-logs promise, a kill switch, fast streaming and 30+ locations on every device.",
+    "Everything in MistyVPN: Stealth Mode that beats blocks, split tunneling, a strict no-logs promise, a kill switch, fast streaming and 40+ locations on every device.",
   alternates: { canonical: "/features" },
-};
-
-const breadcrumbLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-    { "@type": "ListItem", position: 2, name: "Features", item: `${site.url}/features` },
-  ],
 };
 
 export default function FeaturesPage() {
   return (
     <>
-      <JsonLd data={breadcrumbLd} />
+      <Breadcrumbs items={[{ name: "Features", href: "/features" }]} />
 
       <section className="pt-20 pb-12 text-center">
         <Container>

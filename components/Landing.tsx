@@ -1,7 +1,7 @@
 import { Container, SectionHeading, Button, Card, Eyebrow } from "@/components/ui";
 import { CheckIcon } from "@/components/Icons";
 import JsonLd from "@/components/JsonLd";
-import { site } from "@/lib/site";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export type LandingSection = { h2: string; body: string[] };
 export type LandingFaq = { q: string; a: string };
@@ -27,14 +27,6 @@ export function Landing({
   sections,
   faqs,
 }: LandingProps) {
-  const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-      { "@type": "ListItem", position: 2, name: crumb, item: `${site.url}/${slug}` },
-    ],
-  };
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -47,7 +39,7 @@ export function Landing({
 
   return (
     <>
-      <JsonLd data={breadcrumbLd} />
+      <Breadcrumbs items={[{ name: crumb, href: `/${slug}` }]} />
       <JsonLd data={faqLd} />
 
       <section className="pt-20 pb-12">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container, Eyebrow, Card, Button } from "@/components/ui";
 import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { site } from "@/lib/site";
 
@@ -64,15 +65,6 @@ const faqLd = {
   })),
 };
 
-const breadcrumbLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-    { "@type": "ListItem", position: 2, name: "Support", item: `${site.url}/support` },
-  ],
-};
-
 function WhatsAppGlyph({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
@@ -101,7 +93,7 @@ function CheckGlyph({ className = "" }: { className?: string }) {
 export default function SupportPage() {
   return (
     <>
-      <JsonLd data={breadcrumbLd} />
+      <Breadcrumbs items={[{ name: "Support", href: "/support" }]} />
       <JsonLd data={faqLd} />
 
       {/* Hero */}

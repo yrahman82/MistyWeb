@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Container, SectionHeading, Button, Card, Eyebrow } from "@/components/ui";
 import { EyeOffIcon, LockIcon, ServerIcon } from "@/components/Icons";
-import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -9,15 +9,6 @@ export const metadata: Metadata = {
   description:
     "MistyVPN is a strict no-logs VPN. We don't record your browsing, traffic, or IP address. Here's exactly what that means and how the architecture enforces it.",
   alternates: { canonical: "/no-logs" },
-};
-
-const breadcrumbLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-    { "@type": "ListItem", position: 2, name: "No-Logs", item: `${site.url}/no-logs` },
-  ],
 };
 
 const points = [
@@ -41,7 +32,7 @@ const points = [
 export default function NoLogsPage() {
   return (
     <>
-      <JsonLd data={breadcrumbLd} />
+      <Breadcrumbs items={[{ name: "No-Logs", href: "/no-logs" }]} />
 
       <section className="pt-20 pb-10 text-center">
         <Container>

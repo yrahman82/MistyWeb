@@ -14,6 +14,11 @@ export default function Header() {
   const pathname = usePathname();
   const signInHref = `/login?next=${encodeURIComponent(pathname || "/")}`;
 
+  // Highlight the current page in the menu. Home only matches exactly; others match the
+  // section (so /features and any /features/* both light up "Features").
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+
   // Reflect auth state (localStorage). Re-check on navigation so it updates
   // after sign-in/out. Starts false to match SSR, then corrects on mount.
   const [loggedIn, setLoggedIn] = useState(false);
@@ -35,23 +40,29 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-6 lg:flex">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
+              aria-current={isActive(item.href) ? "page" : undefined}
+              className={`text-sm font-medium transition-colors ${
+                isActive(item.href) ? "text-brand" : "text-slate-300 hover:text-white"
+              }`}
             >
               {item.label}
             </Link>
           ))}
         </div>
 
-        <div className="hidden items-center gap-5 md:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           {loggedIn ? (
             <Link
               href="/account"
-              className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
+              aria-current={isActive("/account") ? "page" : undefined}
+              className={`text-sm font-medium transition-colors ${
+                isActive("/account") ? "text-brand" : "text-slate-300 hover:text-white"
+              }`}
             >
               Account
             </Link>
@@ -71,7 +82,7 @@ export default function Header() {
         {/* Mobile toggle */}
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}

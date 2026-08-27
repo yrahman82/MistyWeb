@@ -49,7 +49,7 @@ export default function OpengraphImage() {
           Private internet that actually works.
         </div>
         <div style={{ marginTop: 28, fontSize: 32, color: "#94a3b8" }}>
-          Stealth Mode · No-logs · 30+ locations · Start free
+          Stealth Mode · No-logs · 40+ locations · Start free
         </div>
       </div>
     ),

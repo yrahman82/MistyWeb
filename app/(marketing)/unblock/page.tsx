@@ -20,7 +20,7 @@ export default function UnblockPage() {
         "Stealth Mode gets past blocks other VPNs can't",
         "Stream your shows in crisp HD from anywhere",
         "Split tunneling keeps banking and local apps fast",
-        "30+ locations, more added over time",
+        "40+ locations, more added over time",
         "Strict no-logs — your activity stays yours",
         "Start free, no credit card",
       ]}
@@ -35,7 +35,7 @@ export default function UnblockPage() {
         {
           h2: "Streaming that doesn't buffer",
           body: [
-            "A VPN is only good for streaming if it's fast. MistyVPN runs lean, modern technology across 30+ optimized locations, so high-definition video stays smooth instead of stalling.",
+            "A VPN is only good for streaming if it's fast. MistyVPN runs lean, modern technology across 40+ optimized locations, so high-definition video stays smooth instead of stalling.",
             "Pick a location, hit connect, and press play — it really is that simple.",
           ],
         },
@@ -53,7 +53,7 @@ export default function UnblockPage() {
         },
         {
           q: "Can I stream in HD?",
-          a: "Yes. MistyVPN is tuned for fast, high-definition streaming across 30+ locations, and split tunneling lets you route just your streaming apps through the VPN at full speed.",
+          a: "Yes. MistyVPN is tuned for fast, high-definition streaming across 40+ locations, and split tunneling lets you route just your streaming apps through the VPN at full speed.",
         },
         {
           q: "Will it slow down my other apps?",

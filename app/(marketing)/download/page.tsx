@@ -1,24 +1,15 @@
 import type { Metadata } from "next";
 import { Container, Button, Eyebrow, Card } from "@/components/ui";
 import { iconMap } from "@/components/Icons";
-import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import DownloadGrid from "@/components/DownloadGrid";
-import { site, moneyBack } from "@/lib/site";
+import { moneyBack } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Download MistyVPN — iPhone, Android, Mac & Android TV",
   description:
     "Get MistyVPN on all your devices. One account covers iPhone, iPad, Android, Mac and Android TV — start free, no card required, with a 14-day money-back guarantee on Premium.",
   alternates: { canonical: "/download" },
-};
-
-const breadcrumbLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-    { "@type": "ListItem", position: 2, name: "Download", item: `${site.url}/download` },
-  ],
 };
 
 const trust = [
@@ -42,7 +33,7 @@ const trust = [
 export default function DownloadPage() {
   return (
     <>
-      <JsonLd data={breadcrumbLd} />
+      <Breadcrumbs items={[{ name: "Download", href: "/download" }]} />
 
       <section className="pt-20 pb-10 text-center">
         <Container>

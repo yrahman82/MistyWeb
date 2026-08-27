@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Container, SectionHeading, Button, Eyebrow } from "@/components/ui";
 import { CheckIcon } from "@/components/Icons";
-import JsonLd from "@/components/JsonLd";
-import { faqs, site, moneyBack } from "@/lib/site";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { faqs, moneyBack } from "@/lib/site";
 import { getPlans } from "@/lib/pricing";
 
 export const metadata: Metadata = {
@@ -12,22 +12,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/pricing" },
 };
 
-const breadcrumbLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-    { "@type": "ListItem", position: 2, name: "Pricing", item: `${site.url}/pricing` },
-  ],
-};
-
 export default async function PricingPage() {
   // Prices come from the DB paywall (same source as the apps + checkout) — see lib/pricing.ts.
   const plans = await getPlans();
 
   return (
     <>
-      <JsonLd data={breadcrumbLd} />
+      <Breadcrumbs items={[{ name: "Pricing", href: "/pricing" }]} />
 
       <section className="pt-20 pb-10 text-center">
         <Container>
@@ -39,7 +30,7 @@ export default async function PricingPage() {
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
             Start free, upgrade when you&apos;re ready. Every plan includes the
-            full feature set — Stealth Mode, split tunneling and all 30+
+            full feature set — Stealth Mode, split tunneling and all 40+
             locations.
           </p>
         </Container>

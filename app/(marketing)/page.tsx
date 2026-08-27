@@ -69,7 +69,7 @@ export default function HomePage() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
             MistyVPN keeps you private and unblocked on every device — with
-            Stealth Mode that gets past blocks, blazing speed across 30+
+            Stealth Mode that gets past blocks, blazing speed across 40+
             locations, and a strict no-logs promise.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -81,7 +81,7 @@ export default function HomePage() {
             </Button>
           </div>
           <p className="mt-4 text-sm text-slate-400">
-            Password manager &amp; authenticator included · 14-day money-back guarantee
+            14-day money-back guarantee
           </p>
 
           {/* stats */}
@@ -130,6 +130,67 @@ export default function HomePage() {
                 You decide, app by app.
               </p>
             </Card>
+          </div>
+        </Container>
+      </section>
+
+      {/* Spotlight: Password Manager + Authenticator (a headline differentiator) */}
+      <section className="py-8">
+        <Container>
+          <div className="relative overflow-hidden rounded-3xl border border-brand/30 bg-gradient-to-br from-brand/15 via-ink-3 to-accent/15 px-6 py-12 sm:px-10">
+            <div className="grid gap-10 md:grid-cols-2 md:items-center">
+              <div>
+                <Eyebrow>More than a VPN</Eyebrow>
+                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                  Password Manager &amp; Authenticator — included free
+                </h2>
+                <p className="mt-4 text-lg leading-8 text-slate-300">
+                  A full encrypted password manager and a built-in two-factor
+                  authenticator, right inside the app. Save logins, autofill,
+                  generate strong passwords and store your 2FA codes — all
+                  protected end-to-end. The big VPNs charge extra or lock these
+                  behind a pricier tier. With MistyVPN they&apos;re simply
+                  included, on every plan.
+                </p>
+                <div className="mt-7">
+                  <Button href="/features" variant="secondary">
+                    Explore all features
+                  </Button>
+                </div>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {[
+                  {
+                    icon: "key",
+                    title: "Password Manager",
+                    body: "Encrypted vault, autofill and a strong-password generator across your devices.",
+                  },
+                  {
+                    icon: "otp",
+                    title: "Authenticator (2FA)",
+                    body: "Built-in one-time codes — replace Google Authenticator, kept in the same secure vault.",
+                  },
+                ].map((c) => {
+                  const Icon = iconMap[c.icon as keyof typeof iconMap];
+                  return (
+                    <div
+                      key={c.title}
+                      className="rounded-2xl border border-white/10 bg-white/[0.05] p-6"
+                    >
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/20 text-brand">
+                        <Icon className="h-6 w-6" />
+                      </div>
+                      <h3 className="mt-4 text-base font-semibold text-white">
+                        {c.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-6 text-slate-300">
+                        {c.body}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </Container>
       </section>

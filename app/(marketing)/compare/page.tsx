@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Container, SectionHeading, Button, Eyebrow } from "@/components/ui";
 import { CheckIcon, CloseIcon } from "@/components/Icons";
-import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { comparison, site } from "@/lib/site";
 import { getMonthlyPrice, getAnnualPerMonth } from "@/lib/pricing";
 
@@ -10,15 +10,6 @@ export const metadata: Metadata = {
   description:
     "See how MistyVPN compares to NordVPN, ExpressVPN and PureVPN — a free tier, a built-in password manager & authenticator, next-gen anti-block technology, and premium for less. Honest side-by-side.",
   alternates: { canonical: "/compare" },
-};
-
-const breadcrumbLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-    { "@type": "ListItem", position: 2, name: "Compare", item: `${site.url}/compare` },
-  ],
 };
 
 function Cell({ value, isUs }: { value: boolean | string; isUs: boolean }) {
@@ -50,7 +41,7 @@ export default async function ComparePage() {
 
   return (
     <>
-      <JsonLd data={breadcrumbLd} />
+      <Breadcrumbs items={[{ name: "Compare", href: "/compare" }]} />
 
       <section className="pt-20 pb-10 text-center">
         <Container>
