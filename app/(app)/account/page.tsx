@@ -320,8 +320,12 @@ function AccountInner() {
         )}
       </Section>
 
-      <Section title="VPN Credentials">
-        <p className="mb-3 text-xs text-slate-500">Use these to sign in to the MistyVPN apps.</p>
+      <Section title="OpenVPN Credentials">
+        <p className="mb-3 text-xs text-slate-500">
+          For connecting third-party OpenVPN clients (routers, the OpenVPN app, etc.). You
+          don&apos;t need these for the MistyVPN app — just sign in there with your account
+          email and password.
+        </p>
         <CopyRow label="Username" value={status?.vpnUsername ?? ""} />
         <CopyRow label="Password" value={status?.vpnPassword ?? ""} />
       </Section>
