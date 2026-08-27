@@ -79,6 +79,8 @@ export type SubStatus = {
   expiresAt: string | null;
   willCancel: boolean;
   freeMinutes: number;
+  cardBrand?: string | null;
+  cardLast4?: string | null;
 };
 
 export function getStatus() {
@@ -130,6 +132,23 @@ export function cancelSubscription() {
 
 export function resumeSubscription() {
   return req<{ message: string }>("/api/stripe/resume", { auth: true, body: {} });
+}
+
+// ── Change card (Stripe Elements + SetupIntent) ─────────────────────────────
+// 1) get a SetupIntent client secret to render the Payment Element
+export function createSetupIntent() {
+  return req<{ clientSecret: string }>("/api/stripe/setup-intent", {
+    auth: true,
+    body: {},
+  });
+}
+
+// 2) after confirming the SetupIntent client-side, send the new payment-method id
+export function updatePaymentMethod(paymentMethodId: string) {
+  return req<{ cardBrand: string | null; cardLast4: string | null }>(
+    "/api/stripe/update-payment-method",
+    { auth: true, body: { paymentMethodId } },
+  );
 }
 
 // VPN credentials come back from login/register; stash for the account page.

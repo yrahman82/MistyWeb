@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { EmbeddedCheckout, EmbeddedCheckoutProvider } from "@stripe/react-stripe-js";
 import { getStripe } from "@/lib/stripe";
+import ChangeCardForm from "@/components/ChangeCardForm";
 import {
   auth,
   getStatus,
@@ -40,6 +41,7 @@ function AccountInner() {
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
   const [activating, setActivating] = useState(false);
+  const [changingCard, setChangingCard] = useState(false);
   const autoStarted = useRef(false);
 
   const choosePlan = useCallback(async (planKey: string) => {
@@ -260,6 +262,40 @@ function AccountInner() {
                 )}
               </div>
             )}
+            {canManage ? (
+              <div className="mt-5 border-t border-white/5 pt-4">
+                {changingCard ? (
+                  <ChangeCardForm
+                    onDone={(card) => {
+                      setChangingCard(false);
+                      setStatus((s) =>
+                        s ? { ...s, cardBrand: card.cardBrand, cardLast4: card.cardLast4 } : s,
+                      );
+                    }}
+                    onCancel={() => setChangingCard(false)}
+                  />
+                ) : (
+                  <div className="flex items-center justify-between gap-4">
+                    <div>
+                      <p className="text-xs uppercase tracking-wider text-slate-400">
+                        Payment method
+                      </p>
+                      <p className="mt-1 text-sm text-white">
+                        {status.cardLast4
+                          ? `${brandLabel(status.cardBrand)} •••• ${status.cardLast4}`
+                          : "No card on file"}
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => setChangingCard(true)}
+                      className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5"
+                    >
+                      {status.cardLast4 ? "Change" : "Add card"}
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : null}
             {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
           </div>
         ) : (
@@ -294,6 +330,12 @@ export default function AccountPage() {
 }
 
 // ── UI bits ───────────────────────────────────────────────────────────
+// "visa" → "Visa", "amex" → "Amex". Falls back to "Card" when the brand is unknown.
+function brandLabel(brand?: string | null): string {
+  if (!brand) return "Card";
+  return brand.charAt(0).toUpperCase() + brand.slice(1);
+}
+
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
