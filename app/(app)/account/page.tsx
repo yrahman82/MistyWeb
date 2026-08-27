@@ -249,6 +249,22 @@ function AccountInner() {
             ) : (
               <p className="mt-1 text-sm text-slate-400">Unlimited access to all servers</p>
             )}
+
+            {/* Post-purchase CTA — get the app on every device */}
+            <div className="mt-4 rounded-xl border border-brand/25 bg-brand/[0.06] p-4">
+              <p className="text-sm font-medium text-white">You&apos;re all set — get the app</p>
+              <p className="mt-1 text-xs text-slate-400">
+                Download MistyVPN on iPhone, Android, Mac and Android TV, then sign in with your
+                account email and password.
+              </p>
+              <Link
+                href="/download"
+                className="mt-3 inline-flex rounded-full bg-brand px-5 py-2 text-sm font-semibold text-ink transition-colors hover:bg-white"
+              >
+                Download the app
+              </Link>
+            </div>
+
             {canManage ? (
               status.willCancel ? (
                 <button onClick={onResume} disabled={busy}
