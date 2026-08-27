@@ -134,6 +134,39 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* Features grid */}
+      <section id="features" className="py-16">
+        <Container>
+          <SectionHeading
+            center
+            eyebrow="Everything included"
+            title="One app. Everything you need."
+            body="No add-ons, no upsells. Every plan comes with the full toolkit."
+          />
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {features.map((f) => {
+              const Icon = iconMap[f.icon as keyof typeof iconMap];
+              return (
+                <Card key={f.title}>
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/15 text-brand">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-5 text-base font-semibold text-white">
+                    {f.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-400">{f.body}</p>
+                </Card>
+              );
+            })}
+          </div>
+          <div className="mt-10 text-center">
+            <Button href="/features" variant="secondary">
+              Explore all features
+            </Button>
+          </div>
+        </Container>
+      </section>
+
       {/* Spotlight: Password Manager + Authenticator (a headline differentiator) */}
       <section className="py-8">
         <Container>
@@ -191,39 +224,6 @@ export default function HomePage() {
                 })}
               </div>
             </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Features grid */}
-      <section id="features" className="py-16">
-        <Container>
-          <SectionHeading
-            center
-            eyebrow="Everything included"
-            title="One app. Everything you need."
-            body="No add-ons, no upsells. Every plan comes with the full toolkit."
-          />
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((f) => {
-              const Icon = iconMap[f.icon as keyof typeof iconMap];
-              return (
-                <Card key={f.title}>
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/15 text-brand">
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="mt-5 text-base font-semibold text-white">
-                    {f.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-400">{f.body}</p>
-                </Card>
-              );
-            })}
-          </div>
-          <div className="mt-10 text-center">
-            <Button href="/features" variant="secondary">
-              Explore all features
-            </Button>
           </div>
         </Container>
       </section>
