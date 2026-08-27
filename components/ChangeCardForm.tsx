@@ -1,16 +1,26 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Elements,
   PaymentElement,
   useStripe,
   useElements,
 } from "@stripe/react-stripe-js";
+import type { StripeElementsOptions } from "@stripe/stripe-js";
 import { getStripe } from "@/lib/stripe";
 import { createSetupIntent, updatePaymentMethod } from "@/lib/api";
 
 type Card = { cardBrand: string | null; cardLast4: string | null };
+
+// Stable module-level references — Stripe's Payment Element lives in an iframe; if the `options`
+// object or the PaymentElement options change identity on a re-render, the iframe re-initializes and
+// typing appears to "freeze"/reset. Keep these constant.
+const PE_OPTIONS = { layout: "tabs" as const };
+const APPEARANCE: StripeElementsOptions["appearance"] = {
+  theme: "night",
+  variables: { colorPrimary: "#38bdf8", borderRadius: "10px" },
+};
 
 // In-app card change: SetupIntent → Payment Element → confirm → tell the backend to make it the
 // default (so renewals use it). Themed dark to match the site.
@@ -23,6 +33,8 @@ export default function ChangeCardForm({
 }) {
   const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [err, setErr] = useState("");
+  // getStripe() is a singleton, but pin the promise once so the `stripe` prop reference never changes.
+  const [stripePromise] = useState(() => getStripe());
 
   useEffect(() => {
     createSetupIntent()
@@ -32,21 +44,18 @@ export default function ChangeCardForm({
       );
   }, []);
 
+  // Stable options object — only rebuilt when the client secret actually changes.
+  const options = useMemo<StripeElementsOptions | null>(
+    () => (clientSecret ? { clientSecret, appearance: APPEARANCE } : null),
+    [clientSecret],
+  );
+
   if (err && !clientSecret) return <p className="text-sm text-red-400">{err}</p>;
-  if (!clientSecret)
+  if (!options)
     return <p className="text-sm text-slate-500">Loading secure card form…</p>;
 
   return (
-    <Elements
-      stripe={getStripe()}
-      options={{
-        clientSecret,
-        appearance: {
-          theme: "night",
-          variables: { colorPrimary: "#38bdf8", borderRadius: "10px" },
-        },
-      }}
-    >
+    <Elements stripe={stripePromise} options={options}>
       <Inner onDone={onDone} onCancel={onCancel} />
     </Elements>
   );
@@ -101,7 +110,7 @@ function Inner({
   return (
     <form onSubmit={submit} className="space-y-4">
       <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-        <PaymentElement options={{ layout: "tabs" }} />
+        <PaymentElement options={PE_OPTIONS} />
       </div>
       {err ? <p className="text-sm text-red-400">{err}</p> : null}
       <div className="flex gap-2">
