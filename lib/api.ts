@@ -87,6 +87,10 @@ export type SubStatus = {
   freeMinutes: number;
   cardBrand?: string | null;
   cardLast4?: string | null;
+  // Saved card for a lapsed (not-subscribed) user → enables one-tap resubscribe.
+  hasSavedCard?: boolean;
+  savedCardBrand?: string | null;
+  savedCardLast4?: string | null;
 };
 
 export function getStatus() {
@@ -124,6 +128,15 @@ export async function getPlans(): Promise<Plan[]> {
 
 export function createCheckoutSession(plan: string) {
   return req<{ clientSecret: string }>("/api/stripe/create-checkout-session", {
+    auth: true,
+    body: { plan },
+  });
+}
+
+// One-tap resubscribe using the saved card. `status: "active"` → charged + subscribing;
+// `needsCheckout: true` → no usable saved card, fall back to Checkout.
+export function resubscribe(plan: string) {
+  return req<{ status?: string; needsCheckout?: boolean }>("/api/stripe/resubscribe", {
     auth: true,
     body: { plan },
   });

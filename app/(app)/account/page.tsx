@@ -11,6 +11,7 @@ import {
   getStatus,
   getPlans,
   createCheckoutSession,
+  resubscribe,
   cancelSubscription,
   resumeSubscription,
   changePassword,
@@ -44,12 +45,43 @@ function AccountInner() {
   const [changingCard, setChangingCard] = useState(false);
   const autoStarted = useRef(false);
 
+  // Latest status kept in a ref so choosePlan can read `hasSavedCard` without depending on `status`
+  // (which the load effect sets — a dep on it would loop the effect that also calls choosePlan).
+  const statusRef = useRef<SubStatus | null>(null);
+  useEffect(() => { statusRef.current = status; }, [status]);
+
+  const refresh = useCallback(async () => {
+    const s = await getStatus();
+    setStatus(s);
+    return s;
+  }, []);
+
+  const onPaid = useCallback(async () => {
+    setClientSecret(null);
+    setPlan(null);
+    setView("overview");
+    setActivating(true);
+    for (let i = 0; i < 12; i++) {
+      await new Promise((r) => setTimeout(r, 2000));
+      const s = await getStatus().catch(() => null);
+      if (s?.subscribed) { setStatus(s); setActivating(false); return; }
+    }
+    setActivating(false);
+    refresh().catch(() => {});
+  }, [refresh]);
+
   const choosePlan = useCallback(async (planKey: string) => {
     setErr("");
     setBusy(true);
     setPlan(planKey);
-    setView("checkout");
     try {
+      // Lapsed user with a saved card → charge it directly, no Checkout / no re-entering the card.
+      if (statusRef.current?.hasSavedCard) {
+        const r = await resubscribe(planKey);
+        if (r.status === "active") { setBusy(false); onPaid(); return; }
+        // needsCheckout → the saved card can't be charged cleanly; fall through to Stripe Checkout.
+      }
+      setView("checkout");
       const { clientSecret } = await createCheckoutSession(planKey);
       setClientSecret(clientSecret);
     } catch (e) {
@@ -58,13 +90,7 @@ function AccountInner() {
     } finally {
       setBusy(false);
     }
-  }, []);
-
-  const refresh = useCallback(async () => {
-    const s = await getStatus();
-    setStatus(s);
-    return s;
-  }, []);
+  }, [onPaid]);
 
   useEffect(() => {
     if (!auth.isLoggedIn) {
@@ -97,20 +123,6 @@ function AccountInner() {
   useEffect(() => {
     getPlans().then(setPlans).catch(() => {});
   }, []);
-
-  const onPaid = useCallback(async () => {
-    setClientSecret(null);
-    setPlan(null);
-    setView("overview");
-    setActivating(true);
-    for (let i = 0; i < 12; i++) {
-      await new Promise((r) => setTimeout(r, 2000));
-      const s = await getStatus().catch(() => null);
-      if (s?.subscribed) { setStatus(s); setActivating(false); return; }
-    }
-    setActivating(false);
-    refresh().catch(() => {});
-  }, [refresh]);
 
   async function onCancel() {
     if (!confirm("Cancel your subscription? You'll keep access until the current period ends.")) return;
@@ -171,6 +183,12 @@ function AccountInner() {
               See plans &amp; benefits →
             </Link>
           </div>
+          {status?.hasSavedCard ? (
+            <p className="mt-3 text-xs text-slate-400">
+              Your saved {brandLabel(status.savedCardBrand)} •••• {status.savedCardLast4} will be
+              charged — no need to re-enter card details.
+            </p>
+          ) : null}
           <div className="mt-5 space-y-3">
             {plans.map((p) => (
               <button key={p.key} onClick={() => choosePlan(p.key)} disabled={busy}
