@@ -47,6 +47,7 @@ function AccountInner() {
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
   const [activating, setActivating] = useState(false);
+  const [confirmChanging, setConfirmChanging] = useState(false); // change method inside the confirm view
   const autoStarted = useRef(false);
 
   // Latest status kept in a ref so choosePlan can read `hasSavedCard` without depending on `status`
@@ -253,40 +254,59 @@ function AccountInner() {
     const selected = plans.find((p) => p.key === plan);
     return (
       <div className="w-full max-w-lg">
-        <button onClick={() => setView(cameFromPricing ? "overview" : "plans")} className="text-sm text-slate-400 hover:text-white">
+        <button
+          onClick={() => {
+            if (confirmChanging) { setConfirmChanging(false); return; }
+            setView(cameFromPricing ? "overview" : "plans");
+          }}
+          className="text-sm text-slate-400 hover:text-white"
+        >
           ← Back
         </button>
         <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
           <h1 className="text-xl font-semibold">Confirm your subscription</h1>
-          <div className="mt-5 space-y-3 rounded-xl border border-white/10 bg-white/[0.03] p-4 text-sm">
-            <div className="flex items-center justify-between gap-4">
-              <span className="text-slate-400">Plan</span>
-              <span className="text-white">
-                {selected?.title ?? "MistyVPN Premium"}
-                {selected ? ` · ${selected.price}${selected.unit}` : ""}
-              </span>
+          {confirmChanging ? (
+            <div className="mt-5">
+              <p className="mb-3 text-sm text-slate-300">
+                Choose a new payment method — you&apos;ll confirm the charge after.
+              </p>
+              <ChangeCardForm
+                onDone={() => { setConfirmChanging(false); refresh().catch(() => {}); }}
+                onCancel={() => setConfirmChanging(false)}
+              />
             </div>
-            <div className="flex items-center justify-between gap-4">
-              <span className="text-slate-400">Payment</span>
-              <span className="text-white">{savedMethodLabel(status)}</span>
-            </div>
-          </div>
-          <p className="mt-4 text-sm text-slate-300">
-            We&apos;ll charge <span className="font-medium text-white">{savedMethodLabel(status)}</span> now and
-            automatically each period. Want to use a different card or PayPal? Cancel and change your
-            payment method below first.
-          </p>
-          {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
-          <div className="mt-5 flex gap-2">
-            <button onClick={() => setView(cameFromPricing ? "overview" : "plans")} disabled={busy}
-              className="rounded-full border border-white/15 px-5 py-2.5 text-sm text-white hover:bg-white/5 disabled:opacity-50">
-              Cancel
-            </button>
-            <button onClick={confirmResubscribe} disabled={busy}
-              className="rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-white disabled:opacity-50">
-              {busy ? "Processing…" : "Confirm & subscribe"}
-            </button>
-          </div>
+          ) : (
+            <>
+              <div className="mt-5 space-y-3 rounded-xl border border-white/10 bg-white/[0.03] p-4 text-sm">
+                <div className="flex items-center justify-between gap-4">
+                  <span className="text-slate-400">Plan</span>
+                  <span className="text-white">
+                    {selected?.title ?? "MistyVPN Premium"}
+                    {selected ? ` · ${selected.price}${selected.unit}` : ""}
+                  </span>
+                </div>
+                <div className="flex items-start justify-between gap-4">
+                  <span className="shrink-0 text-slate-400">Payment</span>
+                  <span className="min-w-0 break-words text-right text-white">{savedMethodLabel(status)}</span>
+                </div>
+              </div>
+              <p className="mt-4 text-sm text-slate-300">
+                We&apos;ll charge <span className="font-medium text-white">{savedMethodLabel(status)}</span> now
+                and automatically each period.
+              </p>
+              {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
+              <div className="mt-5 flex flex-wrap gap-2">
+                <button onClick={() => setConfirmChanging(true)} disabled={busy}
+                  className="rounded-full border border-white/15 px-5 py-2.5 text-sm text-white hover:bg-white/5 disabled:opacity-50">
+                  Change method
+                </button>
+                <button onClick={confirmResubscribe} disabled={busy}
+                  className="rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-white disabled:opacity-50">
+                  {busy ? "Processing…" : "Confirm & subscribe"}
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </div>
     );
