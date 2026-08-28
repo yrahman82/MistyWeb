@@ -292,7 +292,7 @@ function AccountInner() {
               </div>
               <p className="mt-4 text-sm text-slate-300">
                 We&apos;ll charge <span className="font-medium text-white">{savedMethodLabel(status)}</span> now
-                and automatically each period.
+                and automatically on every renewal.
               </p>
               {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
               <div className="mt-5 flex flex-wrap gap-2">
