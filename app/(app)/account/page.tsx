@@ -127,7 +127,11 @@ function AccountInner() {
       .then((s) => {
         if (!s.subscribed && cameFromPricing && !autoStarted.current) {
           autoStarted.current = true;
+          statusRef.current = s; // prime so choosePlan sees a saved method (confirm vs full checkout)
           choosePlan(planParam!);
+          // Strip ?plan so navigating away and back (or the back button) doesn't re-open checkout —
+          // the intent is one-time. View state already holds checkout/confirm for this session.
+          router.replace("/account");
         }
       })
       .catch((e) => {
