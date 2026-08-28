@@ -476,11 +476,25 @@ function PaymentMethodSection({
 
   const brand = status.savedCardBrand ?? status.cardBrand;
   const last4 = status.savedCardLast4 ?? status.cardLast4;
+  const isPaypal = status.savedPaymentType === "paypal";
+  const isLink = status.savedPaymentType === "link";
   const hasCard = !!last4;
+  const hasMethod = hasCard || isPaypal || isLink;
 
-  // NOTE: no "Remove card" for now — we keep the last payment method on file (like most subscription
-  // products) to avoid the "cancel → remove card → re-enable auto-renew = renewing sub with no card"
-  // hole. Removing a card needs a proper design pass (only when safe, add-another-first, etc.).
+  // Show whatever the customer actually pays with — a card ("Visa •••• 4242", also covers Apple/Google
+  // Pay), PayPal (+ payer email), or Link. "Change" always collects a card (you can switch to a card
+  // any time); to switch back to PayPal, pick it again at your next checkout.
+  const label = isPaypal
+    ? `PayPal${status.savedPaymentLabel ? ` · ${status.savedPaymentLabel}` : ""}`
+    : isLink
+    ? `Link${status.savedPaymentLabel ? ` · ${status.savedPaymentLabel}` : ""}`
+    : hasCard
+    ? `${brandLabel(brand)} •••• ${last4}`
+    : "No payment method on file";
+
+  // NOTE: no "Remove" for now — we keep the last payment method on file (like most subscription
+  // products) to avoid the "cancel → remove method → re-enable auto-renew = renewing with no method"
+  // hole. Removal needs a proper design pass (only when safe, add-another-first, etc.).
   return (
     <Section title="Payment Method">
       {changing ? (
@@ -490,14 +504,12 @@ function PaymentMethodSection({
         />
       ) : (
         <div className="flex items-center justify-between gap-4">
-          <p className="text-sm text-white">
-            {hasCard ? `${brandLabel(brand)} •••• ${last4}` : "No card on file"}
-          </p>
+          <p className="text-sm text-white">{label}</p>
           <button
             onClick={() => setChanging(true)}
             className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5"
           >
-            {hasCard ? "Change" : "Add card"}
+            {hasMethod ? "Change card" : "Add card"}
           </button>
         </div>
       )}

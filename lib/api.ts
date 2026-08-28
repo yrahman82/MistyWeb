@@ -95,6 +95,10 @@ export type SubStatus = {
   hasSavedCard?: boolean;
   savedCardBrand?: string | null;
   savedCardLast4?: string | null;
+  // Actual default payment method type: "card" | "paypal" | "link" | … (card covers Apple/Google Pay).
+  savedPaymentType?: string | null;
+  // For non-card methods (e.g. PayPal) — the payer email to display.
+  savedPaymentLabel?: string | null;
 };
 
 export function getStatus() {
