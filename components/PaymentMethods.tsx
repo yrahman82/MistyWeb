@@ -29,6 +29,17 @@ function GooglePay() {
   );
 }
 
+function PayPal() {
+  return (
+    <span className="inline-flex h-11 items-center rounded-xl bg-white px-4 shadow-sm ring-1 ring-black/10">
+      <span className="text-[16px] font-bold italic tracking-tight">
+        <span className="text-[#003087]">Pay</span>
+        <span className="text-[#0070ba]">Pal</span>
+      </span>
+    </span>
+  );
+}
+
 function BrandChip({ children }: { children: React.ReactNode }) {
   return (
     <span className="inline-flex h-9 min-w-[52px] items-center justify-center rounded-lg bg-white px-2.5 shadow-sm ring-1 ring-black/10">
@@ -71,15 +82,17 @@ export default function PaymentMethods() {
         Check out in one tap — no card typing
       </h2>
       <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-slate-300">
-        Pay in a single tap with <span className="font-medium text-white">Apple&nbsp;Pay</span> or{" "}
-        <span className="font-medium text-white">Google&nbsp;Pay</span> — your card details never
-        touch our site. Prefer a card? We accept all major cards, on secure Stripe checkout.
+        Pay in a single tap with <span className="font-medium text-white">Apple&nbsp;Pay</span>,{" "}
+        <span className="font-medium text-white">Google&nbsp;Pay</span>, or{" "}
+        <span className="font-medium text-white">PayPal</span> — your card details never touch our
+        site. Prefer a card? We accept all major cards, on secure Stripe checkout.
       </p>
 
       {/* Wallets — the prominent, one-tap options */}
       <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
         <ApplePay />
         <GooglePay />
+        <PayPal />
       </div>
 
       {/* Cards */}

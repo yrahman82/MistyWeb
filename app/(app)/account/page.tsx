@@ -541,7 +541,7 @@ function PaymentMethodSection({
             onClick={() => setChanging(true)}
             className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5"
           >
-            {hasMethod ? "Change card" : "Add card"}
+            {hasMethod ? "Change payment method" : "Add payment method"}
           </button>
         </div>
       )}
