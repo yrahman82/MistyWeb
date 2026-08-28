@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import CheckoutForm from "@/components/CheckoutForm";
 import ChangeCardForm from "@/components/ChangeCardForm";
 import { Spinner, Loader } from "@/components/ui";
+import { getStripe } from "@/lib/stripe";
 import {
   auth,
   getStatus,
@@ -15,6 +16,7 @@ import {
   renew,
   cancelSubscription,
   resumeSubscription,
+  updatePaymentMethod,
   changePassword,
   deleteAccount,
   logout,
@@ -135,6 +137,29 @@ function AccountInner() {
       router.replace("/account");
     }
   }, [returnedFromCheckout, onPaid, router]);
+
+  // Finish a redirect-based payment-method UPDATE (e.g. switching to PayPal): Stripe returns to
+  // /account?setupreturn=1 with the SetupIntent — retrieve it, set the new method as default, refresh.
+  const handledSetupReturn = useRef(false);
+  useEffect(() => {
+    if (params.get("setupreturn") !== "1" || !auth.isLoggedIn || handledSetupReturn.current) return;
+    handledSetupReturn.current = true;
+    const secret = params.get("setup_intent_client_secret");
+    (async () => {
+      try {
+        if (secret) {
+          const stripe = await getStripe();
+          const res = await stripe?.retrieveSetupIntent(secret);
+          const pm = res?.setupIntent?.payment_method;
+          const pmId = typeof pm === "string" ? pm : pm?.id;
+          if (pmId) await updatePaymentMethod(pmId);
+        }
+        await refresh().catch(() => {});
+      } finally {
+        router.replace("/account");
+      }
+    })();
+  }, [params, refresh, router]);
 
   async function onCancel() {
     if (!confirm("Cancel your subscription? You'll keep access until the current period ends.")) return;

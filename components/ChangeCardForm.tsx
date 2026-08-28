@@ -55,7 +55,7 @@ export default function ChangeCardForm({
   if (!options)
     return (
       <div className="flex min-h-[120px] items-center justify-center">
-        <Spinner label="Loading secure card form…" />
+        <Spinner label="Loading secure payment form…" />
       </div>
     );
 
@@ -85,13 +85,19 @@ function Inner({
     setBusy(true);
     setErr("");
 
+    // Card + Apple/Google Pay confirm inline (redirect: "if_required"). PayPal needs to redirect to
+    // authorize the billing agreement — it leaves the page and returns to return_url, where the
+    // account page finishes the update (retrieves the SetupIntent → sets it as default).
     const { error, setupIntent } = await stripe.confirmSetup({
       elements,
+      confirmParams: {
+        return_url: `${window.location.origin}/account?setupreturn=1`,
+      },
       redirect: "if_required",
     });
 
     if (error) {
-      setErr(error.message || "Card update failed");
+      setErr(error.message || "Couldn't update your payment method");
       setBusy(false);
       return;
     }
@@ -99,8 +105,7 @@ function Inner({
     const pm = setupIntent?.payment_method;
     const pmId = typeof pm === "string" ? pm : pm?.id;
     if (!pmId) {
-      setErr("No payment method returned");
-      setBusy(false);
+      // A redirect-based method (PayPal) is being handled via return_url — nothing more to do here.
       return;
     }
 
@@ -108,7 +113,7 @@ function Inner({
       const card = await updatePaymentMethod(pmId);
       onDone(card);
     } catch (e2) {
-      setErr(e2 instanceof Error ? e2.message : "Could not save card");
+      setErr(e2 instanceof Error ? e2.message : "Could not save payment method");
       setBusy(false);
     }
   }
@@ -122,7 +127,7 @@ function Inner({
       <div className="relative min-h-[200px] rounded-xl border border-white/10 bg-white/[0.03] p-4">
         {!ready ? (
           <div className="absolute inset-0 flex items-center justify-center">
-            <Spinner label="Loading secure card form…" />
+            <Spinner label="Loading secure payment form…" />
           </div>
         ) : null}
         <div className={ready ? "" : "pointer-events-none opacity-0"}>
@@ -145,7 +150,7 @@ function Inner({
           disabled={busy || !ready || !stripe}
           className="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-ink hover:bg-white disabled:opacity-50"
         >
-          {busy ? "Saving…" : !ready ? "Loading…" : "Save card"}
+          {busy ? "Saving…" : !ready ? "Loading…" : "Save payment method"}
         </button>
       </div>
     </form>
