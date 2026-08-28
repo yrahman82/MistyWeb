@@ -616,12 +616,12 @@ function PaymentMethodSection({
         />
       ) : (
         <div className="flex items-center justify-between gap-4">
-          <p className="text-sm text-white">{label}</p>
+          <p className="min-w-0 break-words text-sm text-white">{label}</p>
           <button
             onClick={() => setChanging(true)}
             className="shrink-0 rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5"
           >
-            {hasMethod ? "Change payment method" : "Add payment method"}
+            {hasMethod ? "Change" : "Add card"}
           </button>
         </div>
       )}
