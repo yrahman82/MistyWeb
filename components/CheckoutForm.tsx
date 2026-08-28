@@ -67,6 +67,12 @@ function Inner({
   const [err, setErr] = useState("");
   const [ready, setReady] = useState(false); // Payment Element fields loaded
   const [hasWallet, setHasWallet] = useState(false); // any express wallet available
+  // Promo code
+  const [promoOpen, setPromoOpen] = useState(false);
+  const [promo, setPromo] = useState("");
+  const [promoBusy, setPromoBusy] = useState(false);
+  const [promoErr, setPromoErr] = useState("");
+  const [applied, setApplied] = useState(false);
 
   if (result.type === "loading") {
     return (

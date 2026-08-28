@@ -28,7 +28,7 @@ const PLATFORM_LABEL: Record<string, string> = {
   web: "Web", apple: "App Store", google: "Google Play",
 };
 
-type View = "overview" | "plans" | "checkout";
+type View = "overview" | "plans" | "confirm" | "checkout";
 
 function AccountInner() {
   const router = useRouter();
@@ -74,27 +74,48 @@ function AccountInner() {
     refresh().catch(() => {});
   }, [refresh]);
 
-  const choosePlan = useCallback(async (planKey: string) => {
-    setErr("");
-    setBusy(true);
-    setPlan(planKey);
+  // Open the full Stripe checkout (enter a payment method) — for users with NO saved method.
+  const startCheckout = useCallback(async (planKey: string) => {
+    setView("checkout");
+    setClientSecret(null);
     try {
-      // Lapsed user with a saved card → charge it directly, no Checkout / no re-entering the card.
-      if (statusRef.current?.hasSavedCard) {
-        const r = await resubscribe(planKey);
-        if (r.status === "active") { setBusy(false); onPaid(); return; }
-        // needsCheckout → the saved card can't be charged cleanly; fall through to Stripe Checkout.
-      }
-      setView("checkout");
       const { clientSecret } = await createCheckoutSession(planKey);
       setClientSecret(clientSecret);
     } catch (e) {
       setErr(e instanceof Error ? e.message : "Could not start checkout");
       setView("plans");
+    }
+  }, []);
+
+  const choosePlan = useCallback((planKey: string) => {
+    setErr("");
+    setPlan(planKey);
+    // Returning user who already has a payment method on file → CONFIRM charging that method (card or
+    // PayPal). We deliberately don't let them enter a NEW method here: an account has one payment
+    // method, not one-per-subscription — to use a different one they change it in Payment Method first.
+    if (statusRef.current?.savedPaymentType) {
+      setView("confirm");
+      return;
+    }
+    startCheckout(planKey);
+  }, [startCheckout]);
+
+  // Confirmed → charge the saved method now. Falls back to full checkout if it can't be charged
+  // cleanly (declined / SCA / no chargeable method).
+  async function confirmResubscribe() {
+    if (!plan) return;
+    setBusy(true);
+    setErr("");
+    try {
+      const r = await resubscribe(plan);
+      if (r.status === "active") { onPaid(); return; }
+      await startCheckout(plan);
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : "Could not complete your subscription");
     } finally {
       setBusy(false);
     }
-  }, [onPaid]);
+  }
 
   useEffect(() => {
     if (!auth.isLoggedIn) {
@@ -223,6 +244,50 @@ function AccountInner() {
     );
   }
 
+  // ── Confirm (returning user with a saved method — charge it, don't collect a new one) ──
+  if (view === "confirm" && status) {
+    const selected = plans.find((p) => p.key === plan);
+    return (
+      <div className="w-full max-w-lg">
+        <button onClick={() => setView(cameFromPricing ? "overview" : "plans")} className="text-sm text-slate-400 hover:text-white">
+          ← Back
+        </button>
+        <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <h1 className="text-xl font-semibold">Confirm your subscription</h1>
+          <div className="mt-5 space-y-3 rounded-xl border border-white/10 bg-white/[0.03] p-4 text-sm">
+            <div className="flex items-center justify-between gap-4">
+              <span className="text-slate-400">Plan</span>
+              <span className="text-white">
+                {selected?.title ?? "MistyVPN Premium"}
+                {selected ? ` · ${selected.price}${selected.unit}` : ""}
+              </span>
+            </div>
+            <div className="flex items-center justify-between gap-4">
+              <span className="text-slate-400">Payment</span>
+              <span className="text-white">{savedMethodLabel(status)}</span>
+            </div>
+          </div>
+          <p className="mt-4 text-sm text-slate-300">
+            We&apos;ll charge <span className="font-medium text-white">{savedMethodLabel(status)}</span> now and
+            automatically each period. Want to use a different card or PayPal? Cancel and change your
+            payment method below first.
+          </p>
+          {err ? <p className="mt-3 text-sm text-red-400">{err}</p> : null}
+          <div className="mt-5 flex gap-2">
+            <button onClick={() => setView(cameFromPricing ? "overview" : "plans")} disabled={busy}
+              className="rounded-full border border-white/15 px-5 py-2.5 text-sm text-white hover:bg-white/5 disabled:opacity-50">
+              Cancel
+            </button>
+            <button onClick={confirmResubscribe} disabled={busy}
+              className="rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-white disabled:opacity-50">
+              {busy ? "Processing…" : "Confirm & subscribe"}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // ── Plans ──────────────────────────────────────────────────────────
   if (view === "plans") {
     return (
@@ -237,10 +302,10 @@ function AccountInner() {
               See plans &amp; benefits →
             </Link>
           </div>
-          {status?.hasSavedCard ? (
+          {status?.savedPaymentType ? (
             <p className="mt-3 text-xs text-slate-400">
-              Your saved {brandLabel(status.savedCardBrand)} •••• {status.savedCardLast4} will be
-              charged — no need to re-enter card details.
+              We&apos;ll charge your saved {savedMethodLabel(status)} — you&apos;ll confirm before
+              anything is charged.
             </p>
           ) : null}
           <div className="mt-5 space-y-3">
@@ -452,6 +517,17 @@ export default function AccountPage() {
 function brandLabel(brand?: string | null): string {
   if (!brand) return "Card";
   return brand.charAt(0).toUpperCase() + brand.slice(1);
+}
+
+// Human label for the customer's saved default method — card ("Visa •••• 4242"), PayPal, or Link.
+function savedMethodLabel(s: SubStatus): string {
+  if (s.savedPaymentType === "paypal")
+    return `PayPal${s.savedPaymentLabel ? ` · ${s.savedPaymentLabel}` : ""}`;
+  if (s.savedPaymentType === "link")
+    return `Link${s.savedPaymentLabel ? ` · ${s.savedPaymentLabel}` : ""}`;
+  const brand = s.savedCardBrand ?? s.cardBrand;
+  const last4 = s.savedCardLast4 ?? s.cardLast4;
+  return last4 ? `${brandLabel(brand)} •••• ${last4}` : "your saved payment method";
 }
 
 // Format a ledger amount + currency, e.g. 3.99 + "usd" → "$3.99".
