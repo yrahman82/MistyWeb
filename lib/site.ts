@@ -26,7 +26,7 @@ export const site = {
   stores: {
     ios: "/download",
     android: "/download",
-    mac: "https://github.com/yrahman82/mistyvpn-releases/releases/latest/download/MistyVPN.zip",
+    mac: "https://github.com/yrahman82/mistyvpn-releases/releases/latest/download/MistyVPN.dmg",
     tv: "/download",
   },
 } as const;
