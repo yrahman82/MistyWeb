@@ -379,7 +379,14 @@ function AccountInner() {
                   MistyVPN Premium{status.amount != null ? ` · ${fmtMoney(status.amount, status.currency)}` : ""}
                 </span>
               </div>
-              {status.savedCardLast4 ?? status.cardLast4 ? (
+              {status.savedPaymentType === "paypal" ? (
+                <div className="mt-2 flex items-center justify-between gap-4">
+                  <span className="text-slate-400">Method</span>
+                  <span className="text-white">
+                    PayPal{status.savedPaymentLabel ? ` · ${status.savedPaymentLabel}` : ""}
+                  </span>
+                </div>
+              ) : status.savedCardLast4 ?? status.cardLast4 ? (
                 <div className="mt-2 flex items-center justify-between gap-4">
                   <span className="text-slate-400">Card</span>
                   <span className="text-white">
