@@ -26,7 +26,7 @@ export const site = {
   stores: {
     ios: "/download",
     android: "/download",
-    mac: "/download",
+    mac: "https://github.com/yrahman82/mistyvpn-releases/releases/latest/download/MistyVPN.zip",
     tv: "/download",
   },
 } as const;
@@ -170,7 +170,7 @@ export const features = [
 export const platforms = [
   { name: "iPhone & iPad", store: "App Store", href: site.stores.ios, icon: "apple" },
   { name: "Android", store: "Google Play", href: site.stores.android, icon: "android" },
-  { name: "Mac", store: "Mac App Store", href: site.stores.mac, icon: "apple" },
+  { name: "Mac", store: "Direct download · macOS 13+", href: site.stores.mac, icon: "apple" },
   { name: "Android TV", store: "Google Play", href: site.stores.tv, icon: "tv" },
 ];
 
