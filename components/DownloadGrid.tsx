@@ -10,6 +10,7 @@ const OS_TO_PLATFORM: Record<string, string[]> = {
   iOS: ["iPhone & iPad"],
   Android: ["Android", "Android TV"],
   Mac: ["Mac"],
+  Windows: ["Windows"],
 };
 
 export default function DownloadGrid() {
@@ -21,6 +22,7 @@ export default function DownloadGrid() {
     if (/iPhone|iPad|iPod/i.test(ua)) setOs("iOS");
     else if (/Android/i.test(ua)) setOs("Android");
     else if (/Macintosh|Mac OS X/i.test(ua)) setOs("Mac");
+    else if (/Windows/i.test(ua)) setOs("Windows");
     else setOs("other");
   }, []);
 

@@ -27,6 +27,10 @@ export const site = {
     ios: "/download",
     android: "/download",
     mac: "https://github.com/yrahman82/mistyvpn-releases/releases/latest/download/MistyVPN.dmg",
+    // Windows: the moving "windows-latest" release tag → always the newest signed installer (the per-version
+    // win-vX releases stay for history + the WinSparkle appcast). Not GitHub's "latest" so the Mac DMG link
+    // above (which uses /releases/latest) is unaffected.
+    windows: "https://github.com/yrahman82/mistyvpn-releases/releases/download/windows-latest/MistyVPN-Setup.exe",
     tv: "/download",
   },
 } as const;
@@ -69,6 +73,7 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
       { label: "iPhone & iPad", href: "/download" },
       { label: "Android", href: "/download" },
       { label: "Mac", href: "/download" },
+      { label: "Windows", href: "/download" },
       { label: "Android TV", href: "/download" },
     ],
   },
@@ -171,6 +176,7 @@ export const platforms = [
   { name: "iPhone & iPad", store: "App Store", href: site.stores.ios, icon: "apple" },
   { name: "Android", store: "Google Play", href: site.stores.android, icon: "android" },
   { name: "Mac", store: "macOS 13+", href: site.stores.mac, icon: "apple" },
+  { name: "Windows", store: "Windows 10/11", href: site.stores.windows, icon: "windows" },
   { name: "Android TV", store: "Google Play", href: site.stores.tv, icon: "tv" },
 ];
 

@@ -198,6 +198,18 @@ export function TvIcon(p: IconProps) {
   );
 }
 
+export function WindowsIcon(p: IconProps) {
+  // The four-pane Windows logo.
+  return (
+    <svg {...base} {...p}>
+      <path d="M3 5.5 11 4.3V11.3H3V5.5Z" />
+      <path d="M13 4 21 3v8.3h-8V4Z" />
+      <path d="M3 12.7h8v6.8L3 18.3v-5.6Z" />
+      <path d="M13 12.7h8V21l-8-1.2v-7.1Z" />
+    </svg>
+  );
+}
+
 export const iconMap = {
   shield: ShieldIcon,
   bolt: BoltIcon,
@@ -218,6 +230,7 @@ export const iconMap = {
   apple: AppleIcon,
   android: AndroidIcon,
   tv: TvIcon,
+  windows: WindowsIcon,
 } as const;
 
 export type IconName = keyof typeof iconMap;
