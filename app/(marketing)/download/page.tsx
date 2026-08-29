@@ -54,8 +54,8 @@ export default function DownloadPage() {
         <Container className="max-w-3xl">
           <DownloadGrid />
           <p className="mt-6 text-center text-sm text-slate-400">
-            Apps are rolling out to the App Store and Google Play. Already have an
-            account?{" "}
+            MistyVPN is on Google Play now, with the App Store version rolling out
+            soon. Already have an account?{" "}
             <a href="/account" className="text-brand hover:underline">
               Manage it here
             </a>

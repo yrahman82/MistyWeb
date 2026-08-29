@@ -25,13 +25,15 @@ export const site = {
   // Store links point at the /download hub until the real App Store / Play Store URLs are live.
   stores: {
     ios: "/download",
-    android: "/download",
+    // Android + Android TV are one APK (single Play listing, package com.mistyvpn.app); Google routes
+    // phone vs leanback entry point automatically, so both cards point at the same store URL.
+    android: "https://play.google.com/store/apps/details?id=com.mistyvpn.app",
     mac: "https://github.com/yrahman82/mistyvpn-releases/releases/latest/download/MistyVPN.dmg",
     // Windows: the moving "windows-latest" release tag → always the newest signed installer (the per-version
     // win-vX releases stay for history + the WinSparkle appcast). Not GitHub's "latest" so the Mac DMG link
     // above (which uses /releases/latest) is unaffected.
     windows: "https://github.com/yrahman82/mistyvpn-releases/releases/download/windows-latest/MistyVPN-Setup.exe",
-    tv: "/download",
+    tv: "https://play.google.com/store/apps/details?id=com.mistyvpn.app",
   },
 } as const;
 
