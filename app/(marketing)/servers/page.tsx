@@ -101,9 +101,9 @@ export default function ServersPage() {
       </div>
 
       <p className="mt-5 text-sm text-slate-400">
-        WireGuard, VLESS (Reality) and Hysteria2 run in the MistyVPN apps; OpenVPN (UDP/TCP) and
-        ShadowTLS also work for routers and manual configuration. Live server health and load are
-        coming to this page soon.
+        WireGuard, VLESS (Reality) and Hysteria2 run in the MistyVPN apps; OpenVPN (UDP/TCP) also
+        works for routers and manual configuration. Stealth obfuscation is applied automatically
+        where a network needs it. Live server health and load are coming to this page soon.
       </p>
     </Container>
   );

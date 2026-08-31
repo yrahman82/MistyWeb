@@ -4,7 +4,7 @@
 export type ServerLoc = { city: string; country: string; cc: string; host: string; flag: string };
 
 // Protocols every MistyVPN server exposes (app + router/manual use).
-export const serverProtocols = ["WireGuard", "VLESS (Reality)", "Hysteria2", "OpenVPN UDP", "OpenVPN TCP", "ShadowTLS"] as const;
+export const serverProtocols = ["WireGuard", "VLESS (Reality)", "Hysteria2", "OpenVPN UDP", "OpenVPN TCP"] as const;
 
 export const serverLocations: ServerLoc[] = [
   { city: "Sydney", country: "Australia", cc: "au", host: "au-syd-1.mistyvpn.com", flag: "🇦🇺" },
