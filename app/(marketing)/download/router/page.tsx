@@ -29,7 +29,7 @@ export default function RouterLandingPage() {
           OpenVPN client works.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Button href={UDP_PROFILE_PATH} className="px-6">Download profile (UDP)</Button>
+          <Button href={UDP_PROFILE_PATH} variant="secondary" className="px-6">UDP profile</Button>
           <Button href={TCP_PROFILE_PATH} variant="secondary" className="px-6">TCP profile</Button>
           <Button href="/servers" variant="secondary" className="px-6">Server list</Button>
         </div>
@@ -52,9 +52,13 @@ export default function RouterLandingPage() {
                   </h3>
                 </div>
                 <p className="mt-3 flex-1 text-sm leading-6 text-slate-400">{p.detail}</p>
-                <Link href={p.href} className="mt-3 text-sm font-medium text-brand hover:underline">
-                  {p.linkLabel}
-                </Link>
+                <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+                  {p.links.map((l) => (
+                    <Link key={l.href} href={l.href} className="text-sm font-medium text-brand hover:underline">
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             );
           })}

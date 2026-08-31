@@ -20,29 +20,29 @@ export type Router = {
   steps: Step[];
 };
 
-// Shown on the landing page — the three things you need first. Kept short: one line each + its own link.
-export type Prereq = { icon: string; title: string; detail: string; href: string; linkLabel: string };
+// Shown on the landing page — the three things you need first. Kept short: one line each + its own link(s).
+export type Prereq = { icon: string; title: string; detail: string; links: { href: string; label: string }[] };
 export const prereqs: Prereq[] = [
   {
     icon: "key",
     title: "VPN username & password",
-    detail: "Not your account login — the VPN credentials (user_1234567).",
-    href: "/account",
-    linkLabel: "Open Account →",
+    detail: "Separate from your account login. Get them on the Account page — on the website or in the mobile apps.",
+    links: [{ href: "/account", label: "Open Account →" }],
   },
   {
     icon: "globe",
     title: "A server hostname",
     detail: "Pick a location, e.g. gb-lon-1.mistyvpn.com. UDP 10006 · TCP 10007.",
-    href: "/servers",
-    linkLabel: "Server list →",
+    links: [{ href: "/servers", label: "Server list →" }],
   },
   {
     icon: "download",
     title: "The OpenVPN profile",
     detail: "Certificate included. Set the 'remote' to your server, then upload it.",
-    href: UDP_PROFILE_PATH,
-    linkLabel: "Download .ovpn →",
+    links: [
+      { href: UDP_PROFILE_PATH, label: "UDP →" },
+      { href: TCP_PROFILE_PATH, label: "TCP →" },
+    ],
   },
 ];
 

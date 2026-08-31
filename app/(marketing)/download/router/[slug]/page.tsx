@@ -42,7 +42,7 @@ export default async function RouterGuidePage({ params }: { params: Promise<{ sl
         </h1>
         <p className="mt-4 text-slate-300">{r.summary}</p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Button href={UDP_PROFILE_PATH} className="px-6">Download profile (UDP)</Button>
+          <Button href={UDP_PROFILE_PATH} variant="secondary" className="px-6">UDP profile</Button>
           <Button href={TCP_PROFILE_PATH} variant="secondary" className="px-6">TCP profile</Button>
           <Button href="/servers" variant="secondary" className="px-6">Server list</Button>
         </div>
@@ -65,7 +65,9 @@ export default async function RouterGuidePage({ params }: { params: Promise<{ sl
           <li className="flex flex-wrap items-baseline gap-x-2">
             <span className="text-brand">•</span>
             <span>The OpenVPN profile (certificate included)</span>
-            <Link href={UDP_PROFILE_PATH} className="text-brand hover:underline">Download .ovpn</Link>
+            <Link href={UDP_PROFILE_PATH} className="text-brand hover:underline">UDP</Link>
+            <span className="text-slate-600">·</span>
+            <Link href={TCP_PROFILE_PATH} className="text-brand hover:underline">TCP</Link>
           </li>
         </ul>
       </div>
