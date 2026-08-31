@@ -37,7 +37,7 @@ export const site = {
   },
 } as const;
 
-export type NavItem = { label: string; href: string };
+export type NavItem = { label: string; href: string; children?: NavItem[] };
 
 export const nav: NavItem[] = [
   { label: "Home", href: "/" },
@@ -46,7 +46,15 @@ export const nav: NavItem[] = [
   { label: "Compare", href: "/compare" },
   { label: "No-Logs", href: "/no-logs" },
   { label: "Download", href: "/download" },
-  { label: "Support", href: "/support" },
+  {
+    label: "Support",
+    href: "/support",
+    children: [
+      { label: "Contact Us", href: "/support" },
+      { label: "Server List", href: "/servers" },
+      // Tutorials / Help material — add here later.
+    ],
+  },
 ];
 
 export const footerNav: { title: string; items: NavItem[] }[] = [

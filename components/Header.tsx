@@ -41,18 +41,52 @@ export default function Header() {
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-6 lg:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              aria-current={isActive(item.href) ? "page" : undefined}
-              className={`text-sm font-medium transition-colors ${
-                isActive(item.href) ? "text-brand" : "text-slate-300 hover:text-white"
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) =>
+            item.children ? (
+              <div key={item.label} className="group relative">
+                <Link
+                  href={item.href}
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  className={`flex items-center gap-1 text-sm font-medium transition-colors ${
+                    isActive(item.href) ? "text-brand" : "text-slate-300 hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                  <svg className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
+                    <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clipRule="evenodd" />
+                  </svg>
+                </Link>
+                {/* pt-2 keeps the hover bridge so the menu doesn't close in the gap */}
+                <div className="absolute left-1/2 top-full hidden -translate-x-1/2 pt-2 group-hover:block">
+                  <div className="min-w-[11rem] rounded-xl border border-white/10 bg-ink py-1.5 shadow-xl shadow-black/40">
+                    {item.children.map((c) => (
+                      <Link
+                        key={c.label}
+                        href={c.href}
+                        aria-current={isActive(c.href) ? "page" : undefined}
+                        className={`block px-4 py-2 text-sm transition-colors hover:bg-white/5 ${
+                          isActive(c.href) ? "text-brand" : "text-slate-300 hover:text-white"
+                        }`}
+                      >
+                        {c.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={`text-sm font-medium transition-colors ${
+                  isActive(item.href) ? "text-brand" : "text-slate-300 hover:text-white"
+                }`}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </div>
 
         <div className="hidden items-center gap-5 lg:flex">
@@ -95,16 +129,40 @@ export default function Header() {
       {open ? (
         <div className="border-t border-white/10 bg-ink md:hidden">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-5 py-4 sm:px-6">
-            {nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 hover:bg-white/5"
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {nav.map((item) =>
+              item.children ? (
+                <div key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 hover:bg-white/5"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                  <div className="ml-3 flex flex-col border-l border-white/10 pl-3">
+                    {item.children.map((c) => (
+                      <Link
+                        key={c.label}
+                        href={c.href}
+                        className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/5"
+                        onClick={() => setOpen(false)}
+                      >
+                        {c.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 hover:bg-white/5"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
             <Link
               href={loggedIn ? "/account" : signInHref}
               className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 hover:bg-white/5"
