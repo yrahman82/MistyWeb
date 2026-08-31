@@ -30,7 +30,8 @@ export default function ServersPage() {
         </p>
       </div>
 
-      <div className="mt-10 overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.03]">
+      {/* Desktop: full matrix table (horizontal scroll only as a last resort on tablets) */}
+      <div className="mt-10 hidden overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.03] lg:block">
         <table className="w-full min-w-[860px] border-collapse text-center">
           <thead>
             <tr className="border-b border-white/10">
@@ -68,6 +69,35 @@ export default function ServersPage() {
             ))}
           </tbody>
         </table>
+      </div>
+
+      {/* Mobile: one card per location — no horizontal scroll; protocols as chips */}
+      <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:hidden">
+        {serverLocations.map((s) => (
+          <div key={s.host} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+            <div className="flex items-center gap-2.5">
+              <span className="text-xl leading-none" aria-hidden>{s.flag}</span>
+              <div>
+                <div className="text-sm font-semibold text-white">{s.city}</div>
+                <div className="text-xs text-slate-400">{s.country}</div>
+              </div>
+            </div>
+            <code className="mt-3 block overflow-x-auto rounded bg-white/5 px-2 py-1.5 text-xs text-slate-200">
+              {s.host}
+            </code>
+            <div className="mt-3 flex flex-wrap gap-1.5">
+              {serverProtocols.map((p) => (
+                <span
+                  key={p}
+                  className="inline-flex items-center gap-1 rounded-full bg-emerald-400/10 px-2 py-0.5 text-[11px] font-medium text-emerald-300"
+                >
+                  <CheckIcon className="h-3 w-3" />
+                  {p}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
 
       <p className="mt-5 text-sm text-slate-400">
