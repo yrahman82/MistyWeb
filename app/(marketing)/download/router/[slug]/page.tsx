@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container, Eyebrow, Button } from "@/components/ui";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { routers, PROFILE_PATH } from "@/lib/routers";
+import { routers, UDP_PROFILE_PATH, TCP_PROFILE_PATH } from "@/lib/routers";
 
 export function generateStaticParams() {
   return routers.map((r) => ({ slug: r.slug }));
@@ -42,20 +42,32 @@ export default async function RouterGuidePage({ params }: { params: Promise<{ sl
         </h1>
         <p className="mt-4 text-slate-300">{r.summary}</p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Button href={PROFILE_PATH} className="px-6">Download OpenVPN profile</Button>
+          <Button href={UDP_PROFILE_PATH} className="px-6">Download profile (UDP)</Button>
+          <Button href={TCP_PROFILE_PATH} variant="secondary" className="px-6">TCP profile</Button>
           <Button href="/servers" variant="secondary" className="px-6">Server list</Button>
         </div>
       </div>
 
-      {/* What you need — compact reminder with links */}
-      <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm leading-6 text-slate-300">
-        <span className="font-semibold text-white">You&apos;ll need:</span>{" "}
-        your VPN username &amp; password (
-        <Link href="/account" className="text-brand hover:underline">mistyvpn.com/account</Link>{" "}
-        → VPN Credentials, or in the app under Account), a server hostname from the{" "}
-        <Link href="/servers" className="text-brand hover:underline">Server List</Link>{" "}
-        (e.g. <code className="rounded bg-white/5 px-1.5 py-0.5 text-xs">gb-lon-1.mistyvpn.com</code>, UDP port
-        10006), and the <Link href={PROFILE_PATH} className="text-brand hover:underline">OpenVPN profile</Link>.
+      {/* What you need — scannable checklist with links */}
+      <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+        <span className="text-sm font-semibold text-white">You&apos;ll need</span>
+        <ul className="mt-3 space-y-2.5 text-sm text-slate-300">
+          <li className="flex flex-wrap items-baseline gap-x-2">
+            <span className="text-brand">•</span>
+            <span>Your VPN username &amp; password</span>
+            <Link href="/account" className="text-brand hover:underline">Account → VPN Credentials</Link>
+          </li>
+          <li className="flex flex-wrap items-baseline gap-x-2">
+            <span className="text-brand">•</span>
+            <span>A server hostname like <code className="rounded bg-white/5 px-1.5 py-0.5 text-xs">gb-lon-1.mistyvpn.com</code> (UDP 10006 · TCP 10007)</span>
+            <Link href="/servers" className="text-brand hover:underline">Server list</Link>
+          </li>
+          <li className="flex flex-wrap items-baseline gap-x-2">
+            <span className="text-brand">•</span>
+            <span>The OpenVPN profile (certificate included)</span>
+            <Link href={UDP_PROFILE_PATH} className="text-brand hover:underline">Download .ovpn</Link>
+          </li>
+        </ul>
       </div>
 
       {/* Steps */}

@@ -36,9 +36,11 @@ export default function DownloadGrid() {
         // this page, so we render a "Coming soon" state instead of a dead button. Swap in the real
         // App Store / Play Store URLs in lib/site.ts `stores` and the buttons go live automatically.
         const live = p.href.startsWith("http");
-        // Internal links (e.g. Router → /download/router) aren't store downloads — they open a
-        // setup-guide page. Render a "Setup guide" link instead of the store button / "Coming soon".
-        const internal = p.href.startsWith("/");
+        // A setup-guide card links to a sub-page under /download/ (e.g. Router → /download/router).
+        // NOTE: a store placeholder like iOS's "/download" points back at THIS page — it is NOT a
+        // guide, so match "/download/" (with the trailing slash) to exclude the self-link → those
+        // fall through to the "Coming soon" state until the store URL goes live.
+        const internal = p.href.startsWith("/download/");
         const isMine = highlighted.includes(p.name);
         return (
           <div

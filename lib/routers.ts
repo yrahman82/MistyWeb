@@ -3,7 +3,11 @@
 // an OpenVPN client works. Steps reference: the MistyVPN .ovpn profile, /servers for the hostname, and
 // the Account screen for the VPN username/password.
 
-export const PROFILE_PATH = "/mistyvpn-openvpn.ovpn"; // downloadable OpenVPN profile (shared CA, no keys/creds)
+// Downloadable OpenVPN profiles (shared CA, no keys/creds). UDP is the default; TCP for networks
+// that block UDP. Both point at gb-lon-1 — change the 'remote' line for a different location.
+export const UDP_PROFILE_PATH = "/mistyvpn-openvpn-udp.ovpn";
+export const TCP_PROFILE_PATH = "/mistyvpn-openvpn-tcp.ovpn";
+export const PROFILE_PATH = UDP_PROFILE_PATH; // back-compat default
 
 export type Step = { title: string; detail: string };
 export type Router = {
@@ -11,25 +15,34 @@ export type Router = {
   name: string;
   badge: string;      // firmware/family
   summary: string;
+  mono: string;       // short monogram for the card badge
+  color: string;      // brand-ish accent (hex) for the badge tint
   steps: Step[];
 };
 
-// Shown on the landing page and above every guide — the three things you need first.
-export const prereqs: Step[] = [
+// Shown on the landing page — the three things you need first. Kept short: one line each + its own link.
+export type Prereq = { icon: string; title: string; detail: string; href: string; linkLabel: string };
+export const prereqs: Prereq[] = [
   {
-    title: "1 · Get your VPN username & password",
-    detail:
-      "These are separate from your account email/password. Open the MistyVPN app → Account → VPN Credentials (iOS & Android), or sign in at mistyvpn.com/account → VPN Credentials on the web. Copy the username (looks like user_1234567) and password.",
+    icon: "key",
+    title: "VPN username & password",
+    detail: "Not your account login — the VPN credentials (user_1234567).",
+    href: "/account",
+    linkLabel: "Open Account →",
   },
   {
-    title: "2 · Pick a server location",
-    detail:
-      "Open the Server List to choose a location. Each location has a hostname like gb-lon-1.mistyvpn.com. You'll set this as the server address in the profile (OpenVPN UDP is port 10006, TCP is 10007).",
+    icon: "globe",
+    title: "A server hostname",
+    detail: "Pick a location, e.g. gb-lon-1.mistyvpn.com. UDP 10006 · TCP 10007.",
+    href: "/servers",
+    linkLabel: "Server list →",
   },
   {
-    title: "3 · Download the OpenVPN profile",
-    detail:
-      "Grab the MistyVPN .ovpn profile below. It already contains our certificate. Change the 'remote' line to your chosen server hostname, then upload it to your router and enter the VPN username/password from step 1.",
+    icon: "download",
+    title: "The OpenVPN profile",
+    detail: "Certificate included. Set the 'remote' to your server, then upload it.",
+    href: UDP_PROFILE_PATH,
+    linkLabel: "Download .ovpn →",
   },
 ];
 
@@ -38,6 +51,8 @@ export const routers: Router[] = [
     slug: "dd-wrt",
     name: "DD-WRT",
     badge: "Custom firmware",
+    mono: "DD",
+    color: "#e0403f",
     summary: "Popular open firmware for Linksys, Netgear, TP-Link and many other routers.",
     steps: [
       { title: "Open the router admin", detail: "In a browser, go to your router's address (often 192.168.1.1) and sign in." },
@@ -53,6 +68,8 @@ export const routers: Router[] = [
     slug: "asuswrt",
     name: "Asus (AsusWRT / Merlin)",
     badge: "Built-in OpenVPN",
+    mono: "AS",
+    color: "#00a0e0",
     summary: "Most Asus routers (stock firmware and Asuswrt-Merlin) have a built-in OpenVPN client.",
     steps: [
       { title: "Open the router admin", detail: "Go to router.asus.com (or 192.168.1.1) and sign in." },
@@ -67,6 +84,8 @@ export const routers: Router[] = [
     slug: "openwrt",
     name: "OpenWRT",
     badge: "Custom firmware",
+    mono: "OW",
+    color: "#00b5e2",
     summary: "Lightweight open router OS. Uses the OpenVPN package + LuCI web UI.",
     steps: [
       { title: "Install the OpenVPN packages", detail: "In LuCI, go to System → Software, Update lists, then install: openvpn-openssl and luci-app-openvpn." },
@@ -79,6 +98,8 @@ export const routers: Router[] = [
     slug: "freshtomato",
     name: "Tomato / FreshTomato",
     badge: "Custom firmware",
+    mono: "TO",
+    color: "#e2703a",
     summary: "Tomato-family firmware (FreshTomato, AdvancedTomato) with a built-in OpenVPN client.",
     steps: [
       { title: "Open the router admin", detail: "Go to your router's address and sign in." },
@@ -93,6 +114,8 @@ export const routers: Router[] = [
     slug: "pfsense",
     name: "pfSense / OPNsense",
     badge: "Firewall/router OS",
+    mono: "PF",
+    color: "#c0392b",
     summary: "Full firewall OSes for dedicated router boxes — OpenVPN client under the VPN menu.",
     steps: [
       { title: "Add the CA", detail: "System → Cert Manager → CAs → Add. Paste the <ca>…</ca> block from the .ovpn and save." },
@@ -106,6 +129,8 @@ export const routers: Router[] = [
     slug: "gl-inet",
     name: "GL.iNet",
     badge: "Travel routers",
+    mono: "GL",
+    color: "#f5a623",
     summary: "GL.iNet travel/home routers with an easy OpenVPN client in the admin panel.",
     steps: [
       { title: "Open the admin panel", detail: "Go to 192.168.8.1 and sign in." },
@@ -118,6 +143,8 @@ export const routers: Router[] = [
     slug: "generic",
     name: "Any other OpenVPN router",
     badge: "Universal",
+    mono: "★",
+    color: "#7c8aff",
     summary: "Any router with an OpenVPN client works — the settings are the same everywhere.",
     steps: [
       { title: "Find the OpenVPN client", detail: "In your router's admin, look for a VPN / OpenVPN Client section (wording varies by brand)." },

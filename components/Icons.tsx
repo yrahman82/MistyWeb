@@ -210,6 +210,19 @@ export function WindowsIcon(p: IconProps) {
   );
 }
 
+export function RouterIcon(p: IconProps) {
+  // A Wi-Fi router: rack body + status light + broadcast arcs.
+  return (
+    <svg {...base} {...p}>
+      <rect x="3" y="13" width="18" height="6" rx="1.5" />
+      <path d="M7 16h.01M11 16h4" />
+      <path d="M12 10V7" />
+      <path d="M9.5 7.5a3.5 3.5 0 0 1 5 0" />
+      <path d="M7.5 5.5a6.5 6.5 0 0 1 9 0" />
+    </svg>
+  );
+}
+
 export const iconMap = {
   shield: ShieldIcon,
   bolt: BoltIcon,
@@ -231,6 +244,7 @@ export const iconMap = {
   android: AndroidIcon,
   tv: TvIcon,
   windows: WindowsIcon,
+  router: RouterIcon,
 } as const;
 
 export type IconName = keyof typeof iconMap;

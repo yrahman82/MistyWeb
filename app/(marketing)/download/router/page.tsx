@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container, Eyebrow, Button } from "@/components/ui";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { routers, prereqs, PROFILE_PATH } from "@/lib/routers";
+import { iconMap } from "@/components/Icons";
+import { routers, prereqs, UDP_PROFILE_PATH, TCP_PROFILE_PATH } from "@/lib/routers";
 
 export const metadata: Metadata = {
   title: "VPN for Routers — DD-WRT, Asus, OpenWRT & more (OpenVPN)",
@@ -28,27 +29,36 @@ export default function RouterLandingPage() {
           OpenVPN client works.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Button href={PROFILE_PATH} className="px-6">Download OpenVPN profile</Button>
-          <Button href="/servers" variant="secondary" className="px-6">Browse server list</Button>
+          <Button href={UDP_PROFILE_PATH} className="px-6">Download profile (UDP)</Button>
+          <Button href={TCP_PROFILE_PATH} variant="secondary" className="px-6">TCP profile</Button>
+          <Button href="/servers" variant="secondary" className="px-6">Server list</Button>
         </div>
       </div>
 
-      {/* What you need first */}
+      {/* Before you start — one line + its own link per card */}
       <div className="mt-12">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Before you start</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-3">
-          {prereqs.map((p) => (
-            <div key={p.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-              <h3 className="text-sm font-semibold text-white">{p.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-400">{p.detail}</p>
-            </div>
-          ))}
+          {prereqs.map((p, i) => {
+            const Icon = iconMap[p.icon as keyof typeof iconMap];
+            return (
+              <div key={p.title} className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-9 w-9 flex-none items-center justify-center rounded-xl bg-brand/15 text-brand">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="text-sm font-semibold text-white">
+                    <span className="text-slate-500">{i + 1}.</span> {p.title}
+                  </h3>
+                </div>
+                <p className="mt-3 flex-1 text-sm leading-6 text-slate-400">{p.detail}</p>
+                <Link href={p.href} className="mt-3 text-sm font-medium text-brand hover:underline">
+                  {p.linkLabel}
+                </Link>
+              </div>
+            );
+          })}
         </div>
-        <p className="mt-3 text-sm text-slate-400">
-          Get credentials at <Link href="/account" className="text-brand hover:underline">mistyvpn.com/account</Link>{" "}
-          (or in the app: Account → VPN Credentials). Pick a location on the{" "}
-          <Link href="/servers" className="text-brand hover:underline">Server List</Link>.
-        </p>
       </div>
 
       {/* Router picker */}
@@ -62,13 +72,19 @@ export default function RouterLandingPage() {
               href={`/download/router/${r.slug}`}
               className="group flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-brand/50 hover:bg-brand/[0.06]"
             >
-              <div className="flex items-center justify-between">
-                <span className="text-base font-semibold text-white">{r.name}</span>
-                <span className="rounded-full bg-white/5 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-300">
-                  {r.badge}
+              <div className="flex items-center gap-3">
+                <span
+                  className="flex h-11 w-11 flex-none items-center justify-center rounded-xl text-base font-bold"
+                  style={{ backgroundColor: `${r.color}22`, color: r.color }}
+                >
+                  {r.mono}
                 </span>
+                <div className="min-w-0">
+                  <div className="truncate text-base font-semibold text-white">{r.name}</div>
+                  <div className="text-[11px] uppercase tracking-wide text-slate-400">{r.badge}</div>
+                </div>
               </div>
-              <p className="mt-2 flex-1 text-sm leading-6 text-slate-400">{r.summary}</p>
+              <p className="mt-3 flex-1 text-sm leading-6 text-slate-400">{r.summary}</p>
               <span className="mt-4 text-sm font-medium text-brand group-hover:underline">View guide →</span>
             </Link>
           ))}

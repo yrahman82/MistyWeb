@@ -188,7 +188,7 @@ export const platforms = [
   { name: "Mac", store: "macOS 13+", href: site.stores.mac, icon: "apple" },
   { name: "Windows", store: "Windows 10/11", href: site.stores.windows, icon: "windows" },
   { name: "Android TV", store: "Google Play", href: site.stores.tv, icon: "tv" },
-  { name: "Router", store: "OpenVPN — DD-WRT, Asus, OpenWRT & more", href: "/download/router", icon: "server" },
+  { name: "Router", store: "OpenVPN — DD-WRT, Asus, OpenWRT & more", href: "/download/router", icon: "router" },
 ];
 
 // Three simple steps for the "how it works" section.
