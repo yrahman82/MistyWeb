@@ -91,7 +91,8 @@ export default async function RouterGuidePage({ params }: { params: Promise<{ sl
         <Link href="/download/router" className="text-brand hover:underline">← All routers</Link>
         <span className="text-slate-500">·</span>
         <span className="text-slate-400">
-          Stuck? <Link href="/support" className="text-brand hover:underline">Contact us</Link> and we&apos;ll help you get connected.
+          Stuck? <Link href="/support" className="text-brand hover:underline">Contact us</Link>{" "}
+          and we&apos;ll help you get connected.
         </span>
       </div>
     </Container>
