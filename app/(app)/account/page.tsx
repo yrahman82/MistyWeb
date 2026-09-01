@@ -23,6 +23,7 @@ import {
   type SubStatus,
   type Plan,
 } from "@/lib/api";
+import { trackBeginCheckout, trackPurchase } from "@/lib/analytics";
 
 const PLATFORM_LABEL: Record<string, string> = {
   web: "Web", apple: "App Store", google: "Google Play",
@@ -55,6 +56,16 @@ function AccountInner() {
   const statusRef = useRef<SubStatus | null>(null);
   useEffect(() => { statusRef.current = status; }, [status]);
 
+  // Analytics funnel: keep the chosen plan + plans in refs so onPaid (which resets `plan`) can still
+  // read them, and dedupe the purchase event (onPaid can be called more than once — poll, returnUrl).
+  const planRef = useRef<string | null>(null);
+  useEffect(() => { planRef.current = plan; }, [plan]);
+  const plansRef = useRef<Plan[]>([]);
+  useEffect(() => { plansRef.current = plans; }, [plans]);
+  const purchaseFiredRef = useRef(false);
+  const priceForPlan = (key: string | null) =>
+    key ? (plansRef.current.find((p) => p.key === key)?.price ?? null) : null;
+
   const refresh = useCallback(async () => {
     const s = await getStatus();
     setStatus(s);
@@ -62,6 +73,13 @@ function AccountInner() {
   }, []);
 
   const onPaid = useCallback(async () => {
+    // Funnel: bottom — "purchase successful". Deduped: onPaid can fire more than once (activation
+    // poll, redirect return). Read the plan from the ref because we reset `plan` just below.
+    if (!purchaseFiredRef.current) {
+      purchaseFiredRef.current = true;
+      const key = planRef.current;
+      trackPurchase(key, priceForPlan(key));
+    }
     setClientSecret(null);
     setPlan(null);
     setView("overview");
@@ -91,6 +109,10 @@ function AccountInner() {
   const choosePlan = useCallback((planKey: string) => {
     setErr("");
     setPlan(planKey);
+    // Funnel: middle — "tried buying". Covers both paths below (new-card checkout and saved-card
+    // confirm). Reset the purchase dedupe so a fresh attempt can fire its own purchase event.
+    purchaseFiredRef.current = false;
+    trackBeginCheckout(planKey, priceForPlan(planKey));
     // Returning user who already has a payment method on file → CONFIRM charging that method (card or
     // PayPal). We deliberately don't let them enter a NEW method here: an account has one payment
     // method, not one-per-subscription — to use a different one they change it in Payment Method first.

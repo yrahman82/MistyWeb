@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { faqs } from "@/lib/site";
 import { getPlans } from "@/lib/pricing";
 import PaymentMethods from "@/components/PaymentMethods";
+import TrackEvent from "@/components/TrackEvent";
 
 export const metadata: Metadata = {
   title: "Pricing — free to start, Premium from $2.50/mo",
@@ -19,6 +20,8 @@ export default async function PricingPage() {
 
   return (
     <>
+      {/* Funnel: top — "saw prices". */}
+      <TrackEvent event="view_pricing" />
       <Breadcrumbs items={[{ name: "Pricing", href: "/pricing" }]} />
 
       <section className="pt-20 pb-10 text-center">
