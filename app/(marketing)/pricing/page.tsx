@@ -79,7 +79,7 @@ export default async function PricingPage() {
                 </ul>
                 <div className="mt-8">
                   <Button
-                    href={plan.key === "free" ? "/register" : `/account?plan=${plan.key}`}
+                    href={plan.key === "free" ? "/download" : `/account?plan=${plan.key}`}
                     variant={plan.highlight ? "primary" : "secondary"}
                     className="w-full"
                   >

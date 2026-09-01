@@ -251,8 +251,9 @@ export const plans = [
     cadence: "",
     note: "No card needed",
     highlight: false,
-    blurb: "Get started for free and earn free minutes as you go.",
+    blurb: "Get started for free and earn free minutes as you go — on the iOS and Android apps.",
     features: [
+      "iOS & Android apps only",
       "Earn free minutes",
       "All protocols & Stealth Mode",
       "1 device",
