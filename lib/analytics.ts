@@ -4,11 +4,12 @@
 // referrer automatically — no code needed for those. This file adds (a) SPA-safe page_view on every
 // client-side route change and (b) the purchase funnel events: view_pricing → begin_checkout → purchase.
 //
-// Enable by setting NEXT_PUBLIC_GA_ID (e.g. "G-XXXXXXXXXX") in the environment (Vercel → Project →
-// Settings → Environment Variables). With it unset, every helper is a no-op and no script loads, so
-// preview/local builds stay clean.
+// The live GA4 stream (Misty Web, https://mistyvpn.com). A Measurement ID is NOT a secret — it ships
+// to every browser in the gtag script — so it's safe to bake in as the default. Override per-env with
+// NEXT_PUBLIC_GA_ID (e.g. a separate property for staging) if ever needed.
+const DEFAULT_GA_ID = "G-MRVWG0TC1T";
 
-export const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || DEFAULT_GA_ID;
 
 type Params = Record<string, unknown>;
 

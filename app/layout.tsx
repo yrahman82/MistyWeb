@@ -5,8 +5,7 @@ import { Suspense } from "react";
 import "./globals.css";
 import { site } from "@/lib/site";
 import Analytics from "@/components/Analytics";
-
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+import { GA_ID } from "@/lib/analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
