@@ -182,13 +182,14 @@ export const features = [
   },
 ];
 
+// `key` is the download-tracking category sent to the BE redirect (/api/download/{key}) + GA.
 export const platforms = [
-  { name: "iPhone & iPad", store: "App Store", href: site.stores.ios, icon: "apple" },
-  { name: "Android", store: "Google Play", href: site.stores.android, icon: "android" },
-  { name: "Mac", store: "macOS 13+", href: site.stores.mac, icon: "apple" },
-  { name: "Windows", store: "Windows 10/11", href: site.stores.windows, icon: "windows" },
-  { name: "Android TV", store: "Google Play", href: site.stores.tv, icon: "tv" },
-  { name: "Router", store: "OpenVPN — DD-WRT, Asus, OpenWRT & more", href: "/download/router", icon: "router" },
+  { key: "ios", name: "iPhone & iPad", store: "App Store", href: site.stores.ios, icon: "apple" },
+  { key: "android", name: "Android", store: "Google Play", href: site.stores.android, icon: "android" },
+  { key: "mac", name: "Mac", store: "macOS 13+", href: site.stores.mac, icon: "apple" },
+  { key: "windows", name: "Windows", store: "Windows 10/11", href: site.stores.windows, icon: "windows" },
+  { key: "tv", name: "Android TV", store: "Google Play", href: site.stores.tv, icon: "tv" },
+  { key: "router", name: "Router", store: "OpenVPN — DD-WRT, Asus, OpenWRT & more", href: "/download/router", icon: "router" },
 ];
 
 // Three simple steps for the "how it works" section.

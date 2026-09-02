@@ -4,6 +4,11 @@ import { useEffect, useState } from "react";
 import { iconMap } from "@/components/Icons";
 import { Button } from "@/components/ui";
 import { platforms } from "@/lib/site";
+import { trackDownload } from "@/lib/analytics";
+
+// Downloads route through the BE redirect endpoint (counts server-side, then 302s to the store/asset)
+// so the numbers survive adblockers + the GFW. GA fires too as a secondary signal.
+const API = process.env.NEXT_PUBLIC_API_URL ?? "https://dev-be.mistyvpn.com";
 
 // Map a detected OS to the platform card name(s) it should highlight.
 const OS_TO_PLATFORM: Record<string, string[]> = {
@@ -70,7 +75,12 @@ export default function DownloadGrid() {
                 Setup guide
               </Button>
             ) : live ? (
-              <Button href={p.href} external className="h-10 px-5">
+              <Button
+                href={`${API}/api/download/${p.key}`}
+                external
+                className="h-10 px-5"
+                onClick={() => trackDownload(p.key)}
+              >
                 Get it
               </Button>
             ) : (

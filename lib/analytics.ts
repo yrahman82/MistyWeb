@@ -64,6 +64,13 @@ export function trackBeginCheckout(plan: string, price?: string | null) {
   });
 }
 
+/** Fired when a platform download button is clicked ("which app download was triggered").
+ *  Secondary to the first-party BE counter (/api/download/{platform}) — GA is blocked by adblockers
+ *  and in China, so it undercounts; the BE redirect is the reliable source of truth. */
+export function trackDownload(platform: string) {
+  gaEvent("app_download", { platform });
+}
+
 /** Fired once when a subscription is successfully activated ("purchase successful"). */
 export function trackPurchase(plan: string | null, price?: string | null, transactionId?: string) {
   gaEvent("purchase", {

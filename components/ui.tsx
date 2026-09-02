@@ -58,6 +58,8 @@ type ButtonProps = {
   className?: string;
   // external links open in a new tab
   external?: boolean;
+  // fire-and-forget side effect on click (e.g. an analytics event); does not block navigation
+  onClick?: () => void;
 };
 
 const variants = {
@@ -74,17 +76,18 @@ export function Button({
   variant = "primary",
   className = "",
   external = false,
+  onClick,
 }: ButtonProps) {
   const cls = `inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold transition-all duration-200 ${variants[variant]} ${className}`;
   if (external || href.startsWith("http")) {
     return (
-      <a href={href} className={cls} target="_blank" rel="noopener noreferrer">
+      <a href={href} className={cls} target="_blank" rel="noopener noreferrer" onClick={onClick}>
         {children}
       </a>
     );
   }
   return (
-    <Link href={href} className={cls}>
+    <Link href={href} className={cls} onClick={onClick}>
       {children}
     </Link>
   );
