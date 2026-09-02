@@ -32,6 +32,7 @@ export default function DownloadGrid() {
   }, []);
 
   const highlighted = os ? (OS_TO_PLATFORM[os] ?? []) : [];
+  const DlIcon = iconMap.download;
 
   return (
     <div className="grid gap-4 sm:grid-cols-2">
@@ -75,14 +76,30 @@ export default function DownloadGrid() {
                 Setup guide
               </Button>
             ) : live ? (
-              <Button
-                href={`${API}/api/download/${p.key}`}
-                external
-                className="h-10 px-5"
-                onClick={() => trackDownload(p.key)}
-              >
-                Get it
-              </Button>
+              <div className="flex flex-col items-end gap-1.5">
+                <Button
+                  href={`${API}/api/download/${p.key}`}
+                  external
+                  className="h-10 px-5"
+                  onClick={() => trackDownload(p.key)}
+                >
+                  Get it
+                </Button>
+                {/* Android also offers a direct APK (no Google Play — for sideload / China). Tracked
+                    separately as `android-apk` so Play vs direct downloads are counted apart. */}
+                {p.key === "android" ? (
+                  <a
+                    href={`${API}/api/download/android-apk`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackDownload("android-apk")}
+                    className="inline-flex items-center gap-1 text-[11px] font-medium text-slate-400 transition-colors hover:text-brand"
+                  >
+                    <DlIcon className="h-3 w-3" />
+                    Download APK
+                  </a>
+                ) : null}
+              </div>
             ) : (
               <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-slate-300">
                 Coming soon
