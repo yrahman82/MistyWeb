@@ -51,61 +51,61 @@ export default function DownloadGrid() {
         return (
           <div
             key={p.name}
-            className={`flex items-center justify-between gap-4 rounded-2xl border p-5 transition-colors ${
+            className={`flex flex-col gap-4 rounded-2xl border p-5 transition-colors sm:flex-row sm:items-center sm:justify-between ${
               isMine
                 ? "border-brand/50 bg-brand/[0.08]"
                 : "border-white/10 bg-white/[0.04]"
             }`}
           >
-            <div className="flex items-center gap-4">
-              <Icon className="h-8 w-8 text-white" />
-              <div>
-                <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-white">{p.name}</span>
+            <div className="flex min-w-0 items-center gap-4">
+              <Icon className="h-8 w-8 shrink-0 text-white" />
+              <div className="min-w-0">
+                <div className="text-sm font-semibold text-white">{p.name}</div>
+                <div className="text-xs text-slate-400">
+                  {p.store}
                   {isMine ? (
-                    <span className="rounded-full bg-brand/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-brand">
-                      Your device
-                    </span>
+                    <span className="ml-1.5 font-semibold text-brand">· Your device</span>
                   ) : null}
                 </div>
-                <div className="text-xs text-slate-400">{p.store}</div>
               </div>
             </div>
-            {internal ? (
-              <Button href={p.href} className="h-10 px-5">
-                Setup guide
-              </Button>
-            ) : live ? (
-              <div className="flex flex-col items-end gap-1.5">
-                <Button
-                  href={`${API}/api/download/${p.key}`}
-                  external
-                  className="h-10 px-5"
-                  onClick={() => trackDownload(p.key)}
-                >
-                  Get it
+            <div className="flex w-full shrink-0 flex-col items-stretch gap-1.5 sm:w-auto sm:items-end">
+              {internal ? (
+                <Button href={p.href} className="h-10 w-full justify-center px-5 sm:w-auto">
+                  Setup guide
                 </Button>
-                {/* Android + Android TV also offer the SAME universal APK direct (no Google Play — for
-                    sideload / China). Tracked apart per surface (android-apk vs tv-apk). A proper
-                    secondary button, not a tiny link, so it's easy to see and tap (incl. a TV remote). */}
-                {p.key === "android" || p.key === "tv" ? (
-                  <a
-                    href={`${API}/api/download/${p.key === "tv" ? "tv-apk" : "android-apk"}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => trackDownload(p.key === "tv" ? "tv-apk" : "android-apk")}
-                    className="inline-flex h-9 items-center gap-1.5 rounded-full border border-brand/40 bg-brand/10 px-4 text-xs font-semibold text-brand transition-colors hover:border-brand/70 hover:bg-brand/20"
+              ) : live ? (
+                <>
+                  <Button
+                    href={`${API}/api/download/${p.key}`}
+                    external
+                    className="h-10 w-full justify-center px-5 sm:w-auto"
+                    onClick={() => trackDownload(p.key)}
                   >
-                    <DlIcon className="h-4 w-4" />
-                    Download APK
-                  </a>
-                ) : null}
-              </div>
-            ) : (
-              <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-slate-300">
-                Coming soon
-              </span>
-            )}
+                    Get it
+                  </Button>
+                  {/* Android + Android TV also offer the SAME universal APK direct (no Google Play — for
+                      sideload / China). Tracked apart per surface (android-apk vs tv-apk). A proper
+                      secondary button, not a tiny link, so it's easy to see and tap (incl. a TV remote). */}
+                  {p.key === "android" || p.key === "tv" ? (
+                    <a
+                      href={`${API}/api/download/${p.key === "tv" ? "tv-apk" : "android-apk"}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackDownload(p.key === "tv" ? "tv-apk" : "android-apk")}
+                      className="inline-flex h-9 w-full items-center justify-center gap-1.5 rounded-full border border-brand/40 bg-brand/10 px-4 text-xs font-semibold text-brand transition-colors hover:border-brand/70 hover:bg-brand/20 sm:w-auto"
+                    >
+                      <DlIcon className="h-4 w-4" />
+                      Download APK
+                    </a>
+                  ) : null}
+                </>
+              ) : (
+                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-center text-xs font-medium text-slate-300 sm:text-left">
+                  Coming soon
+                </span>
+              )}
+            </div>
           </div>
         );
       })}
