@@ -85,17 +85,18 @@ export default function DownloadGrid() {
                 >
                   Get it
                 </Button>
-                {/* Android also offers a direct APK (no Google Play — for sideload / China). Tracked
-                    separately as `android-apk` so Play vs direct downloads are counted apart. */}
-                {p.key === "android" ? (
+                {/* Android + Android TV also offer the SAME universal APK direct (no Google Play — for
+                    sideload / China). Tracked apart per surface (android-apk vs tv-apk). A proper
+                    secondary button, not a tiny link, so it's easy to see and tap (incl. a TV remote). */}
+                {p.key === "android" || p.key === "tv" ? (
                   <a
-                    href={`${API}/api/download/android-apk`}
+                    href={`${API}/api/download/${p.key === "tv" ? "tv-apk" : "android-apk"}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => trackDownload("android-apk")}
-                    className="inline-flex items-center gap-1 text-[11px] font-medium text-slate-400 transition-colors hover:text-brand"
+                    onClick={() => trackDownload(p.key === "tv" ? "tv-apk" : "android-apk")}
+                    className="inline-flex h-9 items-center gap-1.5 rounded-full border border-brand/40 bg-brand/10 px-4 text-xs font-semibold text-brand transition-colors hover:border-brand/70 hover:bg-brand/20"
                   >
-                    <DlIcon className="h-3 w-3" />
+                    <DlIcon className="h-4 w-4" />
                     Download APK
                   </a>
                 ) : null}
