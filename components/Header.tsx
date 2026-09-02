@@ -105,7 +105,7 @@ export default function Header() {
               href={signInHref}
               className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
             >
-              Sign in
+              Sign in <span className="text-slate-500">/</span> Sign up
             </Link>
           )}
           <Button href="/download" variant="primary" className="h-10 px-5">
@@ -168,7 +168,7 @@ export default function Header() {
               className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 hover:bg-white/5"
               onClick={() => setOpen(false)}
             >
-              {loggedIn ? "Account" : "Sign in"}
+              {loggedIn ? "Account" : "Sign in / Sign up"}
             </Link>
             <Button href="/download" variant="primary" className="mt-3 w-full">
               Get MistyVPN
