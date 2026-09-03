@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import CheckoutForm from "@/components/CheckoutForm";
 import ChangeCardForm from "@/components/ChangeCardForm";
 import CryptoCheckout from "@/components/CryptoCheckout";
+import { SupportedBrandsRow, Usdt, Usdc } from "@/components/PayBrands";
 import { Spinner, Loader } from "@/components/ui";
 import { getStripe } from "@/lib/stripe";
 import {
@@ -274,25 +275,31 @@ function AccountInner() {
             <p className="mt-1 text-sm text-slate-400">{selected.title} · {selected.price}{selected.unit}</p>
           ) : null}
           <div className="mt-5 space-y-3">
+            {/* Card & wallets — brands come from the shared PayBrands (single source; no PayPal until live) */}
             <button
               onClick={() => plan && goStripe(plan)}
-              className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left transition-colors hover:border-brand/50"
+              className="group block w-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition-colors hover:border-brand/50"
             >
-              <div>
-                <div className="font-semibold text-white">Card, PayPal &amp; wallets</div>
-                <div className="text-xs text-slate-400">Visa, Mastercard, Amex, Apple/Google Pay, PayPal</div>
+              <div className="flex items-center justify-between">
+                <span className="font-semibold text-white">Card &amp; Apple / Google Pay</span>
+                <span className="text-slate-500 group-hover:text-white">›</span>
               </div>
-              <span className="text-slate-500">›</span>
+              <SupportedBrandsRow className="mt-3" />
             </button>
+            {/* Crypto — show both coins + all networks so the full set (2 coins × 3 networks) is clear */}
             <button
               onClick={() => setView("crypto")}
-              className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left transition-colors hover:border-brand/50"
+              className="group block w-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition-colors hover:border-brand/50"
             >
-              <div>
-                <div className="font-semibold text-white">Crypto (USDT / USDC)</div>
-                <div className="text-xs text-slate-400">Stablecoins on TRON, Ethereum or BSC — no card needed</div>
+              <div className="flex items-center justify-between">
+                <span className="font-semibold text-white">Crypto — no card needed</span>
+                <span className="text-slate-500 group-hover:text-white">›</span>
               </div>
-              <span className="text-slate-500">›</span>
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                <Usdt />
+                <Usdc />
+                <span className="text-xs text-slate-400">on TRON · Ethereum · BSC</span>
+              </div>
             </button>
           </div>
           {err ? <p className="mt-4 text-sm text-red-400">{err}</p> : null}
