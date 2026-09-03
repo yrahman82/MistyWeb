@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { Spinner, Loader } from "@/components/ui";
 import CryptoClaim from "@/components/CryptoClaim";
+import { Usdt, Usdc, NetworkBadge } from "@/components/PayBrands";
 import {
   getCryptoAssets,
   createCryptoInvoice,
@@ -49,7 +50,7 @@ export default function CryptoCheckout({
           [...c.assets].sort(
             (a, b) =>
               (NETWORKS[a.chain]?.order ?? 9) - (NETWORKS[b.chain]?.order ?? 9) ||
-              a.coin.localeCompare(b.coin),
+              (a.coin === "USDT" ? 0 : 1) - (b.coin === "USDT" ? 0 : 1), // USDT first (more common)
           ),
         );
       })
@@ -112,12 +113,14 @@ export default function CryptoCheckout({
                 <button
                   key={`${a.coin}-${a.chain}`}
                   onClick={() => pick(a.coin, a.chain)}
-                  className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left transition-colors hover:border-brand/50"
+                  className="group flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left transition-colors hover:border-brand/50 hover:bg-white/[0.05]"
                 >
-                  <span className="font-semibold text-white">
-                    {a.coin} <span className="text-slate-400">on</span> {netLabel(a.chain)}
+                  <span className="flex items-center gap-3">
+                    {a.coin === "USDT" ? <Usdt /> : <Usdc />}
+                    <NetworkBadge chain={a.chain} />
+                    <span className="text-sm font-medium text-white">{netLabel(a.chain)}</span>
                   </span>
-                  <span className="text-slate-500">›</span>
+                  <span className="text-slate-500 transition-colors group-hover:text-white">›</span>
                 </button>
               ))}
             </div>

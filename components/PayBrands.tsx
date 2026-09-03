@@ -98,3 +98,18 @@ export function Usdc() {
     </span>
   );
 }
+
+// Small network badge (brand colours) for the crypto coin picker.
+export function NetworkBadge({ chain }: { chain: string }) {
+  const m: Record<string, { label: string; cls: string }> = {
+    tron: { label: "TRON", cls: "bg-[#EB0029] text-white" },
+    bsc: { label: "BNB", cls: "bg-[#F0B90B] text-black" },
+    ethereum: { label: "ETH", cls: "bg-[#627EEA] text-white" },
+  };
+  const n = m[chain] ?? { label: chain.toUpperCase(), cls: "bg-white/10 text-white" };
+  return (
+    <span className={`inline-flex h-6 items-center justify-center rounded-md px-2 text-[11px] font-bold ${n.cls}`}>
+      {n.label}
+    </span>
+  );
+}
