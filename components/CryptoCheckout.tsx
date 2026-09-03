@@ -193,19 +193,24 @@ function CryptoPay({
       </button>
 
       <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-        {/* Amount + network */}
+        {/* Amount + selected coin/network — big, iconic, bold so it can't be misread */}
         <div className="text-center">
           <p className="text-sm text-slate-400">Send exactly</p>
-          <p className="mt-1 text-3xl font-bold text-white">
+          <p className="mt-1 text-4xl font-bold tracking-tight text-white">
             {amount} <span className="text-brand">{inv.coin}</span>
           </p>
-          <p className="mt-1 text-sm text-slate-400">on {netLabel(inv.chain)}</p>
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+            {inv.coin === "USDT" ? <Usdt /> : <Usdc />}
+            <span className="text-sm text-slate-400">on</span>
+            <NetworkBadge chain={inv.chain} />
+            <span className="text-sm font-semibold text-white">{netLabel(inv.chain)}</span>
+          </div>
         </div>
 
-        {/* Critical wrong-network warning */}
-        <div className="mt-4 rounded-xl border border-amber-400/25 bg-amber-400/[0.06] p-3 text-center text-xs text-amber-300/90">
-          Only send <b>{inv.coin}</b> on the <b>{netLabel(inv.chain)}</b> network to this address.
-          Sending a different coin or network will be lost.
+        {/* Critical wrong-coin/network warning — bold names */}
+        <div className="mt-4 rounded-xl border border-amber-400/30 bg-amber-400/[0.08] p-3 text-center text-xs text-amber-200">
+          Send <b className="text-white">{inv.coin}</b> on <b className="text-white">{netLabel(inv.chain)}</b> only —
+          a different coin or network will be lost.
         </div>
 
         {/* QR — client-side render; the address never leaves the browser to a 3rd party */}
