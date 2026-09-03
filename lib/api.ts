@@ -220,10 +220,12 @@ export function getCryptoInvoice(invoiceId: string) {
 }
 
 // "I paid but it's not showing" recovery. The tx hash is only a hint — the backend re-verifies on-chain.
-export function claimCrypto(invoiceId: string, txHash: string) {
+// invoiceId optional: scoped (pay screen) or, when omitted, matched against any of the user's pending
+// invoices (account page — enter a tx hash any time).
+export function claimCrypto(txHash: string, invoiceId?: string) {
   return req<{ status: string; confirmations?: number; message?: string }>("/api/crypto/claim", {
     auth: true,
-    body: { invoiceId, txHash },
+    body: invoiceId ? { invoiceId, txHash } : { txHash },
   });
 }
 

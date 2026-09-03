@@ -3,11 +3,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { Spinner, Loader } from "@/components/ui";
+import CryptoClaim from "@/components/CryptoClaim";
 import {
   getCryptoAssets,
   createCryptoInvoice,
   getCryptoInvoice,
-  claimCrypto,
   type CryptoAsset,
   type CryptoInvoice,
 } from "@/lib/api";
@@ -142,10 +142,6 @@ function CryptoPay({
   const [inv, setInv] = useState<CryptoInvoice>(invoice);
   const [copied, setCopied] = useState(false);
   const [now, setNow] = useState(Date.now());
-  const [claimOpen, setClaimOpen] = useState(false);
-  const [txHash, setTxHash] = useState("");
-  const [claiming, setClaiming] = useState(false);
-  const [claimMsg, setClaimMsg] = useState("");
   const paidFired = useRef(false);
 
   const firePaid = useCallback(() => {
@@ -179,25 +175,6 @@ function CryptoPay({
     return () => clearInterval(t);
   }, []);
 
-  async function submitClaim() {
-    if (!txHash.trim()) return;
-    setClaiming(true);
-    setClaimMsg("");
-    try {
-      const r = await claimCrypto(inv.invoiceId, txHash.trim());
-      if (r.status === "paid") {
-        firePaid();
-        return;
-      }
-      setClaimMsg(r.message ?? "Not found yet — if you just sent it, wait for confirmations and try again.");
-      const fresh = await getCryptoInvoice(inv.invoiceId).catch(() => null);
-      if (fresh) setInv(fresh);
-    } catch (e) {
-      setClaimMsg(e instanceof Error ? e.message : "Couldn't verify that transaction.");
-    } finally {
-      setClaiming(false);
-    }
-  }
 
   const msLeft = new Date(inv.expiresAt).getTime() - now;
   const expired = msLeft <= 0;
@@ -274,39 +251,9 @@ function CryptoPay({
           )}
         </div>
 
-        {/* Recovery: paste tx hash */}
+        {/* Recovery — same component as the account page (paste tx hash → backend re-verifies on-chain) */}
         <div className="mt-4">
-          {!claimOpen ? (
-            <button onClick={() => setClaimOpen(true)} className="text-xs text-brand hover:underline">
-              Already sent it? Enter your transaction hash
-            </button>
-          ) : (
-            <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
-              <p className="mb-2 text-xs text-slate-400">Paste the transaction hash of your payment:</p>
-              <input
-                value={txHash}
-                onChange={(e) => setTxHash(e.target.value)}
-                placeholder="0x… / TRON tx id"
-                className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 font-mono text-xs text-white outline-none focus:border-brand"
-              />
-              {claimMsg ? <p className="mt-2 text-xs text-amber-300/90">{claimMsg}</p> : null}
-              <div className="mt-2 flex gap-2">
-                <button
-                  onClick={() => setClaimOpen(false)}
-                  className="rounded-full border border-white/15 px-4 py-1.5 text-xs text-white hover:bg-white/5"
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={submitClaim}
-                  disabled={claiming || !txHash.trim()}
-                  className="rounded-full bg-brand px-4 py-1.5 text-xs font-semibold text-ink hover:bg-white disabled:opacity-50"
-                >
-                  {claiming ? "Checking…" : "Verify payment"}
-                </button>
-              </div>
-            </div>
-          )}
+          <CryptoClaim invoiceId={inv.invoiceId} onPaid={firePaid} variant="inline" />
         </div>
 
         {expired ? (

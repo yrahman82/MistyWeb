@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import CheckoutForm from "@/components/CheckoutForm";
 import ChangeCardForm from "@/components/ChangeCardForm";
 import CryptoCheckout from "@/components/CryptoCheckout";
+import CryptoClaim from "@/components/CryptoClaim";
 import { SupportedBrandsRow, Usdt, Usdc } from "@/components/PayBrands";
 import { Spinner, Loader } from "@/components/ui";
 import { getStripe } from "@/lib/stripe";
@@ -612,6 +613,17 @@ function AccountInner() {
       </Section>
 
       <PaymentMethodSection status={status} onChanged={() => refresh().catch(() => {})} />
+
+      {/* Crypto payment recovery — enter a tx hash any time; same component as the pay screen. */}
+      {cryptoEnabled ? (
+        <Section title="Paid with crypto?">
+          <p className="mb-3 text-xs text-slate-500">
+            Sent a crypto payment that isn&apos;t showing yet? Paste the transaction hash and we&apos;ll
+            verify it on-chain and activate your subscription.
+          </p>
+          <CryptoClaim onPaid={() => refresh().catch(() => {})} variant="section" />
+        </Section>
+      ) : null}
 
       <Section title="OpenVPN Credentials">
         <p className="mb-3 text-xs text-slate-500">
