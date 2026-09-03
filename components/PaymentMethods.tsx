@@ -1,4 +1,9 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { moneyBack } from "@/lib/site";
+import { getCryptoAssets } from "@/lib/api";
+import { Usdt, Usdc } from "@/components/PayBrands";
 
 // Prominent "how you pay" trust band for the pricing page. The point users care about:
 // they can check out in one tap with Apple Pay / Google Pay and NEVER type card details on our
@@ -68,6 +73,11 @@ function Amex() {
 }
 
 export default function PaymentMethods() {
+  // Show the crypto row only where crypto is enabled (backend flag). Public endpoint, no auth.
+  const [cryptoEnabled, setCryptoEnabled] = useState(false);
+  useEffect(() => {
+    getCryptoAssets().then((c) => setCryptoEnabled(c.enabled && c.assets.length > 0)).catch(() => {});
+  }, []);
   return (
     <div className="mx-auto mt-12 max-w-3xl rounded-3xl border border-white/10 bg-white/[0.03] p-8 text-center">
       <h2 className="text-xl font-semibold text-white sm:text-2xl">
@@ -97,6 +107,20 @@ export default function PaymentMethods() {
           <span className="text-sm text-slate-400">&amp; more</span>
         </div>
       </div>
+
+      {/* Crypto — shown only when enabled (flag). No card needed; the full 2×3 set is on the checkout. */}
+      {cryptoEnabled ? (
+        <div className="mt-6 flex flex-col items-center gap-3">
+          <span className="text-xs font-medium uppercase tracking-wider text-slate-500">
+            or pay with crypto
+          </span>
+          <div className="flex flex-wrap items-center justify-center gap-2.5">
+            <Usdt />
+            <Usdc />
+            <span className="text-sm text-slate-400">on TRON · Ethereum · BSC</span>
+          </div>
+        </div>
+      ) : null}
 
       {/* Trust line */}
       <div className="mt-8 flex flex-col items-center justify-center gap-2 border-t border-white/10 pt-6 text-sm sm:flex-row sm:gap-3">

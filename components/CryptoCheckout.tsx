@@ -87,7 +87,7 @@ export default function CryptoCheckout({
   return (
     <div className="w-full max-w-lg">
       <button onClick={onBack} className="text-sm text-slate-400 hover:text-white">
-        ← Back
+        ← Choose a different payment method
       </button>
       <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
         <h1 className="text-xl font-semibold">Pay with crypto</h1>

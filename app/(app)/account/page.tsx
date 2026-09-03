@@ -255,6 +255,9 @@ function AccountInner() {
 
   function backFromCheckout() {
     setClientSecret(null);
+    // With crypto available the user came through the rail selector — go back there (consistent with
+    // the crypto flow's back). Without crypto, keep the original behavior.
+    if (cryptoEnabled) { setView("method"); return; }
     if (cameFromPricing) router.push("/pricing");
     else setView("plans");
   }
@@ -326,7 +329,7 @@ function AccountInner() {
     return (
       <div className="w-full max-w-lg">
         <button onClick={backFromCheckout} className="text-sm text-slate-400 hover:text-white">
-          {cameFromPricing ? "← Back to plans" : "← Change plan"}
+          {cryptoEnabled ? "← Choose a different payment method" : cameFromPricing ? "← Back to plans" : "← Change plan"}
         </button>
         <div className="mt-4 overflow-hidden rounded-2xl bg-white">
           {clientSecret ? (

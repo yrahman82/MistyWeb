@@ -187,9 +187,10 @@ export function updatePaymentMethod(paymentMethodId: string) {
 export type CryptoAsset = { coin: string; chain: string };
 export type CryptoConfig = { enabled: boolean; assets: CryptoAsset[] };
 
-// Whether crypto is enabled + the coin/chain menu. Backend-flag gated.
+// Whether crypto is enabled + the coin/chain menu. Backend-flag gated. PUBLIC (no auth) so the
+// logged-out pricing page can show/hide the crypto option.
 export function getCryptoAssets() {
-  return req<CryptoConfig>("/api/crypto/assets", { auth: true });
+  return req<CryptoConfig>("/api/crypto/assets");
 }
 
 export type CryptoInvoice = {
