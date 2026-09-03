@@ -183,6 +183,49 @@ export function updatePaymentMethod(paymentMethodId: string) {
   );
 }
 
+// ── Crypto payments (self-hosted USDT/USDC on TRON + EVM) ───────────────────
+export type CryptoAsset = { coin: string; chain: string };
+export type CryptoConfig = { enabled: boolean; assets: CryptoAsset[] };
+
+// Whether crypto is enabled + the coin/chain menu. Backend-flag gated.
+export function getCryptoAssets() {
+  return req<CryptoConfig>("/api/crypto/assets", { auth: true });
+}
+
+export type CryptoInvoice = {
+  invoiceId: string;
+  status: "pending" | "paid" | "expired";
+  coin: string;
+  chain: string;
+  address: string;
+  amount: number; // USDT/USDC to send (1:1 with USD)
+  paymentUri: string; // QR payload (EIP-681 for EVM, plain address for TRON)
+  confirmations: number;
+  expiresAt: string;
+  txHash?: string | null;
+};
+
+// Create a pending invoice (fresh address + QR). Works identically for a first purchase or a renewal.
+export function createCryptoInvoice(plan: string, coin: string, chain: string) {
+  return req<CryptoInvoice>("/api/crypto/create-invoice", {
+    auth: true,
+    body: { plan, coin, chain },
+  });
+}
+
+// Poll invoice status. READ-ONLY — the backend credits on-chain; this just reflects the result.
+export function getCryptoInvoice(invoiceId: string) {
+  return req<CryptoInvoice>(`/api/crypto/invoice/${invoiceId}`, { auth: true });
+}
+
+// "I paid but it's not showing" recovery. The tx hash is only a hint — the backend re-verifies on-chain.
+export function claimCrypto(invoiceId: string, txHash: string) {
+  return req<{ status: string; confirmations?: number; message?: string }>("/api/crypto/claim", {
+    auth: true,
+    body: { invoiceId, txHash },
+  });
+}
+
 // VPN credentials come back from login/register; stash for the account page.
 const CREDS_KEY = "mistyvpn.creds";
 export function saveCreds(r: AuthResult) {

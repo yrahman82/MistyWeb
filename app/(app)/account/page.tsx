@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import CheckoutForm from "@/components/CheckoutForm";
 import ChangeCardForm from "@/components/ChangeCardForm";
+import CryptoCheckout from "@/components/CryptoCheckout";
 import { Spinner, Loader } from "@/components/ui";
 import { getStripe } from "@/lib/stripe";
 import {
@@ -17,6 +18,7 @@ import {
   cancelSubscription,
   resumeSubscription,
   updatePaymentMethod,
+  getCryptoAssets,
   changePassword,
   deleteAccount,
   logout,
@@ -29,7 +31,7 @@ const PLATFORM_LABEL: Record<string, string> = {
   web: "Web", apple: "App Store", google: "Google Play",
 };
 
-type View = "overview" | "plans" | "confirm" | "checkout";
+type View = "overview" | "plans" | "method" | "confirm" | "checkout" | "crypto";
 
 function AccountInner() {
   const router = useRouter();
@@ -50,6 +52,15 @@ function AccountInner() {
   const [activating, setActivating] = useState(false);
   const [confirmChanging, setConfirmChanging] = useState(false); // change method inside the confirm view
   const autoStarted = useRef(false);
+
+  // Is crypto available? (backend-flag gated). Kept in a ref too so choosePlan's stable callback reads
+  // the latest value without re-creating (mirrors statusRef).
+  const [cryptoEnabled, setCryptoEnabled] = useState(false);
+  const cryptoEnabledRef = useRef(false);
+  useEffect(() => { cryptoEnabledRef.current = cryptoEnabled; }, [cryptoEnabled]);
+  useEffect(() => {
+    getCryptoAssets().then((c) => setCryptoEnabled(c.enabled && c.assets.length > 0)).catch(() => {});
+  }, []);
 
   // Latest status kept in a ref so choosePlan can read `hasSavedCard` without depending on `status`
   // (which the load effect sets — a dep on it would loop the effect that also calls choosePlan).
@@ -106,22 +117,25 @@ function AccountInner() {
     }
   }, []);
 
+  // The Stripe (card/PayPal/wallets) path: returning user with a saved method → CONFIRM charging it;
+  // else the full Stripe checkout. (We don't collect a NEW method in confirm — an account has one
+  // method; to switch, they change it in Payment Method first.)
+  const goStripe = useCallback((planKey: string) => {
+    if (statusRef.current?.savedPaymentType) { setView("confirm"); return; }
+    startCheckout(planKey);
+  }, [startCheckout]);
+
   const choosePlan = useCallback((planKey: string) => {
     setErr("");
     setPlan(planKey);
-    // Funnel: middle — "tried buying". Covers both paths below (new-card checkout and saved-card
-    // confirm). Reset the purchase dedupe so a fresh attempt can fire its own purchase event.
+    // Funnel: middle — "tried buying". Reset the purchase dedupe so a fresh attempt fires its own event.
     purchaseFiredRef.current = false;
     trackBeginCheckout(planKey, priceForPlan(planKey));
-    // Returning user who already has a payment method on file → CONFIRM charging that method (card or
-    // PayPal). We deliberately don't let them enter a NEW method here: an account has one payment
-    // method, not one-per-subscription — to use a different one they change it in Payment Method first.
-    if (statusRef.current?.savedPaymentType) {
-      setView("confirm");
-      return;
-    }
-    startCheckout(planKey);
-  }, [startCheckout]);
+    // Stripe used to render every payment option itself. Crypto is a SEPARATE rail, so when it's
+    // available we present the rail choice first; otherwise go straight to Stripe (unchanged behavior).
+    if (cryptoEnabledRef.current) { setView("method"); return; }
+    goStripe(planKey);
+  }, [goStripe]);
 
   // Confirmed → charge the saved method now. Falls back to full checkout if it can't be charged
   // cleanly (declined / SCA / no chargeable method).
@@ -245,6 +259,60 @@ function AccountInner() {
   }
 
   if (loading) return <Loader label="Loading your account…" />;
+
+  // ── Choose payment rail (Stripe card/PayPal/wallets vs Crypto) ──
+  if (view === "method") {
+    const selected = plans.find((p) => p.key === plan);
+    return (
+      <div className="w-full max-w-lg">
+        <button onClick={() => setView(cameFromPricing ? "overview" : "plans")} className="text-sm text-slate-400 hover:text-white">
+          ← Back
+        </button>
+        <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <h1 className="text-xl font-semibold">How would you like to pay?</h1>
+          {selected ? (
+            <p className="mt-1 text-sm text-slate-400">{selected.title} · {selected.price}{selected.unit}</p>
+          ) : null}
+          <div className="mt-5 space-y-3">
+            <button
+              onClick={() => plan && goStripe(plan)}
+              className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left transition-colors hover:border-brand/50"
+            >
+              <div>
+                <div className="font-semibold text-white">Card, PayPal &amp; wallets</div>
+                <div className="text-xs text-slate-400">Visa, Mastercard, Amex, Apple/Google Pay, PayPal</div>
+              </div>
+              <span className="text-slate-500">›</span>
+            </button>
+            <button
+              onClick={() => setView("crypto")}
+              className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left transition-colors hover:border-brand/50"
+            >
+              <div>
+                <div className="font-semibold text-white">Crypto (USDT / USDC)</div>
+                <div className="text-xs text-slate-400">Stablecoins on TRON, Ethereum or BSC — no card needed</div>
+              </div>
+              <span className="text-slate-500">›</span>
+            </button>
+          </div>
+          {err ? <p className="mt-4 text-sm text-red-400">{err}</p> : null}
+        </div>
+      </div>
+    );
+  }
+
+  // ── Crypto checkout (coin picker → address/QR → live status) ──
+  if (view === "crypto" && plan) {
+    const selected = plans.find((p) => p.key === plan);
+    return (
+      <CryptoCheckout
+        plan={plan}
+        planLabel={selected ? `${selected.title} · ${selected.price}${selected.unit}` : undefined}
+        onPaid={onPaid}
+        onBack={() => setView("method")}
+      />
+    );
+  }
 
   // ── Checkout (Stripe Embedded Checkout: address + VAT + 3DS + invoice) ──
   if (view === "checkout") {
