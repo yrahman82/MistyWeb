@@ -12,12 +12,13 @@ import {
   type CryptoInvoice,
 } from "@/lib/api";
 
-// Display metadata per chain. Ordered TRON-first (lowest fees) — matters because the customer pays
-// the network fee to SEND, so we nudge toward TRON for small plans.
-const NETWORKS: Record<string, { label: string; note: string; order: number }> = {
-  tron: { label: "TRON (TRC-20)", note: "Lowest fees · recommended", order: 0 },
-  bsc: { label: "BNB Smart Chain (BEP-20)", note: "Low fees", order: 1 },
-  ethereum: { label: "Ethereum (ERC-20)", note: "Higher network fees", order: 2 },
+// Display metadata per chain. NO fee ranking — the send fee depends entirely on where the customer
+// pays FROM (a wallet vs an exchange like Binance give very different fees, sometimes opposite), so
+// we don't claim a "cheapest". Order is by how common the network is.
+const NETWORKS: Record<string, { label: string; order: number }> = {
+  tron: { label: "TRON (TRC-20)", order: 0 },
+  bsc: { label: "BNB Smart Chain (BEP-20)", order: 1 },
+  ethereum: { label: "Ethereum (ERC-20)", order: 2 },
 };
 
 const netLabel = (chain: string) => NETWORKS[chain]?.label ?? chain;
@@ -102,25 +103,24 @@ export default function CryptoCheckout({
         ) : creating ? (
           <Loader label="Preparing your payment address…" className="mt-6" />
         ) : (
-          <div className="mt-5 space-y-3">
-            {assets.map((a) => {
-              const net = NETWORKS[a.chain];
-              return (
+          <div className="mt-5">
+            <p className="mb-3 text-xs text-slate-500">
+              Pick the network your wallet or exchange supports — network fees vary by where you send from.
+            </p>
+            <div className="space-y-3">
+              {assets.map((a) => (
                 <button
                   key={`${a.coin}-${a.chain}`}
                   onClick={() => pick(a.coin, a.chain)}
                   className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left transition-colors hover:border-brand/50"
                 >
-                  <div>
-                    <div className="font-semibold text-white">
-                      {a.coin} <span className="text-slate-400">on</span> {netLabel(a.chain)}
-                    </div>
-                    <div className="text-xs text-slate-400">{net?.note ?? ""}</div>
-                  </div>
+                  <span className="font-semibold text-white">
+                    {a.coin} <span className="text-slate-400">on</span> {netLabel(a.chain)}
+                  </span>
                   <span className="text-slate-500">›</span>
                 </button>
-              );
-            })}
+              ))}
+            </div>
           </div>
         )}
         {err ? <p className="mt-4 text-sm text-red-400">{err}</p> : null}
