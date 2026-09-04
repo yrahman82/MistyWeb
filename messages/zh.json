@@ -1419,5 +1419,13 @@
     "free": "免费 90 分钟——无需银行卡或账户",
     "payments": "Apple Pay、Google Pay、银行卡和加密货币",
     "streaming": "畅享所有流媒体——全球无阻"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "页面未找到",
+    "heading": "这个页面失联了",
+    "message": "你要找的页面不存在，或者可能已经移动——让我们带你回到正轨。",
+    "home": "返回首页",
+    "pricing": "查看套餐"
   }
 }

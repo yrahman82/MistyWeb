@@ -1419,5 +1419,13 @@
     "free": "90 ücretsiz dakika — kart ya da hesap yok",
     "payments": "Apple Pay, Google Pay, kartlar ve kripto",
     "streaming": "Her şeyi izleyin — dünya çapında engelsiz"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Sayfa bulunamadı",
+    "heading": "Bu sayfa ortadan kayboldu",
+    "message": "Aradığınız sayfa yok ya da taşınmış olabilir — sizi geri götürelim.",
+    "home": "Ana sayfaya dön",
+    "pricing": "Planları gör"
   }
 }

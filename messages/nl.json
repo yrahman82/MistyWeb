@@ -1419,5 +1419,13 @@
     "free": "90 gratis minuten — geen kaart, geen account",
     "payments": "Apple Pay, Google Pay, kaarten en crypto",
     "streaming": "Alles streamen — wereldwijd gedeblokkeerd"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Pagina niet gevonden",
+    "heading": "Deze pagina is van de radar verdwenen",
+    "message": "De pagina die je zoekt bestaat niet of is misschien verplaatst — we brengen je terug.",
+    "home": "Terug naar home",
+    "pricing": "Bekijk abonnementen"
   }
 }

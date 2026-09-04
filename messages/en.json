@@ -1419,5 +1419,13 @@
     "free": "90 free minutes — no card, no account",
     "payments": "Apple Pay, Google Pay, cards & crypto",
     "streaming": "Stream anything — unblocked worldwide"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "heading": "This page went off the grid",
+    "message": "The page you’re looking for doesn’t exist or may have moved — let’s get you back online.",
+    "home": "Back to home",
+    "pricing": "See plans"
   }
 }

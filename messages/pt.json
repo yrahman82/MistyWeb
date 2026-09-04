@@ -1419,5 +1419,13 @@
     "free": "90 minutos grátis — sem cartão nem conta",
     "payments": "Apple Pay, Google Pay, cartões e cripto",
     "streaming": "Todo o streaming — desbloqueado no mundo todo"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Página não encontrada",
+    "heading": "Esta página saiu do mapa",
+    "message": "A página que você procura não existe ou pode ter sido movida — vamos te levar de volta.",
+    "home": "Voltar ao início",
+    "pricing": "Ver planos"
   }
 }
