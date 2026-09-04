@@ -1427,5 +1427,16 @@
     "message": "お探しのページは存在しないか、移動した可能性があります。元の場所にお戻りください。",
     "home": "ホームに戻る",
     "pricing": "プランを見る"
+  },
+  "chat": {
+    "bubble": "チャットで相談",
+    "title": "MistyVPN サポート",
+    "subtitle": "あなたの言語で返信します",
+    "greeting": "こんにちは 👋 どうされましたか？",
+    "placeholder": "メッセージを入力…",
+    "send": "送信",
+    "connecting": "接続中…",
+    "unavailable": "ライブチャットは現在オフラインです。support@mistyvpn.com までメールいただければ、すぐに返信します。",
+    "close": "閉じる"
   }
 }

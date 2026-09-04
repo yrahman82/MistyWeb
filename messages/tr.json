@@ -1427,5 +1427,16 @@
     "message": "Aradığınız sayfa yok ya da taşınmış olabilir — sizi geri götürelim.",
     "home": "Ana sayfaya dön",
     "pricing": "Planları gör"
+  },
+  "chat": {
+    "bubble": "Bize yazın",
+    "title": "MistyVPN Destek",
+    "subtitle": "Sizin dilinizde yanıtlıyoruz",
+    "greeting": "Merhaba 👋 Nasıl yardımcı olabiliriz?",
+    "placeholder": "Mesajınızı yazın…",
+    "send": "Gönder",
+    "connecting": "Bağlanıyor…",
+    "unavailable": "Canlı sohbet şu anda çevrimdışı — support@mistyvpn.com adresine yazın, hızlıca yanıtlayalım.",
+    "close": "Kapat"
   }
 }

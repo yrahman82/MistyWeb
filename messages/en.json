@@ -1427,5 +1427,16 @@
     "message": "The page you’re looking for doesn’t exist or may have moved — let’s get you back online.",
     "home": "Back to home",
     "pricing": "See plans"
+  },
+  "chat": {
+    "bubble": "Chat with us",
+    "title": "MistyVPN Support",
+    "subtitle": "We reply in your language",
+    "greeting": "Hi 👋 How can we help?",
+    "placeholder": "Type your message…",
+    "send": "Send",
+    "connecting": "Connecting…",
+    "unavailable": "Live chat is offline right now — email support@mistyvpn.com and we’ll reply fast.",
+    "close": "Close"
   }
 }

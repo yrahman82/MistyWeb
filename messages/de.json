@@ -1427,5 +1427,16 @@
     "message": "Die gesuchte Seite existiert nicht oder wurde verschoben — wir bringen Sie zurück.",
     "home": "Zurück zur Startseite",
     "pricing": "Tarife ansehen"
+  },
+  "chat": {
+    "bubble": "Chatten Sie mit uns",
+    "title": "MistyVPN-Support",
+    "subtitle": "Wir antworten in Ihrer Sprache",
+    "greeting": "Hallo 👋 Wie können wir helfen?",
+    "placeholder": "Ihre Nachricht…",
+    "send": "Senden",
+    "connecting": "Verbindung…",
+    "unavailable": "Der Live-Chat ist gerade offline — schreiben Sie an support@mistyvpn.com, wir antworten schnell.",
+    "close": "Schließen"
   }
 }

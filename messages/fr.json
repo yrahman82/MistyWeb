@@ -1427,5 +1427,16 @@
     "message": "La page que vous cherchez n’existe pas ou a peut-être été déplacée — on vous ramène en lieu sûr.",
     "home": "Retour à l’accueil",
     "pricing": "Voir les offres"
+  },
+  "chat": {
+    "bubble": "Discuter avec nous",
+    "title": "Assistance MistyVPN",
+    "subtitle": "Nous répondons dans votre langue",
+    "greeting": "Bonjour 👋 Comment pouvons-nous vous aider ?",
+    "placeholder": "Écrivez votre message…",
+    "send": "Envoyer",
+    "connecting": "Connexion…",
+    "unavailable": "Le chat est hors ligne pour le moment — écrivez à support@mistyvpn.com, nous répondrons vite.",
+    "close": "Fermer"
   }
 }

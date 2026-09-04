@@ -1427,5 +1427,16 @@
     "message": "De pagina die je zoekt bestaat niet of is misschien verplaatst — we brengen je terug.",
     "home": "Terug naar home",
     "pricing": "Bekijk abonnementen"
+  },
+  "chat": {
+    "bubble": "Chat met ons",
+    "title": "MistyVPN-ondersteuning",
+    "subtitle": "We antwoorden in jouw taal",
+    "greeting": "Hoi 👋 Waarmee kunnen we helpen?",
+    "placeholder": "Typ je bericht…",
+    "send": "Versturen",
+    "connecting": "Verbinden…",
+    "unavailable": "De livechat is nu offline — mail support@mistyvpn.com en we reageren snel.",
+    "close": "Sluiten"
   }
 }

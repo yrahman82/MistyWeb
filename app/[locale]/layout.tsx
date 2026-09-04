@@ -14,11 +14,12 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 const CLIENT_NAMESPACES = [
   "nav", "announce", "payments", "checkout", "crypto", "card", "downloadGrid",
   "notFound", "accountPage", "pricingPage", "loginPage", "registerPage",
-  "resetPasswordPage", "tvLoginPage",
+  "resetPasswordPage", "tvLoginPage", "chat",
 ] as const;
 import "../globals.css";
 import { site } from "@/lib/site";
 import Analytics from "@/components/Analytics";
+import ChatWidget from "@/components/ChatWidget";
 import { GA_ID } from "@/lib/analytics";
 import { routing, htmlLang, type Locale } from "@/i18n/routing";
 import { localeUrl, alternatesFor } from "@/lib/seo";
@@ -91,7 +92,10 @@ export default async function LocaleLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <NextIntlClientProvider messages={clientMessages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={clientMessages}>
+          {children}
+          <ChatWidget />
+        </NextIntlClientProvider>
         {GA_ID ? (
           <>
             <Script
