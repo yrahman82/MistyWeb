@@ -42,6 +42,25 @@ export const localeNames: Record<Locale, string> = {
   nl: "Nederlands",
 };
 
+// A representative flag emoji per language, shown next to the name in the language pickers.
+// (Flags map to a country, not a language — these are the conventional choices for each.)
+export const localeFlags: Record<Locale, string> = {
+  en: "🇬🇧",
+  zh: "🇨🇳",
+  hi: "🇮🇳",
+  bn: "🇧🇩",
+  es: "🇪🇸",
+  fr: "🇫🇷",
+  de: "🇩🇪",
+  ru: "🇷🇺",
+  pt: "🇧🇷",
+  it: "🇮🇹",
+  tr: "🇹🇷",
+  ja: "🇯🇵",
+  ko: "🇰🇷",
+  nl: "🇳🇱",
+};
+
 // BCP-47 tags for <html lang> / hreflang (a couple differ from the short locale code).
 export const htmlLang: Record<Locale, string> = {
   en: "en",
