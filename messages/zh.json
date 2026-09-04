@@ -1,0 +1,1292 @@
+{
+  "meta": {
+    "tagline": "安全、私密、快速。",
+    "description": "MistyVPN 让你在每台设备上都能保持私密、畅通无阻。隐身技术轻松突破封锁，支持分应用代理、严格的无日志承诺，以及 40 多个全球节点——免费即可开始。",
+    "keywords": "VPN, 无日志 VPN, 反审查 VPN, 解锁网站 VPN, 突破防火墙 VPN, 流媒体 VPN, WireGuard, VLESS Reality, Hysteria2, 抗封锁 VPN"
+  },
+  "nav": {
+    "home": "首页",
+    "features": "功能",
+    "pricing": "价格",
+    "compare": "对比",
+    "noLogs": "无日志",
+    "download": "下载",
+    "support": "支持",
+    "contactUs": "联系我们",
+    "serverList": "服务器列表",
+    "getApp": "获取 MistyVPN",
+    "signInUp": "登录 / 注册",
+    "account": "账户",
+    "language": "语言",
+    "breadcrumb": "导航路径",
+    "footer": {
+      "product": "产品",
+      "trust": "信任",
+      "getAppTitle": "获取应用",
+      "compareVpns": "对比各家 VPN",
+      "unblock": "解锁一切",
+      "noLogsPromise": "无日志承诺",
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "helpSupport": "帮助与支持",
+      "iphone": "iPhone 与 iPad",
+      "android": "Android",
+      "mac": "Mac",
+      "windows": "Windows",
+      "tv": "Android TV",
+      "rights": "版权所有。",
+      "blurb": "一款无日志 VPN，专为在别家被封锁的地方也能用而打造。",
+      "legal": "{name} 是 {legalName} 的商用名称，该公司在{registeredIn}注册{companyNo}。注册办公地址：{office}。"
+    }
+  },
+  "common": {
+    "cta": {
+      "getFree": "免费获取 MistyVPN",
+      "seePlans": "查看套餐",
+      "exploreFeatures": "了解全部功能",
+      "compareVpns": "对比各家 VPN"
+    },
+    "moneyBack": "14 天退款保证",
+    "stats": [
+      {
+        "value": "40+",
+        "label": "全球节点"
+      },
+      {
+        "value": "0",
+        "label": "保存的日志"
+      },
+      {
+        "value": "10",
+        "label": "同时在线设备"
+      },
+      {
+        "value": "16",
+        "label": "语言"
+      }
+    ],
+    "features": [
+      {
+        "title": "隐身模式",
+        "body": "让你的 VPN 隐于无形。MistyVPN 会伪装你的连接，让它看起来就像普通的网页浏览——因此即使在封锁其他 VPN 的网络里也照样能用。一键开启，默认打开。"
+      },
+      {
+        "title": "分应用代理",
+        "body": "只保护你想保护的。把选定的应用和网站走 VPN，其余的——银行、本地服务、游戏——都保持本地全速。"
+      },
+      {
+        "title": "严格无日志",
+        "body": "我们什么都不留。不记录浏览历史、不记录流量、不记录 IP 地址。没有可泄露的，也没有可交出的。"
+      },
+      {
+        "title": "真正的快",
+        "body": "现代协议加上 40 多个优化节点，意味着流媒体不卡顿、通话不延迟、下载飞快——即便网络繁忙也一样。"
+      },
+      {
+        "title": "无国界追剧",
+        "body": "随时随地以清晰高清观看你喜欢的节目。选个节点，点击连接，按下播放。"
+      },
+      {
+        "title": "断网保护",
+        "body": "一旦连接中断，MistyVPN 会立即切断流量，绝不让任何数据在无保护的情况下溜出去。"
+      },
+      {
+        "title": "密码管理器",
+        "body": "一个功能完整、全程加密的密码管理器直接内置于应用中——保存登录信息、生成强密码、随处自动填充。大牌 VPN 都把它锁在更贵的套餐里或额外收费。而在 MistyVPN 里，它就是免费包含的。"
+      },
+      {
+        "title": "身份验证器（2FA）",
+        "body": "内置两步验证码生成器——取代 Google Authenticator，把你的一次性验证码和密码放在同一个安全加密的保险库里。无需额外订阅，无需附加组件。免费包含。"
+      },
+      {
+        "title": "覆盖你的所有设备",
+        "body": "iPhone、iPad、Android、Mac 和 Android TV。一份订阅全部覆盖，最多可同时连接 10 台设备。"
+      },
+      {
+        "title": "使用你的母语",
+        "body": "用 16 种语言舒心地使用 MistyVPN——而且我们会不断增加，你无需更新应用即可用上。"
+      },
+      {
+        "title": "自动模式",
+        "body": "一键开启，MistyVPN 会自动为你的网络挑选最快、最稳定的连接——完全无需任何设置。"
+      },
+      {
+        "title": "40 多个全球节点",
+        "body": "通过遍布美洲、欧洲、中东和亚洲的服务器连接——想在哪里出现就在哪里出现。"
+      },
+      {
+        "title": "自动连接",
+        "body": "让 MistyVPN 在设备启动的那一刻就连上，自动为你保驾护航——绝不会不小心暴露。"
+      },
+      {
+        "title": "赚取免费时长",
+        "body": "免费时长用完了？随时补充你的免费分钟——无需账户，也无需信用卡。"
+      }
+    ],
+    "steps": [
+      {
+        "title": "下载并注册",
+        "body": "为你的设备下载应用，一分钟内免费开始——无需信用卡。"
+      },
+      {
+        "title": "点击连接",
+        "body": "选个节点，或让自动模式为你挑最快的。剩下的交给隐身模式。"
+      },
+      {
+        "title": "自由畅游",
+        "body": "私密地追剧、浏览、通话——安全、畅通、又快速。"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "MistyVPN 真的做到无日志吗？",
+        "a": "是的。MistyVPN 不记录你的浏览、流量或 IP 地址。根本没有任何可被泄露或交出的存储内容。"
+      },
+      {
+        "q": "在别的 VPN 被封锁的地方它能用吗？",
+        "a": "能。隐身模式把你的连接伪装成普通网页流量，因此在典型 VPN 会被识别并封锁的高度受限网络里，MistyVPN 依然照常工作。"
+      },
+      {
+        "q": "我可以用多少台设备？",
+        "a": "一份订阅覆盖你的所有设备——iPhone、Android、Mac 和 Android TV——最多可同时连接 10 台。"
+      },
+      {
+        "q": "我能用 MistyVPN 看流媒体吗？",
+        "a": "当然可以。MistyVPN 针对高清流畅播放做了优化，分应用代理还能让你只把流媒体应用以全速走 VPN。"
+      },
+      {
+        "q": "有免费版吗？",
+        "a": "有。免费开始，边用边赚免费时长——无需账户或信用卡。随时可升级到高级版，享受无限、全速的畅快体验。"
+      },
+      {
+        "q": "怎么付款？",
+        "a": "在网页上用银行卡安全付款，或在应用内通过 App Store 或 Google Play 付款。随时可取消——在此处的账户里，或在你的商店账户里操作。"
+      },
+      {
+        "q": "有退款保证吗？",
+        "a": "有——每个付费套餐都享有 14 天退款保证，无需任何理由。头两周内不满意？发邮件给我们即可全额退款。通过 App Store 或 Google Play 购买的，按商店的标准流程退款。"
+      },
+      {
+        "q": "MistyVPN 包含密码管理器吗？",
+        "a": "包含——完整加密的密码管理器和内置的两步验证器在每个套餐里都免费提供，连免费版也有。多数其他 VPN 要么不提供，要么在更高档套餐里额外收费。"
+      }
+    ]
+  },
+  "home": {
+    "metaTitle": "MistyVPN——在每台设备上都私密、畅通、快速",
+    "hero": {
+      "eyebrow": "免费开始 · 无需银行卡",
+      "titleLead": "真正好用的",
+      "titleHighlight": "私密网络",
+      "titleTrail": "，无处不在。",
+      "subtitle": "MistyVPN 让你在每台设备上都保持私密、畅通——凭借能突破封锁的隐身模式、遍及 40 多个节点的极速表现，以及严格的无日志承诺。"
+    },
+    "stealth": {
+      "eyebrow": "隐身模式",
+      "title": "从设计上就隐于无形",
+      "body": "大多数 VPN 被封锁，是因为网络能<em>看出</em>它们是 VPN。MistyVPN 不会这样被发现——隐身模式让你的连接看起来就像普通浏览，因此在其他一切都失效的地方它照样能用。",
+      "note": "默认开启。一键即可连接。"
+    },
+    "split": {
+      "eyebrow": "分应用代理",
+      "title": "只保护你想保护的",
+      "body": "让流媒体和浏览走 VPN，而银行应用、本地网站和游戏则保持在你的正常连接上——全速运行，毫不妥协。",
+      "note": "由你决定，逐个应用设置。"
+    },
+    "features": {
+      "eyebrow": "一切都已包含",
+      "title": "一个应用，满足你所有需求。",
+      "body": "没有附加组件，没有额外推销。每个套餐都自带完整工具箱。"
+    },
+    "vault": {
+      "eyebrow": "不止是 VPN",
+      "title": "密码管理器和身份验证器——免费包含",
+      "body": "完整加密的密码管理器和内置的两步验证器，就在应用里。保存登录信息、自动填充、生成强密码、存储你的 2FA 验证码——全部端到端加密保护。大牌 VPN 要么额外收费，要么把它们锁在更贵的套餐里。而在 MistyVPN，它们在每个套餐里都免费包含。",
+      "pmTitle": "密码管理器",
+      "pmBody": "在你的各台设备间提供加密保险库、自动填充和强密码生成器。",
+      "otpTitle": "身份验证器（2FA）",
+      "otpBody": "内置一次性验证码——取代 Google Authenticator，保存在同一个安全保险库中。"
+    },
+    "how": {
+      "eyebrow": "工作原理",
+      "title": "三步点击即受保护"
+    },
+    "compare": {
+      "title": "MistyVPN 相比之下如何？",
+      "body": "免费版、新一代抗封锁技术，高级版还比大牌更便宜。看看逐项对比。"
+    },
+    "faq": {
+      "eyebrow": "常见问题",
+      "title": "好问题"
+    },
+    "ctaBand": {
+      "title": "你的私密网络，现在就开始。",
+      "body": "免费试用，无需银行卡，不留任何日志。高级版享有 14 天退款保证——一分钟内即可连上。"
+    }
+  },
+  "accountPage": {
+    "metaTitle": "账户",
+    "metaDescription": "管理你的 MistyVPN 订阅、付款方式和账户设置。",
+    "loading": "加载中…",
+    "loadingAccount": "正在加载你的账户…",
+    "back": "← 返回",
+    "backToAccount": "← 返回账户",
+    "platformWeb": "网页",
+    "payHeading": "你想怎么付款？",
+    "payCardWallets": "银行卡与 Apple / Google Pay",
+    "payCrypto": "加密货币——无需银行卡",
+    "cryptoNetworks": "支持 TRON · Ethereum · BSC",
+    "errStartCheckout": "无法开始结账",
+    "checkoutBackChooseMethod": "← 选择其他付款方式",
+    "checkoutBackToPlans": "← 返回套餐",
+    "checkoutChangePlan": "← 更换套餐",
+    "preparingCheckout": "正在准备安全结账…",
+    "confirmHeading": "确认你的订阅",
+    "confirmChooseNew": "选择一种新的付款方式——之后再确认扣款。",
+    "labelPlan": "套餐",
+    "labelPayment": "付款方式",
+    "premiumName": "MistyVPN 高级版",
+    "confirmChargeNotice": "我们现在会向 <b>{method}</b> 扣款，并在每次续订时自动扣款。",
+    "changeMethod": "更换付款方式",
+    "confirmSubscribe": "确认并订阅",
+    "processing": "处理中…",
+    "errComplete": "无法完成你的订阅",
+    "getPremium": "获取高级版",
+    "seePlansBenefits": "查看套餐与权益 →",
+    "savedChargeHint": "我们会向你保存的 {method} 扣款——在扣款前你会先确认。",
+    "accountHeading": "账户",
+    "signOut": "退出登录",
+    "sectionSubscription": "订阅",
+    "sectionPaymentMethod": "付款方式",
+    "sectionPaidWithCrypto": "用加密货币付过款？",
+    "sectionOpenvpnCredentials": "OpenVPN 凭据",
+    "sectionAccount": "账户",
+    "activating": "正在激活你的订阅…只需几秒。",
+    "premiumActive": "高级版已激活",
+    "wontRenew": "不会续订——可使用至 {date}",
+    "renewsOn": "将于 {date} 自动续订",
+    "unlimitedAccess": "无限畅用所有服务器",
+    "allSetTitle": "一切就绪——快去获取应用",
+    "allSetBody": "在 iPhone、Android、Mac 和 Android TV 上下载 MistyVPN，然后用你的账户邮箱和密码登录。",
+    "downloadApp": "下载应用",
+    "resumeSub": "恢复订阅",
+    "cancelSub": "取消订阅",
+    "confirmCancelSub": "要取消订阅吗？在当前周期结束前你仍可继续使用。",
+    "errCancel": "无法取消",
+    "errResume": "无法恢复",
+    "subViaApple": "你是通过 Apple 设备上的 App Store 订阅的。",
+    "subViaGoogle": "你是通过 Android 设备上的 Google Play 订阅的。",
+    "subViaStore": "你是通过移动应用商店订阅的。",
+    "manageWhereBought": "如需更改或取消，请到购买处管理——此处无法取消。",
+    "manageInStore": "在 {store} 中管理 ↗",
+    "paymentIssue": "付款问题",
+    "pastDueBody": "我们未能续订你的 MistyVPN 高级版订阅。我们正在自动重试——你也可以立即续订以马上恢复使用。",
+    "labelMethod": "方式",
+    "labelCard": "银行卡",
+    "renewNow": "立即续订",
+    "retrying": "重试中…",
+    "errChargeFailed": "我们无法向你保存的银行卡扣款——请在下方更新后，再试一次续订。",
+    "errRenew": "无法续订",
+    "cardFailingHint": "如果你的银行卡一直扣款失败，请在下方更新，我们会用新卡重试。",
+    "freePlan": "免费套餐",
+    "freePlanBody": "升级即可在所有设备上无限、全速畅用。",
+    "upgradePremium": "升级到高级版",
+    "cryptoSectionBody": "发了加密货币付款但还没显示？粘贴交易哈希，我们会在链上核验并激活你的订阅。",
+    "openvpnBody": "用于连接第三方 OpenVPN 客户端（路由器、OpenVPN 应用等）。使用 MistyVPN 应用无需这些——直接用你的账户邮箱和密码登录即可。",
+    "labelUsername": "用户名",
+    "labelPasswordCred": "密码",
+    "copy": "复制",
+    "copied": "已复制",
+    "savedMethodFallback": "你保存的付款方式",
+    "noMethodOnFile": "没有已保存的付款方式",
+    "change": "更改",
+    "addCard": "添加银行卡",
+    "labelEmail": "邮箱",
+    "changePassword": "修改密码",
+    "currentPasswordPlaceholder": "当前密码",
+    "newPasswordPlaceholder": "新密码（至少 8 个字符）",
+    "cancel": "取消",
+    "updatePassword": "更新密码",
+    "saving": "保存中…",
+    "passwordUpdated": "密码已更新。",
+    "errUpdatePassword": "无法更新密码",
+    "deleteAccount": "删除账户",
+    "deleting": "删除中…",
+    "confirmDelete": "要永久删除你的账户吗？此操作无法撤销。",
+    "errDeleteAccount": "无法删除账户",
+    "errLoadAccount": "无法加载你的账户。请检查网络后重试。"
+  },
+  "comparePage": {
+    "metaTitle": "MistyVPN 对比 NordVPN、ExpressVPN 和 PureVPN",
+    "metaDescription": "看看 MistyVPN 相比 NordVPN、ExpressVPN 和 PureVPN 如何——免费版、内置密码管理器和身份验证器、新一代抗封锁技术，价格还更低。诚实的逐项对比。",
+    "breadcrumb": "对比",
+    "hero": {
+      "eyebrow": "对比",
+      "title": "MistyVPN 对阵大牌",
+      "subtitle": "货真价实的免费版、新一代抗封锁技术，高级版价格还比多数家便宜。这就是诚实的逐项对比。"
+    },
+    "table": {
+      "featureHeader": "功能",
+      "rows": [
+        {
+          "label": "月费价格",
+          "values": [
+            "$3.99",
+            "~$12.99",
+            "~$12.99",
+            "~$11.95"
+          ]
+        },
+        {
+          "label": "免费版",
+          "values": [
+            "有——可赚取免费时长",
+            "无",
+            "无",
+            "无"
+          ]
+        },
+        {
+          "label": "无需 1–2 年合约的最优价",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "label": "免费包含密码管理器",
+          "values": [
+            "有——每个套餐都有",
+            "更高档套餐",
+            "更高档套餐",
+            "附加组件"
+          ]
+        },
+        {
+          "label": "内置身份验证器（2FA 验证码）",
+          "values": [
+            "",
+            "更高档套餐",
+            "更高档套餐",
+            ""
+          ]
+        },
+        {
+          "label": "新一代反审查（Reality / Hysteria2）",
+          "values": [
+            "",
+            "有限",
+            "有限",
+            "有限"
+          ]
+        },
+        {
+          "label": "在中国及严格防火墙下可用",
+          "values": [
+            "专为此打造",
+            "有限",
+            "有限",
+            "有限"
+          ]
+        },
+        {
+          "label": "隐身模式（突破封锁）",
+          "values": [
+            "",
+            "",
+            "",
+            "有限"
+          ]
+        },
+        {
+          "label": "全平台分应用代理",
+          "values": [
+            "",
+            "有限",
+            "有限",
+            "有限"
+          ]
+        },
+        {
+          "label": "断网保护",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "label": "严格无日志",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "label": "同时在线设备数",
+          "values": [
+            "10",
+            "10",
+            "8",
+            "10"
+          ]
+        },
+        {
+          "label": "应用语言数",
+          "values": [
+            "16",
+            "视情况而定",
+            "视情况而定",
+            "视情况而定"
+          ]
+        }
+      ],
+      "footnote": "所列价格为标准的<strong>按月付费</strong>价——竞品打出的宣传价通常需要 1–2 年的承诺。竞品信息反映的是截至 2026 年 8 月公开列出的功能与价格，可能会变动——请以各家官网为准。对比信息本着诚意提供，仅供一般参考。"
+    },
+    "switch": {
+      "eyebrow": "人们为何转投",
+      "title": "MistyVPN 真正与众不同之处",
+      "cards": {
+        "freeTier": {
+          "title": "真正的免费版",
+          "body": "多数高级 VPN 根本没有免费选项。MistyVPN 让你免费开始，还能赚取免费时长——无需银行卡，无需承诺。"
+        },
+        "vault": {
+          "title": "密码管理器 + 2FA，免费",
+          "body": "完整加密的密码管理器和内置身份验证器，在每个套餐里都免费提供。NordVPN、ExpressVPN 和 PureVPN 都把它们锁在更贵的套餐里，或作为付费附加组件出售。"
+        },
+        "antiBlock": {
+          "title": "为突破封锁而生",
+          "body": "隐身模式采用新一代反审查技术（Reality + Hysteria2），因此在主流 VPN 会被识别并封锁的中国及严格防火墙背后，MistyVPN 依然照常工作。"
+        },
+        "price": {
+          "title": "价格只是零头",
+          "body": "按月付费，MistyVPN 仅需 {monthlyPrice}——而大牌在无长期合约时大约要收 12–13 美元。选年付套餐更是每月仅 {annualPerMonth}。"
+        }
+      }
+    },
+    "ctaBand": {
+      "title": "亲自看看差别",
+      "body": "免费开始——无需银行卡，不留日志。高级版享有 14 天退款保证。"
+    }
+  },
+  "deleteAccountPage": {
+    "metaTitle": "删除你的账户与数据",
+    "metaDescription": "如何删除你的 {name} 账户及相关数据、哪些会被移除、哪些会被保留。",
+    "eyebrow": "账户",
+    "h1": "删除你的 {name} 账户与数据",
+    "lastUpdated": "最后更新：{date}",
+    "lastUpdatedDate": "2026 年 7 月 15 日",
+    "intro": "本页说明如何申请删除你的 {name} 账户及与之关联的数据。{name} 由 {name} 开发并运营。",
+    "inApp": {
+      "heading": "在应用内删除你的账户",
+      "intro": "永久删除账户及其数据最快的方式，就是直接在 {name} 应用中操作：",
+      "step1": "在你的设备上打开 {name} 应用。",
+      "step2": "进入<b>账户</b>。",
+      "step3": "点击<b>删除账户</b>。",
+      "step4": "在提示时确认。你的账户及相关数据将被立即删除。",
+      "note": "此功能在 iPhone、iPad、Android、Mac 和 Android TV 上均可使用。"
+    },
+    "email": {
+      "heading": "或通过邮件申请删除",
+      "p1": "如果你无法使用应用内选项，可通过邮件申请删除。请用与你账户关联的邮箱地址给我们发消息，我们会核实你的请求并在 <b>30 天</b>内删除你的账户。",
+      "linkText": "发送邮件至 {email} 以删除你的账户"
+    },
+    "deleted": {
+      "heading": "哪些数据会被删除",
+      "intro": "删除账户时，我们会移除与之关联的个人数据，包括：",
+      "items": [
+        "你的邮箱地址和账户标识符",
+        "你经哈希处理的密码",
+        "你的 VPN 凭据和设备记录",
+        "你的账户与任何订阅之间的关联"
+      ],
+      "note": "由于 {name} 是严格无日志的服务，我们本就不持有任何浏览历史、流量、DNS 或 IP 活动记录——因此根本没有此类数据可供删除。"
+    },
+    "retained": {
+      "heading": "哪些内容可能会被保留",
+      "billing": "<b>账单与交易记录：</b>在需要履行法律、税务或会计义务时，我们可能会在法律要求的期限内（通常长达 7 年）保留最少量的交易记录。这些仅在合规所需的范围内保留。",
+      "store": "<b>商店订阅：</b>通过 Apple App Store 或 Google Play 购买的订阅由这些商店管理。删除账户不会取消仍在生效的商店订阅——请在你的 Apple 或 Google 账户中取消，以停止今后的扣费。"
+    },
+    "questions": {
+      "heading": "疑问",
+      "text": "关于你的账户或数据的任何问题，请通过 <link>{email}</link> 联系我们。有关我们如何处理数据的完整详情，请参阅我们的<privacy>隐私政策</privacy>。"
+    }
+  },
+  "downloadGrid": {
+    "yourDevice": "你的设备",
+    "setupGuide": "设置指南",
+    "getIt": "获取",
+    "downloadApk": "下载 APK",
+    "comingSoon": "即将推出"
+  },
+  "downloadPage": {
+    "metaTitle": "下载 MistyVPN——iPhone、Android、Mac 和 Android TV",
+    "metaDescription": "在你的所有设备上获取 MistyVPN。一个账户覆盖 iPhone、iPad、Android、Mac 和 Android TV——免费开始，无需银行卡，高级版享 14 天退款保证。",
+    "breadcrumb": "下载",
+    "eyebrow": "下载",
+    "title": "在每台设备上获取 MistyVPN",
+    "subtitle": "一个账户覆盖 iPhone、iPad、Android、Mac 和 Android TV——最多同时 10 台设备。在下方选择你的平台，几秒钟即可连接。",
+    "storeNote": "MistyVPN 现已上架 Google Play，App Store 版本也即将推出。已经有账户了？<manage>在此管理</manage>。",
+    "trust": [
+      {
+        "title": "免费开始",
+        "body": "无需信用卡。赚取免费时长，先体验完整应用再付一分钱。"
+      },
+      {
+        "title": "免费包含密码管理器和 2FA",
+        "body": "完整加密的密码管理器和身份验证器在每个套餐里都免费提供。"
+      },
+      {
+        "title": "14 天退款保证",
+        "body": "无风险升级高级版——14 天内全额退款，无需任何理由。"
+      }
+    ],
+    "ctaTitle": "初次使用 MistyVPN？",
+    "ctaBody": "现在就创建一个免费账户——安装应用的那一刻，你的订阅和设置就会同步到每台设备。",
+    "ctaCreate": "创建免费账户",
+    "ctaPricing": "查看价格"
+  },
+  "featuresPage": {
+    "metaTitle": "功能——隐身模式、分应用代理、无日志等等",
+    "metaDescription": "MistyVPN 的全部功能：突破封锁的隐身模式、分应用代理、严格的无日志承诺、断网保护、快速流媒体，以及覆盖每台设备的 40 多个节点。",
+    "breadcrumb": "功能",
+    "hero": {
+      "eyebrow": "功能",
+      "title": "在关键处强大，用起来简单。",
+      "subtitle": "每个套餐——连免费版在内——都自带完整工具箱。没有附加组件，没有隐藏条款。"
+    },
+    "stealth": {
+      "eyebrow": "隐身模式",
+      "title": "没人看得见的 VPN，才是好 VPN",
+      "body": "网络靠识别 VPN 特有的流量特征来封锁它们。隐身模式把你的连接伪装成日常 HTTPS，因此在其他 VPN 被抓住的地方——公共 Wi-Fi、公司网络，或最严格的国家级防火墙背后——MistyVPN 都能溜过去。",
+      "note": "默认开启。无需任何设置。"
+    },
+    "split": {
+      "eyebrow": "分应用代理",
+      "title": "你的通道，你做主",
+      "body": "只让你选中的应用走 VPN，其余的都留在正常连接上。私密追剧的同时，让你的银行应用看到真实位置，游戏也不卡顿。",
+      "note": "逐个挑选应用和网站。"
+    },
+    "grid": [
+      {
+        "title": "隐身模式",
+        "body": "让你的 VPN 隐于无形。MistyVPN 会伪装你的连接，让它看起来就像普通的网页浏览——因此即使在封锁其他 VPN 的网络里也照样能用。一键开启，默认打开。"
+      },
+      {
+        "title": "分应用代理",
+        "body": "只保护你想保护的。把选定的应用和网站走 VPN，其余的——银行、本地服务、游戏——都保持本地全速。"
+      },
+      {
+        "title": "严格无日志",
+        "body": "我们什么都不留。不记录浏览历史、不记录流量、不记录 IP 地址。没有可泄露的，也没有可交出的。"
+      },
+      {
+        "title": "真正的快",
+        "body": "现代协议加上 40 多个优化节点，意味着流媒体不卡顿、通话不延迟、下载飞快——即便网络繁忙也一样。"
+      },
+      {
+        "title": "无国界追剧",
+        "body": "随时随地以清晰高清观看你喜欢的节目。选个节点，点击连接，按下播放。"
+      },
+      {
+        "title": "断网保护",
+        "body": "一旦连接中断，MistyVPN 会立即切断流量，绝不让任何数据在无保护的情况下溜出去。"
+      },
+      {
+        "title": "密码管理器",
+        "body": "一个功能完整、全程加密的密码管理器直接内置于应用中——保存登录信息、生成强密码、随处自动填充。大牌 VPN 都把它锁在更贵的套餐里或额外收费。而在 MistyVPN 里，它就是免费包含的。"
+      },
+      {
+        "title": "身份验证器（2FA）",
+        "body": "内置两步验证码生成器——取代 Google Authenticator，把你的一次性验证码和密码放在同一个安全加密的保险库里。无需额外订阅，无需附加组件。免费包含。"
+      },
+      {
+        "title": "覆盖你的所有设备",
+        "body": "iPhone、iPad、Android、Mac 和 Android TV。一份订阅全部覆盖，最多可同时连接 10 台设备。"
+      },
+      {
+        "title": "使用你的母语",
+        "body": "用 16 种语言舒心地使用 MistyVPN——而且我们会不断增加，你无需更新应用即可用上。"
+      },
+      {
+        "title": "自动模式",
+        "body": "一键开启，MistyVPN 会自动为你的网络挑选最快、最稳定的连接——完全无需任何设置。"
+      },
+      {
+        "title": "40 多个全球节点",
+        "body": "通过遍布美洲、欧洲、中东和亚洲的服务器连接——想在哪里出现就在哪里出现。"
+      },
+      {
+        "title": "自动连接",
+        "body": "让 MistyVPN 在设备启动的那一刻就连上，自动为你保驾护航——绝不会不小心暴露。"
+      },
+      {
+        "title": "赚取免费时长",
+        "body": "免费时长用完了？随时补充你的免费分钟——无需账户，也无需信用卡。"
+      }
+    ],
+    "underHood": {
+      "eyebrow": "深入内核",
+      "title": "新一代防护，用起来毫不费力",
+      "body": "隐身模式由目前最先进的反审查技术驱动，让你的连接融入其中而不是显眼突出。自动模式会悄悄为你的网络挑选最快、最稳定的选项——你只需点击连接。那些精巧之处，都不会来打扰你。"
+    },
+    "cta": {
+      "title": "今天就免费试试",
+      "body": "完整工具箱，免费开始——无需信用卡。"
+    }
+  },
+  "landing": {
+    "getFree": "免费获取 MistyVPN",
+    "howItWorks": "工作原理",
+    "faqEyebrow": "常见问题",
+    "faqTitle": "常见问题",
+    "ctaTitle": "随时为你准备好",
+    "ctaBody": "免费开始，无需信用卡，严格无日志。"
+  },
+  "loginPage": {
+    "metaTitle": "登录",
+    "metaDescription": "登录你的 MistyVPN 账户，管理订阅、付款方式和设备。",
+    "heading": "欢迎回来",
+    "subtitle": "登录你的 MistyVPN 账户。",
+    "emailLabel": "邮箱",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "密码",
+    "passwordPlaceholder": "你的密码",
+    "forgotLink": "忘记密码？",
+    "show": "显示",
+    "hide": "隐藏",
+    "submit": "登录",
+    "submitting": "登录中…",
+    "noAccount": "初次使用 MistyVPN？",
+    "createAccount": "创建账户",
+    "errorGeneric": "出了点问题",
+    "forgotNeedEmail": "请先输入你的邮箱，再点击“忘记密码”。",
+    "forgotSent": "如果该邮箱有对应账户，重置链接正在发送途中。",
+    "loading": "加载中…"
+  },
+  "noLogsPage": {
+    "metaTitle": "无日志政策——我们不收集什么",
+    "metaDescription": "MistyVPN 是一款严格无日志的 VPN。我们不记录你的浏览、流量或 IP 地址。这里正是解释这意味着什么，以及架构如何强制做到这一点。",
+    "breadcrumb": "无日志",
+    "hero": {
+      "eyebrow": "隐私",
+      "title": "严格无日志。没什么可交出的。",
+      "subtitle": "保护数据的最好办法，就是从不收集它。{brand} 的构建方式让你所做的一切根本无迹可寻。"
+    },
+    "points": [
+      {
+        "title": "无活动日志",
+        "body": "我们从不记录你访问的网站、使用的应用，或你的 DNS 查询。你的浏览记录不归我们保存。"
+      },
+      {
+        "title": "无连接日志",
+        "body": "我们不存储你的真实 IP 地址，也不记录你何时连接的时间线。没有可供构建的画像。"
+      },
+      {
+        "title": "由设计强制保障",
+        "body": "崩溃报告经过隐私清洗，去除了令牌、凭据和 IP，我们的服务器也配置为只保留转发流量所必需的内容，别的一概不留。"
+      }
+    ],
+    "keep": {
+      "eyebrow": "我们保留什么",
+      "title": "运行服务所需的最低限度",
+      "body": "无日志政策并不意味着任何地方都零数据——而是意味着其中没有任何数据能把活动与你联系起来。",
+      "p1": "为了运营账户和订阅，我们会存储必需信息：一个账户标识符和你的订阅状态（来自 App Store 或 Google Play）。我们不会把它与任何流量记录相关联，因为根本不存在此类记录。",
+      "p2": "汇总的、无法识别身份的指标（如服务器总负载）帮助我们保持网络快速。崩溃报告会剔除任何敏感内容——令牌、密码、密钥和 IP 地址从不会被发送。",
+      "p3": "本页是通俗易懂的摘要。完整详情请参阅<link>隐私政策</link>。"
+    },
+    "cta": {
+      "title": "无需凭空信任的隐私"
+    }
+  },
+  "pricingPage": {
+    "metaTitle": "价格——免费开始，高级版每月低至 $2.50",
+    "metaDescription": "MistyVPN 价格简单明了。免费开始并赚取免费时长，或从每月 $2.50 起升级高级版，在最多 10 台设备上无限畅速。一切都在应用内管理。",
+    "breadcrumb": "价格",
+    "eyebrow": "价格",
+    "title": "价格简单，一切都已包含。",
+    "subtitle": "免费开始，准备好了再升级。每个套餐都包含完整功能——隐身模式、分应用代理和全部 40 多个节点。",
+    "bestValue": "最超值",
+    "pricesNote": "价格以美元计，通过网页安全结账或经由 App Store / Google Play 收费；税费和本地价格在结账时计算。随时可取消。",
+    "faqEyebrow": "常见问题",
+    "faqTitle": "价格相关问题"
+  },
+  "privacyPage": {
+    "metaTitle": "隐私政策",
+    "metaDescription": "{name} 如何处理你的数据：一款严格无日志的 VPN，只收集运营账户和订阅所需的最低限度信息，从不记录你的活动。",
+    "eyebrow": "法律",
+    "title": "隐私政策",
+    "updatedDate": "2026 年 7 月 15 日",
+    "lastUpdated": "最后更新：{date}",
+    "sections": [
+      {
+        "kind": "p",
+        "text": "{name}（“{name}”“我们”）在 iPhone、iPad、Android、Mac 和 Android TV 上提供无日志的虚拟专用网络（VPN）服务。{name} 是 {legalName} 的商用名称，该公司在{registeredIn}注册（公司编号 {companyNumber}），注册办公地址为 {registeredOffice}。就本隐私政策而言，{legalName} 为数据控制者。本政策说明我们收集什么、我们刻意<b>不</b>收集哪些内容、我们如何使用和共享信息，以及你对自己数据所享有的权利。它适用于我们的应用、网站，以及我们的账户和订阅系统。"
+      },
+      {
+        "kind": "p",
+        "text": "我们的指导原则很简单：我们从不收集的东西，就不会丢失、泄露，也无法被强制交出。我们把 {name} 设计成以尽可能少的个人数据来运行。"
+      },
+      {
+        "kind": "h2",
+        "text": "1. 我们的无日志承诺"
+      },
+      {
+        "kind": "p",
+        "text": "在你连接 {name} 期间，我们<b>不会</b>收集、监控或存储："
+      },
+      {
+        "kind": "ul",
+        "items": [
+          "你的浏览历史，或你使用的网站和应用",
+          "你的流量内容",
+          "你连接的目的地（IP 或域名）",
+          "你的 DNS 查询",
+          "你原始的（源）IP 地址",
+          "可能与你的身份或活动相关联的连接时间戳、会话时长或带宽日志"
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "我们不保留任何可用于将 VPN 活动与个人用户对应起来的记录。由于这些日志根本不存在，我们没有任何东西可以出售、泄露，或在收到请求时披露。"
+      },
+      {
+        "kind": "h2",
+        "text": "2. 我们收集的信息"
+      },
+      {
+        "kind": "p",
+        "text": "我们只收集运营账户、交付并保障服务、处理订阅以及排查问题所必需的信息。"
+      },
+      {
+        "kind": "h3",
+        "text": "账户数据"
+      },
+      {
+        "kind": "p",
+        "text": "如果你创建账户，我们会存储你的<b>邮箱地址</b>和一个经过哈希（不可逆打乱）处理的密码版本。每位用户还会被分配一个随机的<b>账户标识符</b>。你无需创建账户即可使用免费版。"
+      },
+      {
+        "kind": "h3",
+        "text": "设备数据"
+      },
+      {
+        "kind": "p",
+        "text": "我们会为每次安装生成一个随机的<b>设备标识符</b>。它用于管理你的设备、执行并发连接限制以及发放你的免费时长。它不与任何活动日志关联，也不会用于识别你的个人身份。"
+      },
+      {
+        "kind": "h3",
+        "text": "VPN 凭据"
+      },
+      {
+        "kind": "p",
+        "text": "为了连接，你的设备会持有每台设备专属的 VPN 凭据（如用户名、密码和协议密钥）。在可能的情况下，这些凭据存储在你设备的安全钥匙串中，而非我们的服务器上，并会在你登录或退出时轮换更新。"
+      },
+      {
+        "kind": "h3",
+        "text": "订阅与付款状态"
+      },
+      {
+        "kind": "p",
+        "text": "订阅通过 <b>Apple App Store</b>、<b>Google Play</b>，或在网页上通过 <b>Stripe</b> 购买和管理。我们会收到对你订阅状态（有效、已过期、已取消）的验证结果和一个交易标识符。我们<b>不会</b>收到或存储你完整的卡号或银行详情；这些完全由商店或支付处理方处理。"
+      },
+      {
+        "kind": "h3",
+        "text": "诊断与崩溃数据"
+      },
+      {
+        "kind": "p",
+        "text": "已发布的应用会通过 <b>Sentry</b> 发送匿名化的崩溃和错误报告，以便我们查找并修复缺陷。这些报告经过隐私清洗：在发送前，我们会剔除身份验证令牌、VPN 凭据、密码、用户名和 IP 地址，并且在开发版本中完全禁用报告。"
+      },
+      {
+        "kind": "h3",
+        "text": "汇总运营数据"
+      },
+      {
+        "kind": "p",
+        "text": "我们使用无法识别身份的汇总指标——如服务器总负载和整体服务健康状况——来保持网络的可靠与快速。此类数据不与个人用户或其活动关联。"
+      },
+      {
+        "kind": "h3",
+        "text": "临时连接数据"
+      },
+      {
+        "kind": "p",
+        "text": "为了执行单个账户所允许的设备数量限制，我们的服务器会在连接处于活动状态时，短暂处理该连接的网络地址与你随机的设备标识符。此信息是瞬时的，仅在会话存续期间（大约几分钟）保留，不会写入任何活动日志，事后也不予留存。"
+      },
+      {
+        "kind": "h3",
+        "text": "支持沟通"
+      },
+      {
+        "kind": "p",
+        "text": "如果你联系我们（例如通过邮件或聊天），我们会保留该往来内容，以便为你提供帮助并改进我们的支持。"
+      },
+      {
+        "kind": "h3",
+        "text": "网站数据"
+      },
+      {
+        "kind": "p",
+        "text": "我们的网站使用运行站点、记住你的偏好以及处理网页付款所需的必要 Cookie 和尊重隐私的分析工具。请参阅下文的 <b>Cookie</b>。"
+      },
+      {
+        "kind": "h2",
+        "text": "3. 我们不收集的信息"
+      },
+      {
+        "kind": "p",
+        "text": "明确地说，{name} <b>不会</b>收集或留存：你的浏览或流量内容、你通过 VPN 访问的网站和服务、你的 DNS 查询、你的真实 IP 地址，或任何将你的活动与你本人对应起来的记录。我们不出售你的个人数据，也不会将你的数据用于广告或画像分析。"
+      },
+      {
+        "kind": "h2",
+        "text": "4. 我们如何使用你的信息"
+      },
+      {
+        "kind": "ul",
+        "items": [
+          "创建并管理你的账户和设备",
+          "提供、维护并保障 VPN 服务",
+          "验证并管理订阅、免费时长和账单状态",
+          "防止滥用并执行连接限制",
+          "诊断崩溃并改进可靠性和性能",
+          "回应你的支持请求",
+          "遵守适用于我们的法律义务"
+        ]
+      },
+      {
+        "kind": "h2",
+        "text": "5. 处理的法律依据（GDPR）"
+      },
+      {
+        "kind": "p",
+        "text": "如果你身处欧洲经济区或英国，我们基于以下法律依据处理你的数据：<b>合同履行</b>（提供你所注册的服务）、<b>正当利益</b>（保障我们的网络、防止滥用并改进产品，并与你的权利相权衡）、<b>同意</b>（在需要之处，你可随时撤回），以及<b>法律义务</b>（法律要求之处）。"
+      },
+      {
+        "kind": "h2",
+        "text": "6. 付款"
+      },
+      {
+        "kind": "p",
+        "text": "应用内订阅由 Apple App Store 和 Google Play 依据其各自的条款和隐私政策处理。网页订阅由 Stripe 处理。你输入的付款详情由这些提供方处理——{name} 从不会看到你完整的卡片或银行信息。你可随时在你的商店账户或账户门户中查看、更改或取消订阅。"
+      },
+      {
+        "kind": "h2",
+        "text": "7. 我们如何共享信息"
+      },
+      {
+        "kind": "p",
+        "text": "我们不出售你的个人数据。我们仅与帮助我们运营 {name} 的服务提供商共享上述有限数据，且仅在必要时："
+      },
+      {
+        "kind": "ul",
+        "items": [
+          "<b>Apple 和 Google</b>——用于验证和管理应用内订阅。",
+          "<b>Stripe</b>——用于处理网页订阅付款。",
+          "<b>Sentry</b>——用于接收经隐私清洗的崩溃和错误报告。",
+          "<b>基础设施和托管提供商</b>——用于运营我们的服务器和后端。"
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "这些提供商受保密和数据保护义务约束，且只能将信息用于向我们提供其服务。如有效的法律程序要求，我们也可能披露信息——但由于我们不保留任何活动日志，我们无法提供你在连接期间所做行为的记录。"
+      },
+      {
+        "kind": "h2",
+        "text": "8. 跨境数据传输"
+      },
+      {
+        "kind": "p",
+        "text": "{name} 在许多国家运营服务器，让你可以从任何需要的地方连接。账户和订阅数据可能在你所在国家以外的国家处理。当我们将个人数据传输出欧洲经济区或英国时，我们会依靠适当的保障措施，例如欧盟委员会的标准合同条款。"
+      },
+      {
+        "kind": "h2",
+        "text": "9. 数据留存"
+      },
+      {
+        "kind": "p",
+        "text": "我们仅在你的账户处于活动状态期间，或在履行法律、税务或会计义务所需的期间，保留账户和订阅数据。当你删除账户时，我们会移除与之关联的账户数据。由于我们不保留任何活动日志，没有浏览历史可供留存或删除。瞬时连接数据会在你的会话结束时丢弃。"
+      },
+      {
+        "kind": "h2",
+        "text": "10. 安全"
+      },
+      {
+        "kind": "p",
+        "text": "我们通过传输过程加密、密码哈希、范围受限的访问控制，以及对系统访问权限的严格限制来保护你的数据。没有任何传输或存储方式是绝对安全的，但保持数据最少化本身就是我们最有力的保障：可暴露的东西极少。如果发生影响你个人数据的安全事件，我们将依法通知受影响的用户和监管机构。"
+      },
+      {
+        "kind": "h2",
+        "text": "11. 你的权利"
+      },
+      {
+        "kind": "h3",
+        "text": "欧洲经济区 / 英国（GDPR）"
+      },
+      {
+        "kind": "p",
+        "text": "你有权访问、更正、删除或导出你的个人数据；限制或反对某些处理；撤回同意；并向你当地的数据保护机构提出投诉。"
+      },
+      {
+        "kind": "h3",
+        "text": "加利福尼亚州（CCPA/CPRA）"
+      },
+      {
+        "kind": "p",
+        "text": "你有权知悉我们收集哪些个人信息、请求删除、更正它，并选择退出其出售或共享。我们<b>不会</b>出售或共享你的个人信息，也绝不会因你行使权利而歧视你。"
+      },
+      {
+        "kind": "p",
+        "text": "你可随时直接在应用中删除你的账户及其数据。对于任何其他请求，请通过 <mail>{email}</mail> 联系我们，我们会在适用法律要求的期限内予以回应。"
+      },
+      {
+        "kind": "h2",
+        "text": "12. 儿童"
+      },
+      {
+        "kind": "p",
+        "text": "{name} 面向成年人，并非针对儿童。我们不会在明知的情况下收集 18 岁以下（或适用地区 13 岁以下）任何人的个人数据。如果你认为有儿童向我们提供了个人数据，请联系我们，我们会予以删除。"
+      },
+      {
+        "kind": "h2",
+        "text": "13. Cookie"
+      },
+      {
+        "kind": "p",
+        "text": "我们的网站使用运行站点和处理付款所需的<b>必要 Cookie</b>，以及尊重隐私的分析工具来了解站点的使用情况。我们不使用广告或跨站点跟踪 Cookie。你可以通过浏览器设置来管理 Cookie。"
+      },
+      {
+        "kind": "h2",
+        "text": "14. 第三方链接"
+      },
+      {
+        "kind": "p",
+        "text": "我们的网站和应用可能链接到我们无法控制的第三方网站或服务。本政策不涵盖这些内容；请查阅其各自的隐私政策。"
+      },
+      {
+        "kind": "h2",
+        "text": "15. 本政策的变更"
+      },
+      {
+        "kind": "p",
+        "text": "我们可能会不时更新本政策。重大变更将通过上方的“最后更新”日期予以体现，并在适当情况下在应用内或通过邮件公布。更新后继续使用 {name} 即表示你接受修订后的政策。"
+      },
+      {
+        "kind": "h2",
+        "text": "16. 联系我们"
+      },
+      {
+        "kind": "p",
+        "text": "对隐私有疑问、请求或投诉？请通过 <mail>{email}</mail> 给我们发邮件，我们很乐意为你提供帮助。"
+      }
+    ]
+  },
+  "registerPage": {
+    "metaTitle": "创建你的账户",
+    "metaDescription": "创建你的 MistyVPN 账户。免费开始，然后订阅以解锁无限、全速的畅快体验。",
+    "heading": "创建你的账户",
+    "subtitle": "免费开始，然后订阅以解锁一切。",
+    "emailLabel": "邮箱",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "密码",
+    "passwordPlaceholder": "至少 8 个字符",
+    "show": "显示",
+    "hide": "隐藏",
+    "submit": "创建账户",
+    "submitting": "创建中…",
+    "haveAccount": "已经有账户了？",
+    "signIn": "登录",
+    "errorGeneric": "出了点问题",
+    "loading": "加载中…"
+  },
+  "resetPasswordPage": {
+    "metaTitle": "重置密码",
+    "metaDescription": "重置你的 MistyVPN 账户密码。",
+    "verifying": "正在验证你的链接…",
+    "noToken": "未找到重置令牌。",
+    "invalidLink": "链接无效。",
+    "serverUnreachable": "无法连接到服务器。请重试。",
+    "requestNewLink": "申请新的重置链接",
+    "formHeading": "设置新密码",
+    "formSubtitle": "请选择一个强密码（至少 8 个字符）。",
+    "newPasswordPlaceholder": "新密码",
+    "confirmPasswordPlaceholder": "确认密码",
+    "show": "显示",
+    "hide": "隐藏",
+    "passwordsDontMatch": "两次输入的密码不一致。",
+    "passwordTooShort": "密码必须至少 8 个字符。",
+    "somethingWrong": "出了点问题。",
+    "submit": "更新密码",
+    "submitting": "更新中…",
+    "successTitle": "密码已更新！",
+    "successBody": "现在你可以在 MistyVPN 应用中用新密码登录了。"
+  },
+  "routerPage": {
+    "metaTitle": "路由器 VPN——DD-WRT、Asus、OpenWRT 等（OpenVPN）",
+    "metaDescription": "用 OpenVPN 在你的路由器上设置 MistyVPN，保护家中的每台设备——电视、游戏机、智能家居设备。DD-WRT、Asus、OpenWRT、Tomato、pfSense 和 GL.iNet 的分步指南。",
+    "crumbDownload": "下载",
+    "crumbRouter": "路由器 VPN",
+    "eyebrow": "路由器 VPN",
+    "h1": "把 MistyVPN 装到你的路由器上",
+    "lede": "在路由器上设置一次 MistyVPN，其后连接的每台设备都受保护——智能电视、游戏机、流媒体盒子，以及那些自身无法运行 VPN 应用的智能家居设备。MistyVPN 支持 <strong>OpenVPN</strong>，因此任何带 OpenVPN 客户端的路由器都能用。",
+    "udpProfile": "UDP 配置文件",
+    "tcpProfile": "TCP 配置文件",
+    "serverList": "服务器列表",
+    "beforeYouStart": "开始之前",
+    "chooseYourRouter": "选择你的路由器",
+    "chooseYourRouterBody": "选择你的路由器或固件，获取分步说明。",
+    "viewGuide": "查看指南 →"
+  },
+  "serversPage": {
+    "metaTitle": "服务器列表——MistyVPN 的每个节点与协议",
+    "metaDescription": "完整的 MistyVPN 服务器目录：每个节点、其服务器主机名，以及它支持的协议——WireGuard、VLESS（Reality）、Hysteria2、OpenVPN 和 ShadowTLS。可用于应用、路由器或手动设置。",
+    "breadcrumbSupport": "支持",
+    "breadcrumbServerList": "服务器列表",
+    "eyebrow": "服务器列表",
+    "title": "每个节点，每种协议",
+    "intro": "遍及 {countries} 个国家的 {locations} 个节点。每台 MistyVPN 服务器都以相同方式部署，因此<strong>所有协议在所有服务器上都可用</strong>。使用下方的主机名，即可从应用、路由器或手动设置进行连接——挑选适合你网络的协议。",
+    "colLocation": "节点",
+    "colHostname": "服务器主机名",
+    "protocolSupported": "支持 {protocol}",
+    "footerNote": "WireGuard、VLESS（Reality）和 Hysteria2 在 MistyVPN 应用中运行；OpenVPN（UDP/TCP）也适用于路由器和手动配置。在网络需要时，会自动应用隐身混淆。实时服务器健康状况与负载即将在本页面上线。"
+  },
+  "supportPage": {
+    "metaTitle": "帮助与支持——快速联系真人",
+    "metaDescription": "获取 MistyVPN 的帮助。通过 WhatsApp 联系我们或发邮件至 support@mistyvpn.com——真人、快速回复、全天候。快速修复方案与常见问题解答。",
+    "breadcrumb": "支持",
+    "hero": {
+      "eyebrow": "支持",
+      "title": "我们随时待命——全天候为你服务。",
+      "subtitle": "真人回复，速度快。通过 WhatsApp 或邮件联系我们，我们会帮你重新连上网。"
+    },
+    "whatsapp": {
+      "title": "在 WhatsApp 上聊",
+      "body": "联系我们最快的方式。会在你手机上打开 WhatsApp，或在电脑上打开 WhatsApp Web。",
+      "button": "在 WhatsApp 上联系我们"
+    },
+    "email": {
+      "title": "给我们发邮件",
+      "body": "更喜欢邮件？随时写信给我们，我们会在几小时内给出真人回复——不会让你在工单里来回折腾。",
+      "button": "邮件支持"
+    },
+    "trust": [
+      {
+        "label": "2 小时内回复",
+        "sub": "通常的响应时间"
+      },
+      {
+        "label": "真人服务，绝无机器人",
+        "sub": "人工支持"
+      },
+      {
+        "label": "全天候可用",
+        "sub": "每天"
+      },
+      {
+        "label": "严格无日志",
+        "sub": "我们看不到你的活动"
+      }
+    ],
+    "quickFixes": {
+      "eyebrow": "联系我们之前",
+      "title": "60 秒快速修复",
+      "body": "大多数小问题用下面这几招就能解决。都试过还是卡住？我们随时一条消息就到。",
+      "items": [
+        "把应用更新到最新版本。",
+        "把协议设为自动，并选一个附近的服务器。",
+        "确保隐身模式已开启。",
+        "把 VPN 关掉再打开，或重启应用。",
+        "断开 VPN，检查你的网络本身是否正常。"
+      ]
+    },
+    "faq": {
+      "eyebrow": "解答",
+      "title": "常见问题"
+    },
+    "faqs": [
+      {
+        "q": "我连不上——应该先试什么？",
+        "a": "把协议切换为自动（设置 → 协议），选一个附近的服务器，并确保隐身模式已开启。在严格的网络里，隐身会把你的连接伪装成普通 HTTPS，从而顺利通过。如果还是连不上，给我们发消息，我们几分钟就帮你搞定。"
+      },
+      {
+        "q": "如何管理或取消我的订阅？",
+        "a": "订阅通过你的 Apple ID 或 Google 账户扣费。随时可在设备的账户设置中管理或取消——Apple：设置 → 你的姓名 → 订阅；Google：Play 商店 → 订阅。在付费周期结束前，你的访问权限会持续有效。"
+      },
+      {
+        "q": "退款怎么办理？",
+        "a": "由于扣费由 Apple 和 Google 处理，退款也通过它们发放。我们很乐意协助你完成——只要联系我们，我们会为你指出最快的途径。"
+      },
+      {
+        "q": "你们会记录我做了什么吗？",
+        "a": "不会。MistyVPN 严格无日志——我们不记录你的浏览、流量或活动。我们从不收集的东西，根本无从交出。完整详情请见我们的无日志承诺。"
+      },
+      {
+        "q": "哪个服务器最适合看流媒体？",
+        "a": "选一个你想看的内容所在国家的服务器，然后连接。如果某个服务加载不出来，试试同一国家的另一座城市，或切换隐身模式。也可以问我们当前的最佳选择——我们一直在关注。"
+      },
+      {
+        "q": "在受限或公共 Wi-Fi 上能用吗？",
+        "a": "能。隐身模式正是为此而生——咖啡馆、酒店、机场、办公室以及重度过滤的网络。它默认开启，无需任何设置。"
+      }
+    ],
+    "closing": {
+      "title": "还是卡住？我们一起来解决。",
+      "body": "给我们发条消息，真人会帮你重新连上网——通常两小时内搞定。",
+      "button": "在 WhatsApp 联系我们"
+    }
+  },
+  "termsPage": {
+    "metaTitle": "服务条款",
+    "metaDescription": "规范你使用 {name} 的条款。",
+    "eyebrow": "法律",
+    "h1": "服务条款",
+    "lastUpdated": "最后更新：{date}",
+    "lastUpdatedDate": "2026 年 6 月 9 日",
+    "intro": "本条款规范你对 {name} 的使用，该服务由 {company} 运营，该公司在{registeredIn}注册（公司编号 {number}），注册办公地址为 {office}。使用本服务即表示你同意本条款。",
+    "sections": [
+      {
+        "heading": "可接受的使用",
+        "paragraphs": [
+          "{name} 旨在保护你的隐私与安全。你同意不将本服务用于非法活动、伤害他人、发送垃圾信息或恶意软件，或侵犯知识产权。你有责任遵守适用于你的法律，包括任何有关 VPN 使用的当地规定。"
+        ]
+      },
+      {
+        "heading": "账户",
+        "paragraphs": [
+          "你有责任妥善保管你的账户凭据。免费访问在有限范围内提供；付费订阅可解锁完整访问权限。"
+        ]
+      },
+      {
+        "heading": "订阅与账单",
+        "paragraphs": [
+          "订阅可通过本网站的安全结账用银行卡购买，或通过 Apple App Store 和 Google Play 购买。就商店购买而言，账单、续订和退款受这些商店政策的约束——请通过你的商店账户管理或取消。就在本网站上进行的购买而言，你可随时在账户页面管理或取消。"
+        ]
+      },
+      {
+        "heading": "14 天退款保证",
+        "paragraphs": [
+          "每个付费套餐都享有 14 天退款保证。如果你在首次购买后的 14 天内不满意，请通过 {email} 联系我们即可全额退款——无需任何理由。就在本网站上进行的购买，我们会直接退回原付款方式。就通过 Apple App Store 或 Google Play 进行的购买，退款将通过相应商店的退款流程处理，我们会协助你办理。本保证适用于你的首次购买，不适用于后续续订。"
+        ]
+      },
+      {
+        "heading": "服务可用性",
+        "paragraphs": [
+          "我们努力保持服务的可靠，但不保证不间断的访问。网络状况、第三方限制和维护都可能影响可用性。"
+        ]
+      },
+      {
+        "heading": "免责声明与责任限制",
+        "paragraphs": [
+          "在法律允许的范围内，本服务按“现状”提供，不附带任何形式的保证。在法律允许的最大范围内，{name} 不对因你使用本服务而产生的间接或后果性损害承担责任。"
+        ]
+      },
+      {
+        "heading": "本条款的变更",
+        "paragraphs": [
+          "我们可能会不时更新本条款。变更生效后继续使用即构成接受。"
+        ]
+      }
+    ],
+    "contact": {
+      "heading": "联系",
+      "body": "对本条款有疑问？请发邮件至 <link>{email}</link>。"
+    }
+  },
+  "tvLoginPage": {
+    "metaTitle": "电视登录",
+    "metaDescription": "登录以授权你的 MistyVPN 电视应用。",
+    "brandSubtitle": "电视登录",
+    "stepEnterCode": "输入代码",
+    "stepSignIn": "登录",
+    "codeHeading": "输入电视代码",
+    "codeSubtitle": "输入电视屏幕上显示的代码，或扫描二维码自动填入。",
+    "codeLabel": "来自你电视的代码",
+    "codePlaceholder": "例如 FJLX8JYJ",
+    "codeTooShort": "请输入你电视上显示的代码。",
+    "continue": "继续",
+    "loginHeading": "登录",
+    "loginSubtitle": "用你的 MistyVPN 账户登录，以授权代码 <hl>{code}</hl>。",
+    "emailLabel": "邮箱",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "密码",
+    "passwordPlaceholder": "••••••••",
+    "show": "显示",
+    "hide": "隐藏",
+    "invalidCredentials": "邮箱或密码有误",
+    "codeExpiredInvalid": "此代码已过期或无效。请回到你的电视获取新代码。",
+    "authorizeFailed": "无法授权电视。请重试。",
+    "serverUnreachable": "无法连接到服务器。请检查你的网络后重试。",
+    "signInAuthorize": "登录并授权电视",
+    "signingIn": "登录中…",
+    "authorizingTv": "正在授权电视…",
+    "changeCode": "← 更改代码",
+    "successTitle": "电视已登录！",
+    "successBody": "你的电视将在几秒内自动更新。你可以关闭此页面。",
+    "expiredTitle": "代码已过期",
+    "expiredBodyFallback": "请回到你的电视获取新代码。",
+    "tryAgain": "重试",
+    "footer": "mistyvpn.com · 面向所有设备的安全 VPN"
+  },
+  "unblockPage": {
+    "metaTitle": "随时随地解锁一切——网站、应用与流媒体",
+    "metaDescription": "MistyVPN 的隐身模式让你突破封锁，回到开放的互联网——你的网站、你的应用、你的高清剧集——即使在最受限的网络里也能用。免费开始。",
+    "crumb": "解锁",
+    "eyebrow": "解锁",
+    "h1": "把整个互联网找回来",
+    "lede": "在公司、校园、酒店 Wi-Fi 上被封锁，或困在国家级防火墙背后？MistyVPN 的隐身模式让你始终连着你想要的网站、应用和剧集——私密且全速。",
+    "bullets": [
+      "隐身模式能突破其他 VPN 越不过的封锁",
+      "随时随地以清晰高清追你的剧",
+      "分应用代理让银行和本地应用保持快速",
+      "40 多个节点，还在不断增加",
+      "严格无日志——你的活动始终属于你",
+      "免费开始，无需信用卡"
+    ],
+    "sections": [
+      {
+        "h2": "东西为何被封锁——以及 MistyVPN 如何解决",
+        "body": [
+          "受限网络不只是封锁地址；许多网络一旦发现 VPN 流量就会立即侦测并切断。这就是为什么那么多 VPN 在公司、学校、酒店或审查地区干脆就用不了。",
+          "MistyVPN 的隐身模式让你的连接看起来就像日常的普通浏览。没有明显的 VPN 特征可供标记——因此在其他应用被切断的地方，你依然连着网。"
+        ]
+      },
+      {
+        "h2": "不卡顿的流媒体",
+        "body": [
+          "只有够快，VPN 才适合看流媒体。MistyVPN 在 40 多个优化节点上运行精简的现代技术，让高清视频保持流畅而不卡顿。",
+          "选个节点，点击连接，按下播放——真的就这么简单。"
+        ]
+      },
+      {
+        "h2": "靠分应用代理保持快速",
+        "body": [
+          "你不必把所有流量都走 VPN。有了分应用代理，你可以只让流媒体和浏览走 MistyVPN，而银行应用、本地服务和游戏则留在你的正常连接上——全速运行，毫无取舍。"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "在别的 VPN 被封锁的地方 MistyVPN 能用吗？",
+        "a": "能。隐身模式把你的连接伪装成普通网页流量，因此在典型 VPN 会被识别并封锁的受限网络里——公司、学校、酒店和重度审查地区——MistyVPN 依然照常工作。"
+      },
+      {
+        "q": "我能看高清吗？",
+        "a": "能。MistyVPN 针对遍及 40 多个节点的快速高清流媒体做了优化，分应用代理还能让你只把流媒体应用以全速走 VPN。"
+      },
+      {
+        "q": "它会拖慢我其他应用吗？",
+        "a": "只要你不想，就不会。分应用代理让你把银行、本地网站和游戏留在正常连接上，只让你选中的应用走 VPN。"
+      },
+      {
+        "q": "有免费方式可以试用吗？",
+        "a": "有——免费开始并赚取免费时长，无需账户或信用卡。"
+      }
+    ]
+  }
+}

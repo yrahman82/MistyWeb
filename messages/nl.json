@@ -1,0 +1,1292 @@
+{
+  "meta": {
+    "tagline": "Veilig. Privé. Snel.",
+    "description": "MistyVPN houdt je privé en zonder blokkades op al je apparaten. Stealth-technologie die blokkades omzeilt, split tunneling, een strikte no-logs-belofte en 40+ locaties wereldwijd — gratis te beginnen.",
+    "keywords": "VPN, no-logs VPN, anti-censuur VPN, websites deblokkeren VPN, firewall omzeilen VPN, streaming VPN, WireGuard, VLESS Reality, Hysteria2, censuurbestendige VPN"
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Functies",
+    "pricing": "Prijzen",
+    "compare": "Vergelijken",
+    "noLogs": "No-logs",
+    "download": "Downloaden",
+    "support": "Support",
+    "contactUs": "Neem contact op",
+    "serverList": "Serverlijst",
+    "getApp": "MistyVPN downloaden",
+    "signInUp": "Inloggen / Registreren",
+    "account": "Account",
+    "language": "Taal",
+    "breadcrumb": "Broodkruimel",
+    "footer": {
+      "product": "Product",
+      "trust": "Vertrouwen",
+      "getAppTitle": "Download de app",
+      "compareVpns": "VPN's vergelijken",
+      "unblock": "Deblokkeer alles",
+      "noLogsPromise": "No-logs-belofte",
+      "privacy": "Privacybeleid",
+      "terms": "Servicevoorwaarden",
+      "helpSupport": "Help & support",
+      "iphone": "iPhone & iPad",
+      "android": "Android",
+      "mac": "Mac",
+      "windows": "Windows",
+      "tv": "Android TV",
+      "rights": "Alle rechten voorbehouden.",
+      "blurb": "Een no-logs-VPN die werkt waar andere geblokkeerd worden.",
+      "legal": "{name} is een handelsnaam van {legalName}, een bedrijf geregistreerd in {registeredIn}{companyNo}. Ingeschreven kantoor: {office}."
+    }
+  },
+  "common": {
+    "cta": {
+      "getFree": "MistyVPN gratis downloaden",
+      "seePlans": "Bekijk abonnementen",
+      "exploreFeatures": "Ontdek alle functies",
+      "compareVpns": "VPN's vergelijken"
+    },
+    "moneyBack": "14 dagen niet-goed-geld-terug-garantie",
+    "stats": [
+      {
+        "value": "40+",
+        "label": "Locaties wereldwijd"
+      },
+      {
+        "value": "0",
+        "label": "Logs bewaard"
+      },
+      {
+        "value": "10",
+        "label": "Apparaten tegelijk"
+      },
+      {
+        "value": "16",
+        "label": "Talen"
+      }
+    ],
+    "features": [
+      {
+        "title": "Stealth Mode",
+        "body": "Je VPN, onzichtbaar. MistyVPN vermomt je verbinding zodat het lijkt op gewoon internetgebruik — zo blijft het werken, zelfs op netwerken die andere VPN's blokkeren. Eén tik, standaard aan."
+      },
+      {
+        "title": "Split Tunneling",
+        "body": "Bescherm alleen wat je wilt. Stuur gekozen apps en sites via de VPN en houd al het andere — je bank, lokale diensten, gamen — op volle lokale snelheid."
+      },
+      {
+        "title": "Strikt no-logs",
+        "body": "We bewaren niets. Geen browsegeschiedenis, geen verkeer, geen IP-adres. Er is niets om te lekken en niets om af te geven."
+      },
+      {
+        "title": "Razendsnel",
+        "body": "Moderne protocollen en 40+ geoptimaliseerde locaties zorgen voor streamen zonder buffers, videobellen zonder haperingen en snelle downloads — zelfs op een druk netwerk."
+      },
+      {
+        "title": "Stream zonder grenzen",
+        "body": "Kijk je series overal in kristalheldere HD. Kies een locatie, druk op verbinden en start met kijken."
+      },
+      {
+        "title": "Kill switch",
+        "body": "Valt de verbinding ooit weg, dan blokkeert MistyVPN direct al het verkeer zodat er niets onbeschermd naar buiten glipt."
+      },
+      {
+        "title": "Wachtwoordmanager",
+        "body": "Een volledige, versleutelde wachtwoordmanager rechtstreeks in de app — bewaar logins, genereer sterke wachtwoorden en vul overal automatisch in. De grote VPN's stoppen dit achter een duurder abonnement of rekenen er extra voor. Bij MistyVPN zit het er gewoon gratis bij."
+      },
+      {
+        "title": "Authenticator (2FA)",
+        "body": "Ingebouwde generator voor tweestapscodes — vervang Google Authenticator en bewaar je eenmalige codes in dezelfde veilige, versleutelde kluis als je wachtwoorden. Geen apart abonnement, geen add-on. Gratis inbegrepen."
+      },
+      {
+        "title": "Al je apparaten",
+        "body": "iPhone, iPad, Android, Mac en Android TV. Eén abonnement dekt ze allemaal, met tot 10 tegelijk verbonden."
+      },
+      {
+        "title": "In jouw taal",
+        "body": "Gebruik MistyVPN moeiteloos in 16 talen — en we voegen er meer toe zonder dat je de app ooit hoeft te updaten."
+      },
+      {
+        "title": "Automatische modus",
+        "body": "Eén tik en MistyVPN kiest automatisch de snelste, meest betrouwbare verbinding voor jouw netwerk — je hoeft niets in te stellen."
+      },
+      {
+        "title": "40+ locaties wereldwijd",
+        "body": "Verbind via servers in Noord- en Zuid-Amerika, Europa, het Midden-Oosten en Azië — verschijn waar je maar wilt zijn."
+      },
+      {
+        "title": "Automatisch verbinden",
+        "body": "Laat MistyVPN verbinden zodra je apparaat opstart, zodat je automatisch beschermd bent — nooit per ongeluk onbeschermd."
+      },
+      {
+        "title": "Verdien gratis minuten",
+        "body": "Geen gratis tijd meer over? Vul je gratis minuten op elk moment aan — zonder account en zonder creditcard."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Downloaden & registreren",
+        "body": "Pak de app voor je apparaat en begin binnen een minuut gratis — geen creditcard nodig."
+      },
+      {
+        "title": "Tik op verbinden",
+        "body": "Kies een locatie of laat Auto de snelste kiezen. Stealth Mode doet de rest."
+      },
+      {
+        "title": "Surf vrij",
+        "body": "Stream, surf en bel privé — beschermd, zonder blokkades en snel."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is MistyVPN echt no-logs?",
+        "a": "Ja. MistyVPN registreert je browsen, je verkeer of je IP-adres niet. Er wordt simpelweg niets opgeslagen dat gelekt of afgegeven zou kunnen worden."
+      },
+      {
+        "q": "Werkt het waar andere VPN's geblokkeerd zijn?",
+        "a": "Ja. Stealth Mode vermomt je verbinding als gewoon internetverkeer, zodat MistyVPN blijft werken op streng gefilterde netwerken waar gewone VPN's worden herkend en geblokkeerd."
+      },
+      {
+        "q": "Hoeveel apparaten kan ik gebruiken?",
+        "a": "Eén abonnement dekt al je apparaten — iPhone, Android, Mac en Android TV — met tot 10 tegelijk verbonden."
+      },
+      {
+        "q": "Kan ik streamen met MistyVPN?",
+        "a": "Absoluut. MistyVPN is afgestemd op snel streamen in HD, en met split tunneling stuur je alleen je streaming-apps via de VPN op volle snelheid."
+      },
+      {
+        "q": "Is er een gratis versie?",
+        "a": "Ja. Begin gratis en verdien onderweg gratis minuten — zonder account of creditcard. Upgrade op elk moment naar Premium voor onbeperkte toegang op volle snelheid."
+      },
+      {
+        "q": "Hoe betaal ik?",
+        "a": "Betaal veilig met kaart op het web, of in de app via de App Store of Google Play. Zeg op elk moment op — vanuit je account hier of vanuit je account bij de store."
+      },
+      {
+        "q": "Is er een niet-goed-geld-terug-garantie?",
+        "a": "Ja — elk betaald abonnement valt onder een 14 dagen niet-goed-geld-terug-garantie, geen vragen gesteld. Niet tevreden in je eerste twee weken? Mail ons voor volledige terugbetaling. Aankopen via de App Store of Google Play worden terugbetaald via de standaardprocedure van de store."
+      },
+      {
+        "q": "Zit er bij MistyVPN een wachtwoordmanager?",
+        "a": "Ja — een volledige versleutelde wachtwoordmanager en een ingebouwde tweestapsauthenticator zitten gratis bij elk abonnement, zelfs bij de gratis versie. De meeste andere VPN's bieden dit niet of rekenen er extra voor op een duurder abonnement."
+      }
+    ]
+  },
+  "home": {
+    "metaTitle": "MistyVPN — Privé, zonder blokkades, snel op elk apparaat",
+    "hero": {
+      "eyebrow": "Gratis beginnen · Geen kaart nodig",
+      "titleLead": "Privé-internet dat",
+      "titleHighlight": "echt werkt",
+      "titleTrail": ", overal.",
+      "subtitle": "MistyVPN houdt je privé en zonder blokkades op elk apparaat — met Stealth Mode dat blokkades omzeilt, razendsnelle snelheid over 40+ locaties en een strikte no-logs-belofte."
+    },
+    "stealth": {
+      "eyebrow": "Stealth Mode",
+      "title": "Onzichtbaar van nature",
+      "body": "De meeste VPN's worden geblokkeerd omdat het netwerk <em>ziet</em> dat het een VPN is. MistyVPN is zo niet te herkennen — Stealth Mode laat je verbinding op gewoon surfen lijken, zodat het blijft werken waar al het andere faalt.",
+      "note": "Standaard aan. Eén tik om te verbinden."
+    },
+    "split": {
+      "eyebrow": "Split Tunneling",
+      "title": "Bescherm alleen wat je wilt",
+      "body": "Stuur je streamen en surfen via de VPN, terwijl je bank-app, lokale sites en games op je normale verbinding blijven — volle snelheid, geen concessies.",
+      "note": "Jij beslist, app voor app."
+    },
+    "features": {
+      "eyebrow": "Alles inbegrepen",
+      "title": "Eén app. Alles wat je nodig hebt.",
+      "body": "Geen add-ons, geen upsells. Bij elk abonnement zit de volledige set gereedschap."
+    },
+    "vault": {
+      "eyebrow": "Meer dan een VPN",
+      "title": "Wachtwoordmanager & authenticator — gratis inbegrepen",
+      "body": "Een volledige versleutelde wachtwoordmanager en een ingebouwde tweestapsauthenticator, direct in de app. Bewaar logins, vul automatisch in, genereer sterke wachtwoorden en bewaar je 2FA-codes — allemaal end-to-end beschermd. De grote VPN's rekenen er extra voor of stoppen dit achter een duurder abonnement. Bij MistyVPN zit het er gewoon bij, in elk abonnement.",
+      "pmTitle": "Wachtwoordmanager",
+      "pmBody": "Versleutelde kluis, automatisch invullen en een generator voor sterke wachtwoorden op al je apparaten.",
+      "otpTitle": "Authenticator (2FA)",
+      "otpBody": "Ingebouwde eenmalige codes — vervang Google Authenticator, bewaard in dezelfde veilige kluis."
+    },
+    "how": {
+      "eyebrow": "Hoe het werkt",
+      "title": "Beschermd in drie tikken"
+    },
+    "compare": {
+      "title": "Hoe verhoudt MistyVPN zich?",
+      "body": "Een gratis versie, nieuwe generatie anti-blokkeertechniek en Premium voor minder dan de grote namen. Bekijk de vergelijking."
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Goede vragen"
+    },
+    "ctaBand": {
+      "title": "Je privé-internet begint nu.",
+      "body": "Gratis te proberen, geen kaart, niets gelogd. Premium valt onder een 14 dagen niet-goed-geld-terug-garantie — binnen een minuut verbonden."
+    }
+  },
+  "accountPage": {
+    "metaTitle": "Account",
+    "metaDescription": "Beheer je MistyVPN-abonnement, betaalmethode en accountinstellingen.",
+    "loading": "Laden…",
+    "loadingAccount": "Je account wordt geladen…",
+    "back": "← Terug",
+    "backToAccount": "← Terug naar account",
+    "platformWeb": "Web",
+    "payHeading": "Hoe wil je betalen?",
+    "payCardWallets": "Kaart & Apple / Google Pay",
+    "payCrypto": "Crypto — geen kaart nodig",
+    "cryptoNetworks": "via TRON · Ethereum · BSC",
+    "errStartCheckout": "Afrekenen kon niet worden gestart",
+    "checkoutBackChooseMethod": "← Kies een andere betaalmethode",
+    "checkoutBackToPlans": "← Terug naar abonnementen",
+    "checkoutChangePlan": "← Abonnement wijzigen",
+    "preparingCheckout": "Beveiligd afrekenen wordt voorbereid…",
+    "confirmHeading": "Bevestig je abonnement",
+    "confirmChooseNew": "Kies een nieuwe betaalmethode — je bevestigt de afschrijving daarna.",
+    "labelPlan": "Abonnement",
+    "labelPayment": "Betaling",
+    "premiumName": "MistyVPN Premium",
+    "confirmChargeNotice": "We schrijven nu <b>{method}</b> af en automatisch bij elke verlenging.",
+    "changeMethod": "Methode wijzigen",
+    "confirmSubscribe": "Bevestigen & abonneren",
+    "processing": "Bezig met verwerken…",
+    "errComplete": "Je abonnement kon niet worden voltooid",
+    "getPremium": "Neem Premium",
+    "seePlansBenefits": "Bekijk abonnementen & voordelen →",
+    "savedChargeHint": "We schrijven je opgeslagen {method} af — je bevestigt voordat er iets wordt afgeschreven.",
+    "accountHeading": "Account",
+    "signOut": "Uitloggen",
+    "sectionSubscription": "Abonnement",
+    "sectionPaymentMethod": "Betaalmethode",
+    "sectionPaidWithCrypto": "Met crypto betaald?",
+    "sectionOpenvpnCredentials": "OpenVPN-inloggegevens",
+    "sectionAccount": "Account",
+    "activating": "Je abonnement wordt geactiveerd… dit duurt een paar seconden.",
+    "premiumActive": "Premium actief",
+    "wontRenew": "Wordt niet verlengd — toegang tot {date}",
+    "renewsOn": "Wordt automatisch verlengd op {date}",
+    "unlimitedAccess": "Onbeperkte toegang tot alle servers",
+    "allSetTitle": "Je bent helemaal klaar — download de app",
+    "allSetBody": "Download MistyVPN op iPhone, Android, Mac en Android TV en log daarna in met je account-e-mail en wachtwoord.",
+    "downloadApp": "Download de app",
+    "resumeSub": "Abonnement hervatten",
+    "cancelSub": "Abonnement opzeggen",
+    "confirmCancelSub": "Je abonnement opzeggen? Je houdt toegang tot het einde van de huidige periode.",
+    "errCancel": "Opzeggen mislukt",
+    "errResume": "Hervatten mislukt",
+    "subViaApple": "Je hebt je geabonneerd via de App Store op je Apple-apparaat.",
+    "subViaGoogle": "Je hebt je geabonneerd via Google Play op je Android-apparaat.",
+    "subViaStore": "Je hebt je geabonneerd via een mobiele app store.",
+    "manageWhereBought": "Wil je wijzigen of opzeggen, doe dat waar je het hebt gekocht — het kan hier niet worden opgezegd.",
+    "manageInStore": "Beheren in {store} ↗",
+    "paymentIssue": "Betalingsprobleem",
+    "pastDueBody": "We konden je MistyVPN Premium-abonnement niet verlengen. We proberen het automatisch opnieuw — of verleng nu om je toegang meteen te herstellen.",
+    "labelMethod": "Methode",
+    "labelCard": "Kaart",
+    "renewNow": "Nu verlengen",
+    "retrying": "Opnieuw proberen…",
+    "errChargeFailed": "We konden je opgeslagen kaart niet afschrijven — werk hem hieronder bij en probeer daarna opnieuw te verlengen.",
+    "errRenew": "Verlengen mislukt",
+    "cardFailingHint": "Blijft je kaart mislukken, werk hem dan hieronder bij en we proberen het opnieuw met de nieuwe kaart.",
+    "freePlan": "Gratis abonnement",
+    "freePlanBody": "Upgrade voor onbeperkte toegang op volle snelheid op al je apparaten.",
+    "upgradePremium": "Upgraden naar Premium",
+    "cryptoSectionBody": "Een cryptobetaling verstuurd die nog niet zichtbaar is? Plak de transactie-hash en we verifiëren hem on-chain en activeren je abonnement.",
+    "openvpnBody": "Voor het verbinden van OpenVPN-clients van derden (routers, de OpenVPN-app, enz.). Voor de MistyVPN-app heb je deze niet nodig — log daar gewoon in met je account-e-mail en wachtwoord.",
+    "labelUsername": "Gebruikersnaam",
+    "labelPasswordCred": "Wachtwoord",
+    "copy": "Kopiëren",
+    "copied": "Gekopieerd",
+    "savedMethodFallback": "je opgeslagen betaalmethode",
+    "noMethodOnFile": "Geen betaalmethode geregistreerd",
+    "change": "Wijzigen",
+    "addCard": "Kaart toevoegen",
+    "labelEmail": "E-mail",
+    "changePassword": "Wachtwoord wijzigen",
+    "currentPasswordPlaceholder": "Huidig wachtwoord",
+    "newPasswordPlaceholder": "Nieuw wachtwoord (min. 8 tekens)",
+    "cancel": "Annuleren",
+    "updatePassword": "Wachtwoord bijwerken",
+    "saving": "Opslaan…",
+    "passwordUpdated": "Wachtwoord bijgewerkt.",
+    "errUpdatePassword": "Wachtwoord bijwerken mislukt",
+    "deleteAccount": "Account verwijderen",
+    "deleting": "Verwijderen…",
+    "confirmDelete": "Je account definitief verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "errDeleteAccount": "Account verwijderen mislukt",
+    "errLoadAccount": "Je account kon niet worden geladen. Controleer je verbinding en probeer het opnieuw."
+  },
+  "comparePage": {
+    "metaTitle": "MistyVPN vs NordVPN, ExpressVPN & PureVPN",
+    "metaDescription": "Zie hoe MistyVPN zich verhoudt tot NordVPN, ExpressVPN en PureVPN — een gratis versie, een ingebouwde wachtwoordmanager & authenticator, nieuwe generatie anti-blokkeertechniek en Premium voor minder. Een eerlijke vergelijking.",
+    "breadcrumb": "Vergelijken",
+    "hero": {
+      "eyebrow": "Vergelijken",
+      "title": "MistyVPN vs de grote namen",
+      "subtitle": "Een echte gratis versie, nieuwe generatie anti-blokkeertechniek en Premium voor minder dan de meeste. Hier is de eerlijke vergelijking."
+    },
+    "table": {
+      "featureHeader": "Functie",
+      "rows": [
+        {
+          "label": "Maandprijs",
+          "values": [
+            "$3.99",
+            "~$12.99",
+            "~$12.99",
+            "~$11.95"
+          ]
+        },
+        {
+          "label": "Gratis versie",
+          "values": [
+            "Ja — verdien gratis minuten",
+            "Nee",
+            "Nee",
+            "Nee"
+          ]
+        },
+        {
+          "label": "Beste tarief zonder contract van 1–2 jaar",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "label": "Wachtwoordmanager gratis inbegrepen",
+          "values": [
+            "Ja — elk abonnement",
+            "Duurder abonnement",
+            "Duurder abonnement",
+            "Add-on"
+          ]
+        },
+        {
+          "label": "Ingebouwde authenticator (2FA-codes)",
+          "values": [
+            "",
+            "Duurder abonnement",
+            "Duurder abonnement",
+            ""
+          ]
+        },
+        {
+          "label": "Nieuwe generatie anti-censuur (Reality / Hysteria2)",
+          "values": [
+            "",
+            "Beperkt",
+            "Beperkt",
+            "Beperkt"
+          ]
+        },
+        {
+          "label": "Werkt in China & strenge firewalls",
+          "values": [
+            "Daarvoor gebouwd",
+            "Beperkt",
+            "Beperkt",
+            "Beperkt"
+          ]
+        },
+        {
+          "label": "Stealth Mode (omzeilt blokkades)",
+          "values": [
+            "",
+            "",
+            "",
+            "Beperkt"
+          ]
+        },
+        {
+          "label": "Split tunneling op elk platform",
+          "values": [
+            "",
+            "Beperkt",
+            "Beperkt",
+            "Beperkt"
+          ]
+        },
+        {
+          "label": "Kill switch",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "label": "Strikt no-logs",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "label": "Apparaten tegelijk",
+          "values": [
+            "10",
+            "10",
+            "8",
+            "10"
+          ]
+        },
+        {
+          "label": "App-talen",
+          "values": [
+            "16",
+            "wisselend",
+            "wisselend",
+            "wisselend"
+          ]
+        }
+      ],
+      "footnote": "De getoonde prijzen zijn standaard <strong>maandtarieven</strong> — de reclameprijzen van concurrenten vereisen doorgaans een verbintenis van 1–2 jaar. De gegevens van concurrenten weerspiegelen openbaar vermelde functies en prijzen per augustus 2026 en kunnen veranderen — controleer dit op de eigen website van elke aanbieder. Vergelijkingen zijn te goeder trouw verstrekt als algemene richtlijn."
+    },
+    "switch": {
+      "eyebrow": "Waarom mensen overstappen",
+      "title": "Wat MistyVPN echt onderscheidt",
+      "cards": {
+        "freeTier": {
+          "title": "Een echte gratis versie",
+          "body": "De meeste premium-VPN's hebben helemaal geen gratis optie. Met MistyVPN begin je gratis en verdien je gratis minuten — geen kaart, geen verplichting."
+        },
+        "vault": {
+          "title": "Wachtwoordmanager + 2FA, gratis",
+          "body": "Een volledige versleutelde wachtwoordmanager en een ingebouwde authenticator zitten gratis bij elk abonnement. NordVPN, ExpressVPN en PureVPN stoppen dit achter een duurder abonnement of verkopen het als betaalde add-ons."
+        },
+        "antiBlock": {
+          "title": "Gebouwd om blokkades te omzeilen",
+          "body": "Stealth Mode gebruikt nieuwe generatie anti-censuurtechniek (Reality + Hysteria2), zodat MistyVPN blijft werken in China en achter strenge firewalls waar gangbare VPN's worden herkend en geblokkeerd."
+        },
+        "price": {
+          "title": "Een fractie van de prijs",
+          "body": "Per maand kost MistyVPN {monthlyPrice} — tegenover ongeveer $12–13 die de grote namen rekenen zonder langlopend contract. Met het jaarabonnement is het slechts {annualPerMonth}."
+        }
+      }
+    },
+    "ctaBand": {
+      "title": "Zie het verschil zelf",
+      "body": "Gratis te beginnen — geen kaart, niets gelogd. Premium valt onder een 14 dagen niet-goed-geld-terug-garantie."
+    }
+  },
+  "deleteAccountPage": {
+    "metaTitle": "Je account & gegevens verwijderen",
+    "metaDescription": "Hoe je je {name}-account en bijbehorende gegevens verwijdert, wat wordt verwijderd en wat wordt bewaard.",
+    "eyebrow": "Account",
+    "h1": "Verwijder je {name}-account & gegevens",
+    "lastUpdated": "Laatst bijgewerkt: {date}",
+    "lastUpdatedDate": "15 juli 2026",
+    "intro": "Deze pagina legt uit hoe je verwijdering aanvraagt van je {name}-account en de bijbehorende gegevens. {name} wordt ontwikkeld en beheerd door {name}.",
+    "inApp": {
+      "heading": "Verwijder je account vanuit de app",
+      "intro": "De snelste manier om je account en gegevens definitief te verwijderen is rechtstreeks in de {name}-app:",
+      "step1": "Open de {name}-app op je apparaat.",
+      "step2": "Ga naar <b>Account</b>.",
+      "step3": "Tik op <b>Account verwijderen</b>.",
+      "step4": "Bevestig wanneer daarom wordt gevraagd. Je account en bijbehorende gegevens worden direct verwijderd.",
+      "note": "Dit is beschikbaar op iPhone, iPad, Android, Mac en Android TV."
+    },
+    "email": {
+      "heading": "Of vraag verwijdering aan via e-mail",
+      "p1": "Als je de optie in de app niet kunt gebruiken, vraag dan verwijdering aan via e-mail. Stuur ons vanaf het adres dat aan je account is gekoppeld een bericht, dan verifiëren we je verzoek en verwijderen we je account binnen <b>30 dagen</b>.",
+      "linkText": "Mail {email} om je account te verwijderen"
+    },
+    "deleted": {
+      "heading": "Welke gegevens worden verwijderd",
+      "intro": "Wanneer je account wordt verwijderd, verwijderen we de bijbehorende persoonsgegevens, waaronder:",
+      "items": [
+        "Je e-mailadres en account-identificator",
+        "Je gehashte wachtwoord",
+        "Je VPN-inloggegevens en apparaatgegevens",
+        "De koppeling tussen je account en een abonnement"
+      ],
+      "note": "Omdat {name} een strikte no-logs-dienst is, bewaren we sowieso geen browsegeschiedenis, verkeer, DNS of IP-activiteit — er is dus geen dergelijke data om te verwijderen."
+    },
+    "retained": {
+      "heading": "Wat mogelijk wordt bewaard",
+      "billing": "<b>Facturatie- en transactiegegevens:</b> waar dit nodig is om te voldoen aan wettelijke, fiscale of boekhoudkundige verplichtingen, bewaren we mogelijk minimale transactiegegevens gedurende de wettelijk vereiste termijn (doorgaans tot 7 jaar). Deze worden alleen bewaard voor zover nodig voor naleving.",
+      "store": "<b>Store-abonnementen:</b> abonnementen gekocht via de Apple App Store of Google Play worden door die stores beheerd. Het verwijderen van je account zegt een actief store-abonnement niet op — zeg het op via je Apple- of Google-account om toekomstige facturatie te stoppen."
+    },
+    "questions": {
+      "heading": "Vragen",
+      "text": "Voor alles wat met je account of gegevens te maken heeft, neem contact met ons op via <link>{email}</link>. Bekijk ons <privacy>Privacybeleid</privacy> voor alle details over hoe we met gegevens omgaan."
+    }
+  },
+  "downloadGrid": {
+    "yourDevice": "Jouw apparaat",
+    "setupGuide": "Installatiehandleiding",
+    "getIt": "Downloaden",
+    "downloadApk": "APK downloaden",
+    "comingSoon": "Binnenkort"
+  },
+  "downloadPage": {
+    "metaTitle": "MistyVPN downloaden — iPhone, Android, Mac & Android TV",
+    "metaDescription": "Zet MistyVPN op al je apparaten. Eén account dekt iPhone, iPad, Android, Mac en Android TV — gratis te beginnen, geen kaart nodig, met een 14 dagen niet-goed-geld-terug-garantie op Premium.",
+    "breadcrumb": "Downloaden",
+    "eyebrow": "Downloaden",
+    "title": "Zet MistyVPN op elk apparaat",
+    "subtitle": "Eén account dekt iPhone, iPad, Android, Mac en Android TV — tot 10 apparaten tegelijk. Kies hieronder je platform en verbind in enkele seconden.",
+    "storeNote": "MistyVPN is nu beschikbaar in Google Play, en de App Store-versie wordt binnenkort uitgerold. Heb je al een account? <manage>Beheer het hier</manage>.",
+    "trust": [
+      {
+        "title": "Gratis beginnen",
+        "body": "Geen creditcard. Verdien gratis minuten en probeer de volledige app voordat je een cent betaalt."
+      },
+      {
+        "title": "Wachtwoordmanager & 2FA inbegrepen",
+        "body": "Een volledige versleutelde wachtwoordmanager en authenticator zitten gratis bij elk abonnement."
+      },
+      {
+        "title": "14 dagen niet-goed-geld-terug-garantie",
+        "body": "Ga risicovrij Premium — volledige terugbetaling binnen 14 dagen, geen vragen gesteld."
+      }
+    ],
+    "ctaTitle": "Nieuw bij MistyVPN?",
+    "ctaBody": "Maak nu een gratis account aan — je abonnement en instellingen synchroniseren naar elk apparaat zodra je de app installeert.",
+    "ctaCreate": "Gratis account aanmaken",
+    "ctaPricing": "Bekijk prijzen"
+  },
+  "featuresPage": {
+    "metaTitle": "Functies — Stealth Mode, split tunneling, no-logs & meer",
+    "metaDescription": "Alles in MistyVPN: Stealth Mode dat blokkades omzeilt, split tunneling, een strikte no-logs-belofte, een kill switch, snel streamen en 40+ locaties op elk apparaat.",
+    "breadcrumb": "Functies",
+    "hero": {
+      "eyebrow": "Functies",
+      "title": "Krachtig waar het telt. Simpel in gebruik.",
+      "subtitle": "Bij elk abonnement — zelfs gratis — zit de volledige set gereedschap. Geen add-ons, geen sterretjes."
+    },
+    "stealth": {
+      "eyebrow": "Stealth Mode",
+      "title": "Een VPN die niemand ziet, is pas een VPN",
+      "body": "Netwerken blokkeren VPN's door hun verraderlijke verkeer te herkennen. Stealth Mode vermomt je verbinding als alledaags HTTPS, zodat MistyVPN erdoor glipt waar andere VPN's worden betrapt — op openbare wifi, op het werk of achter de strengste nationale firewalls.",
+      "note": "Standaard aan. Niets in te stellen."
+    },
+    "split": {
+      "eyebrow": "Split Tunneling",
+      "title": "Jouw tunnel, jouw regels",
+      "body": "Stuur alleen de apps die je kiest via de VPN en laat de rest op je normale verbinding. Stream privé terwijl je bank-app je echte locatie ziet en je games zonder haperingen blijven.",
+      "note": "Kies apps en sites, app voor app."
+    },
+    "grid": [
+      {
+        "title": "Stealth Mode",
+        "body": "Je VPN, onzichtbaar. MistyVPN vermomt je verbinding zodat het lijkt op gewoon internetgebruik — zo blijft het werken, zelfs op netwerken die andere VPN's blokkeren. Eén tik, standaard aan."
+      },
+      {
+        "title": "Split Tunneling",
+        "body": "Bescherm alleen wat je wilt. Stuur gekozen apps en sites via de VPN en houd al het andere — je bank, lokale diensten, gamen — op volle lokale snelheid."
+      },
+      {
+        "title": "Strikt no-logs",
+        "body": "We bewaren niets. Geen browsegeschiedenis, geen verkeer, geen IP-adres. Er is niets om te lekken en niets om af te geven."
+      },
+      {
+        "title": "Razendsnel",
+        "body": "Moderne protocollen en 40+ geoptimaliseerde locaties zorgen voor streamen zonder buffers, videobellen zonder haperingen en snelle downloads — zelfs op een druk netwerk."
+      },
+      {
+        "title": "Stream zonder grenzen",
+        "body": "Kijk je series overal in kristalheldere HD. Kies een locatie, druk op verbinden en start met kijken."
+      },
+      {
+        "title": "Kill switch",
+        "body": "Valt de verbinding ooit weg, dan blokkeert MistyVPN direct al het verkeer zodat er niets onbeschermd naar buiten glipt."
+      },
+      {
+        "title": "Wachtwoordmanager",
+        "body": "Een volledige, versleutelde wachtwoordmanager rechtstreeks in de app — bewaar logins, genereer sterke wachtwoorden en vul overal automatisch in. De grote VPN's stoppen dit achter een duurder abonnement of rekenen er extra voor. Bij MistyVPN zit het er gewoon gratis bij."
+      },
+      {
+        "title": "Authenticator (2FA)",
+        "body": "Ingebouwde generator voor tweestapscodes — vervang Google Authenticator en bewaar je eenmalige codes in dezelfde veilige, versleutelde kluis als je wachtwoorden. Geen apart abonnement, geen add-on. Gratis inbegrepen."
+      },
+      {
+        "title": "Al je apparaten",
+        "body": "iPhone, iPad, Android, Mac en Android TV. Eén abonnement dekt ze allemaal, met tot 10 tegelijk verbonden."
+      },
+      {
+        "title": "In jouw taal",
+        "body": "Gebruik MistyVPN moeiteloos in 16 talen — en we voegen er meer toe zonder dat je de app ooit hoeft te updaten."
+      },
+      {
+        "title": "Automatische modus",
+        "body": "Eén tik en MistyVPN kiest automatisch de snelste, meest betrouwbare verbinding voor jouw netwerk — je hoeft niets in te stellen."
+      },
+      {
+        "title": "40+ locaties wereldwijd",
+        "body": "Verbind via servers in Noord- en Zuid-Amerika, Europa, het Midden-Oosten en Azië — verschijn waar je maar wilt zijn."
+      },
+      {
+        "title": "Automatisch verbinden",
+        "body": "Laat MistyVPN verbinden zodra je apparaat opstart, zodat je automatisch beschermd bent — nooit per ongeluk onbeschermd."
+      },
+      {
+        "title": "Verdien gratis minuten",
+        "body": "Geen gratis tijd meer over? Vul je gratis minuten op elk moment aan — zonder account en zonder creditcard."
+      }
+    ],
+    "underHood": {
+      "eyebrow": "Onder de motorkap",
+      "title": "Nieuwe generatie bescherming, moeiteloos gemaakt",
+      "body": "Stealth Mode draait op de meest geavanceerde anti-censuurtechniek die er is, zodat je verbinding opgaat in de massa in plaats van op te vallen. De automatische modus kiest stilletjes de snelste, meest betrouwbare optie voor jouw netwerk — jij tikt alleen op verbinden. Het slimme werk blijft uit je zicht."
+    },
+    "cta": {
+      "title": "Probeer het vandaag gratis",
+      "body": "De volledige set gereedschap, gratis te beginnen — geen creditcard."
+    }
+  },
+  "landing": {
+    "getFree": "MistyVPN gratis downloaden",
+    "howItWorks": "Hoe het werkt",
+    "faqEyebrow": "FAQ",
+    "faqTitle": "Veelgestelde vragen",
+    "ctaTitle": "Klaar wanneer jij dat bent",
+    "ctaBody": "Gratis te beginnen, geen creditcard, strikt no-logs."
+  },
+  "loginPage": {
+    "metaTitle": "Inloggen",
+    "metaDescription": "Log in op je MistyVPN-account om je abonnement, betaalmethode en apparaten te beheren.",
+    "heading": "Welkom terug",
+    "subtitle": "Log in op je MistyVPN-account.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "jij@voorbeeld.com",
+    "passwordLabel": "Wachtwoord",
+    "passwordPlaceholder": "Je wachtwoord",
+    "forgotLink": "Wachtwoord vergeten?",
+    "show": "Tonen",
+    "hide": "Verbergen",
+    "submit": "Inloggen",
+    "submitting": "Bezig met inloggen…",
+    "noAccount": "Nieuw bij MistyVPN?",
+    "createAccount": "Maak een account aan",
+    "errorGeneric": "Er ging iets mis",
+    "forgotNeedEmail": "Vul eerst je e-mailadres in en tik daarna op “Wachtwoord vergeten”.",
+    "forgotSent": "Als er bij dat e-mailadres een account hoort, is er een herstellink onderweg.",
+    "loading": "Laden…"
+  },
+  "noLogsPage": {
+    "metaTitle": "No-logs-beleid — wat we niet verzamelen",
+    "metaDescription": "MistyVPN is een strikte no-logs-VPN. We registreren je browsen, verkeer of IP-adres niet. Hier lees je precies wat dat betekent en hoe de architectuur het afdwingt.",
+    "breadcrumb": "No-logs",
+    "hero": {
+      "eyebrow": "Privacy",
+      "title": "Strikt no-logs. Niets om af te geven.",
+      "subtitle": "De beste manier om je gegevens te beschermen, is ze nooit te verzamelen. {brand} is zo gebouwd dat er simpelweg geen registratie is van wat je doet."
+    },
+    "points": [
+      {
+        "title": "Geen activiteitslogs",
+        "body": "We registreren nooit de sites die je bezoekt, de apps die je gebruikt of je DNS-verzoeken. Jouw browsen is niet aan ons om te bewaren."
+      },
+      {
+        "title": "Geen verbindingslogs",
+        "body": "We slaan je echte IP-adres niet op, en ook geen tijdlijn van wanneer je verbond. Er is geen profiel op te bouwen."
+      },
+      {
+        "title": "Afgedwongen door ontwerp",
+        "body": "Crashrapporten zijn privacygescrubd van tokens, inloggegevens en IP-adressen, en onze servers zijn zo ingesteld dat ze niets bewaren dat niet nodig is om je verkeer te routeren."
+      }
+    ],
+    "keep": {
+      "eyebrow": "Wat we wel bewaren",
+      "title": "Het minimum om de dienst te draaien",
+      "body": "Een no-logs-beleid betekent niet dat er nergens data bestaat — het betekent dat niets daarvan activiteit aan jou koppelt.",
+      "p1": "Om accounts en abonnementen te laten werken, bewaren we het essentiële: een account-identificator en je abonnementsstatus (van de App Store of Google Play). We koppelen dit aan geen enkele registratie van je verkeer, want zo'n registratie bestaat niet.",
+      "p2": "Geaggregeerde, niet-identificerende statistieken (zoals totale serverbelasting) helpen ons het netwerk snel te houden. Crashrapporten zijn ontdaan van alles wat gevoelig is — tokens, wachtwoorden, sleutels en IP-adressen worden nooit verzonden.",
+      "p3": "Deze pagina is een samenvatting in gewone taal. Bekijk het <link>Privacybeleid</link> voor alle details."
+    },
+    "cta": {
+      "title": "Privacy die je niet op ons woord hoeft te geloven"
+    }
+  },
+  "pricingPage": {
+    "metaTitle": "Prijzen — gratis te beginnen, Premium vanaf $2.50/mnd",
+    "metaDescription": "Eenvoudige MistyVPN-prijzen. Begin gratis en verdien gratis minuten, of ga Premium vanaf $2.50/maand voor onbeperkte snelheid op tot 10 apparaten. Beheer alles in de app.",
+    "breadcrumb": "Prijzen",
+    "eyebrow": "Prijzen",
+    "title": "Eenvoudige prijzen. Alles inbegrepen.",
+    "subtitle": "Begin gratis, upgrade wanneer je er klaar voor bent. Bij elk abonnement zit de volledige set functies — Stealth Mode, split tunneling en alle 40+ locaties.",
+    "bestValue": "Beste keuze",
+    "pricesNote": "Prijzen in USD, gefactureerd via beveiligd afrekenen op het web of via de App Store / Google Play; belastingen en lokale prijzen worden bij het afrekenen toegepast. Zeg op elk moment op.",
+    "faqEyebrow": "FAQ",
+    "faqTitle": "Vragen over prijzen"
+  },
+  "privacyPage": {
+    "metaTitle": "Privacybeleid",
+    "metaDescription": "Hoe {name} met je gegevens omgaat: een strikte no-logs-VPN die het minimum verzamelt dat nodig is om accounts en abonnementen te laten werken, en je activiteit nooit registreert.",
+    "eyebrow": "Juridisch",
+    "title": "Privacybeleid",
+    "updatedDate": "15 juli 2026",
+    "lastUpdated": "Laatst bijgewerkt: {date}",
+    "sections": [
+      {
+        "kind": "p",
+        "text": "{name} (\"{name}\", \"wij\", \"we\" of \"ons\") biedt een no-logs virtueel particulier netwerk (VPN) aan op iPhone, iPad, Android, Mac en Android TV. {name} is een handelsnaam van {legalName}, een bedrijf geregistreerd in {registeredIn} (bedrijfsnr. {companyNumber}), met ingeschreven kantoor te {registeredOffice}. {legalName} is de verwerkingsverantwoordelijke voor de doeleinden van dit Privacybeleid. Dit beleid legt uit wat we verzamelen, de dingen die we bewust <b>niet</b> verzamelen, hoe we informatie gebruiken en delen, en welke rechten je hebt over je gegevens. Het geldt voor onze apps, onze website en onze account- en abonnementssystemen."
+      },
+      {
+        "kind": "p",
+        "text": "Ons leidende principe is simpel: we kunnen niet verliezen, lekken of gedwongen worden af te geven wat we nooit verzamelen. We hebben {name} ontworpen om te draaien op zo min mogelijk persoonsgegevens."
+      },
+      {
+        "kind": "h2",
+        "text": "1. Onze no-logs-belofte"
+      },
+      {
+        "kind": "p",
+        "text": "Terwijl je met {name} bent verbonden, verzamelen, monitoren of bewaren we <b>niet</b>:"
+      },
+      {
+        "kind": "ul",
+        "items": [
+          "Je browsegeschiedenis, of de websites en apps die je gebruikt",
+          "De inhoud van je verkeer",
+          "De bestemmingen (IP's of domeinen) waarmee je verbindt",
+          "Je DNS-verzoeken",
+          "Je oorspronkelijke (bron-)IP-adres",
+          "Verbindingstijdstempels, sessieduur of bandbreedtelogs die aan je identiteit of activiteit gekoppeld zouden kunnen worden"
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "We bewaren geen gegevens waarmee VPN-activiteit aan een individuele gebruiker gekoppeld zou kunnen worden. Omdat deze logs niet bestaan, is er niets voor ons om te verkopen, te lekken of vrij te geven naar aanleiding van een verzoek."
+      },
+      {
+        "kind": "h2",
+        "text": "2. Informatie die we verzamelen"
+      },
+      {
+        "kind": "p",
+        "text": "We verzamelen alleen wat nodig is om accounts te beheren, de dienst te leveren en te beveiligen, abonnementen te verwerken en problemen op te lossen."
+      },
+      {
+        "kind": "h3",
+        "text": "Accountgegevens"
+      },
+      {
+        "kind": "p",
+        "text": "Als je een account aanmaakt, bewaren we je <b>e-mailadres</b> en een gehashte (onomkeerbaar versleutelde) versie van je wachtwoord. Elke gebruiker krijgt ook een willekeurige <b>account-identificator</b> toegewezen. Je kunt de gratis versie gebruiken zonder een account aan te maken."
+      },
+      {
+        "kind": "h3",
+        "text": "Apparaatgegevens"
+      },
+      {
+        "kind": "p",
+        "text": "We genereren voor elke installatie een willekeurige <b>apparaat-identificator</b>. Deze wordt gebruikt om je apparaten te beheren, limieten voor gelijktijdige verbindingen af te dwingen en je gratis minuten te leveren. Hij is niet gekoppeld aan een activiteitslog en identificeert je niet persoonlijk."
+      },
+      {
+        "kind": "h3",
+        "text": "VPN-inloggegevens"
+      },
+      {
+        "kind": "p",
+        "text": "Om te verbinden bewaart je apparaat VPN-inloggegevens per apparaat (zoals een gebruikersnaam, wachtwoord en protocolsleutels). Waar mogelijk worden deze opgeslagen in de beveiligde keychain van je apparaat in plaats van op onze servers, en worden ze ververst wanneer je in- of uitlogt."
+      },
+      {
+        "kind": "h3",
+        "text": "Abonnements- en betaalstatus"
+      },
+      {
+        "kind": "p",
+        "text": "Abonnementen worden gekocht en beheerd via de <b>Apple App Store</b>, <b>Google Play</b> of — op het web — <b>Stripe</b>. We ontvangen een validatie van je abonnementsstatus (actief, verlopen, opgezegd) en een transactie-identificator. We ontvangen of bewaren je volledige kaartnummer of bankgegevens <b>niet</b>; die worden volledig afgehandeld door de store of betaalverwerker."
+      },
+      {
+        "kind": "h3",
+        "text": "Diagnose- en crashgegevens"
+      },
+      {
+        "kind": "p",
+        "text": "Uitgebrachte apps sturen geanonimiseerde crash- en foutrapporten via <b>Sentry</b> zodat we bugs kunnen vinden en oplossen. Deze rapporten worden privacygescrubd: we verwijderen authenticatietokens, VPN-inloggegevens, wachtwoorden, gebruikersnamen en IP-adressen voordat ze worden verzonden, en rapportage is volledig uitgeschakeld in ontwikkelbuilds."
+      },
+      {
+        "kind": "h3",
+        "text": "Geaggregeerde operationele gegevens"
+      },
+      {
+        "kind": "p",
+        "text": "We gebruiken niet-identificerende, geaggregeerde statistieken — zoals totale serverbelasting en algemene servicegezondheid — om het netwerk betrouwbaar en snel te houden. Deze gegevens zijn niet gekoppeld aan individuele gebruikers of hun activiteit."
+      },
+      {
+        "kind": "h3",
+        "text": "Tijdelijke verbindingsgegevens"
+      },
+      {
+        "kind": "p",
+        "text": "Om het aantal apparaten dat op één account is toegestaan af te dwingen, verwerken onze servers kortstondig het netwerkadres van een verbinding samen met je willekeurige apparaat-identificator terwijl de verbinding actief is. Deze informatie is vluchtig, wordt alleen bewaard voor de duur van de sessie (ongeveer een paar minuten), en wordt niet weggeschreven naar een activiteitslog of daarna bewaard."
+      },
+      {
+        "kind": "h3",
+        "text": "Supportcommunicatie"
+      },
+      {
+        "kind": "p",
+        "text": "Als je contact met ons opneemt (bijvoorbeeld per e-mail of chat), bewaren we de inhoud van die correspondentie zodat we je kunnen helpen en onze support kunnen verbeteren."
+      },
+      {
+        "kind": "h3",
+        "text": "Websitegegevens"
+      },
+      {
+        "kind": "p",
+        "text": "Onze website gebruikt essentiële cookies en privacyvriendelijke analyse die nodig zijn om de site te draaien, je voorkeuren te onthouden en webbetalingen te verwerken. Zie <b>Cookies</b> hieronder."
+      },
+      {
+        "kind": "h2",
+        "text": "3. Informatie die we niet verzamelen"
+      },
+      {
+        "kind": "p",
+        "text": "Om het expliciet te maken: {name} verzamelt of bewaart <b>niet</b>: de inhoud van je browsen of verkeer, de sites en diensten die je via de VPN bereikt, je DNS-verzoeken, je echte IP-adres, of enige registratie die je activiteit aan jou koppelt. We verkopen je persoonsgegevens niet, en we gebruiken je gegevens niet voor advertenties of profilering."
+      },
+      {
+        "kind": "h2",
+        "text": "4. Hoe we je informatie gebruiken"
+      },
+      {
+        "kind": "ul",
+        "items": [
+          "Om je account en apparaten aan te maken en te beheren",
+          "Om de VPN-dienst te leveren, te onderhouden en te beveiligen",
+          "Om abonnementen, gratis minuten en factuurstatus te valideren en te beheren",
+          "Om misbruik te voorkomen en verbindingslimieten af te dwingen",
+          "Om crashes te diagnosticeren en betrouwbaarheid en prestaties te verbeteren",
+          "Om te reageren op je supportverzoeken",
+          "Om te voldoen aan wettelijke verplichtingen die op ons van toepassing zijn"
+        ]
+      },
+      {
+        "kind": "h2",
+        "text": "5. Rechtsgronden voor verwerking (AVG)"
+      },
+      {
+        "kind": "p",
+        "text": "Als je je in de Europese Economische Ruimte of het Verenigd Koninkrijk bevindt, verwerken we je gegevens op deze rechtsgronden: <b>uitvoering van een overeenkomst</b> (om de dienst te leveren waarvoor je je hebt aangemeld), <b>gerechtvaardigde belangen</b> (om ons netwerk te beveiligen, misbruik te voorkomen en het product te verbeteren, afgewogen tegen je rechten), <b>toestemming</b> (waar vereist, die je op elk moment kunt intrekken) en <b>wettelijke verplichting</b> (waar de wet dat vereist)."
+      },
+      {
+        "kind": "h2",
+        "text": "6. Betalingen"
+      },
+      {
+        "kind": "p",
+        "text": "In-app-abonnementen worden verwerkt door de Apple App Store en Google Play onder hun eigen voorwaarden en privacybeleid. Webabonnementen worden verwerkt door Stripe. Betaalgegevens die je invoert worden afgehandeld door die aanbieders — {name} ziet nooit je volledige kaart- of bankgegevens. Je kunt een abonnement op elk moment bekijken, wijzigen of opzeggen vanuit je store-account of het accountportaal."
+      },
+      {
+        "kind": "h2",
+        "text": "7. Hoe we informatie delen"
+      },
+      {
+        "kind": "p",
+        "text": "We verkopen je persoonsgegevens niet. We delen de beperkte gegevens hierboven alleen met dienstverleners die ons helpen {name} te draaien, en alleen voor zover nodig:"
+      },
+      {
+        "kind": "ul",
+        "items": [
+          "<b>Apple en Google</b> — om in-app-abonnementen te valideren en te beheren.",
+          "<b>Stripe</b> — om webabonnementsbetalingen te verwerken.",
+          "<b>Sentry</b> — om privacygescrubde crash- en foutrapporten te ontvangen.",
+          "<b>Infrastructuur- en hostingaanbieders</b> — om onze servers en backend te draaien."
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "Deze aanbieders zijn gebonden aan geheimhoudings- en gegevensbeschermingsverplichtingen en mogen de informatie alleen gebruiken om hun dienst aan ons te leveren. We kunnen ook informatie vrijgeven indien vereist door een geldig juridisch proces — maar omdat we geen activiteitslogs bewaren, kunnen we geen gegevens produceren van wat je deed terwijl je verbonden was."
+      },
+      {
+        "kind": "h2",
+        "text": "8. Internationale gegevensoverdrachten"
+      },
+      {
+        "kind": "p",
+        "text": "{name} beheert servers in veel landen zodat je kunt verbinden vanaf waar je maar wilt. Account- en abonnementsgegevens kunnen worden verwerkt in andere landen dan je eigen land. Waar we persoonsgegevens buiten de EER of het VK overdragen, vertrouwen we op passende waarborgen zoals de Standaardcontractbepalingen van de Europese Commissie."
+      },
+      {
+        "kind": "h2",
+        "text": "9. Bewaartermijn van gegevens"
+      },
+      {
+        "kind": "p",
+        "text": "We bewaren account- en abonnementsgegevens alleen zolang je account actief is, of zo lang als nodig om te voldoen aan wettelijke, fiscale of boekhoudkundige verplichtingen. Wanneer je je account verwijdert, verwijderen we je bijbehorende accountgegevens. Omdat we geen activiteitslogs bewaren, is er geen browsegeschiedenis om te bewaren of te verwijderen. Vluchtige verbindingsgegevens worden weggegooid wanneer je sessie eindigt."
+      },
+      {
+        "kind": "h2",
+        "text": "10. Beveiliging"
+      },
+      {
+        "kind": "p",
+        "text": "We beschermen je gegevens met versleuteling tijdens verzending, gehashte wachtwoorden, afgebakende toegangscontroles en strikte beperkingen op wie toegang heeft tot onze systemen. Geen enkele methode van verzending of opslag is perfect veilig, maar zo min mogelijk gegevens bewaren is op zich onze sterkste waarborg: er is heel weinig om bloot te stellen. Als er een inbreuk plaatsvindt die je persoonsgegevens treft, stellen we getroffen gebruikers en toezichthouders op de hoogte zoals de wet vereist."
+      },
+      {
+        "kind": "h2",
+        "text": "11. Jouw rechten"
+      },
+      {
+        "kind": "h3",
+        "text": "EER / VK (AVG)"
+      },
+      {
+        "kind": "p",
+        "text": "Je hebt het recht om je persoonsgegevens in te zien, te corrigeren, te verwijderen of te exporteren; om bepaalde verwerking te beperken of er bezwaar tegen te maken; om toestemming in te trekken; en om een klacht in te dienen bij je lokale gegevensbeschermingsautoriteit."
+      },
+      {
+        "kind": "h3",
+        "text": "Californië (CCPA/CPRA)"
+      },
+      {
+        "kind": "p",
+        "text": "Je hebt het recht om te weten welke persoonlijke informatie we verzamelen, om verwijdering ervan te verzoeken, om deze te corrigeren en om je af te melden voor de verkoop of het delen ervan. We verkopen of delen je persoonlijke informatie <b>niet</b>, en we zullen je nooit discrimineren omdat je je rechten uitoefent."
+      },
+      {
+        "kind": "p",
+        "text": "Je kunt je account en de gegevens ervan op elk moment rechtstreeks in de app verwijderen. Neem voor elk ander verzoek contact met ons op via <mail>{email}</mail>, dan reageren we binnen de termijnen die de toepasselijke wetgeving vereist."
+      },
+      {
+        "kind": "h2",
+        "text": "12. Kinderen"
+      },
+      {
+        "kind": "p",
+        "text": "{name} is bedoeld voor volwassenen en is niet gericht op kinderen. We verzamelen niet bewust persoonsgegevens van iemand onder de 18 (of onder de 13 waar van toepassing). Als je vermoedt dat een kind ons persoonsgegevens heeft verstrekt, neem dan contact met ons op, dan verwijderen we ze."
+      },
+      {
+        "kind": "h2",
+        "text": "13. Cookies"
+      },
+      {
+        "kind": "p",
+        "text": "Onze website gebruikt <b>essentiële cookies</b> die nodig zijn om de site te draaien en betalingen te verwerken, en privacyvriendelijke analyse om te begrijpen hoe de site wordt gebruikt. We gebruiken geen advertentie- of cross-sitetrackingcookies. Je kunt cookies beheren via de instellingen van je browser."
+      },
+      {
+        "kind": "h2",
+        "text": "14. Links van derden"
+      },
+      {
+        "kind": "p",
+        "text": "Onze site en apps kunnen linken naar websites of diensten van derden die we niet beheren. Dit beleid geldt niet voor hen; bekijk hun eigen privacybeleid."
+      },
+      {
+        "kind": "h2",
+        "text": "15. Wijzigingen in dit beleid"
+      },
+      {
+        "kind": "p",
+        "text": "We kunnen dit beleid van tijd tot tijd bijwerken. Ingrijpende wijzigingen worden weergegeven door de datum \"Laatst bijgewerkt\" hierboven en, waar passend, aangekondigd in de app of per e-mail. Voortgezet gebruik van {name} na een update betekent dat je het herziene beleid accepteert."
+      },
+      {
+        "kind": "h2",
+        "text": "16. Neem contact op"
+      },
+      {
+        "kind": "p",
+        "text": "Vragen, verzoeken of klachten over privacy? Mail ons via <mail>{email}</mail> en we helpen je graag."
+      }
+    ]
+  },
+  "registerPage": {
+    "metaTitle": "Maak je account aan",
+    "metaDescription": "Maak je MistyVPN-account aan. Begin gratis en abonneer je daarna om onbeperkte toegang op volle snelheid te ontgrendelen.",
+    "heading": "Maak je account aan",
+    "subtitle": "Begin gratis en abonneer je daarna om alles te ontgrendelen.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "jij@voorbeeld.com",
+    "passwordLabel": "Wachtwoord",
+    "passwordPlaceholder": "Minimaal 8 tekens",
+    "show": "Tonen",
+    "hide": "Verbergen",
+    "submit": "Account aanmaken",
+    "submitting": "Bezig met aanmaken…",
+    "haveAccount": "Heb je al een account?",
+    "signIn": "Inloggen",
+    "errorGeneric": "Er ging iets mis",
+    "loading": "Laden…"
+  },
+  "resetPasswordPage": {
+    "metaTitle": "Wachtwoord opnieuw instellen",
+    "metaDescription": "Stel het wachtwoord van je MistyVPN-account opnieuw in.",
+    "verifying": "Je link wordt geverifieerd…",
+    "noToken": "Geen hersteltoken gevonden.",
+    "invalidLink": "Ongeldige link.",
+    "serverUnreachable": "Kon de server niet bereiken. Probeer het opnieuw.",
+    "requestNewLink": "Vraag een nieuwe herstellink aan",
+    "formHeading": "Nieuw wachtwoord instellen",
+    "formSubtitle": "Kies een sterk wachtwoord (min. 8 tekens).",
+    "newPasswordPlaceholder": "Nieuw wachtwoord",
+    "confirmPasswordPlaceholder": "Bevestig wachtwoord",
+    "show": "Tonen",
+    "hide": "Verbergen",
+    "passwordsDontMatch": "Wachtwoorden komen niet overeen.",
+    "passwordTooShort": "Wachtwoord moet minimaal 8 tekens zijn.",
+    "somethingWrong": "Er ging iets mis.",
+    "submit": "Wachtwoord bijwerken",
+    "submitting": "Bezig met bijwerken…",
+    "successTitle": "Wachtwoord bijgewerkt!",
+    "successBody": "Je kunt nu inloggen met je nieuwe wachtwoord in de MistyVPN-app."
+  },
+  "routerPage": {
+    "metaTitle": "VPN voor routers — DD-WRT, Asus, OpenWRT & meer (OpenVPN)",
+    "metaDescription": "Stel MistyVPN in op je router met OpenVPN en bescherm elk apparaat in je huis — tv's, consoles, smarthome-apparatuur. Stapsgewijze handleidingen voor DD-WRT, Asus, OpenWRT, Tomato, pfSense en GL.iNet.",
+    "crumbDownload": "Downloaden",
+    "crumbRouter": "Router-VPN",
+    "eyebrow": "Router-VPN",
+    "h1": "Zet MistyVPN op je router",
+    "lede": "Stel MistyVPN één keer in op je router en elk apparaat erachter is beschermd — smart-tv's, consoles, streamingboxen en smarthome-apparatuur die zelf geen VPN-app kunnen draaien. MistyVPN ondersteunt <strong>OpenVPN</strong>, dus elke router met een OpenVPN-client werkt.",
+    "udpProfile": "UDP-profiel",
+    "tcpProfile": "TCP-profiel",
+    "serverList": "Serverlijst",
+    "beforeYouStart": "Voordat je begint",
+    "chooseYourRouter": "Kies je router",
+    "chooseYourRouterBody": "Kies je router of firmware voor stapsgewijze instructies.",
+    "viewGuide": "Bekijk handleiding →"
+  },
+  "serversPage": {
+    "metaTitle": "Serverlijst — elke MistyVPN-locatie & elk protocol",
+    "metaDescription": "De volledige MistyVPN-servergids: elke locatie, de serverhostnaam en de protocollen die worden ondersteund — WireGuard, VLESS (Reality), Hysteria2, OpenVPN en ShadowTLS. Gebruik ze voor de app, routers of handmatige installatie.",
+    "breadcrumbSupport": "Support",
+    "breadcrumbServerList": "Serverlijst",
+    "eyebrow": "Serverlijst",
+    "title": "Elke locatie, elk protocol",
+    "intro": "{locations} locaties in {countries} landen. Elke MistyVPN-server wordt identiek ingericht, dus <strong>alle protocollen werken op alle servers</strong>. Gebruik de hostnaam hieronder om te verbinden vanuit de app, een router of een handmatige installatie — kies het protocol dat bij je netwerk past.",
+    "colLocation": "Locatie",
+    "colHostname": "Serverhostnaam",
+    "protocolSupported": "{protocol} ondersteund",
+    "footerNote": "WireGuard, VLESS (Reality) en Hysteria2 draaien in de MistyVPN-apps; OpenVPN (UDP/TCP) werkt ook voor routers en handmatige configuratie. Stealth-obfuscatie wordt automatisch toegepast waar een netwerk dat vereist. Live servergezondheid en -belasting komen binnenkort op deze pagina."
+  },
+  "supportPage": {
+    "metaTitle": "Help & support — praat snel met een mens",
+    "metaDescription": "Krijg hulp bij MistyVPN. Stuur ons een bericht op WhatsApp of mail support@mistyvpn.com — echte mensen, snelle antwoorden, 24/7. Snelle oplossingen en antwoorden op veelgestelde vragen.",
+    "breadcrumb": "Support",
+    "hero": {
+      "eyebrow": "Support",
+      "title": "We staan voor je klaar — de klok rond.",
+      "subtitle": "Echte mensen, snelle antwoorden. Bereik ons op WhatsApp of per e-mail en we zorgen dat je weer verbonden bent."
+    },
+    "whatsapp": {
+      "title": "Chat op WhatsApp",
+      "body": "De snelste manier om ons te bereiken. Opent WhatsApp op je telefoon, of WhatsApp Web op je computer.",
+      "button": "Stuur ons een bericht op WhatsApp"
+    },
+    "email": {
+      "title": "Mail ons",
+      "body": "Liever e-mail? Schrijf ons wanneer je maar wilt en we antwoorden binnen een paar uur met een echt antwoord — geen ticketgedoe.",
+      "button": "Mail support"
+    },
+    "trust": [
+      {
+        "label": "Antwoord binnen 2 uur",
+        "sub": "gebruikelijke reactietijd"
+      },
+      {
+        "label": "Echte mensen, geen bots",
+        "sub": "menselijke support"
+      },
+      {
+        "label": "24/7 beschikbaar",
+        "sub": "elke dag"
+      },
+      {
+        "label": "Strikt no-logs",
+        "sub": "we kunnen je activiteit niet zien"
+      }
+    ],
+    "quickFixes": {
+      "eyebrow": "Voordat je contact opneemt",
+      "title": "Oplossingen in 60 seconden",
+      "body": "De meeste hikjes zijn met een van deze verholpen. Toch nog vast na het proberen? Wij zijn één bericht ver.",
+      "items": [
+        "Werk de app bij naar de nieuwste versie.",
+        "Zet Protocol op Auto en kies een server in de buurt.",
+        "Zorg dat Stealth Mode is ingeschakeld.",
+        "Zet de VPN uit en weer aan, of herstart de app.",
+        "Controleer of je internet werkt met de VPN losgekoppeld."
+      ]
+    },
+    "faq": {
+      "eyebrow": "Antwoorden",
+      "title": "Veelgestelde vragen"
+    },
+    "faqs": [
+      {
+        "q": "Ik kan niet verbinden — wat moet ik eerst proberen?",
+        "a": "Zet het protocol op Auto (Instellingen → Protocol), kies een server in de buurt en zorg dat Stealth Mode aan staat. Op strenge netwerken vermomt Stealth je verbinding als normaal HTTPS zodat het erdoor komt. Lukt verbinden nog steeds niet, stuur ons dan een bericht en we lossen het in enkele minuten op."
+      },
+      {
+        "q": "Hoe beheer of zeg ik mijn abonnement op?",
+        "a": "Abonnementen worden gefactureerd via je Apple ID of Google-account. Beheer of zeg ze op elk moment op in de accountinstellingen van je apparaat — Apple: Instellingen → je naam → Abonnementen; Google: Play Store → Abonnementen. Je toegang loopt door tot het einde van de betaalde periode."
+      },
+      {
+        "q": "Hoe werken terugbetalingen?",
+        "a": "Omdat de facturatie door Apple en Google wordt afgehandeld, worden terugbetalingen via hen verstrekt. We helpen je er graag doorheen — neem gewoon contact op en we wijzen je de snelste route."
+      },
+      {
+        "q": "Bewaren jullie logs van wat ik doe?",
+        "a": "Nee. MistyVPN is strikt no-logs — we registreren je browsen, verkeer of activiteit niet. We kunnen letterlijk niet afgeven wat we nooit verzamelen. Bekijk onze no-logs-belofte voor alle details."
+      },
+      {
+        "q": "Welke server is het beste voor streamen?",
+        "a": "Kies een server in het land waarvan je de content wilt en verbind vervolgens. Laadt een dienst niet, probeer dan een andere stad in hetzelfde land of schakel Stealth Mode in. Vraag ons om de huidige beste keuze — we houden het in de gaten."
+      },
+      {
+        "q": "Werkt het op beperkte of openbare wifi?",
+        "a": "Ja. Stealth Mode is precies daarvoor gebouwd — cafés, hotels, luchthavens, kantoren en zwaar gefilterde netwerken. Het staat standaard aan, en er is niets in te stellen."
+      }
+    ],
+    "closing": {
+      "title": "Nog steeds vast? Laten we het samen oplossen.",
+      "body": "Stuur ons een bericht en een echt persoon helpt je weer verbonden te raken — meestal binnen twee uur.",
+      "button": "WhatsApp ons"
+    }
+  },
+  "termsPage": {
+    "metaTitle": "Servicevoorwaarden",
+    "metaDescription": "De voorwaarden die je gebruik van {name} regelen.",
+    "eyebrow": "Juridisch",
+    "h1": "Servicevoorwaarden",
+    "lastUpdated": "Laatst bijgewerkt: {date}",
+    "lastUpdatedDate": "9 juni 2026",
+    "intro": "Deze Voorwaarden regelen je gebruik van {name}, een dienst geëxploiteerd door {company}, een bedrijf geregistreerd in {registeredIn} (bedrijfsnr. {number}), met ingeschreven kantoor te {office}. Door de dienst te gebruiken ga je akkoord met deze Voorwaarden.",
+    "sections": [
+      {
+        "heading": "Aanvaardbaar gebruik",
+        "paragraphs": [
+          "{name} is bedoeld om je privacy en veiligheid te beschermen. Je gaat ermee akkoord de dienst niet te gebruiken voor onwettige activiteiten, om anderen schade toe te brengen, om spam of malware te versturen of om intellectuele-eigendomsrechten te schenden. Je bent verantwoordelijk voor het naleven van de wetten die op jou van toepassing zijn, inclusief eventuele lokale regels over VPN-gebruik."
+        ]
+      },
+      {
+        "heading": "Accounts",
+        "paragraphs": [
+          "Je bent verantwoordelijk voor het veilig houden van je accountgegevens. Gratis toegang wordt op beperkte basis verstrekt; betaalde abonnementen ontgrendelen volledige toegang."
+        ]
+      },
+      {
+        "heading": "Abonnementen en facturatie",
+        "paragraphs": [
+          "Abonnementen worden per kaart verkocht via beveiligd afrekenen op deze website, of via de Apple App Store en Google Play. Voor aankopen via een store zijn facturatie, verlengingen en terugbetalingen onderworpen aan het beleid van die stores — beheer of zeg op via je store-account. Voor aankopen op deze website beheer of zeg je op elk moment op vanaf je accountpagina."
+        ]
+      },
+      {
+        "heading": "14 dagen niet-goed-geld-terug-garantie",
+        "paragraphs": [
+          "Elk betaald abonnement valt onder een 14 dagen niet-goed-geld-terug-garantie. Ben je niet tevreden binnen 14 dagen na je eerste aankoop, neem dan contact met ons op via {email} voor volledige terugbetaling — geen vragen gesteld. Voor aankopen op deze website betalen we de oorspronkelijke betaalmethode rechtstreeks terug. Voor aankopen via de Apple App Store of Google Play worden terugbetalingen verwerkt via de terugbetalingsprocedure van de betreffende store, waarbij we je helpen. De garantie geldt voor je eerste aankoop en niet voor latere verlengingen."
+        ]
+      },
+      {
+        "heading": "Beschikbaarheid van de dienst",
+        "paragraphs": [
+          "We werken eraan de dienst betrouwbaar te houden, maar garanderen geen ononderbroken toegang. Netwerkomstandigheden, beperkingen van derden en onderhoud kunnen de beschikbaarheid beïnvloeden."
+        ]
+      },
+      {
+        "heading": "Disclaimer & beperking van aansprakelijkheid",
+        "paragraphs": [
+          "De dienst wordt geleverd \"zoals deze is\" zonder enige vorm van garantie, voor zover wettelijk toegestaan. Voor zover maximaal wettelijk toegestaan is {name} niet aansprakelijk voor indirecte of gevolgschade die voortvloeit uit je gebruik van de dienst."
+        ]
+      },
+      {
+        "heading": "Wijzigingen in deze voorwaarden",
+        "paragraphs": [
+          "We kunnen deze Voorwaarden van tijd tot tijd bijwerken. Voortgezet gebruik nadat wijzigingen van kracht worden, geldt als aanvaarding."
+        ]
+      }
+    ],
+    "contact": {
+      "heading": "Contact",
+      "body": "Vragen over deze Voorwaarden? Mail <link>{email}</link>."
+    }
+  },
+  "tvLoginPage": {
+    "metaTitle": "TV-inloggen",
+    "metaDescription": "Log in om je MistyVPN TV-app te autoriseren.",
+    "brandSubtitle": "TV-inloggen",
+    "stepEnterCode": "Code invoeren",
+    "stepSignIn": "Inloggen",
+    "codeHeading": "Voer TV-code in",
+    "codeSubtitle": "Voer de code in die op je tv-scherm staat, of scan de QR-code om hem automatisch in te vullen.",
+    "codeLabel": "Code van je tv",
+    "codePlaceholder": "bijv. FJLX8JYJ",
+    "codeTooShort": "Voer de code in die op je tv staat.",
+    "continue": "Doorgaan",
+    "loginHeading": "Inloggen",
+    "loginSubtitle": "Log in met je MistyVPN-account om code <hl>{code}</hl> te autoriseren.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "jij@voorbeeld.com",
+    "passwordLabel": "Wachtwoord",
+    "passwordPlaceholder": "••••••••",
+    "show": "Tonen",
+    "hide": "Verbergen",
+    "invalidCredentials": "Ongeldig e-mailadres of wachtwoord",
+    "codeExpiredInvalid": "Deze code is verlopen of ongeldig. Ga terug naar je tv en haal een nieuwe code op.",
+    "authorizeFailed": "Kon de tv niet autoriseren. Probeer het opnieuw.",
+    "serverUnreachable": "Kon de server niet bereiken. Controleer je verbinding en probeer het opnieuw.",
+    "signInAuthorize": "Inloggen & tv autoriseren",
+    "signingIn": "Bezig met inloggen…",
+    "authorizingTv": "Bezig met tv autoriseren…",
+    "changeCode": "← Code wijzigen",
+    "successTitle": "TV ingelogd!",
+    "successBody": "Je tv wordt over een paar seconden automatisch bijgewerkt. Je kunt deze pagina sluiten.",
+    "expiredTitle": "Code verlopen",
+    "expiredBodyFallback": "Ga terug naar je tv en haal een nieuwe code op.",
+    "tryAgain": "Probeer opnieuw",
+    "footer": "mistyvpn.com · Veilige VPN voor alle apparaten"
+  },
+  "unblockPage": {
+    "metaTitle": "Deblokkeer alles, overal — websites, apps & streaming",
+    "metaDescription": "De Stealth Mode van MistyVPN brengt je voorbij blokkades en op het open internet — jouw sites, jouw apps, jouw series in HD — zelfs op de meest beperkte netwerken. Gratis te beginnen.",
+    "crumb": "Deblokkeren",
+    "eyebrow": "Deblokkeren",
+    "h1": "Krijg het hele internet terug",
+    "lede": "Geblokkeerd op het werk, op de campus, op hotelwifi of achter een nationale firewall? De Stealth Mode van MistyVPN houdt je verbonden met de sites, apps en series die je wilt — privé en op volle snelheid.",
+    "bullets": [
+      "Stealth Mode omzeilt blokkades die andere VPN's niet aankunnen",
+      "Stream je series in kristalheldere HD, overal vandaan",
+      "Split tunneling houdt bankieren en lokale apps snel",
+      "40+ locaties, na verloop van tijd meer",
+      "Strikt no-logs — je activiteit blijft van jou",
+      "Gratis te beginnen, geen creditcard"
+    ],
+    "sections": [
+      {
+        "h2": "Waarom dingen geblokkeerd raken — en hoe MistyVPN het oplost",
+        "body": [
+          "Beperkte netwerken blokkeren niet alleen adressen; veel ervan herkennen en stoppen VPN-verkeer zodra ze het opmerken. Daarom stoppen zoveel VPN's simpelweg met werken op het werk, op school, in hotels of in gecensureerde regio's.",
+          "De Stealth Mode van MistyVPN laat je verbinding lijken op gewoon, alledaags surfen. Er is geen duidelijke VPN-signatuur om te markeren — dus je blijft verbonden waar andere apps worden afgesneden."
+        ]
+      },
+      {
+        "h2": "Streamen dat niet buffert",
+        "body": [
+          "Een VPN is alleen goed voor streamen als het snel is. MistyVPN draait op slanke, moderne techniek over 40+ geoptimaliseerde locaties, zodat high-definition video soepel blijft in plaats van te haperen.",
+          "Kies een locatie, druk op verbinden en start met kijken — zo simpel is het echt."
+        ]
+      },
+      {
+        "h2": "Blijf snel met split tunneling",
+        "body": [
+          "Je hoeft niet alles via de VPN te sturen. Met split tunneling stuur je alleen je streamen en surfen via MistyVPN, terwijl je bank-app, lokale diensten en games op je normale verbinding blijven — volle snelheid, geen concessies."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Werkt MistyVPN waar andere VPN's geblokkeerd zijn?",
+        "a": "Ja. Stealth Mode vermomt je verbinding als gewoon internetverkeer, zodat MistyVPN blijft werken op beperkte netwerken — werkplekken, scholen, hotels en zwaar gecensureerde regio's — waar gewone VPN's worden herkend en geblokkeerd."
+      },
+      {
+        "q": "Kan ik in HD streamen?",
+        "a": "Ja. MistyVPN is afgestemd op snel streamen in high definition over 40+ locaties, en met split tunneling stuur je alleen je streaming-apps via de VPN op volle snelheid."
+      },
+      {
+        "q": "Vertraagt het mijn andere apps?",
+        "a": "Niet als je dat niet wilt. Met split tunneling houd je bankieren, lokale sites en games op je normale verbinding, terwijl alleen je gekozen apps de VPN gebruiken."
+      },
+      {
+        "q": "Is er een gratis manier om het te proberen?",
+        "a": "Ja — begin gratis en verdien gratis minuten, zonder account of creditcard."
+      }
+    ]
+  }
+}

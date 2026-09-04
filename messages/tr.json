@@ -1,0 +1,1292 @@
+{
+  "meta": {
+    "tagline": "Güvenli. Gizli. Hızlı.",
+    "description": "MistyVPN her cihazda gizliliğinizi korur ve engelleri aşar. Engelleri geçen gizlilik teknolojisi, bölünmüş tünelleme, kesin bir kayıt tutmama sözü ve 40'tan fazla küresel konum — üstelik ücretsiz başlıyor.",
+    "keywords": "VPN, kayıt tutmayan VPN, sansür karşıtı VPN, site engeli açan VPN, güvenlik duvarı aşan VPN, yayın VPN, WireGuard, VLESS Reality, Hysteria2, sansüre dayanıklı VPN"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "features": "Özellikler",
+    "pricing": "Fiyatlandırma",
+    "compare": "Karşılaştır",
+    "noLogs": "Kayıt Tutmama",
+    "download": "İndir",
+    "support": "Destek",
+    "contactUs": "Bize Ulaşın",
+    "serverList": "Sunucu Listesi",
+    "getApp": "MistyVPN'i Edin",
+    "signInUp": "Giriş yap / Kayıt ol",
+    "account": "Hesap",
+    "language": "Dil",
+    "breadcrumb": "İçerik yolu",
+    "footer": {
+      "product": "Ürün",
+      "trust": "Güven",
+      "getAppTitle": "Uygulamayı edinin",
+      "compareVpns": "VPN'leri Karşılaştır",
+      "unblock": "Her şeyin engelini kaldır",
+      "noLogsPromise": "Kayıt tutmama sözü",
+      "privacy": "Gizlilik Politikası",
+      "terms": "Hizmet Şartları",
+      "helpSupport": "Yardım ve Destek",
+      "iphone": "iPhone ve iPad",
+      "android": "Android",
+      "mac": "Mac",
+      "windows": "Windows",
+      "tv": "Android TV",
+      "rights": "Tüm hakları saklıdır.",
+      "blurb": "Başkalarının engellendiği yerlerde çalışmak için tasarlanmış, kayıt tutmayan bir VPN.",
+      "legal": "{name}, {registeredIn} ülkesinde kayıtlı bir şirket olan {legalName} markasının ticari adıdır{companyNo}. Kayıtlı ofis: {office}."
+    }
+  },
+  "common": {
+    "cta": {
+      "getFree": "MistyVPN'i ücretsiz edin",
+      "seePlans": "Planları gör",
+      "exploreFeatures": "Tüm özellikleri keşfet",
+      "compareVpns": "VPN'leri Karşılaştır"
+    },
+    "moneyBack": "14 gün para iade garantisi",
+    "stats": [
+      {
+        "value": "40+",
+        "label": "Küresel konum"
+      },
+      {
+        "value": "0",
+        "label": "Tutulan kayıt"
+      },
+      {
+        "value": "10",
+        "label": "Aynı anda cihaz"
+      },
+      {
+        "value": "16",
+        "label": "Dil"
+      }
+    ],
+    "features": [
+      {
+        "title": "Gizli Mod",
+        "body": "VPN'iniz, görünmez. MistyVPN bağlantınızı sıradan bir web gezintisi gibi gösterir — böylece diğer VPN'leri engelleyen ağlarda bile çalışmaya devam eder. Tek dokunuş, varsayılan olarak açık."
+      },
+      {
+        "title": "Bölünmüş Tünelleme",
+        "body": "Yalnızca istediğinizi koruyun. Seçtiğiniz uygulama ve siteleri VPN üzerinden gönderin, geri kalan her şeyi — bankanızı, yerel hizmetlerinizi, oyunlarınızı — tam yerel hızda tutun."
+      },
+      {
+        "title": "Kesinlikle kayıt tutmama",
+        "body": "Hiçbir şey saklamıyoruz. Ne gezinti geçmişi, ne trafik, ne IP adresi. Sızacak bir şey de, teslim edilecek bir şey de yok."
+      },
+      {
+        "title": "Cidden hızlı",
+        "body": "Modern protokoller ve 40'tan fazla optimize edilmiş konum, yoğun bir ağda bile takılmasız yayın, kesintisiz görüşme ve hızlı indirme demektir."
+      },
+      {
+        "title": "Sınır tanımadan yayın",
+        "body": "Dizilerinizi her yerden net HD kalitesinde izleyin. Bir konum seçin, bağlanın, oynata basın."
+      },
+      {
+        "title": "Öldürme anahtarı",
+        "body": "Bağlantı bir an için kesilirse MistyVPN trafiği anında engeller, böylece korumasız hiçbir şey dışarı sızmaz."
+      },
+      {
+        "title": "Parola Yöneticisi",
+        "body": "Doğrudan uygulamaya yerleşik, tam ve şifreli bir parola yöneticisi — girişleri kaydedin, güçlü parolalar oluşturun ve her yerde otomatik doldurun. Büyük VPN'ler bunu daha pahalı bir pakete kilitler ya da fazladan ücret alır. MistyVPN'de ise ücretsiz olarak dahildir."
+      },
+      {
+        "title": "Kimlik Doğrulayıcı (2FA)",
+        "body": "Yerleşik iki faktörlü kod üretici — Google Authenticator'ın yerini alır ve tek kullanımlık kodlarınızı parolalarınızla aynı güvenli, şifreli kasada tutar. Başka abonelik yok, eklenti yok. Ücretsiz dahil."
+      },
+      {
+        "title": "Tüm cihazlarınız",
+        "body": "iPhone, iPad, Android, Mac ve Android TV. Tek abonelik hepsini kapsar, aynı anda 10 cihaza kadar bağlanabilir."
+      },
+      {
+        "title": "Kendi dilinizde",
+        "body": "MistyVPN'i 16 dilde rahatça kullanın — ve uygulamayı hiç güncellemenize gerek kalmadan yenilerini ekliyoruz."
+      },
+      {
+        "title": "Otomatik mod",
+        "body": "Tek dokunuşla MistyVPN ağınız için en hızlı ve en güvenilir bağlantıyı otomatik seçer — ayarlanacak hiçbir şey yok."
+      },
+      {
+        "title": "40+ küresel konum",
+        "body": "Amerika kıtası, Avrupa, Orta Doğu ve Asya'daki sunucular üzerinden bağlanın — istediğiniz yerde görünün."
+      },
+      {
+        "title": "Otomatik bağlanma",
+        "body": "MistyVPN'in cihazınız açılır açılmaz bağlanmasını sağlayın, böylece otomatik olarak korunun — asla yanlışlıkla açıkta kalmayın."
+      },
+      {
+        "title": "Ücretsiz dakika kazanın",
+        "body": "Ücretsiz süreniz mi bitti? Ücretsiz dakikalarınızı istediğiniz zaman yükleyin — hesap ya da kredi kartı gerekmez."
+      }
+    ],
+    "steps": [
+      {
+        "title": "İndir ve kaydol",
+        "body": "Cihazınıza uygulamayı alın ve bir dakikadan kısa sürede ücretsiz başlayın — kredi kartı gerekmez."
+      },
+      {
+        "title": "Bağlan'a dokun",
+        "body": "Bir konum seçin ya da Otomatik en hızlısını seçsin. Gerisini Gizli Mod halleder."
+      },
+      {
+        "title": "Özgürce gezin",
+        "body": "Yayın izleyin, gezinin ve görüşün — gizli, engelsiz ve hızlı."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "MistyVPN gerçekten kayıt tutmuyor mu?",
+        "a": "Evet. MistyVPN gezintinizi, trafiğinizi ya da IP adresinizi kaydetmez. Sızabilecek ya da teslim edilebilecek hiçbir şey saklanmaz."
+      },
+      {
+        "q": "Diğer VPN'lerin engellendiği yerlerde çalışıyor mu?",
+        "a": "Evet. Gizli Mod bağlantınızı sıradan web trafiği gibi gösterir, böylece MistyVPN, tipik VPN'lerin fark edilip engellendiği yoğun kısıtlamalı ağlarda çalışmaya devam eder."
+      },
+      {
+        "q": "Kaç cihaz kullanabilirim?",
+        "a": "Tek abonelik tüm cihazlarınızı kapsar — iPhone, Android, Mac ve Android TV — aynı anda 10 cihaza kadar bağlanabilirsiniz."
+      },
+      {
+        "q": "MistyVPN ile yayın izleyebilir miyim?",
+        "a": "Kesinlikle. MistyVPN hızlı HD yayın için ayarlanmıştır ve bölünmüş tünelleme, yalnızca yayın uygulamalarınızı tam hızda VPN üzerinden yönlendirmenizi sağlar."
+      },
+      {
+        "q": "Ücretsiz sürümü var mı?",
+        "a": "Evet. Ücretsiz başlayın ve kullandıkça ücretsiz dakika kazanın — hesap ya da kredi kartı gerekmez. Sınırsız, tam hızlı erişim için istediğiniz zaman Premium'a geçin."
+      },
+      {
+        "q": "Nasıl ödeme yaparım?",
+        "a": "Web'de kartla güvenle ödeyin ya da uygulama içinden App Store veya Google Play üzerinden ödeyin. İstediğiniz zaman iptal edin — buradaki hesabınızdan ya da mağaza hesabınızdan."
+      },
+      {
+        "q": "Para iade garantisi var mı?",
+        "a": "Evet — her ücretli plan 14 gün para iade garantisi kapsamındadır, hiçbir soru sorulmaz. İlk iki hafta içinde memnun kalmadınız mı? Bize e-posta gönderin, tam iade yapalım. App Store ya da Google Play üzerinden yapılan satın alımlar mağazanın standart süreciyle iade edilir."
+      },
+      {
+        "q": "MistyVPN parola yöneticisi içeriyor mu?",
+        "a": "Evet — tam ve şifreli bir parola yöneticisi ile yerleşik bir iki faktörlü kimlik doğrulayıcı, ücretsiz katman da dahil her planda ücretsiz olarak sunulur. Diğer VPN'lerin çoğu ya bunu hiç sunmaz ya da daha üst bir pakette fazladan ücret alır."
+      }
+    ]
+  },
+  "home": {
+    "metaTitle": "MistyVPN — Her cihazda gizli, engelsiz, hızlı",
+    "hero": {
+      "eyebrow": "Ücretsiz başlayın · Kart gerekmez",
+      "titleLead": "Gerçekten her yerde",
+      "titleHighlight": "çalışan",
+      "titleTrail": " gizli internet.",
+      "subtitle": "MistyVPN her cihazda gizliliğinizi korur ve engelleri aşar — engelleri geçen Gizli Mod, 40'tan fazla konumda yıldırım hızı ve kesin bir kayıt tutmama sözü ile."
+    },
+    "stealth": {
+      "eyebrow": "Gizli Mod",
+      "title": "Tasarım gereği görünmez",
+      "body": "Çoğu VPN, ağ onların bir VPN olduğunu <em>görebildiği</em> için engellenir. MistyVPN bu şekilde fark edilemez — Gizli Mod bağlantınızı sıradan bir gezinti gibi gösterir, böylece her şeyin tıkandığı yerde çalışmaya devam eder.",
+      "note": "Varsayılan olarak açık. Bağlanmak için tek dokunuş."
+    },
+    "split": {
+      "eyebrow": "Bölünmüş Tünelleme",
+      "title": "Yalnızca istediğinizi koruyun",
+      "body": "Yayın ve gezintinizi VPN üzerinden yönlendirin, banka uygulamanız, yerel siteleriniz ve oyunlarınız normal bağlantınızda kalsın — tam hız, ödünsüz.",
+      "note": "Uygulama uygulama, siz karar verin."
+    },
+    "features": {
+      "eyebrow": "Her şey dahil",
+      "title": "Tek uygulama. İhtiyacınız olan her şey.",
+      "body": "Eklenti yok, ek satış yok. Her plan tüm araç setiyle gelir."
+    },
+    "vault": {
+      "eyebrow": "Bir VPN'den fazlası",
+      "title": "Parola Yöneticisi ve Kimlik Doğrulayıcı — ücretsiz dahil",
+      "body": "Tam ve şifreli bir parola yöneticisi ile yerleşik bir iki faktörlü kimlik doğrulayıcı, doğrudan uygulamanın içinde. Girişleri kaydedin, otomatik doldurun, güçlü parolalar oluşturun ve 2FA kodlarınızı saklayın — hepsi uçtan uca korumalı. Büyük VPN'ler bunun için ek ücret alır ya da daha pahalı bir pakete kilitler. MistyVPN'de ise her planda ücretsiz dahildir.",
+      "pmTitle": "Parola Yöneticisi",
+      "pmBody": "Cihazlarınız arasında şifreli kasa, otomatik doldurma ve güçlü parola üretici.",
+      "otpTitle": "Kimlik Doğrulayıcı (2FA)",
+      "otpBody": "Yerleşik tek kullanımlık kodlar — Google Authenticator'ın yerini alır, aynı güvenli kasada tutulur."
+    },
+    "how": {
+      "eyebrow": "Nasıl çalışır",
+      "title": "Üç dokunuşta korumalı"
+    },
+    "compare": {
+      "title": "MistyVPN nasıl kıyaslanıyor?",
+      "body": "Ücretsiz katman, yeni nesil engel aşma teknolojisi ve büyük isimlerden daha ucuza premium. Yan yana görün."
+    },
+    "faq": {
+      "eyebrow": "SSS",
+      "title": "İyi sorular"
+    },
+    "ctaBand": {
+      "title": "Gizli internetiniz şimdi başlıyor.",
+      "body": "Denemesi ücretsiz, kart yok, hiçbir şey kaydedilmez. Premium 14 gün para iade garantisiyle korunur — bir dakikadan kısa sürede bağlanın."
+    }
+  },
+  "accountPage": {
+    "metaTitle": "Hesap",
+    "metaDescription": "MistyVPN aboneliğinizi, ödeme yönteminizi ve hesap ayarlarınızı yönetin.",
+    "loading": "Yükleniyor…",
+    "loadingAccount": "Hesabınız yükleniyor…",
+    "back": "← Geri",
+    "backToAccount": "← Hesaba dön",
+    "platformWeb": "Web",
+    "payHeading": "Nasıl ödeme yapmak istersiniz?",
+    "payCardWallets": "Kart ve Apple / Google Pay",
+    "payCrypto": "Kripto — kart gerekmez",
+    "cryptoNetworks": "TRON · Ethereum · BSC üzerinde",
+    "errStartCheckout": "Ödeme başlatılamadı",
+    "checkoutBackChooseMethod": "← Farklı bir ödeme yöntemi seç",
+    "checkoutBackToPlans": "← Planlara dön",
+    "checkoutChangePlan": "← Planı değiştir",
+    "preparingCheckout": "Güvenli ödeme hazırlanıyor…",
+    "confirmHeading": "Aboneliğinizi onaylayın",
+    "confirmChooseNew": "Yeni bir ödeme yöntemi seçin — ücreti sonra onaylayacaksınız.",
+    "labelPlan": "Plan",
+    "labelPayment": "Ödeme",
+    "premiumName": "MistyVPN Premium",
+    "confirmChargeNotice": "Şimdi ve her yenilemede otomatik olarak <b>{method}</b> kartından ücret alacağız.",
+    "changeMethod": "Yöntemi değiştir",
+    "confirmSubscribe": "Onayla ve abone ol",
+    "processing": "İşleniyor…",
+    "errComplete": "Aboneliğiniz tamamlanamadı",
+    "getPremium": "Premium'a geç",
+    "seePlansBenefits": "Planları ve avantajları gör →",
+    "savedChargeHint": "Kayıtlı {method} yönteminizden ücret alacağız — herhangi bir ücret alınmadan önce onaylayacaksınız.",
+    "accountHeading": "Hesap",
+    "signOut": "Çıkış Yap",
+    "sectionSubscription": "Abonelik",
+    "sectionPaymentMethod": "Ödeme Yöntemi",
+    "sectionPaidWithCrypto": "Kripto ile mi ödediniz?",
+    "sectionOpenvpnCredentials": "OpenVPN Kimlik Bilgileri",
+    "sectionAccount": "Hesap",
+    "activating": "Aboneliğiniz etkinleştiriliyor… bu birkaç saniye sürer.",
+    "premiumActive": "Premium Etkin",
+    "wontRenew": "Yenilenmeyecek — {date} tarihine kadar erişim",
+    "renewsOn": "{date} tarihinde otomatik yenilenir",
+    "unlimitedAccess": "Tüm sunuculara sınırsız erişim",
+    "allSetTitle": "Her şey hazır — uygulamayı edinin",
+    "allSetBody": "MistyVPN'i iPhone, Android, Mac ve Android TV'ye indirin, ardından hesap e-postanız ve parolanızla giriş yapın.",
+    "downloadApp": "Uygulamayı indir",
+    "resumeSub": "Aboneliği Sürdür",
+    "cancelSub": "Aboneliği İptal Et",
+    "confirmCancelSub": "Aboneliğinizi iptal etmek istiyor musunuz? Mevcut dönem bitene kadar erişiminiz sürer.",
+    "errCancel": "İptal edilemedi",
+    "errResume": "Sürdürülemedi",
+    "subViaApple": "Apple cihazınızda App Store üzerinden abone oldunuz.",
+    "subViaGoogle": "Android cihazınızda Google Play üzerinden abone oldunuz.",
+    "subViaStore": "Bir mobil uygulama mağazası üzerinden abone oldunuz.",
+    "manageWhereBought": "Değiştirmek ya da iptal etmek için satın aldığınız yerden yönetin — buradan iptal edilemez.",
+    "manageInStore": "{store} içinde yönet ↗",
+    "paymentIssue": "Ödeme sorunu",
+    "pastDueBody": "MistyVPN Premium aboneliğinizi yenileyemedik. Otomatik olarak yeniden deniyoruz — ya da erişimi hemen geri getirmek için şimdi yenileyin.",
+    "labelMethod": "Yöntem",
+    "labelCard": "Kart",
+    "renewNow": "Şimdi yenile",
+    "retrying": "Yeniden deneniyor…",
+    "errChargeFailed": "Kayıtlı kartınızdan ücret alamadık — aşağıdan güncelleyin, sonra tekrar Yenile'yi deneyin.",
+    "errRenew": "Yenilenemedi",
+    "cardFailingHint": "Kartınız sürekli başarısız oluyorsa aşağıdan güncelleyin, yeni kartla yeniden deneyelim.",
+    "freePlan": "Ücretsiz Plan",
+    "freePlanBody": "Tüm cihazlarınızda sınırsız, tam hızlı erişim için yükseltin.",
+    "upgradePremium": "Premium'a yükselt",
+    "cryptoSectionBody": "Henüz görünmeyen bir kripto ödemesi mi yaptınız? İşlem hash'ini yapıştırın, zincir üzerinde doğrulayıp aboneliğinizi etkinleştirelim.",
+    "openvpnBody": "Üçüncü taraf OpenVPN istemcilerini (yönlendiriciler, OpenVPN uygulaması vb.) bağlamak içindir. MistyVPN uygulaması için bunlara ihtiyacınız yok — orada hesap e-postanız ve parolanızla giriş yapmanız yeterli.",
+    "labelUsername": "Kullanıcı adı",
+    "labelPasswordCred": "Parola",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı",
+    "savedMethodFallback": "kayıtlı ödeme yönteminiz",
+    "noMethodOnFile": "Kayıtlı ödeme yöntemi yok",
+    "change": "Değiştir",
+    "addCard": "Kart ekle",
+    "labelEmail": "E-posta",
+    "changePassword": "Parolayı Değiştir",
+    "currentPasswordPlaceholder": "Mevcut parola",
+    "newPasswordPlaceholder": "Yeni parola (en az 8 karakter)",
+    "cancel": "İptal",
+    "updatePassword": "Parolayı Güncelle",
+    "saving": "Kaydediliyor…",
+    "passwordUpdated": "Parola güncellendi.",
+    "errUpdatePassword": "Parola güncellenemedi",
+    "deleteAccount": "Hesabı Sil",
+    "deleting": "Siliniyor…",
+    "confirmDelete": "Hesabınızı kalıcı olarak silmek istiyor musunuz? Bu geri alınamaz.",
+    "errDeleteAccount": "Hesap silinemedi",
+    "errLoadAccount": "Hesabınız yüklenemedi. Bağlantınızı kontrol edip tekrar deneyin."
+  },
+  "comparePage": {
+    "metaTitle": "MistyVPN'e karşı NordVPN, ExpressVPN ve PureVPN",
+    "metaDescription": "MistyVPN'in NordVPN, ExpressVPN ve PureVPN ile nasıl kıyaslandığını görün — ücretsiz katman, yerleşik parola yöneticisi ve kimlik doğrulayıcı, yeni nesil engel aşma teknolojisi ve daha ucuza premium. Dürüst bir yan yana kıyaslama.",
+    "breadcrumb": "Karşılaştır",
+    "hero": {
+      "eyebrow": "Karşılaştır",
+      "title": "MistyVPN'e karşı büyük isimler",
+      "subtitle": "Gerçek bir ücretsiz katman, yeni nesil engel aşma teknolojisi ve çoğundan daha ucuza premium. İşte dürüst yan yana kıyaslama."
+    },
+    "table": {
+      "featureHeader": "Özellik",
+      "rows": [
+        {
+          "label": "Aylık fiyat",
+          "values": [
+            "$3.99",
+            "~$12.99",
+            "~$12.99",
+            "~$11.95"
+          ]
+        },
+        {
+          "label": "Ücretsiz katman",
+          "values": [
+            "Evet — ücretsiz dakika kazan",
+            "Hayır",
+            "Hayır",
+            "Hayır"
+          ]
+        },
+        {
+          "label": "1–2 yıllık sözleşme olmadan en iyi fiyat",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "label": "Parola yöneticisi ücretsiz dahil",
+          "values": [
+            "Evet — her planda",
+            "Üst paket",
+            "Üst paket",
+            "Eklenti"
+          ]
+        },
+        {
+          "label": "Yerleşik kimlik doğrulayıcı (2FA kodları)",
+          "values": [
+            "",
+            "Üst paket",
+            "Üst paket",
+            ""
+          ]
+        },
+        {
+          "label": "Yeni nesil sansür karşıtı teknoloji (Reality / Hysteria2)",
+          "values": [
+            "",
+            "Sınırlı",
+            "Sınırlı",
+            "Sınırlı"
+          ]
+        },
+        {
+          "label": "Çin'de ve katı güvenlik duvarlarında çalışır",
+          "values": [
+            "Bunun için tasarlandı",
+            "Sınırlı",
+            "Sınırlı",
+            "Sınırlı"
+          ]
+        },
+        {
+          "label": "Gizli Mod (engelleri aşar)",
+          "values": [
+            "",
+            "",
+            "",
+            "Sınırlı"
+          ]
+        },
+        {
+          "label": "Her platformda bölünmüş tünelleme",
+          "values": [
+            "",
+            "Sınırlı",
+            "Sınırlı",
+            "Sınırlı"
+          ]
+        },
+        {
+          "label": "Öldürme anahtarı",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "label": "Kesin kayıt tutmama",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "label": "Aynı anda cihaz",
+          "values": [
+            "10",
+            "10",
+            "8",
+            "10"
+          ]
+        },
+        {
+          "label": "Uygulama dilleri",
+          "values": [
+            "16",
+            "değişir",
+            "değişir",
+            "değişir"
+          ]
+        }
+      ],
+      "footnote": "Gösterilen fiyatlar standart <strong>aydan aya</strong> tarifelerdir — rakiplerin reklamını yaptığı öne çıkan fiyatlar genellikle 1–2 yıllık taahhüt gerektirir. Rakip bilgileri, Ağustos 2026 itibarıyla kamuya açık olarak listelenen özellik ve fiyatları yansıtır ve değişebilir — lütfen her sağlayıcının kendi web sitesinden doğrulayın. Karşılaştırmalar genel bilgilendirme amacıyla iyi niyetle sunulmuştur."
+    },
+    "switch": {
+      "eyebrow": "İnsanlar neden geçiyor",
+      "title": "MistyVPN'i gerçekten farklı kılan ne",
+      "cards": {
+        "freeTier": {
+          "title": "Gerçek bir ücretsiz katman",
+          "body": "Premium VPN'lerin çoğunun hiç ücretsiz seçeneği yoktur. MistyVPN ücretsiz başlamanıza ve ücretsiz dakika kazanmanıza olanak tanır — kart yok, taahhüt yok."
+        },
+        "vault": {
+          "title": "Parola yöneticisi + 2FA, ücretsiz",
+          "body": "Tam ve şifreli bir parola yöneticisi ile yerleşik bir kimlik doğrulayıcı her planda ücretsiz gelir. NordVPN, ExpressVPN ve PureVPN bunları daha pahalı bir pakete kilitler ya da ücretli eklenti olarak satar."
+        },
+        "antiBlock": {
+          "title": "Engelleri aşmak için tasarlandı",
+          "body": "Gizli Mod yeni nesil sansür karşıtı teknoloji (Reality + Hysteria2) kullanır, böylece MistyVPN, ana akım VPN'lerin fark edilip engellendiği Çin'de ve katı güvenlik duvarlarının ardında çalışmaya devam eder."
+        },
+        "price": {
+          "title": "Fiyatın küçük bir kısmı",
+          "body": "Aydan aya, MistyVPN {monthlyPrice} — büyük isimlerin uzun sözleşme olmadan aldığı yaklaşık 12–13 dolara kıyasla. Yıllık planda ise ayda yalnızca {annualPerMonth}."
+        }
+      }
+    },
+    "ctaBand": {
+      "title": "Farkı kendiniz görün",
+      "body": "Başlaması ücretsiz — kart yok, hiçbir şey kaydedilmez. Premium 14 gün para iade garantisiyle korunur."
+    }
+  },
+  "deleteAccountPage": {
+    "metaTitle": "Hesabınızı ve Verilerinizi Silin",
+    "metaDescription": "{name} hesabınızı ve ilişkili verilerinizi nasıl sileceğiniz, neyin kaldırıldığı ve neyin saklandığı.",
+    "eyebrow": "Hesap",
+    "h1": "{name} hesabınızı ve verilerinizi silin",
+    "lastUpdated": "Son güncelleme: {date}",
+    "lastUpdatedDate": "15 Temmuz 2026",
+    "intro": "Bu sayfa, {name} hesabınızın ve onunla ilişkili verilerin silinmesini nasıl talep edeceğinizi açıklar. {name}, {name} tarafından geliştirilir ve işletilir.",
+    "inApp": {
+      "heading": "Hesabınızı uygulama içinden silin",
+      "intro": "Hesabınızı ve verilerini kalıcı olarak silmenin en hızlı yolu doğrudan {name} uygulamasındadır:",
+      "step1": "Cihazınızda {name} uygulamasını açın.",
+      "step2": "<b>Hesap</b> bölümüne gidin.",
+      "step3": "<b>Hesabı Sil</b>'e dokunun.",
+      "step4": "Sorulduğunda onaylayın. Hesabınız ve ilişkili veriler anında silinir.",
+      "note": "Bu, iPhone, iPad, Android, Mac ve Android TV'de kullanılabilir."
+    },
+    "email": {
+      "heading": "Ya da e-posta ile silme talep edin",
+      "p1": "Uygulama içi seçeneği kullanamıyorsanız silmeyi e-posta ile talep edin. Hesabınızla ilişkili adresten bize bir mesaj gönderin; talebinizi doğrulayıp hesabınızı <b>30 gün</b> içinde silelim.",
+      "linkText": "Hesabınızı silmek için {email} adresine e-posta gönderin"
+    },
+    "deleted": {
+      "heading": "Hangi veriler silinir",
+      "intro": "Hesabınız silindiğinde, ona bağlı kişisel verileri kaldırırız; buna şunlar dahildir:",
+      "items": [
+        "E-posta adresiniz ve hesap tanımlayıcınız",
+        "Karma (hash) haline getirilmiş parolanız",
+        "VPN kimlik bilgileriniz ve cihaz kayıtlarınız",
+        "Hesabınız ile herhangi bir abonelik arasındaki bağlantı"
+      ],
+      "note": "{name} kesin kayıt tutmayan bir hizmet olduğundan, baştan itibaren hiçbir gezinti geçmişi, trafik, DNS ya da IP etkinliği kaydı tutmayız — dolayısıyla silinecek böyle bir veri de yoktur."
+    },
+    "retained": {
+      "heading": "Neler saklanabilir",
+      "billing": "<b>Faturalama ve işlem kayıtları:</b> yasal, vergisel veya muhasebe yükümlülüklerini yerine getirmek gerektiğinde, yasa gereği zorunlu süre boyunca (genellikle 7 yıla kadar) asgari işlem kayıtlarını saklayabiliriz. Bunlar yalnızca uyumluluk için gerektiği kadar tutulur.",
+      "store": "<b>Mağaza abonelikleri:</b> Apple App Store ya da Google Play üzerinden satın alınan abonelikler bu mağazalar tarafından yönetilir. Hesabınızı silmek etkin bir mağaza aboneliğini iptal etmez — gelecekteki faturalamayı durdurmak için Apple ya da Google hesabınızdan iptal edin."
+    },
+    "questions": {
+      "heading": "Sorular",
+      "text": "Hesabınız ya da verilerinizle ilgili her konu için bize <link>{email}</link> adresinden ulaşın. Verileri nasıl işlediğimize dair tüm ayrıntılar için <privacy>Gizlilik Politikamıza</privacy> bakın."
+    }
+  },
+  "downloadGrid": {
+    "yourDevice": "Cihazınız",
+    "setupGuide": "Kurulum kılavuzu",
+    "getIt": "Edin",
+    "downloadApk": "APK indir",
+    "comingSoon": "Yakında"
+  },
+  "downloadPage": {
+    "metaTitle": "MistyVPN İndir — iPhone, Android, Mac ve Android TV",
+    "metaDescription": "MistyVPN'i tüm cihazlarınıza edinin. Tek hesap iPhone, iPad, Android, Mac ve Android TV'yi kapsar — ücretsiz başlayın, kart gerekmez, Premium'da 14 gün para iade garantisiyle.",
+    "breadcrumb": "İndir",
+    "eyebrow": "İndir",
+    "title": "MistyVPN'i her cihaza edinin",
+    "subtitle": "Tek hesap iPhone, iPad, Android, Mac ve Android TV'yi kapsar — aynı anda 10 cihaza kadar. Aşağıdan platformunuzu seçin ve saniyeler içinde bağlanın.",
+    "storeNote": "MistyVPN şimdi Google Play'de, App Store sürümü yakında geliyor. Zaten hesabınız var mı? <manage>Buradan yönetin</manage>.",
+    "trust": [
+      {
+        "title": "Ücretsiz başlayın",
+        "body": "Kredi kartı yok. Ücretsiz dakika kazanın ve tek kuruş ödemeden önce uygulamanın tamamını deneyin."
+      },
+      {
+        "title": "Parola yöneticisi ve 2FA dahil",
+        "body": "Tam ve şifreli bir parola yöneticisi ile kimlik doğrulayıcı her planda ücretsiz gelir."
+      },
+      {
+        "title": "14 gün para iade garantisi",
+        "body": "Premium'a risksiz geçin — 14 gün içinde tam iade, hiçbir soru sorulmaz."
+      }
+    ],
+    "ctaTitle": "MistyVPN'de yeni misiniz?",
+    "ctaBody": "Şimdi ücretsiz bir hesap oluşturun — uygulamayı yükler yüklemez aboneliğiniz ve ayarlarınız her cihazla eşitlenir.",
+    "ctaCreate": "Ücretsiz hesap oluştur",
+    "ctaPricing": "Fiyatları gör"
+  },
+  "featuresPage": {
+    "metaTitle": "Özellikler — Gizli Mod, Bölünmüş Tünelleme, kayıt tutmama ve daha fazlası",
+    "metaDescription": "MistyVPN'deki her şey: engelleri aşan Gizli Mod, bölünmüş tünelleme, kesin bir kayıt tutmama sözü, öldürme anahtarı, hızlı yayın ve her cihazda 40'tan fazla konum.",
+    "breadcrumb": "Özellikler",
+    "hero": {
+      "eyebrow": "Özellikler",
+      "title": "Önemli yerde güçlü. Kullanımı kolay.",
+      "subtitle": "Her plan — ücretsiz olan bile — tüm araç setiyle gelir. Eklenti yok, yıldızlı dipnot yok."
+    },
+    "stealth": {
+      "eyebrow": "Gizli Mod",
+      "title": "Kimsenin göremediği VPN, gerçek VPN'dir",
+      "body": "Ağlar, VPN'leri ele veren trafiklerini fark ederek engeller. Gizli Mod bağlantınızı sıradan HTTPS gibi gösterir, böylece MistyVPN diğer VPN'lerin yakalandığı yerlerden sıyrılır — halka açık Wi-Fi'de, işte ya da en katı ulusal güvenlik duvarlarının ardında.",
+      "note": "Varsayılan olarak açık. Ayarlanacak bir şey yok."
+    },
+    "split": {
+      "eyebrow": "Bölünmüş Tünelleme",
+      "title": "Tüneliniz, kurallarınız",
+      "body": "Yalnızca seçtiğiniz uygulamaları VPN üzerinden gönderin, geri kalanı normal bağlantınızda bırakın. Bankacılık uygulamanız gerçek konumunuzu görürken ve oyunlarınız gecikmesiz kalırken gizlice yayın izleyin.",
+      "note": "Uygulama ve siteleri, uygulama uygulama seçin."
+    },
+    "grid": [
+      {
+        "title": "Gizli Mod",
+        "body": "VPN'iniz, görünmez. MistyVPN bağlantınızı sıradan bir web gezintisi gibi gösterir — böylece diğer VPN'leri engelleyen ağlarda bile çalışmaya devam eder. Tek dokunuş, varsayılan olarak açık."
+      },
+      {
+        "title": "Bölünmüş Tünelleme",
+        "body": "Yalnızca istediğinizi koruyun. Seçtiğiniz uygulama ve siteleri VPN üzerinden gönderin, geri kalan her şeyi — bankanızı, yerel hizmetlerinizi, oyunlarınızı — tam yerel hızda tutun."
+      },
+      {
+        "title": "Kesinlikle kayıt tutmama",
+        "body": "Hiçbir şey saklamıyoruz. Ne gezinti geçmişi, ne trafik, ne IP adresi. Sızacak bir şey de, teslim edilecek bir şey de yok."
+      },
+      {
+        "title": "Cidden hızlı",
+        "body": "Modern protokoller ve 40'tan fazla optimize edilmiş konum, yoğun bir ağda bile takılmasız yayın, kesintisiz görüşme ve hızlı indirme demektir."
+      },
+      {
+        "title": "Sınır tanımadan yayın",
+        "body": "Dizilerinizi her yerden net HD kalitesinde izleyin. Bir konum seçin, bağlanın, oynata basın."
+      },
+      {
+        "title": "Öldürme anahtarı",
+        "body": "Bağlantı bir an için kesilirse MistyVPN trafiği anında engeller, böylece korumasız hiçbir şey dışarı sızmaz."
+      },
+      {
+        "title": "Parola Yöneticisi",
+        "body": "Doğrudan uygulamaya yerleşik, tam ve şifreli bir parola yöneticisi — girişleri kaydedin, güçlü parolalar oluşturun ve her yerde otomatik doldurun. Büyük VPN'ler bunu daha pahalı bir pakete kilitler ya da fazladan ücret alır. MistyVPN'de ise ücretsiz olarak dahildir."
+      },
+      {
+        "title": "Kimlik Doğrulayıcı (2FA)",
+        "body": "Yerleşik iki faktörlü kod üretici — Google Authenticator'ın yerini alır ve tek kullanımlık kodlarınızı parolalarınızla aynı güvenli, şifreli kasada tutar. Başka abonelik yok, eklenti yok. Ücretsiz dahil."
+      },
+      {
+        "title": "Tüm cihazlarınız",
+        "body": "iPhone, iPad, Android, Mac ve Android TV. Tek abonelik hepsini kapsar, aynı anda 10 cihaza kadar bağlanabilir."
+      },
+      {
+        "title": "Kendi dilinizde",
+        "body": "MistyVPN'i 16 dilde rahatça kullanın — ve uygulamayı hiç güncellemenize gerek kalmadan yenilerini ekliyoruz."
+      },
+      {
+        "title": "Otomatik mod",
+        "body": "Tek dokunuşla MistyVPN ağınız için en hızlı ve en güvenilir bağlantıyı otomatik seçer — ayarlanacak hiçbir şey yok."
+      },
+      {
+        "title": "40+ küresel konum",
+        "body": "Amerika kıtası, Avrupa, Orta Doğu ve Asya'daki sunucular üzerinden bağlanın — istediğiniz yerde görünün."
+      },
+      {
+        "title": "Otomatik bağlanma",
+        "body": "MistyVPN'in cihazınız açılır açılmaz bağlanmasını sağlayın, böylece otomatik olarak korunun — asla yanlışlıkla açıkta kalmayın."
+      },
+      {
+        "title": "Ücretsiz dakika kazanın",
+        "body": "Ücretsiz süreniz mi bitti? Ücretsiz dakikalarınızı istediğiniz zaman yükleyin — hesap ya da kredi kartı gerekmez."
+      }
+    ],
+    "underHood": {
+      "eyebrow": "Kaputun altında",
+      "title": "Yeni nesil koruma, zahmetsiz hale getirildi",
+      "body": "Gizli Mod, mevcut en gelişmiş sansür karşıtı teknolojiyle çalışır, böylece bağlantınız öne çıkmak yerine kalabalığa karışır. Otomatik mod, ağınız için en hızlı ve en güvenilir seçeneği sessizce seçer — siz yalnızca bağlana dokunun. Zekice kısmı gözünüzün önünden uzak durur."
+    },
+    "cta": {
+      "title": "Bugün ücretsiz deneyin",
+      "body": "Tüm araç seti, başlaması ücretsiz — kredi kartı yok."
+    }
+  },
+  "landing": {
+    "getFree": "MistyVPN'i ücretsiz edin",
+    "howItWorks": "Nasıl çalışır",
+    "faqEyebrow": "SSS",
+    "faqTitle": "Sık sorulan sorular",
+    "ctaTitle": "Siz hazır olduğunuzda hazır",
+    "ctaBody": "Başlaması ücretsiz, kredi kartı yok, kesin kayıt tutmama."
+  },
+  "loginPage": {
+    "metaTitle": "Giriş yap",
+    "metaDescription": "Aboneliğinizi, ödeme yönteminizi ve cihazlarınızı yönetmek için MistyVPN hesabınıza giriş yapın.",
+    "heading": "Tekrar hoş geldiniz",
+    "subtitle": "MistyVPN hesabınıza giriş yapın.",
+    "emailLabel": "E-posta",
+    "emailPlaceholder": "siz@ornek.com",
+    "passwordLabel": "Parola",
+    "passwordPlaceholder": "Parolanız",
+    "forgotLink": "Parolanızı mı unuttunuz?",
+    "show": "Göster",
+    "hide": "Gizle",
+    "submit": "Giriş yap",
+    "submitting": "Giriş yapılıyor…",
+    "noAccount": "MistyVPN'de yeni misiniz?",
+    "createAccount": "Hesap oluştur",
+    "errorGeneric": "Bir şeyler ters gitti",
+    "forgotNeedEmail": "Önce e-postanızı girin, sonra “Parolanızı mı unuttunuz”a dokunun.",
+    "forgotSent": "Eğer bu e-postaya bağlı bir hesap varsa, sıfırlama bağlantısı yola çıktı.",
+    "loading": "Yükleniyor…"
+  },
+  "noLogsPage": {
+    "metaTitle": "Kayıt Tutmama Politikası — neleri toplamıyoruz",
+    "metaDescription": "MistyVPN kesin kayıt tutmayan bir VPN'dir. Gezintinizi, trafiğinizi ya da IP adresinizi kaydetmiyoruz. Bunun tam olarak ne anlama geldiğini ve mimarinin bunu nasıl güvence altına aldığını burada bulun.",
+    "breadcrumb": "Kayıt Tutmama",
+    "hero": {
+      "eyebrow": "Gizlilik",
+      "title": "Kesin kayıt tutmama. Teslim edilecek hiçbir şey yok.",
+      "subtitle": "Verilerinizi korumanın en iyi yolu onları hiç toplamamaktır. {brand} öyle tasarlandı ki ne yaptığınıza dair hiçbir kayıt oluşmaz."
+    },
+    "points": [
+      {
+        "title": "Etkinlik kaydı yok",
+        "body": "Ziyaret ettiğiniz siteleri, kullandığınız uygulamaları ya da DNS sorgularınızı asla kaydetmeyiz. Gezintiniz bizim saklayacağımız bir şey değil."
+      },
+      {
+        "title": "Bağlantı kaydı yok",
+        "body": "Gerçek IP adresinizi ya da ne zaman bağlandığınıza dair bir zaman çizelgesini saklamıyoruz. Oluşturulacak bir profil yok."
+      },
+      {
+        "title": "Tasarım gereği güvence altında",
+        "body": "Çökme raporları; belirteçler, kimlik bilgileri ve IP'lerden gizlilik adına arındırılır ve sunucularımız trafiğinizi yönlendirmek için gerekli olmayan hiçbir şeyi tutmayacak şekilde yapılandırılır."
+      }
+    ],
+    "keep": {
+      "eyebrow": "Neleri saklıyoruz",
+      "title": "Hizmeti çalıştırmak için gereken asgari",
+      "body": "Kayıt tutmama politikası, hiçbir yerde hiçbir veri bulunmadığı anlamına gelmez — hiçbirinin etkinliği sizinle ilişkilendirmediği anlamına gelir.",
+      "p1": "Hesapları ve abonelikleri işletmek için yalnızca gerekli olanı saklarız: bir hesap tanımlayıcısı ve abonelik durumunuz (App Store ya da Google Play'den). Bunu trafiğinize dair hiçbir kayıtla ilişkilendirmeyiz, çünkü böyle bir kayıt yok.",
+      "p2": "Toplu, kimliği belirlenemeyen ölçümler (toplam sunucu yükü gibi) ağı hızlı tutmamıza yardımcı olur. Çökme raporları hassas her şeyden arındırılır — belirteçler, parolalar, anahtarlar ve IP adresleri asla gönderilmez.",
+      "p3": "Bu sayfa sade dilde bir özettir. Tüm ayrıntılar için <link>Gizlilik Politikasına</link> bakın."
+    },
+    "cta": {
+      "title": "İnanmakla yetinmeniz gerekmeyen gizlilik"
+    }
+  },
+  "pricingPage": {
+    "metaTitle": "Fiyatlandırma — başlaması ücretsiz, Premium aylık $2.50'den",
+    "metaDescription": "Basit MistyVPN fiyatlandırması. Ücretsiz başlayın ve ücretsiz dakika kazanın ya da 10 cihaza kadar sınırsız hız için aylık $2.50'den Premium'a geçin. Hepsini uygulamada yönetin.",
+    "breadcrumb": "Fiyatlandırma",
+    "eyebrow": "Fiyatlandırma",
+    "title": "Basit fiyatlandırma. Her şey dahil.",
+    "subtitle": "Ücretsiz başlayın, hazır olduğunuzda yükseltin. Her plan tüm özellik setini içerir — Gizli Mod, bölünmüş tünelleme ve 40'tan fazla konumun tamamı.",
+    "bestValue": "En iyi değer",
+    "pricesNote": "Fiyatlar USD cinsindendir, web'de güvenli ödemeyle ya da App Store / Google Play üzerinden faturalandırılır; vergiler ve yerel fiyatlandırma ödeme sırasında uygulanır. İstediğiniz zaman iptal edin.",
+    "faqEyebrow": "SSS",
+    "faqTitle": "Fiyatlandırma soruları"
+  },
+  "privacyPage": {
+    "metaTitle": "Gizlilik Politikası",
+    "metaDescription": "{name} verilerinizi nasıl işler: hesapları ve abonelikleri çalıştırmak için gereken asgariyi toplayan ve etkinliğinizi asla kaydetmeyen, kesin kayıt tutmayan bir VPN.",
+    "eyebrow": "Yasal",
+    "title": "Gizlilik Politikası",
+    "updatedDate": "15 Temmuz 2026",
+    "lastUpdated": "Son güncelleme: {date}",
+    "sections": [
+      {
+        "kind": "p",
+        "text": "{name} (\"{name}\", \"biz\" veya \"bizim\"), iPhone, iPad, Android, Mac ve Android TV'de kayıt tutmayan bir sanal özel ağ (VPN) hizmeti sunar. {name}, {registeredIn} ülkesinde kayıtlı bir şirket olan {legalName} markasının ticari adıdır (şirket no. {companyNumber}); kayıtlı ofisi {registeredOffice} adresindedir. {legalName}, bu Gizlilik Politikası kapsamında veri sorumlusudur. Bu politika neleri topladığımızı, bilerek <b>toplamadığımız</b> şeyleri, bilgileri nasıl kullanıp paylaştığımızı ve verileriniz üzerindeki haklarınızı açıklar. Uygulamalarımız, web sitemiz ve hesap ile abonelik sistemlerimiz için geçerlidir."
+      },
+      {
+        "kind": "p",
+        "text": "Yol gösterici ilkemiz basit: hiç toplamadığımız bir şeyi kaybedemez, sızdıramaz ya da teslim etmeye zorlanamayız. {name}'i mümkün olan en az miktarda kişisel veriyle çalışacak şekilde tasarladık."
+      },
+      {
+        "kind": "h2",
+        "text": "1. Kayıt tutmama taahhüdümüz"
+      },
+      {
+        "kind": "p",
+        "text": "{name}'e bağlıyken şunları <b>toplamaz</b>, izlemez veya saklamayız:"
+      },
+      {
+        "kind": "ul",
+        "items": [
+          "Gezinti geçmişiniz ya da kullandığınız web siteleri ve uygulamalar",
+          "Trafiğinizin içeriği",
+          "Bağlandığınız hedefler (IP'ler ya da alan adları)",
+          "DNS sorgularınız",
+          "Özgün (kaynak) IP adresiniz",
+          "Kimliğinize ya da etkinliğinize bağlanabilecek bağlantı zaman damgaları, oturum süresi veya bant genişliği kayıtları"
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "VPN etkinliğini bir kullanıcıyla eşleştirmek için kullanılabilecek hiçbir kayıt tutmayız. Bu kayıtlar var olmadığından, bir talebe yanıt olarak satacak, sızdıracak ya da ifşa edecek bir şeyimiz de yoktur."
+      },
+      {
+        "kind": "h2",
+        "text": "2. Topladığımız bilgiler"
+      },
+      {
+        "kind": "p",
+        "text": "Yalnızca hesapları işletmek, hizmeti sunup güvenceye almak, abonelikleri işlemek ve sorunları gidermek için gerekli olanı toplarız."
+      },
+      {
+        "kind": "h3",
+        "text": "Hesap verileri"
+      },
+      {
+        "kind": "p",
+        "text": "Bir hesap oluşturursanız <b>e-posta adresinizi</b> ve parolanızın karma (geri döndürülemez şekilde karıştırılmış) bir sürümünü saklarız. Her kullanıcıya ayrıca rastgele bir <b>hesap tanımlayıcısı</b> atanır. Ücretsiz katmanı hesap oluşturmadan kullanabilirsiniz."
+      },
+      {
+        "kind": "h3",
+        "text": "Cihaz verileri"
+      },
+      {
+        "kind": "p",
+        "text": "Her kurulum için rastgele bir <b>cihaz tanımlayıcısı</b> üretiriz. Bu, cihazlarınızı yönetmek, eşzamanlı bağlantı sınırlarını uygulamak ve ücretsiz dakikalarınızı sağlamak için kullanılır. Herhangi bir etkinlik kaydına bağlı değildir ve sizi kişisel olarak tanımlamaz."
+      },
+      {
+        "kind": "h3",
+        "text": "VPN kimlik bilgileri"
+      },
+      {
+        "kind": "p",
+        "text": "Bağlanmak için cihazınız cihaz başına VPN kimlik bilgileri (kullanıcı adı, parola ve protokol anahtarları gibi) tutar. Mümkün olduğunda bunlar sunucularımız yerine cihazınızın güvenli anahtar zincirinde saklanır ve giriş ya da çıkış yaptığınızda döndürülür."
+      },
+      {
+        "kind": "h3",
+        "text": "Abonelik ve ödeme durumu"
+      },
+      {
+        "kind": "p",
+        "text": "Abonelikler <b>Apple App Store</b>, <b>Google Play</b> ya da — web'de — <b>Stripe</b> üzerinden satın alınır ve yönetilir. Abonelik durumunuzun bir doğrulamasını (etkin, süresi dolmuş, iptal edilmiş) ve bir işlem tanımlayıcısını alırız. Tam kart numaranızı ya da banka bilgilerinizi <b>almaz</b> veya saklamayız; bunlar tamamen mağaza ya da ödeme işlemcisi tarafından yürütülür."
+      },
+      {
+        "kind": "h3",
+        "text": "Tanılama ve çökme verileri"
+      },
+      {
+        "kind": "p",
+        "text": "Yayınlanan uygulamalar, hataları bulup düzeltebilmemiz için <b>Sentry</b> aracılığıyla anonimleştirilmiş çökme ve hata raporları gönderir. Bu raporlar gizlilik adına arındırılır: gönderilmeden önce kimlik doğrulama belirteçlerini, VPN kimlik bilgilerini, parolaları, kullanıcı adlarını ve IP adreslerini çıkarırız ve raporlama, geliştirme sürümlerinde tamamen devre dışıdır."
+      },
+      {
+        "kind": "h3",
+        "text": "Toplu operasyonel veriler"
+      },
+      {
+        "kind": "p",
+        "text": "Ağı güvenilir ve hızlı tutmak için kimliği belirlenemeyen, toplu ölçümler — toplam sunucu yükü ve genel hizmet sağlığı gibi — kullanırız. Bu veriler bireysel kullanıcılara ya da etkinliklerine bağlı değildir."
+      },
+      {
+        "kind": "h3",
+        "text": "Geçici bağlantı verileri"
+      },
+      {
+        "kind": "p",
+        "text": "Bir hesapta izin verilen cihaz sayısını uygulamak için sunucularımız, bir bağlantı etkinken bağlantının ağ adresini rastgele cihaz tanımlayıcınızla birlikte kısa süreliğine işler. Bu bilgi geçicidir, yalnızca oturumun ömrü boyunca (kabaca birkaç dakika) tutulur ve herhangi bir etkinlik kaydına yazılmaz ya da sonrasında saklanmaz."
+      },
+      {
+        "kind": "h3",
+        "text": "Destek iletişimleri"
+      },
+      {
+        "kind": "p",
+        "text": "Bizimle iletişime geçerseniz (örneğin e-posta ya da sohbetle), size yardımcı olabilmek ve desteğimizi iyileştirebilmek için bu yazışmanın içeriğini saklarız."
+      },
+      {
+        "kind": "h3",
+        "text": "Web sitesi verileri"
+      },
+      {
+        "kind": "p",
+        "text": "Web sitemiz, siteyi çalıştırmak, tercihlerinizi hatırlamak ve web ödemelerini işlemek için gereken temel çerezleri ve gizliliğe saygılı analizleri kullanır. Aşağıdaki <b>Çerezler</b> bölümüne bakın."
+      },
+      {
+        "kind": "h2",
+        "text": "3. Toplamadığımız bilgiler"
+      },
+      {
+        "kind": "p",
+        "text": "Açık olmak gerekirse, {name} şunları <b>toplamaz</b> ya da saklamaz: gezinti veya trafik içeriğiniz, VPN üzerinden eriştiğiniz site ve hizmetler, DNS sorgularınız, gerçek IP adresiniz ya da etkinliğinizi size geri bağlayan herhangi bir kayıt. Kişisel verilerinizi satmayız ve verilerinizi reklam ya da profilleme için kullanmayız."
+      },
+      {
+        "kind": "h2",
+        "text": "4. Bilgilerinizi nasıl kullanırız"
+      },
+      {
+        "kind": "ul",
+        "items": [
+          "Hesabınızı ve cihazlarınızı oluşturmak ve yönetmek için",
+          "VPN hizmetini sunmak, sürdürmek ve güvenceye almak için",
+          "Abonelikleri, ücretsiz dakikaları ve faturalama durumunu doğrulamak ve yönetmek için",
+          "Kötüye kullanımı önlemek ve bağlantı sınırlarını uygulamak için",
+          "Çökmeleri tanılamak ve güvenilirlik ile performansı iyileştirmek için",
+          "Destek taleplerinize yanıt vermek için",
+          "Bizim için geçerli olan yasal yükümlülüklere uymak için"
+        ]
+      },
+      {
+        "kind": "h2",
+        "text": "5. İşleme için yasal dayanaklar (GDPR)"
+      },
+      {
+        "kind": "p",
+        "text": "Avrupa Ekonomik Alanı'nda ya da Birleşik Krallık'ta iseniz, verilerinizi şu yasal dayanaklarla işleriz: <b>bir sözleşmenin ifası</b> (kaydolduğunuz hizmeti sunmak için), <b>meşru menfaatler</b> (ağımızı güvenceye almak, kötüye kullanımı önlemek ve ürünü iyileştirmek için, haklarınızla dengelenerek), <b>rıza</b> (gerekli olduğunda, dilediğiniz zaman geri çekebilirsiniz) ve <b>yasal yükümlülük</b> (yasanın gerektirdiği durumlarda)."
+      },
+      {
+        "kind": "h2",
+        "text": "6. Ödemeler"
+      },
+      {
+        "kind": "p",
+        "text": "Uygulama içi abonelikler, Apple App Store ve Google Play tarafından kendi şart ve gizlilik politikaları kapsamında işlenir. Web abonelikleri Stripe tarafından işlenir. Girdiğiniz ödeme bilgileri bu sağlayıcılar tarafından yürütülür — {name} tam kart ya da banka bilgilerinizi asla görmez. Bir aboneliği mağaza hesabınızdan ya da hesap portalından istediğiniz zaman görüntüleyebilir, değiştirebilir veya iptal edebilirsiniz."
+      },
+      {
+        "kind": "h2",
+        "text": "7. Bilgileri nasıl paylaşırız"
+      },
+      {
+        "kind": "p",
+        "text": "Kişisel verilerinizi satmayız. Yukarıdaki sınırlı veriyi yalnızca {name}'i çalıştırmamıza yardımcı olan hizmet sağlayıcılarla ve yalnızca gerektiği kadar paylaşırız:"
+      },
+      {
+        "kind": "ul",
+        "items": [
+          "<b>Apple ve Google</b> — uygulama içi abonelikleri doğrulamak ve yönetmek için.",
+          "<b>Stripe</b> — web abonelik ödemelerini işlemek için.",
+          "<b>Sentry</b> — gizlilik adına arındırılmış çökme ve hata raporlarını almak için.",
+          "<b>Altyapı ve barındırma sağlayıcıları</b> — sunucularımızı ve arka ucumuzu işletmek için."
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "Bu sağlayıcılar gizlilik ve veri koruma yükümlülükleriyle bağlıdır ve bilgileri yalnızca bize hizmetlerini sunmak için kullanabilir. Geçerli yasal süreç gerektirdiğinde bilgi ifşa edebiliriz — ancak hiçbir etkinlik kaydı tutmadığımız için, bağlıyken ne yaptığınıza dair kayıt üretemeyiz."
+      },
+      {
+        "kind": "h2",
+        "text": "8. Uluslararası veri aktarımları"
+      },
+      {
+        "kind": "p",
+        "text": "{name}, ihtiyacınız olan her yerden bağlanabilmeniz için birçok ülkede sunucu işletir. Hesap ve abonelik verileri kendi ülkeniz dışındaki ülkelerde işlenebilir. Kişisel verileri AEA ya da Birleşik Krallık dışına aktardığımızda, Avrupa Komisyonu'nun Standart Sözleşme Maddeleri gibi uygun güvencelere dayanırız."
+      },
+      {
+        "kind": "h2",
+        "text": "9. Veri saklama"
+      },
+      {
+        "kind": "p",
+        "text": "Hesap ve abonelik verilerini yalnızca hesabınız etkin olduğu sürece ya da yasal, vergisel veya muhasebe yükümlülüklerini yerine getirmek için gerektiği kadar saklarız. Hesabınızı sildiğinizde, ilişkili hesap verilerinizi kaldırırız. Hiçbir etkinlik kaydı tutmadığımız için, saklanacak ya da silinecek gezinti geçmişi yoktur. Geçici bağlantı verileri, oturumunuz sona erdiğinde atılır."
+      },
+      {
+        "kind": "h2",
+        "text": "10. Güvenlik"
+      },
+      {
+        "kind": "p",
+        "text": "Verilerinizi aktarım sırasında şifreleme, karma parolalar, kapsamlı erişim denetimleri ve sistemlerimize kimlerin erişebileceğine dair katı sınırlarla koruruz. Hiçbir aktarım ya da saklama yöntemi tamamen güvenli değildir, ancak asgari veri tutmak başlı başına en güçlü güvencemizdir: açığa çıkacak çok az şey vardır. Kişisel verilerinizi etkileyen bir ihlal olursa, yasanın gerektirdiği şekilde etkilenen kullanıcıları ve düzenleyicileri bilgilendiririz."
+      },
+      {
+        "kind": "h2",
+        "text": "11. Haklarınız"
+      },
+      {
+        "kind": "h3",
+        "text": "AEA / Birleşik Krallık (GDPR)"
+      },
+      {
+        "kind": "p",
+        "text": "Kişisel verilerinize erişme, düzeltme, silme ya da dışa aktarma; belirli işlemeleri kısıtlama veya bunlara itiraz etme; rızanızı geri çekme; ve yerel veri koruma otoritenize şikâyette bulunma hakkına sahipsiniz."
+      },
+      {
+        "kind": "h3",
+        "text": "Kaliforniya (CCPA/CPRA)"
+      },
+      {
+        "kind": "p",
+        "text": "Hangi kişisel bilgileri topladığımızı bilme, silinmesini talep etme, düzeltme ve satışına ya da paylaşımına itiraz etme hakkına sahipsiniz. Kişisel bilgilerinizi <b>satmaz</b> ya da paylaşmayız ve haklarınızı kullandığınız için sizi asla ayrımcılığa uğratmayız."
+      },
+      {
+        "kind": "p",
+        "text": "Hesabınızı ve verilerini uygulamada istediğiniz zaman doğrudan silebilirsiniz. Diğer her türlü talep için bize <mail>{email}</mail> adresinden ulaşın; geçerli yasanın gerektirdiği süreler içinde yanıt vereceğiz."
+      },
+      {
+        "kind": "h2",
+        "text": "12. Çocuklar"
+      },
+      {
+        "kind": "p",
+        "text": "{name} yetişkinlere yöneliktir ve çocuklara yönelik değildir. 18 yaşından (ya da geçerli olduğu yerlerde 13 yaşından) küçük hiç kimseden bilerek kişisel veri toplamayız. Bir çocuğun bize kişisel veri sağladığını düşünüyorsanız bize ulaşın, biz de silelim."
+      },
+      {
+        "kind": "h2",
+        "text": "13. Çerezler"
+      },
+      {
+        "kind": "p",
+        "text": "Web sitemiz, siteyi çalıştırmak ve ödemeleri işlemek için gereken <b>temel çerezleri</b> ve sitenin nasıl kullanıldığını anlamak için gizliliğe saygılı analizleri kullanır. Reklam ya da siteler arası izleme çerezleri kullanmayız. Çerezleri tarayıcı ayarlarınızdan kontrol edebilirsiniz."
+      },
+      {
+        "kind": "h2",
+        "text": "14. Üçüncü taraf bağlantıları"
+      },
+      {
+        "kind": "p",
+        "text": "Sitemiz ve uygulamalarımız, kontrol etmediğimiz üçüncü taraf web sitelerine ya da hizmetlerine bağlantı verebilir. Bu politika onları kapsamaz; lütfen kendi gizlilik politikalarını inceleyin."
+      },
+      {
+        "kind": "h2",
+        "text": "15. Bu politikadaki değişiklikler"
+      },
+      {
+        "kind": "p",
+        "text": "Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişiklikler yukarıdaki \"Son güncelleme\" tarihine yansıtılır ve uygun olduğunda uygulamada ya da e-postayla duyurulur. Bir güncellemeden sonra {name}'i kullanmaya devam etmeniz, gözden geçirilmiş politikayı kabul ettiğiniz anlamına gelir."
+      },
+      {
+        "kind": "h2",
+        "text": "16. Bize ulaşın"
+      },
+      {
+        "kind": "p",
+        "text": "Gizlilikle ilgili sorular, talepler ya da şikâyetler mi var? Bize <mail>{email}</mail> adresinden e-posta gönderin, size seve seve yardımcı olalım."
+      }
+    ]
+  },
+  "registerPage": {
+    "metaTitle": "Hesabınızı oluşturun",
+    "metaDescription": "MistyVPN hesabınızı oluşturun. Ücretsiz başlayın, ardından sınırsız, tam hızlı erişimin kilidini açmak için abone olun.",
+    "heading": "Hesabınızı oluşturun",
+    "subtitle": "Ücretsiz başlayın, ardından her şeyin kilidini açmak için abone olun.",
+    "emailLabel": "E-posta",
+    "emailPlaceholder": "siz@ornek.com",
+    "passwordLabel": "Parola",
+    "passwordPlaceholder": "En az 8 karakter",
+    "show": "Göster",
+    "hide": "Gizle",
+    "submit": "Hesap oluştur",
+    "submitting": "Oluşturuluyor…",
+    "haveAccount": "Zaten hesabınız var mı?",
+    "signIn": "Giriş yap",
+    "errorGeneric": "Bir şeyler ters gitti",
+    "loading": "Yükleniyor…"
+  },
+  "resetPasswordPage": {
+    "metaTitle": "Parolayı sıfırla",
+    "metaDescription": "MistyVPN hesap parolanızı sıfırlayın.",
+    "verifying": "Bağlantınız doğrulanıyor…",
+    "noToken": "Sıfırlama belirteci bulunamadı.",
+    "invalidLink": "Geçersiz bağlantı.",
+    "serverUnreachable": "Sunucuya ulaşılamadı. Tekrar deneyin.",
+    "requestNewLink": "Yeni bir sıfırlama bağlantısı iste",
+    "formHeading": "Yeni parola belirle",
+    "formSubtitle": "Güçlü bir parola seçin (en az 8 karakter).",
+    "newPasswordPlaceholder": "Yeni parola",
+    "confirmPasswordPlaceholder": "Parolayı onayla",
+    "show": "Göster",
+    "hide": "Gizle",
+    "passwordsDontMatch": "Parolalar eşleşmiyor.",
+    "passwordTooShort": "Parola en az 8 karakter olmalıdır.",
+    "somethingWrong": "Bir şeyler ters gitti.",
+    "submit": "Parolayı Güncelle",
+    "submitting": "Güncelleniyor…",
+    "successTitle": "Parola güncellendi!",
+    "successBody": "Artık MistyVPN uygulamasında yeni parolanızla giriş yapabilirsiniz."
+  },
+  "routerPage": {
+    "metaTitle": "Yönlendiriciler için VPN — DD-WRT, Asus, OpenWRT ve daha fazlası (OpenVPN)",
+    "metaDescription": "MistyVPN'i yönlendiricinize OpenVPN ile kurun ve evinizdeki her cihazı koruyun — TV'ler, konsollar, akıllı ev cihazları. DD-WRT, Asus, OpenWRT, Tomato, pfSense ve GL.iNet için adım adım kılavuzlar.",
+    "crumbDownload": "İndir",
+    "crumbRouter": "Yönlendirici VPN",
+    "eyebrow": "Yönlendirici VPN",
+    "h1": "MistyVPN'i yönlendiricinize kurun",
+    "lede": "MistyVPN'i yönlendiricinize bir kez kurun ve arkasındaki her cihaz korunsun — kendi başına bir VPN uygulaması çalıştıramayan akıllı TV'ler, konsollar, yayın kutuları ve akıllı ev cihazları. MistyVPN <strong>OpenVPN</strong> destekler, dolayısıyla OpenVPN istemcisi olan her yönlendirici çalışır.",
+    "udpProfile": "UDP profili",
+    "tcpProfile": "TCP profili",
+    "serverList": "Sunucu listesi",
+    "beforeYouStart": "Başlamadan önce",
+    "chooseYourRouter": "Yönlendiricinizi seçin",
+    "chooseYourRouterBody": "Adım adım talimatlar için yönlendiricinizi ya da donanım yazılımınızı seçin.",
+    "viewGuide": "Kılavuzu gör →"
+  },
+  "serversPage": {
+    "metaTitle": "Sunucu Listesi — her MistyVPN konumu ve protokolü",
+    "metaDescription": "Eksiksiz MistyVPN sunucu dizini: her konum, sunucu ana bilgisayar adı ve desteklediği protokoller — WireGuard, VLESS (Reality), Hysteria2, OpenVPN ve ShadowTLS. Bunları uygulama, yönlendirici ya da manuel kurulum için kullanın.",
+    "breadcrumbSupport": "Destek",
+    "breadcrumbServerList": "Sunucu Listesi",
+    "eyebrow": "Sunucu Listesi",
+    "title": "Her konum, her protokol",
+    "intro": "{countries} ülkede {locations} konum. Her MistyVPN sunucusu birebir aynı şekilde hazırlanır, dolayısıyla <strong>tüm protokoller tüm sunucularda çalışır</strong>. Uygulamadan, bir yönlendiriciden ya da manuel kurulumdan bağlanmak için aşağıdaki ana bilgisayar adını kullanın — ağınıza uygun protokolü seçin.",
+    "colLocation": "Konum",
+    "colHostname": "Sunucu ana bilgisayar adı",
+    "protocolSupported": "{protocol} destekleniyor",
+    "footerNote": "WireGuard, VLESS (Reality) ve Hysteria2 MistyVPN uygulamalarında çalışır; OpenVPN (UDP/TCP) ayrıca yönlendiriciler ve manuel yapılandırma için de çalışır. Gizli obüskasyon, bir ağın ihtiyaç duyduğu yerde otomatik olarak uygulanır. Canlı sunucu sağlığı ve yükü yakında bu sayfaya geliyor."
+  },
+  "supportPage": {
+    "metaTitle": "Yardım ve Destek — hızlıca bir insanla konuşun",
+    "metaDescription": "MistyVPN ile ilgili yardım alın. Bize WhatsApp'tan mesaj atın ya da support@mistyvpn.com adresine e-posta gönderin — gerçek insanlar, hızlı yanıtlar, 7/24. Hızlı çözümler ve sık sorulan soruların yanıtları.",
+    "breadcrumb": "Destek",
+    "hero": {
+      "eyebrow": "Destek",
+      "title": "Yardım için buradayız — günün her saati.",
+      "subtitle": "Gerçek insanlar, hızlı yanıtlar. WhatsApp'tan ya da e-postayla bize ulaşın, sizi yeniden bağlayalım."
+    },
+    "whatsapp": {
+      "title": "WhatsApp'ta sohbet edin",
+      "body": "Bize ulaşmanın en hızlı yolu. Telefonunuzda WhatsApp'ı ya da bilgisayarınızda WhatsApp Web'i açar.",
+      "button": "WhatsApp'tan bize mesaj atın"
+    },
+    "email": {
+      "title": "Bize e-posta gönderin",
+      "body": "E-postayı mı tercih edersiniz? İstediğiniz zaman yazın, birkaç saat içinde gerçek bir yanıtla dönelim — bilet kuyruğu derdi yok.",
+      "button": "Destek e-postası"
+    },
+    "trust": [
+      {
+        "label": "2 saatten kısa sürede yanıt",
+        "sub": "tipik yanıt süresi"
+      },
+      {
+        "label": "Gerçek insanlar, bot yok",
+        "sub": "insan desteği"
+      },
+      {
+        "label": "7/24 hizmette",
+        "sub": "her gün"
+      },
+      {
+        "label": "Kesin kayıt tutmama",
+        "sub": "etkinliğinizi göremeyiz"
+      }
+    ],
+    "quickFixes": {
+      "eyebrow": "Bize ulaşmadan önce",
+      "title": "60 saniyelik çözümler",
+      "body": "Sorunların çoğu bunlardan biriyle çözülür. Denedikten sonra hâlâ takıldıysanız? Bir mesaj uzaktayız.",
+      "items": [
+        "Uygulamayı en son sürüme güncelleyin.",
+        "Protokolü Otomatik'e ayarlayın ve yakın bir sunucu seçin.",
+        "Gizli Mod'un etkin olduğundan emin olun.",
+        "VPN'i kapatıp açın ya da uygulamayı yeniden başlatın.",
+        "VPN bağlı değilken internetinizin çalıştığını kontrol edin."
+      ]
+    },
+    "faq": {
+      "eyebrow": "Yanıtlar",
+      "title": "Sık sorulan sorular"
+    },
+    "faqs": [
+      {
+        "q": "Bağlanamıyorum — önce neyi denemeliyim?",
+        "a": "Protokolü Otomatik'e alın (Ayarlar → Protokol), yakın bir sunucu seçin ve Gizli Mod'un açık olduğundan emin olun. Katı ağlarda Gizli, bağlantınızı normal HTTPS gibi göstererek geçmesini sağlar. Yine de bağlanmıyorsa bize mesaj atın, dakikalar içinde hallederiz."
+      },
+      {
+        "q": "Aboneliğimi nasıl yönetirim ya da iptal ederim?",
+        "a": "Abonelikler Apple ID'niz ya da Google hesabınız üzerinden faturalandırılır. Cihazınızın hesap ayarlarından istediğiniz zaman yönetin ya da iptal edin — Apple: Ayarlar → adınız → Abonelikler; Google: Play Store → Abonelikler. Erişiminiz ödenen dönemin sonuna kadar sürer."
+      },
+      {
+        "q": "İadeler nasıl işler?",
+        "a": "Faturalama Apple ve Google tarafından yürütüldüğü için iadeler onlar üzerinden yapılır. Süreçte size seve seve yardımcı oluruz — sadece bize ulaşın, en hızlı yolu gösterelim."
+      },
+      {
+        "q": "Ne yaptığımın kaydını tutuyor musunuz?",
+        "a": "Hayır. MistyVPN kesinlikle kayıt tutmaz — gezintinizi, trafiğinizi ya da etkinliğinizi kaydetmeyiz. Hiç toplamadığımız bir şeyi kelimenin tam anlamıyla teslim edemeyiz. Tüm ayrıntılar için kayıt tutmama sözümüze bakın."
+      },
+      {
+        "q": "Yayın için hangi sunucu en iyisi?",
+        "a": "İçeriğini istediğiniz ülkedeki bir sunucuyu seçip bağlanın. Bir hizmet açılmazsa aynı ülkede başka bir şehri deneyin ya da Gizli Mod'u değiştirin. Güncel en iyi seçim için bize sorun — biz takip ediyoruz."
+      },
+      {
+        "q": "Kısıtlı ya da halka açık Wi-Fi'de çalışır mı?",
+        "a": "Evet. Gizli Mod tam da bunun için tasarlandı — kafeler, oteller, havaalanları, ofisler ve yoğun filtrelenen ağlar. Varsayılan olarak açıktır, ayarlanacak hiçbir şey yoktur."
+      }
+    ],
+    "closing": {
+      "title": "Hâlâ takıldınız mı? Birlikte çözelim.",
+      "body": "Bize bir mesaj gönderin, gerçek bir kişi bağlanmanıza yardım etsin — genellikle iki saatten kısa sürede.",
+      "button": "Bize WhatsApp'tan yazın"
+    }
+  },
+  "termsPage": {
+    "metaTitle": "Hizmet Şartları",
+    "metaDescription": "{name} kullanımınızı düzenleyen şartlar.",
+    "eyebrow": "Yasal",
+    "h1": "Hizmet Şartları",
+    "lastUpdated": "Son güncelleme: {date}",
+    "lastUpdatedDate": "9 Haziran 2026",
+    "intro": "Bu Şartlar, {registeredIn} ülkesinde kayıtlı bir şirket olan {company} (şirket no. {number}) tarafından işletilen ve kayıtlı ofisi {office} adresinde bulunan {name} hizmetini kullanımınızı düzenler. Hizmeti kullanarak bu Şartları kabul etmiş olursunuz.",
+    "sections": [
+      {
+        "heading": "Kabul edilebilir kullanım",
+        "paragraphs": [
+          "{name}, gizliliğinizi ve güvenliğinizi korumak için tasarlanmıştır. Hizmeti yasa dışı etkinlik için, başkalarına zarar vermek için, spam ya da kötü amaçlı yazılım göndermek için veya fikrî mülkiyet haklarını ihlal etmek için kullanmamayı kabul edersiniz. VPN kullanımıyla ilgili yerel kurallar da dahil olmak üzere size uygulanan yasalara uymaktan siz sorumlusunuz."
+        ]
+      },
+      {
+        "heading": "Hesaplar",
+        "paragraphs": [
+          "Hesap kimlik bilgilerinizi güvende tutmaktan siz sorumlusunuz. Ücretsiz erişim sınırlı olarak sağlanır; ücretli abonelikler tam erişimin kilidini açar."
+        ]
+      },
+      {
+        "heading": "Abonelikler ve faturalama",
+        "paragraphs": [
+          "Abonelikler bu web sitesinde güvenli ödeme yoluyla kartla ya da Apple App Store ve Google Play üzerinden satılır. Mağaza satın alımlarında faturalama, yenilemeler ve iadeler bu mağazaların politikalarına tabidir — mağaza hesabınızdan yönetin ya da iptal edin. Bu web sitesinde yapılan satın alımlarda, hesap sayfanızdan istediğiniz zaman yönetin ya da iptal edin."
+        ]
+      },
+      {
+        "heading": "14 gün para iade garantisi",
+        "paragraphs": [
+          "Her ücretli plan 14 gün para iade garantisi kapsamındadır. İlk satın alımınızdan sonraki 14 gün içinde memnun kalmazsanız, tam iade için bize {email} adresinden ulaşın — hiçbir soru sorulmaz. Bu web sitesinde yapılan satın alımlarda, iadeyi doğrudan orijinal ödeme yöntemine yaparız. Apple App Store ya da Google Play üzerinden yapılan satın alımlarda iadeler ilgili mağazanın iade süreciyle işlenir; bu konuda size yardımcı oluruz. Garanti, ilk satın alımınız için geçerlidir, sonraki yenilemeler için geçerli değildir."
+        ]
+      },
+      {
+        "heading": "Hizmet erişilebilirliği",
+        "paragraphs": [
+          "Hizmeti güvenilir tutmak için çalışıyoruz ancak kesintisiz erişimi garanti etmiyoruz. Ağ koşulları, üçüncü taraf kısıtlamaları ve bakım çalışmaları erişilebilirliği etkileyebilir."
+        ]
+      },
+      {
+        "heading": "Sorumluluk reddi ve sorumluluğun sınırlandırılması",
+        "paragraphs": [
+          "Hizmet, yasaların izin verdiği ölçüde herhangi bir garanti olmaksızın \"olduğu gibi\" sunulur. Yasaların izin verdiği azami ölçüde, {name} hizmeti kullanımınızdan doğan dolaylı ya da sonuç olarak ortaya çıkan zararlardan sorumlu değildir."
+        ]
+      },
+      {
+        "heading": "Bu şartlardaki değişiklikler",
+        "paragraphs": [
+          "Bu Şartları zaman zaman güncelleyebiliriz. Değişiklikler yürürlüğe girdikten sonra kullanmaya devam etmeniz kabul anlamına gelir."
+        ]
+      }
+    ],
+    "contact": {
+      "heading": "İletişim",
+      "body": "Bu Şartlarla ilgili sorularınız mı var? <link>{email}</link> adresine e-posta gönderin."
+    }
+  },
+  "tvLoginPage": {
+    "metaTitle": "TV Girişi",
+    "metaDescription": "MistyVPN TV uygulamanızı yetkilendirmek için giriş yapın.",
+    "brandSubtitle": "TV Girişi",
+    "stepEnterCode": "Kodu Girin",
+    "stepSignIn": "Giriş Yap",
+    "codeHeading": "TV Kodunu Girin",
+    "codeSubtitle": "TV ekranınızda görünen kodu girin ya da otomatik doldurmak için QR kodunu tarayın.",
+    "codeLabel": "TV'nizdeki kod",
+    "codePlaceholder": "örn. FJLX8JYJ",
+    "codeTooShort": "Lütfen TV'nizde görünen kodu girin.",
+    "continue": "Devam et",
+    "loginHeading": "Giriş Yap",
+    "loginSubtitle": "<hl>{code}</hl> kodunu yetkilendirmek için MistyVPN hesabınızla giriş yapın.",
+    "emailLabel": "E-posta",
+    "emailPlaceholder": "siz@ornek.com",
+    "passwordLabel": "Parola",
+    "passwordPlaceholder": "••••••••",
+    "show": "Göster",
+    "hide": "Gizle",
+    "invalidCredentials": "Geçersiz e-posta ya da parola",
+    "codeExpiredInvalid": "Bu kodun süresi dolmuş ya da geçersiz. TV'nize dönüp yeni bir kod alın.",
+    "authorizeFailed": "TV yetkilendirilemedi. Lütfen tekrar deneyin.",
+    "serverUnreachable": "Sunucuya ulaşılamadı. Bağlantınızı kontrol edip tekrar deneyin.",
+    "signInAuthorize": "Giriş Yap ve TV'yi Yetkilendir",
+    "signingIn": "Giriş yapılıyor…",
+    "authorizingTv": "TV yetkilendiriliyor…",
+    "changeCode": "← Kodu değiştir",
+    "successTitle": "TV Girişi Yapıldı!",
+    "successBody": "TV'niz birkaç saniye içinde otomatik olarak güncellenecek. Bu sayfayı kapatabilirsiniz.",
+    "expiredTitle": "Kodun Süresi Doldu",
+    "expiredBodyFallback": "TV'nize dönüp yeni bir kod alın.",
+    "tryAgain": "Tekrar dene",
+    "footer": "mistyvpn.com · Tüm cihazlar için güvenli VPN"
+  },
+  "unblockPage": {
+    "metaTitle": "Her şeyin, her yerin engelini kaldırın — siteler, uygulamalar ve yayın",
+    "metaDescription": "MistyVPN'in Gizli Modu, engelleri aşıp sizi açık internete ulaştırır — siteleriniz, uygulamalarınız, dizileriniz HD kalitesinde — en kısıtlı ağlarda bile. Ücretsiz başlayın.",
+    "crumb": "Engel kaldır",
+    "eyebrow": "Engel kaldır",
+    "h1": "Tüm interneti geri kazanın",
+    "lede": "İşte, kampüste, otel Wi-Fi'sinde ya da ulusal bir güvenlik duvarının ardında mı engellendiniz? MistyVPN'in Gizli Modu, istediğiniz sitelere, uygulamalara ve dizilere bağlı kalmanızı sağlar — gizli ve tam hızda.",
+    "bullets": [
+      "Gizli Mod, diğer VPN'lerin aşamadığı engelleri geçer",
+      "Dizilerinizi her yerden net HD kalitesinde izleyin",
+      "Bölünmüş tünelleme bankacılığı ve yerel uygulamaları hızlı tutar",
+      "40+ konum, zamanla yenileri ekleniyor",
+      "Kesin kayıt tutmama — etkinliğiniz size ait kalır",
+      "Ücretsiz başlayın, kredi kartı yok"
+    ],
+    "sections": [
+      {
+        "h2": "Neden bir şeyler engellenir — ve MistyVPN bunu nasıl çözer",
+        "body": [
+          "Kısıtlı ağlar yalnızca adresleri engellemez; birçoğu VPN trafiğini fark ettiği anda tespit edip kapatır. Bu yüzden pek çok VPN işte, okulda, otellerde ya da sansürlü bölgelerde çalışmayı bırakır.",
+          "MistyVPN'in Gizli Modu bağlantınızı sıradan, gündelik bir gezinti gibi gösterir. İşaretlenecek belirgin bir VPN imzası yoktur — böylece diğer uygulamaların kesildiği yerde bağlı kalırsınız."
+        ]
+      },
+      {
+        "h2": "Takılmayan yayın",
+        "body": [
+          "Bir VPN, yalnızca hızlıysa yayın için işe yarar. MistyVPN, 40'tan fazla optimize edilmiş konumda yalın, modern teknolojiyle çalışır, böylece yüksek çözünürlüklü video takılmak yerine akıcı kalır.",
+          "Bir konum seçin, bağlanın ve oynata basın — gerçekten bu kadar basit."
+        ]
+      },
+      {
+        "h2": "Bölünmüş tünellemeyle hızlı kalın",
+        "body": [
+          "Her şeyi VPN üzerinden göndermek zorunda değilsiniz. Bölünmüş tünellemeyle yalnızca yayın ve gezintinizi MistyVPN üzerinden yönlendirebilir, banka uygulamanızı, yerel hizmetlerinizi ve oyunlarınızı normal bağlantınızda tutabilirsiniz — tam hız, ödünsüz."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "MistyVPN, diğer VPN'lerin engellendiği yerlerde çalışır mı?",
+        "a": "Evet. Gizli Mod bağlantınızı sıradan web trafiği gibi gösterir, böylece MistyVPN, tipik VPN'lerin tespit edilip engellendiği kısıtlı ağlarda — işyerleri, okullar, oteller ve yoğun sansürlü bölgeler — çalışmaya devam eder."
+      },
+      {
+        "q": "HD kalitesinde yayın izleyebilir miyim?",
+        "a": "Evet. MistyVPN, 40'tan fazla konumda hızlı, yüksek çözünürlüklü yayın için ayarlanmıştır ve bölünmüş tünelleme, yalnızca yayın uygulamalarınızı tam hızda VPN üzerinden yönlendirmenizi sağlar."
+      },
+      {
+        "q": "Diğer uygulamalarımı yavaşlatır mı?",
+        "a": "İstemezseniz hayır. Bölünmüş tünelleme, bankacılığı, yerel siteleri ve oyunları normal bağlantınızda tutmanızı, yalnızca seçtiğiniz uygulamaların VPN'i kullanmasını sağlar."
+      },
+      {
+        "q": "Ücretsiz deneme yolu var mı?",
+        "a": "Evet — ücretsiz başlayın ve ücretsiz dakika kazanın, hesap ya da kredi kartı gerekmez."
+      }
+    ]
+  }
+}

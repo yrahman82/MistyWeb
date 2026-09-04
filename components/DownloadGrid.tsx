@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { iconMap } from "@/components/Icons";
 import { Button } from "@/components/ui";
 import { platforms } from "@/lib/site";
@@ -19,6 +20,7 @@ const OS_TO_PLATFORM: Record<string, string[]> = {
 };
 
 export default function DownloadGrid() {
+  const t = useTranslations("downloadGrid");
   // null until mounted → SSR and first client render match (no highlight), then we detect.
   const [os, setOs] = useState<string | null>(null);
 
@@ -64,7 +66,7 @@ export default function DownloadGrid() {
                 <div className="text-xs text-slate-400">
                   {p.store}
                   {isMine ? (
-                    <span className="ml-1.5 font-semibold text-brand">· Your device</span>
+                    <span className="ml-1.5 font-semibold text-brand">· {t("yourDevice")}</span>
                   ) : null}
                 </div>
               </div>
@@ -72,7 +74,7 @@ export default function DownloadGrid() {
             <div className="flex w-full shrink-0 flex-col items-stretch gap-1.5 sm:w-auto sm:items-end">
               {internal ? (
                 <Button href={p.href} className="h-10 w-full justify-center px-5 sm:w-auto">
-                  Setup guide
+                  {t("setupGuide")}
                 </Button>
               ) : live ? (
                 <>
@@ -82,7 +84,7 @@ export default function DownloadGrid() {
                     className="h-10 w-full justify-center px-5 sm:w-auto"
                     onClick={() => trackDownload(p.key)}
                   >
-                    Get it
+                    {t("getIt")}
                   </Button>
                   {/* Android + Android TV also offer the SAME universal APK direct (no Google Play — for
                       sideload / China). Tracked apart per surface (android-apk vs tv-apk). A proper
@@ -96,13 +98,13 @@ export default function DownloadGrid() {
                       className="inline-flex h-9 w-full items-center justify-center gap-1.5 rounded-full border border-brand/40 bg-brand/10 px-4 text-xs font-semibold text-brand transition-colors hover:border-brand/70 hover:bg-brand/20 sm:w-auto"
                     >
                       <DlIcon className="h-4 w-4" />
-                      Download APK
+                      {t("downloadApk")}
                     </a>
                   ) : null}
                 </>
               ) : (
                 <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-center text-xs font-medium text-slate-300 sm:text-left">
-                  Coming soon
+                  {t("comingSoon")}
                 </span>
               )}
             </div>

@@ -1,16 +1,39 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useEffect, useState } from "react";
-import { nav, site } from "@/lib/site";
+import { site } from "@/lib/site";
 import { auth } from "@/lib/api";
 import { Button } from "@/components/ui";
 import { MenuIcon, CloseIcon } from "@/components/Icons";
 import { Logo } from "@/components/Logo";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+
+// Nav structure lives in code (hrefs never change); labels come from the `nav` message catalog.
+type NavEntry = { key: string; href: string; children?: { key: string; href: string }[] };
+const navItems: NavEntry[] = [
+  { key: "home", href: "/" },
+  { key: "features", href: "/features" },
+  { key: "pricing", href: "/pricing" },
+  { key: "compare", href: "/compare" },
+  { key: "noLogs", href: "/no-logs" },
+  { key: "download", href: "/download" },
+  {
+    key: "support",
+    href: "/support",
+    children: [
+      { key: "contactUs", href: "/support" },
+      { key: "serverList", href: "/servers" },
+    ],
+  },
+];
 
 export default function Header() {
+  const t = useTranslations("nav");
   const [open, setOpen] = useState(false);
+  // usePathname from i18n/navigation returns the path WITHOUT the locale prefix,
+  // so these comparisons against "/features" etc. work in every locale.
   const pathname = usePathname();
   const signInHref = `/login?next=${encodeURIComponent(pathname || "/")}`;
 
@@ -41,9 +64,9 @@ export default function Header() {
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-6 lg:flex">
-          {nav.map((item) =>
+          {navItems.map((item) =>
             item.children ? (
-              <div key={item.label} className="group relative">
+              <div key={item.key} className="group relative">
                 <Link
                   href={item.href}
                   aria-current={isActive(item.href) ? "page" : undefined}
@@ -51,7 +74,7 @@ export default function Header() {
                     isActive(item.href) ? "text-brand" : "text-slate-300 hover:text-white"
                   }`}
                 >
-                  {item.label}
+                  {t(item.key)}
                   <svg className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
                     <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clipRule="evenodd" />
                   </svg>
@@ -61,14 +84,14 @@ export default function Header() {
                   <div className="min-w-[11rem] rounded-xl border border-white/10 bg-ink py-1.5 shadow-xl shadow-black/40">
                     {item.children.map((c) => (
                       <Link
-                        key={c.label}
+                        key={c.key}
                         href={c.href}
                         aria-current={isActive(c.href) ? "page" : undefined}
                         className={`block px-4 py-2 text-sm transition-colors hover:bg-white/5 ${
                           isActive(c.href) ? "text-brand" : "text-slate-300 hover:text-white"
                         }`}
                       >
-                        {c.label}
+                        {t(c.key)}
                       </Link>
                     ))}
                   </div>
@@ -76,20 +99,21 @@ export default function Header() {
               </div>
             ) : (
               <Link
-                key={item.href}
+                key={item.key}
                 href={item.href}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 className={`text-sm font-medium transition-colors ${
                   isActive(item.href) ? "text-brand" : "text-slate-300 hover:text-white"
                 }`}
               >
-                {item.label}
+                {t(item.key)}
               </Link>
             )
           )}
         </div>
 
         <div className="hidden items-center gap-5 lg:flex">
+          <LanguageSwitcher />
           {loggedIn ? (
             <Link
               href="/account"
@@ -98,18 +122,18 @@ export default function Header() {
                 isActive("/account") ? "text-brand" : "text-slate-300 hover:text-white"
               }`}
             >
-              Account
+              {t("account")}
             </Link>
           ) : (
             <Link
               href={signInHref}
               className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
             >
-              Sign in <span className="text-slate-500">/</span> Sign up
+              {t("signInUp")}
             </Link>
           )}
           <Button href="/download" variant="primary" className="h-10 px-5">
-            Get MistyVPN
+            {t("getApp")}
           </Button>
         </div>
 
@@ -129,37 +153,37 @@ export default function Header() {
       {open ? (
         <div className="border-t border-white/10 bg-ink md:hidden">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-5 py-4 sm:px-6">
-            {nav.map((item) =>
+            {navItems.map((item) =>
               item.children ? (
-                <div key={item.label}>
+                <div key={item.key}>
                   <Link
                     href={item.href}
                     className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 hover:bg-white/5"
                     onClick={() => setOpen(false)}
                   >
-                    {item.label}
+                    {t(item.key)}
                   </Link>
                   <div className="ml-3 flex flex-col border-l border-white/10 pl-3">
                     {item.children.map((c) => (
                       <Link
-                        key={c.label}
+                        key={c.key}
                         href={c.href}
                         className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 hover:bg-white/5"
                         onClick={() => setOpen(false)}
                       >
-                        {c.label}
+                        {t(c.key)}
                       </Link>
                     ))}
                   </div>
                 </div>
               ) : (
                 <Link
-                  key={item.href}
+                  key={item.key}
                   href={item.href}
                   className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 hover:bg-white/5"
                   onClick={() => setOpen(false)}
                 >
-                  {item.label}
+                  {t(item.key)}
                 </Link>
               )
             )}
@@ -168,10 +192,13 @@ export default function Header() {
               className="rounded-lg px-3 py-3 text-base font-medium text-slate-200 hover:bg-white/5"
               onClick={() => setOpen(false)}
             >
-              {loggedIn ? "Account" : "Sign in / Sign up"}
+              {loggedIn ? t("account") : t("signInUp")}
             </Link>
+            <div className="px-3 py-3">
+              <LanguageSwitcher />
+            </div>
             <Button href="/download" variant="primary" className="mt-3 w-full">
-              Get MistyVPN
+              {t("getApp")}
             </Button>
           </div>
         </div>

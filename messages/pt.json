@@ -1,0 +1,1292 @@
+{
+  "meta": {
+    "tagline": "Seguro. Privado. Rápido.",
+    "description": "A MistyVPN mantém você privado e sem bloqueios em todos os dispositivos. Tecnologia furtiva que vence bloqueios, split tunneling, uma promessa rígida de não guardar registros e mais de 40 localidades pelo mundo — começando de graça.",
+    "keywords": "VPN, VPN sem logs, VPN anticensura, VPN para desbloquear sites, VPN para burlar firewall, VPN para streaming, WireGuard, VLESS Reality, Hysteria2, VPN resistente à censura"
+  },
+  "nav": {
+    "home": "Início",
+    "features": "Recursos",
+    "pricing": "Preços",
+    "compare": "Comparar",
+    "noLogs": "Sem Logs",
+    "download": "Baixar",
+    "support": "Suporte",
+    "contactUs": "Fale Conosco",
+    "serverList": "Lista de Servidores",
+    "getApp": "Baixar a MistyVPN",
+    "signInUp": "Entrar / Criar conta",
+    "account": "Conta",
+    "language": "Idioma",
+    "breadcrumb": "Trilha de navegação",
+    "footer": {
+      "product": "Produto",
+      "trust": "Confiança",
+      "getAppTitle": "Baixe o app",
+      "compareVpns": "Comparar VPNs",
+      "unblock": "Desbloqueie tudo",
+      "noLogsPromise": "Promessa sem logs",
+      "privacy": "Política de Privacidade",
+      "terms": "Termos de Serviço",
+      "helpSupport": "Ajuda e Suporte",
+      "iphone": "iPhone e iPad",
+      "android": "Android",
+      "mac": "Mac",
+      "windows": "Windows",
+      "tv": "Android TV",
+      "rights": "Todos os direitos reservados.",
+      "blurb": "Uma VPN sem logs feita para funcionar onde as outras são bloqueadas.",
+      "legal": "{name} é um nome comercial de {legalName}, uma empresa registrada em {registeredIn}{companyNo}. Sede registrada: {office}."
+    }
+  },
+  "common": {
+    "cta": {
+      "getFree": "Baixe a MistyVPN grátis",
+      "seePlans": "Ver planos",
+      "exploreFeatures": "Conheça todos os recursos",
+      "compareVpns": "Comparar VPNs"
+    },
+    "moneyBack": "Garantia de reembolso de 14 dias",
+    "stats": [
+      {
+        "value": "40+",
+        "label": "Localidades no mundo"
+      },
+      {
+        "value": "0",
+        "label": "Registros guardados"
+      },
+      {
+        "value": "10",
+        "label": "Dispositivos ao mesmo tempo"
+      },
+      {
+        "value": "16",
+        "label": "Idiomas"
+      }
+    ],
+    "features": [
+      {
+        "title": "Modo Furtivo",
+        "body": "Sua VPN, invisível. A MistyVPN disfarça sua conexão para que ela pareça navegação comum na web — então continua funcionando até em redes que bloqueiam outras VPNs. Um toque, ativado por padrão."
+      },
+      {
+        "title": "Split Tunneling",
+        "body": "Proteja só o que você quiser. Direcione apps e sites escolhidos pela VPN e mantenha o resto — seu banco, serviços locais, jogos — na velocidade total da sua rede."
+      },
+      {
+        "title": "Rígido no-logs",
+        "body": "Não guardamos nada. Nem histórico de navegação, nem tráfego, nem endereço IP. Não há nada para vazar nem nada para entregar."
+      },
+      {
+        "title": "Muito rápida",
+        "body": "Protocolos modernos e mais de 40 localidades otimizadas garantem streaming sem travamentos, chamadas sem lag e downloads rápidos — mesmo em uma rede cheia."
+      },
+      {
+        "title": "Streaming sem fronteiras",
+        "body": "Assista suas séries de qualquer lugar em HD nítido. Escolha uma localidade, toque em conectar e dê play."
+      },
+      {
+        "title": "Kill switch",
+        "body": "Se a conexão cair, a MistyVPN bloqueia o tráfego na hora, para que nada escape sem proteção."
+      },
+      {
+        "title": "Gerenciador de Senhas",
+        "body": "Um gerenciador de senhas completo e criptografado, embutido no app — salve logins, gere senhas fortes e preencha tudo automaticamente. As grandes VPNs deixam isso preso em um plano mais caro ou cobram à parte. Com a MistyVPN, está simplesmente incluído, de graça."
+      },
+      {
+        "title": "Autenticador (2FA)",
+        "body": "Gerador de códigos de dois fatores embutido — substitua o Google Authenticator e guarde seus códigos de uso único no mesmo cofre seguro e criptografado das suas senhas. Sem outra assinatura, sem complemento. Incluído de graça."
+      },
+      {
+        "title": "Todos os seus dispositivos",
+        "body": "iPhone, iPad, Android, Mac e Android TV. Uma assinatura cobre todos eles, com até 10 conectados ao mesmo tempo."
+      },
+      {
+        "title": "No seu idioma",
+        "body": "Use a MistyVPN com conforto em 16 idiomas — e adicionamos mais sem que você precise atualizar o app."
+      },
+      {
+        "title": "Modo automático",
+        "body": "Um toque e a MistyVPN escolhe automaticamente a conexão mais rápida e confiável para a sua rede — não há nada para configurar."
+      },
+      {
+        "title": "Mais de 40 localidades globais",
+        "body": "Conecte-se por servidores nas Américas, Europa, Oriente Médio e Ásia — apareça onde você precisar estar."
+      },
+      {
+        "title": "Conexão automática",
+        "body": "Deixe a MistyVPN conectar assim que o dispositivo liga, para você ficar protegido automaticamente — sem nunca se expor por acidente."
+      },
+      {
+        "title": "Ganhe minutos grátis",
+        "body": "Ficou sem tempo grátis? Recarregue seus minutos grátis quando quiser — sem conta e sem cartão de crédito."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Baixe e crie sua conta",
+        "body": "Pegue o app para o seu dispositivo e comece de graça em menos de um minuto — sem cartão de crédito."
+      },
+      {
+        "title": "Toque em conectar",
+        "body": "Escolha uma localidade ou deixe o Automático escolher a mais rápida. O Modo Furtivo cuida do resto."
+      },
+      {
+        "title": "Navegue com liberdade",
+        "body": "Faça streaming, navegue e ligue com privacidade — protegido, sem bloqueios e rápido."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "A MistyVPN é mesmo no-logs?",
+        "a": "Sim. A MistyVPN não registra sua navegação, seu tráfego nem seu endereço IP. Simplesmente não há nada armazenado que pudesse ser vazado ou entregue."
+      },
+      {
+        "q": "Funciona onde outras VPNs são bloqueadas?",
+        "a": "Sim. O Modo Furtivo disfarça sua conexão como tráfego comum da web, então a MistyVPN continua funcionando em redes muito restritas, onde as VPNs comuns são detectadas e bloqueadas."
+      },
+      {
+        "q": "Em quantos dispositivos posso usar?",
+        "a": "Uma assinatura cobre todos os seus dispositivos — iPhone, Android, Mac e Android TV — com até 10 conectados ao mesmo tempo."
+      },
+      {
+        "q": "Dá para fazer streaming com a MistyVPN?",
+        "a": "Com certeza. A MistyVPN é otimizada para streaming rápido em HD, e o split tunneling deixa você direcionar só os apps de streaming pela VPN em velocidade total."
+      },
+      {
+        "q": "Existe uma versão gratuita?",
+        "a": "Sim. Comece de graça e ganhe minutos grátis conforme usa — sem conta nem cartão de crédito. Faça upgrade para o Premium quando quiser e tenha acesso ilimitado e em velocidade total."
+      },
+      {
+        "q": "Como faço para pagar?",
+        "a": "Pague com segurança por cartão na web, ou dentro do app pela App Store ou pelo Google Play. Cancele quando quiser — aqui na sua conta ou na conta da sua loja."
+      },
+      {
+        "q": "Tem garantia de reembolso?",
+        "a": "Sim — todo plano pago tem garantia de reembolso de 14 dias, sem perguntas. Não gostou nas duas primeiras semanas? Escreva pra gente e devolvemos o valor integral. Compras feitas pela App Store ou pelo Google Play são reembolsadas pelo processo padrão da loja."
+      },
+      {
+        "q": "A MistyVPN inclui um gerenciador de senhas?",
+        "a": "Sim — um gerenciador de senhas completo e criptografado e um autenticador de dois fatores embutido estão incluídos de graça em todos os planos, até no gratuito. A maioria das outras VPNs ou não oferece isso ou cobra à parte em um plano mais caro."
+      }
+    ]
+  },
+  "home": {
+    "metaTitle": "MistyVPN — Privada, sem bloqueios e rápida em todos os dispositivos",
+    "hero": {
+      "eyebrow": "Comece grátis · Sem cartão",
+      "titleLead": "Internet privada que",
+      "titleHighlight": "realmente funciona",
+      "titleTrail": ", em qualquer lugar.",
+      "subtitle": "A MistyVPN mantém você privado e sem bloqueios em todos os dispositivos — com o Modo Furtivo que passa por bloqueios, velocidade altíssima em mais de 40 localidades e uma promessa rígida de não guardar registros."
+    },
+    "stealth": {
+      "eyebrow": "Modo Furtivo",
+      "title": "Invisível por design",
+      "body": "A maioria das VPNs é bloqueada porque a rede consegue <em>ver</em> que são uma VPN. A MistyVPN não pode ser identificada assim — o Modo Furtivo faz sua conexão parecer navegação comum, então continua funcionando onde tudo o mais falha.",
+      "note": "Ativado por padrão. Um toque para conectar."
+    },
+    "split": {
+      "eyebrow": "Split Tunneling",
+      "title": "Proteja só o que você quiser",
+      "body": "Direcione seu streaming e sua navegação pela VPN enquanto o app do banco, sites locais e jogos ficam na sua conexão normal — velocidade total, sem abrir mão de nada.",
+      "note": "Você decide, app por app."
+    },
+    "features": {
+      "eyebrow": "Tudo incluído",
+      "title": "Um app. Tudo o que você precisa.",
+      "body": "Sem complementos, sem venda casada. Todo plano vem com o kit completo."
+    },
+    "vault": {
+      "eyebrow": "Mais do que uma VPN",
+      "title": "Gerenciador de Senhas e Autenticador — incluídos de graça",
+      "body": "Um gerenciador de senhas completo e criptografado e um autenticador de dois fatores embutido, tudo dentro do app. Salve logins, preencha automaticamente, gere senhas fortes e guarde seus códigos 2FA — tudo protegido de ponta a ponta. As grandes VPNs cobram à parte ou deixam isso preso em um plano mais caro. Com a MistyVPN, está simplesmente incluído, em todos os planos.",
+      "pmTitle": "Gerenciador de Senhas",
+      "pmBody": "Cofre criptografado, preenchimento automático e gerador de senhas fortes em todos os seus dispositivos.",
+      "otpTitle": "Autenticador (2FA)",
+      "otpBody": "Códigos de uso único embutidos — substitua o Google Authenticator, guardados no mesmo cofre seguro."
+    },
+    "how": {
+      "eyebrow": "Como funciona",
+      "title": "Protegido em três toques"
+    },
+    "compare": {
+      "title": "Como a MistyVPN se compara?",
+      "body": "Um plano gratuito, tecnologia antibloqueio de última geração e Premium por menos que as grandes marcas. Veja lado a lado."
+    },
+    "faq": {
+      "eyebrow": "Perguntas frequentes",
+      "title": "Boas perguntas"
+    },
+    "ctaBand": {
+      "title": "Sua internet privada começa agora.",
+      "body": "Grátis para experimentar, sem cartão, nada registrado. O Premium tem garantia de reembolso de 14 dias — conecte-se em menos de um minuto."
+    }
+  },
+  "accountPage": {
+    "metaTitle": "Conta",
+    "metaDescription": "Gerencie sua assinatura, forma de pagamento e configurações da conta MistyVPN.",
+    "loading": "Carregando…",
+    "loadingAccount": "Carregando sua conta…",
+    "back": "← Voltar",
+    "backToAccount": "← Voltar para a conta",
+    "platformWeb": "Web",
+    "payHeading": "Como você prefere pagar?",
+    "payCardWallets": "Cartão e Apple / Google Pay",
+    "payCrypto": "Cripto — sem precisar de cartão",
+    "cryptoNetworks": "em TRON · Ethereum · BSC",
+    "errStartCheckout": "Não foi possível iniciar o checkout",
+    "checkoutBackChooseMethod": "← Escolher outra forma de pagamento",
+    "checkoutBackToPlans": "← Voltar aos planos",
+    "checkoutChangePlan": "← Trocar de plano",
+    "preparingCheckout": "Preparando o checkout seguro…",
+    "confirmHeading": "Confirme sua assinatura",
+    "confirmChooseNew": "Escolha uma nova forma de pagamento — você confirma a cobrança em seguida.",
+    "labelPlan": "Plano",
+    "labelPayment": "Pagamento",
+    "premiumName": "MistyVPN Premium",
+    "confirmChargeNotice": "Vamos cobrar <b>{method}</b> agora e automaticamente a cada renovação.",
+    "changeMethod": "Trocar forma de pagamento",
+    "confirmSubscribe": "Confirmar e assinar",
+    "processing": "Processando…",
+    "errComplete": "Não foi possível concluir sua assinatura",
+    "getPremium": "Assinar o Premium",
+    "seePlansBenefits": "Ver planos e benefícios →",
+    "savedChargeHint": "Vamos cobrar seu {method} salvo — você confirma antes de qualquer cobrança.",
+    "accountHeading": "Conta",
+    "signOut": "Sair",
+    "sectionSubscription": "Assinatura",
+    "sectionPaymentMethod": "Forma de Pagamento",
+    "sectionPaidWithCrypto": "Pagou com cripto?",
+    "sectionOpenvpnCredentials": "Credenciais OpenVPN",
+    "sectionAccount": "Conta",
+    "activating": "Ativando sua assinatura… isso leva alguns segundos.",
+    "premiumActive": "Premium Ativo",
+    "wontRenew": "Não será renovado — acesso até {date}",
+    "renewsOn": "Renova automaticamente em {date}",
+    "unlimitedAccess": "Acesso ilimitado a todos os servidores",
+    "allSetTitle": "Tudo pronto — baixe o app",
+    "allSetBody": "Baixe a MistyVPN no iPhone, Android, Mac e Android TV e entre com o e-mail e a senha da sua conta.",
+    "downloadApp": "Baixar o app",
+    "resumeSub": "Retomar Assinatura",
+    "cancelSub": "Cancelar Assinatura",
+    "confirmCancelSub": "Cancelar sua assinatura? Você mantém o acesso até o fim do período atual.",
+    "errCancel": "Não foi possível cancelar",
+    "errResume": "Não foi possível retomar",
+    "subViaApple": "Você assinou pela App Store no seu dispositivo Apple.",
+    "subViaGoogle": "Você assinou pelo Google Play no seu dispositivo Android.",
+    "subViaStore": "Você assinou por uma loja de apps.",
+    "manageWhereBought": "Para alterar ou cancelar, gerencie onde você comprou — não dá para cancelar aqui.",
+    "manageInStore": "Gerenciar em {store} ↗",
+    "paymentIssue": "Problema no pagamento",
+    "pastDueBody": "Não conseguimos renovar sua assinatura MistyVPN Premium. Estamos tentando de novo automaticamente — ou renove agora para restaurar o acesso na hora.",
+    "labelMethod": "Forma",
+    "labelCard": "Cartão",
+    "renewNow": "Renovar agora",
+    "retrying": "Tentando de novo…",
+    "errChargeFailed": "Não conseguimos cobrar seu cartão salvo — atualize-o abaixo e tente Renovar de novo.",
+    "errRenew": "Não foi possível renovar",
+    "cardFailingHint": "Se seu cartão continuar falhando, atualize-o abaixo e tentaremos de novo com o novo cartão.",
+    "freePlan": "Plano Gratuito",
+    "freePlanBody": "Faça upgrade para acesso ilimitado e em velocidade total em todos os seus dispositivos.",
+    "upgradePremium": "Fazer upgrade para o Premium",
+    "cryptoSectionBody": "Enviou um pagamento em cripto que ainda não apareceu? Cole o hash da transação e verificamos na blockchain e ativamos sua assinatura.",
+    "openvpnBody": "Para conectar clientes OpenVPN de terceiros (roteadores, o app OpenVPN, etc.). Você não precisa disso para o app MistyVPN — basta entrar nele com o e-mail e a senha da sua conta.",
+    "labelUsername": "Usuário",
+    "labelPasswordCred": "Senha",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "savedMethodFallback": "sua forma de pagamento salva",
+    "noMethodOnFile": "Nenhuma forma de pagamento cadastrada",
+    "change": "Alterar",
+    "addCard": "Adicionar cartão",
+    "labelEmail": "E-mail",
+    "changePassword": "Alterar Senha",
+    "currentPasswordPlaceholder": "Senha atual",
+    "newPasswordPlaceholder": "Nova senha (mín. 8 caracteres)",
+    "cancel": "Cancelar",
+    "updatePassword": "Atualizar Senha",
+    "saving": "Salvando…",
+    "passwordUpdated": "Senha atualizada.",
+    "errUpdatePassword": "Não foi possível atualizar a senha",
+    "deleteAccount": "Excluir Conta",
+    "deleting": "Excluindo…",
+    "confirmDelete": "Excluir sua conta permanentemente? Isso não pode ser desfeito.",
+    "errDeleteAccount": "Não foi possível excluir a conta",
+    "errLoadAccount": "Não foi possível carregar sua conta. Verifique sua conexão e tente de novo."
+  },
+  "comparePage": {
+    "metaTitle": "MistyVPN vs NordVPN, ExpressVPN e PureVPN",
+    "metaDescription": "Veja como a MistyVPN se compara à NordVPN, ExpressVPN e PureVPN — um plano gratuito, gerenciador de senhas e autenticador embutidos, tecnologia antibloqueio de última geração e Premium por menos. Comparativo honesto lado a lado.",
+    "breadcrumb": "Comparar",
+    "hero": {
+      "eyebrow": "Comparar",
+      "title": "MistyVPN vs as grandes marcas",
+      "subtitle": "Um plano gratuito de verdade, tecnologia antibloqueio de última geração e Premium por menos que a maioria. Aqui está o comparativo honesto lado a lado."
+    },
+    "table": {
+      "featureHeader": "Recurso",
+      "rows": [
+        {
+          "label": "Preço mensal",
+          "values": [
+            "$3.99",
+            "~$12.99",
+            "~$12.99",
+            "~$11.95"
+          ]
+        },
+        {
+          "label": "Plano gratuito",
+          "values": [
+            "Sim — ganhe minutos grátis",
+            "Não",
+            "Não",
+            "Não"
+          ]
+        },
+        {
+          "label": "Melhor tarifa sem contrato de 1–2 anos",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "label": "Gerenciador de senhas incluído de graça",
+          "values": [
+            "Sim — todos os planos",
+            "Plano superior",
+            "Plano superior",
+            "Complemento"
+          ]
+        },
+        {
+          "label": "Autenticador embutido (códigos 2FA)",
+          "values": [
+            "",
+            "Plano superior",
+            "Plano superior",
+            ""
+          ]
+        },
+        {
+          "label": "Anticensura de última geração (Reality / Hysteria2)",
+          "values": [
+            "",
+            "Limitado",
+            "Limitado",
+            "Limitado"
+          ]
+        },
+        {
+          "label": "Funciona na China e em firewalls rígidos",
+          "values": [
+            "Feita para isso",
+            "Limitado",
+            "Limitado",
+            "Limitado"
+          ]
+        },
+        {
+          "label": "Modo Furtivo (vence bloqueios)",
+          "values": [
+            "",
+            "",
+            "",
+            "Limitado"
+          ]
+        },
+        {
+          "label": "Split tunneling em todas as plataformas",
+          "values": [
+            "",
+            "Limitado",
+            "Limitado",
+            "Limitado"
+          ]
+        },
+        {
+          "label": "Kill switch",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "label": "Rígido no-logs",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "label": "Dispositivos ao mesmo tempo",
+          "values": [
+            "10",
+            "10",
+            "8",
+            "10"
+          ]
+        },
+        {
+          "label": "Idiomas do app",
+          "values": [
+            "16",
+            "varia",
+            "varia",
+            "varia"
+          ]
+        }
+      ],
+      "footnote": "Os preços mostrados são as tarifas padrão <strong>mês a mês</strong> — os preços de destaque que os concorrentes anunciam normalmente exigem um compromisso de 1 a 2 anos. Os detalhes dos concorrentes refletem os recursos e preços divulgados publicamente em agosto de 2026 e podem mudar — confira no próprio site de cada provedor. As comparações são fornecidas de boa-fé, como orientação geral."
+    },
+    "switch": {
+      "eyebrow": "Por que as pessoas mudam",
+      "title": "O que realmente diferencia a MistyVPN",
+      "cards": {
+        "freeTier": {
+          "title": "Um plano gratuito de verdade",
+          "body": "A maioria das VPNs premium não tem nenhuma opção gratuita. A MistyVPN deixa você começar de graça e ganhar minutos grátis — sem cartão, sem compromisso."
+        },
+        "vault": {
+          "title": "Gerenciador de senhas + 2FA, de graça",
+          "body": "Um gerenciador de senhas completo e criptografado e um autenticador embutido vêm de graça em todos os planos. NordVPN, ExpressVPN e PureVPN deixam isso preso em um plano mais caro ou vendem como complementos pagos."
+        },
+        "antiBlock": {
+          "title": "Feita para vencer bloqueios",
+          "body": "O Modo Furtivo usa tecnologia anticensura de última geração (Reality + Hysteria2), então a MistyVPN continua funcionando na China e atrás de firewalls rígidos, onde as VPNs comuns são detectadas e bloqueadas."
+        },
+        "price": {
+          "title": "Uma fração do preço",
+          "body": "Mês a mês, a MistyVPN custa {monthlyPrice} — contra cerca de $12–13 que as grandes marcas cobram sem contrato longo. No plano anual, sai por apenas {annualPerMonth}."
+        }
+      }
+    },
+    "ctaBand": {
+      "title": "Veja a diferença você mesmo",
+      "body": "Grátis para começar — sem cartão, nada registrado. O Premium tem garantia de reembolso de 14 dias."
+    }
+  },
+  "deleteAccountPage": {
+    "metaTitle": "Exclua Sua Conta e Dados",
+    "metaDescription": "Como excluir sua conta {name} e os dados associados, o que é removido e o que é mantido.",
+    "eyebrow": "Conta",
+    "h1": "Exclua sua conta {name} e seus dados",
+    "lastUpdated": "Última atualização: {date}",
+    "lastUpdatedDate": "15 de julho de 2026",
+    "intro": "Esta página explica como solicitar a exclusão da sua conta {name} e dos dados associados a ela. A {name} é desenvolvida e operada pela {name}.",
+    "inApp": {
+      "heading": "Exclua sua conta de dentro do app",
+      "intro": "A forma mais rápida de excluir permanentemente sua conta e seus dados é direto no app {name}:",
+      "step1": "Abra o app {name} no seu dispositivo.",
+      "step2": "Vá em <b>Conta</b>.",
+      "step3": "Toque em <b>Excluir Conta</b>.",
+      "step4": "Confirme quando solicitado. Sua conta e os dados associados são excluídos imediatamente.",
+      "note": "Isso está disponível no iPhone, iPad, Android, Mac e Android TV."
+    },
+    "email": {
+      "heading": "Ou solicite a exclusão por e-mail",
+      "p1": "Se você não conseguir usar a opção no app, solicite a exclusão por e-mail. Do endereço associado à sua conta, envie-nos uma mensagem e verificaremos sua solicitação e excluiremos sua conta em até <b>30 dias</b>.",
+      "linkText": "Envie um e-mail para {email} para excluir sua conta"
+    },
+    "deleted": {
+      "heading": "Quais dados são excluídos",
+      "intro": "Quando sua conta é excluída, removemos os dados pessoais vinculados a ela, incluindo:",
+      "items": [
+        "Seu endereço de e-mail e identificador de conta",
+        "Sua senha com hash",
+        "Suas credenciais de VPN e registros de dispositivos",
+        "O vínculo entre sua conta e qualquer assinatura"
+      ],
+      "note": "Como a {name} é um serviço rigorosamente sem logs, não guardamos nenhum registro de histórico de navegação, tráfego, DNS ou atividade de IP para começar — então não há esse tipo de dado para excluir."
+    },
+    "retained": {
+      "heading": "O que pode ser mantido",
+      "billing": "<b>Registros de cobrança e transações:</b> quando exigido para cumprir obrigações legais, fiscais ou contábeis, podemos manter registros mínimos de transação pelo período exigido por lei (normalmente até 7 anos). Eles são guardados apenas quando necessário para conformidade.",
+      "store": "<b>Assinaturas de loja:</b> assinaturas compradas pela Apple App Store ou pelo Google Play são gerenciadas por essas lojas. Excluir sua conta não cancela uma assinatura de loja ativa — cancele-a na sua conta Apple ou Google para interromper cobranças futuras."
+    },
+    "questions": {
+      "heading": "Dúvidas",
+      "text": "Para qualquer coisa relacionada à sua conta ou aos seus dados, fale conosco em <link>{email}</link>. Consulte nossa <privacy>Política de Privacidade</privacy> para todos os detalhes sobre como tratamos os dados."
+    }
+  },
+  "downloadGrid": {
+    "yourDevice": "Seu dispositivo",
+    "setupGuide": "Guia de configuração",
+    "getIt": "Baixar",
+    "downloadApk": "Baixar APK",
+    "comingSoon": "Em breve"
+  },
+  "downloadPage": {
+    "metaTitle": "Baixe a MistyVPN — iPhone, Android, Mac e Android TV",
+    "metaDescription": "Tenha a MistyVPN em todos os seus dispositivos. Uma conta cobre iPhone, iPad, Android, Mac e Android TV — comece de graça, sem cartão, com garantia de reembolso de 14 dias no Premium.",
+    "breadcrumb": "Baixar",
+    "eyebrow": "Baixar",
+    "title": "Tenha a MistyVPN em todos os dispositivos",
+    "subtitle": "Uma conta cobre iPhone, iPad, Android, Mac e Android TV — até 10 dispositivos ao mesmo tempo. Escolha sua plataforma abaixo e conecte-se em segundos.",
+    "storeNote": "A MistyVPN já está no Google Play, e a versão para App Store está chegando em breve. Já tem uma conta? <manage>Gerencie-a aqui</manage>.",
+    "trust": [
+      {
+        "title": "Comece grátis",
+        "body": "Sem cartão de crédito. Ganhe minutos grátis e experimente o app completo antes de pagar um centavo."
+      },
+      {
+        "title": "Gerenciador de senhas e 2FA incluídos",
+        "body": "Um gerenciador de senhas completo e criptografado e um autenticador vêm de graça em todos os planos."
+      },
+      {
+        "title": "Garantia de reembolso de 14 dias",
+        "body": "Assine o Premium sem risco — reembolso integral em até 14 dias, sem perguntas."
+      }
+    ],
+    "ctaTitle": "Novo na MistyVPN?",
+    "ctaBody": "Crie uma conta gratuita agora — sua assinatura e configurações sincronizam com todos os dispositivos assim que você instalar o app.",
+    "ctaCreate": "Criar conta gratuita",
+    "ctaPricing": "Ver preços"
+  },
+  "featuresPage": {
+    "metaTitle": "Recursos — Modo Furtivo, Split Tunneling, no-logs e mais",
+    "metaDescription": "Tudo na MistyVPN: Modo Furtivo que vence bloqueios, split tunneling, uma promessa rígida de não guardar registros, kill switch, streaming rápido e mais de 40 localidades em todos os dispositivos.",
+    "breadcrumb": "Recursos",
+    "hero": {
+      "eyebrow": "Recursos",
+      "title": "Poderosa onde importa. Simples de usar.",
+      "subtitle": "Todo plano — até o gratuito — vem com o kit completo. Sem complementos, sem asteriscos."
+    },
+    "stealth": {
+      "eyebrow": "Modo Furtivo",
+      "title": "Uma VPN que ninguém enxerga é que é VPN",
+      "body": "As redes bloqueiam VPNs detectando seu tráfego característico. O Modo Furtivo disfarça sua conexão como HTTPS do dia a dia, então a MistyVPN passa despercebida onde outras VPNs são pegas — em Wi-Fi público, no trabalho ou atrás dos firewalls nacionais mais rígidos.",
+      "note": "Ativado por padrão. Nada para configurar."
+    },
+    "split": {
+      "eyebrow": "Split Tunneling",
+      "title": "Seu túnel, suas regras",
+      "body": "Direcione pela VPN só os apps que você escolher e deixe o resto na sua conexão normal. Faça streaming com privacidade enquanto o app do banco vê sua localização real e seus jogos ficam sem lag.",
+      "note": "Escolha apps e sites, um por um."
+    },
+    "grid": [
+      {
+        "title": "Modo Furtivo",
+        "body": "Sua VPN, invisível. A MistyVPN disfarça sua conexão para que ela pareça navegação comum na web — então continua funcionando até em redes que bloqueiam outras VPNs. Um toque, ativado por padrão."
+      },
+      {
+        "title": "Split Tunneling",
+        "body": "Proteja só o que você quiser. Direcione apps e sites escolhidos pela VPN e mantenha o resto — seu banco, serviços locais, jogos — na velocidade total da sua rede."
+      },
+      {
+        "title": "Rígido no-logs",
+        "body": "Não guardamos nada. Nem histórico de navegação, nem tráfego, nem endereço IP. Não há nada para vazar nem nada para entregar."
+      },
+      {
+        "title": "Muito rápida",
+        "body": "Protocolos modernos e mais de 40 localidades otimizadas garantem streaming sem travamentos, chamadas sem lag e downloads rápidos — mesmo em uma rede cheia."
+      },
+      {
+        "title": "Streaming sem fronteiras",
+        "body": "Assista suas séries de qualquer lugar em HD nítido. Escolha uma localidade, toque em conectar e dê play."
+      },
+      {
+        "title": "Kill switch",
+        "body": "Se a conexão cair, a MistyVPN bloqueia o tráfego na hora, para que nada escape sem proteção."
+      },
+      {
+        "title": "Gerenciador de Senhas",
+        "body": "Um gerenciador de senhas completo e criptografado, embutido no app — salve logins, gere senhas fortes e preencha tudo automaticamente. As grandes VPNs deixam isso preso em um plano mais caro ou cobram à parte. Com a MistyVPN, está simplesmente incluído, de graça."
+      },
+      {
+        "title": "Autenticador (2FA)",
+        "body": "Gerador de códigos de dois fatores embutido — substitua o Google Authenticator e guarde seus códigos de uso único no mesmo cofre seguro e criptografado das suas senhas. Sem outra assinatura, sem complemento. Incluído de graça."
+      },
+      {
+        "title": "Todos os seus dispositivos",
+        "body": "iPhone, iPad, Android, Mac e Android TV. Uma assinatura cobre todos eles, com até 10 conectados ao mesmo tempo."
+      },
+      {
+        "title": "No seu idioma",
+        "body": "Use a MistyVPN com conforto em 16 idiomas — e adicionamos mais sem que você precise atualizar o app."
+      },
+      {
+        "title": "Modo automático",
+        "body": "Um toque e a MistyVPN escolhe automaticamente a conexão mais rápida e confiável para a sua rede — não há nada para configurar."
+      },
+      {
+        "title": "Mais de 40 localidades globais",
+        "body": "Conecte-se por servidores nas Américas, Europa, Oriente Médio e Ásia — apareça onde você precisar estar."
+      },
+      {
+        "title": "Conexão automática",
+        "body": "Deixe a MistyVPN conectar assim que o dispositivo liga, para você ficar protegido automaticamente — sem nunca se expor por acidente."
+      },
+      {
+        "title": "Ganhe minutos grátis",
+        "body": "Ficou sem tempo grátis? Recarregue seus minutos grátis quando quiser — sem conta e sem cartão de crédito."
+      }
+    ],
+    "underHood": {
+      "eyebrow": "Nos bastidores",
+      "title": "Proteção de última geração, sem complicação",
+      "body": "O Modo Furtivo é movido pela tecnologia anticensura mais avançada disponível, então sua conexão se mistura em vez de se destacar. O modo automático escolhe silenciosamente a opção mais rápida e confiável para a sua rede — você só toca em conectar. A parte inteligente fica fora do seu caminho."
+    },
+    "cta": {
+      "title": "Experimente grátis hoje",
+      "body": "O kit completo, grátis para começar — sem cartão de crédito."
+    }
+  },
+  "landing": {
+    "getFree": "Baixe a MistyVPN grátis",
+    "howItWorks": "Como funciona",
+    "faqEyebrow": "Perguntas frequentes",
+    "faqTitle": "Perguntas comuns",
+    "ctaTitle": "Pronta quando você estiver",
+    "ctaBody": "Grátis para começar, sem cartão de crédito, rígido no-logs."
+  },
+  "loginPage": {
+    "metaTitle": "Entrar",
+    "metaDescription": "Entre na sua conta MistyVPN para gerenciar sua assinatura, forma de pagamento e dispositivos.",
+    "heading": "Bem-vindo de volta",
+    "subtitle": "Entre na sua conta MistyVPN.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "voce@exemplo.com",
+    "passwordLabel": "Senha",
+    "passwordPlaceholder": "Sua senha",
+    "forgotLink": "Esqueceu a senha?",
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "submit": "Entrar",
+    "submitting": "Entrando…",
+    "noAccount": "Novo na MistyVPN?",
+    "createAccount": "Criar uma conta",
+    "errorGeneric": "Algo deu errado",
+    "forgotNeedEmail": "Digite seu e-mail primeiro e depois toque em “Esqueceu a senha”.",
+    "forgotSent": "Se esse e-mail tiver uma conta, um link de redefinição está a caminho.",
+    "loading": "Carregando…"
+  },
+  "noLogsPage": {
+    "metaTitle": "Política Sem Logs — o que não coletamos",
+    "metaDescription": "A MistyVPN é uma VPN rigorosamente sem logs. Não registramos sua navegação, tráfego nem endereço IP. Veja exatamente o que isso significa e como a arquitetura garante isso.",
+    "breadcrumb": "Sem Logs",
+    "hero": {
+      "eyebrow": "Privacidade",
+      "title": "Rígido no-logs. Nada para entregar.",
+      "subtitle": "A melhor forma de proteger seus dados é nunca coletá-los. A {brand} foi construída para que simplesmente não exista registro do que você faz."
+    },
+    "points": [
+      {
+        "title": "Sem registros de atividade",
+        "body": "Nunca registramos os sites que você visita, os apps que você usa ou suas consultas de DNS. Sua navegação não é nossa para guardar."
+      },
+      {
+        "title": "Sem registros de conexão",
+        "body": "Não armazenamos seu endereço IP real nem um histórico de quando você se conectou. Não há perfil a montar."
+      },
+      {
+        "title": "Garantido por design",
+        "body": "Os relatórios de falha têm a privacidade higienizada de tokens, credenciais e IPs, e nossos servidores são configurados para não guardar nada além do necessário para rotear seu tráfego."
+      }
+    ],
+    "keep": {
+      "eyebrow": "O que guardamos",
+      "title": "O mínimo para operar o serviço",
+      "body": "Uma política sem logs não significa que não exista nenhum dado em lugar nenhum — significa que nada disso liga a atividade a você.",
+      "p1": "Para operar contas e assinaturas, armazenamos o essencial: um identificador de conta e o status da sua assinatura (da App Store ou do Google Play). Não vinculamos isso a nenhum registro do seu tráfego, porque esse registro não existe.",
+      "p2": "Métricas agregadas e não identificáveis (como a carga total dos servidores) nos ajudam a manter a rede rápida. Os relatórios de falha são higienizados de qualquer coisa sensível — tokens, senhas, chaves e endereços IP nunca são enviados.",
+      "p3": "Esta página é um resumo em linguagem simples. Consulte a <link>Política de Privacidade</link> para todos os detalhes."
+    },
+    "cta": {
+      "title": "Privacidade que você não precisa aceitar na fé"
+    }
+  },
+  "pricingPage": {
+    "metaTitle": "Preços — grátis para começar, Premium a partir de $2.50/mês",
+    "metaDescription": "Preços simples da MistyVPN. Comece de graça e ganhe minutos grátis, ou vá de Premium a partir de $2.50/mês para velocidade ilimitada em até 10 dispositivos. Gerencie tudo no app.",
+    "breadcrumb": "Preços",
+    "eyebrow": "Preços",
+    "title": "Preços simples. Tudo incluído.",
+    "subtitle": "Comece de graça e faça upgrade quando estiver pronto. Todo plano inclui o conjunto completo de recursos — Modo Furtivo, split tunneling e todas as mais de 40 localidades.",
+    "bestValue": "Melhor custo-benefício",
+    "pricesNote": "Preços em USD, cobrados por checkout seguro na web ou pela App Store / Google Play; impostos e preços locais são aplicados no checkout. Cancele quando quiser.",
+    "faqEyebrow": "Perguntas frequentes",
+    "faqTitle": "Perguntas sobre preços"
+  },
+  "privacyPage": {
+    "metaTitle": "Política de Privacidade",
+    "metaDescription": "Como a {name} trata seus dados: uma VPN rigorosamente sem logs que coleta o mínimo necessário para operar contas e assinaturas, e nunca registra sua atividade.",
+    "eyebrow": "Legal",
+    "title": "Política de Privacidade",
+    "updatedDate": "15 de julho de 2026",
+    "lastUpdated": "Última atualização: {date}",
+    "sections": [
+      {
+        "kind": "p",
+        "text": "A {name} (\"{name}\", \"nós\" ou \"nosso\") oferece um serviço de rede privada virtual (VPN) sem logs no iPhone, iPad, Android, Mac e Android TV. {name} é um nome comercial de {legalName}, uma empresa registrada em {registeredIn} (nº da empresa {companyNumber}), com sede registrada em {registeredOffice}. A {legalName} é a controladora dos dados para os fins desta Política de Privacidade. Esta política explica o que coletamos, o que deliberadamente <b>não</b> coletamos, como usamos e compartilhamos informações e os direitos que você tem sobre seus dados. Ela se aplica aos nossos apps, ao nosso site e aos nossos sistemas de conta e assinatura."
+      },
+      {
+        "kind": "p",
+        "text": "Nosso princípio norteador é simples: não podemos perder, vazar ou ser obrigados a entregar o que nunca coletamos. Projetamos a {name} para funcionar com a menor quantidade possível de dados pessoais."
+      },
+      {
+        "kind": "h2",
+        "text": "1. Nosso compromisso sem logs"
+      },
+      {
+        "kind": "p",
+        "text": "Enquanto você está conectado à {name}, nós <b>não</b> coletamos, monitoramos nem armazenamos:"
+      },
+      {
+        "kind": "ul",
+        "items": [
+          "Seu histórico de navegação, ou os sites e apps que você usa",
+          "O conteúdo do seu tráfego",
+          "Os destinos (IPs ou domínios) aos quais você se conecta",
+          "Suas consultas de DNS",
+          "Seu endereço IP original (de origem)",
+          "Carimbos de data/hora de conexão, duração de sessão ou registros de largura de banda que pudessem ser ligados à sua identidade ou atividade"
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "Não mantemos nenhum registro que pudesse ser usado para associar a atividade na VPN a um usuário individual. Como esses logs não existem, não há nada para vendermos, vazarmos ou divulgarmos em resposta a uma solicitação."
+      },
+      {
+        "kind": "h2",
+        "text": "2. Informações que coletamos"
+      },
+      {
+        "kind": "p",
+        "text": "Coletamos apenas o necessário para operar contas, entregar e proteger o serviço, processar assinaturas e resolver problemas."
+      },
+      {
+        "kind": "h3",
+        "text": "Dados da conta"
+      },
+      {
+        "kind": "p",
+        "text": "Se você criar uma conta, armazenamos seu <b>endereço de e-mail</b> e uma versão com hash (embaralhada de forma irreversível) da sua senha. Cada usuário também recebe um <b>identificador de conta</b> aleatório. Você pode usar o plano gratuito sem criar uma conta."
+      },
+      {
+        "kind": "h3",
+        "text": "Dados do dispositivo"
+      },
+      {
+        "kind": "p",
+        "text": "Geramos um <b>identificador de dispositivo</b> aleatório para cada instalação. Ele é usado para gerenciar seus dispositivos, aplicar limites de conexões simultâneas e entregar seus minutos grátis. Não é vinculado a nenhum registro de atividade e não identifica você pessoalmente."
+      },
+      {
+        "kind": "h3",
+        "text": "Credenciais de VPN"
+      },
+      {
+        "kind": "p",
+        "text": "Para conectar, seu dispositivo guarda credenciais de VPN por dispositivo (como usuário, senha e chaves de protocolo). Sempre que possível, elas são armazenadas no keychain seguro do seu dispositivo, e não em nossos servidores, e são rotacionadas quando você entra ou sai da conta."
+      },
+      {
+        "kind": "h3",
+        "text": "Status de assinatura e pagamento"
+      },
+      {
+        "kind": "p",
+        "text": "As assinaturas são compradas e gerenciadas pela <b>Apple App Store</b>, pelo <b>Google Play</b> ou — na web — pelo <b>Stripe</b>. Recebemos uma validação do status da sua assinatura (ativa, expirada, cancelada) e um identificador de transação. Nós <b>não</b> recebemos nem armazenamos o número completo do seu cartão ou dados bancários; isso é tratado inteiramente pela loja ou pelo processador de pagamentos."
+      },
+      {
+        "kind": "h3",
+        "text": "Dados de diagnóstico e falhas"
+      },
+      {
+        "kind": "p",
+        "text": "Os apps lançados enviam relatórios anonimizados de falhas e erros pelo <b>Sentry</b> para que possamos encontrar e corrigir bugs. Esses relatórios têm a privacidade higienizada: removemos tokens de autenticação, credenciais de VPN, senhas, nomes de usuário e endereços IP antes do envio, e o relatório é totalmente desativado em compilações de desenvolvimento."
+      },
+      {
+        "kind": "h3",
+        "text": "Dados operacionais agregados"
+      },
+      {
+        "kind": "p",
+        "text": "Usamos métricas agregadas e não identificáveis — como a carga total dos servidores e a saúde geral do serviço — para manter a rede confiável e rápida. Esses dados não são vinculados a usuários individuais nem à sua atividade."
+      },
+      {
+        "kind": "h3",
+        "text": "Dados temporários de conexão"
+      },
+      {
+        "kind": "p",
+        "text": "Para aplicar o número de dispositivos permitidos em uma conta, nossos servidores processam brevemente o endereço de rede de uma conexão junto com o seu identificador de dispositivo aleatório enquanto a conexão está ativa. Essa informação é transitória, mantida apenas durante a sessão (poucos minutos) e não é gravada em nenhum registro de atividade nem retida depois."
+      },
+      {
+        "kind": "h3",
+        "text": "Comunicações de suporte"
+      },
+      {
+        "kind": "p",
+        "text": "Se você entrar em contato conosco (por exemplo, por e-mail ou chat), guardamos o conteúdo dessa correspondência para poder ajudar você e melhorar nosso suporte."
+      },
+      {
+        "kind": "h3",
+        "text": "Dados do site"
+      },
+      {
+        "kind": "p",
+        "text": "Nosso site usa cookies essenciais e análises que respeitam a privacidade, necessários para operar o site, lembrar suas preferências e processar pagamentos na web. Consulte <b>Cookies</b> abaixo."
+      },
+      {
+        "kind": "h2",
+        "text": "3. Informações que não coletamos"
+      },
+      {
+        "kind": "p",
+        "text": "Para deixar claro, a {name} <b>não</b> coleta nem retém: o conteúdo da sua navegação ou tráfego, os sites e serviços que você acessa pela VPN, suas consultas de DNS, seu endereço IP real ou qualquer registro que ligue sua atividade a você. Não vendemos seus dados pessoais e não usamos seus dados para publicidade ou criação de perfis."
+      },
+      {
+        "kind": "h2",
+        "text": "4. Como usamos suas informações"
+      },
+      {
+        "kind": "ul",
+        "items": [
+          "Para criar e gerenciar sua conta e dispositivos",
+          "Para fornecer, manter e proteger o serviço de VPN",
+          "Para validar e gerenciar assinaturas, minutos grátis e status de cobrança",
+          "Para prevenir abusos e aplicar limites de conexão",
+          "Para diagnosticar falhas e melhorar a confiabilidade e o desempenho",
+          "Para responder às suas solicitações de suporte",
+          "Para cumprir as obrigações legais que se aplicam a nós"
+        ]
+      },
+      {
+        "kind": "h2",
+        "text": "5. Bases legais para o tratamento (GDPR)"
+      },
+      {
+        "kind": "p",
+        "text": "Se você está no Espaço Econômico Europeu ou no Reino Unido, tratamos seus dados com base nestas bases legais: <b>execução de um contrato</b> (para fornecer o serviço que você contratou), <b>interesses legítimos</b> (para proteger nossa rede, prevenir abusos e melhorar o produto, equilibrados com seus direitos), <b>consentimento</b> (quando exigido, o qual você pode retirar a qualquer momento) e <b>obrigação legal</b> (quando a lei exige)."
+      },
+      {
+        "kind": "h2",
+        "text": "6. Pagamentos"
+      },
+      {
+        "kind": "p",
+        "text": "As assinaturas no app são processadas pela Apple App Store e pelo Google Play, sob seus próprios termos e políticas de privacidade. As assinaturas na web são processadas pelo Stripe. Os dados de pagamento que você insere são tratados por esses provedores — a {name} nunca vê o número completo do seu cartão nem seus dados bancários. Você pode ver, alterar ou cancelar uma assinatura na conta da sua loja ou no portal da conta a qualquer momento."
+      },
+      {
+        "kind": "h2",
+        "text": "7. Como compartilhamos informações"
+      },
+      {
+        "kind": "p",
+        "text": "Não vendemos seus dados pessoais. Compartilhamos os dados limitados acima apenas com prestadores de serviço que nos ajudam a operar a {name}, e somente quando necessário:"
+      },
+      {
+        "kind": "ul",
+        "items": [
+          "<b>Apple e Google</b> — para validar e gerenciar assinaturas no app.",
+          "<b>Stripe</b> — para processar pagamentos de assinaturas na web.",
+          "<b>Sentry</b> — para receber relatórios de falha e erro com a privacidade higienizada.",
+          "<b>Provedores de infraestrutura e hospedagem</b> — para operar nossos servidores e backend."
+        ]
+      },
+      {
+        "kind": "p",
+        "text": "Esses provedores estão sujeitos a obrigações de confidencialidade e proteção de dados e só podem usar as informações para nos prestar o serviço. Também podemos divulgar informações se exigido por processo legal válido — mas, como não mantemos registros de atividade, não podemos produzir registros do que você fez enquanto conectado."
+      },
+      {
+        "kind": "h2",
+        "text": "8. Transferências internacionais de dados"
+      },
+      {
+        "kind": "p",
+        "text": "A {name} opera servidores em muitos países para que você possa se conectar de onde precisar. Dados de conta e assinatura podem ser processados em países diferentes do seu. Quando transferimos dados pessoais para fora do EEE ou do Reino Unido, contamos com salvaguardas apropriadas, como as Cláusulas Contratuais Padrão da Comissão Europeia."
+      },
+      {
+        "kind": "h2",
+        "text": "9. Retenção de dados"
+      },
+      {
+        "kind": "p",
+        "text": "Mantemos dados de conta e assinatura apenas enquanto sua conta estiver ativa, ou conforme necessário para cumprir obrigações legais, fiscais ou contábeis. Quando você exclui sua conta, removemos os dados de conta associados. Como não mantemos registros de atividade, não há histórico de navegação a reter ou excluir. Os dados transitórios de conexão são descartados quando sua sessão termina."
+      },
+      {
+        "kind": "h2",
+        "text": "10. Segurança"
+      },
+      {
+        "kind": "p",
+        "text": "Protegemos seus dados com criptografia em trânsito, senhas com hash, controles de acesso restritos e limites rígidos de quem pode acessar nossos sistemas. Nenhum método de transmissão ou armazenamento é perfeitamente seguro, mas manter dados mínimos é, por si só, nossa maior salvaguarda: há muito pouco a expor. Se ocorrer uma violação que afete seus dados pessoais, notificaremos os usuários afetados e os órgãos reguladores conforme exigido por lei."
+      },
+      {
+        "kind": "h2",
+        "text": "11. Seus direitos"
+      },
+      {
+        "kind": "h3",
+        "text": "EEE / Reino Unido (GDPR)"
+      },
+      {
+        "kind": "p",
+        "text": "Você tem o direito de acessar, corrigir, excluir ou exportar seus dados pessoais; de restringir ou se opor a determinados tratamentos; de retirar o consentimento; e de apresentar uma reclamação à sua autoridade local de proteção de dados."
+      },
+      {
+        "kind": "h3",
+        "text": "Califórnia (CCPA/CPRA)"
+      },
+      {
+        "kind": "p",
+        "text": "Você tem o direito de saber quais informações pessoais coletamos, de solicitar sua exclusão, de corrigi-las e de recusar sua venda ou compartilhamento. Nós <b>não</b> vendemos nem compartilhamos suas informações pessoais, e nunca discriminaremos você por exercer seus direitos."
+      },
+      {
+        "kind": "p",
+        "text": "Você pode excluir sua conta e seus dados diretamente no app a qualquer momento. Para qualquer outra solicitação, fale conosco em <mail>{email}</mail> e responderemos dentro dos prazos exigidos pela legislação aplicável."
+      },
+      {
+        "kind": "h2",
+        "text": "12. Crianças"
+      },
+      {
+        "kind": "p",
+        "text": "A {name} é destinada a adultos e não é direcionada a crianças. Não coletamos conscientemente dados pessoais de menores de 18 anos (ou menores de 13 anos, quando aplicável). Se você acredita que uma criança nos forneceu dados pessoais, entre em contato e nós os excluiremos."
+      },
+      {
+        "kind": "h2",
+        "text": "13. Cookies"
+      },
+      {
+        "kind": "p",
+        "text": "Nosso site usa <b>cookies essenciais</b> necessários para operar o site e processar pagamentos, e análises que respeitam a privacidade para entender como o site é usado. Não usamos cookies de publicidade ou de rastreamento entre sites. Você pode controlar os cookies nas configurações do seu navegador."
+      },
+      {
+        "kind": "h2",
+        "text": "14. Links de terceiros"
+      },
+      {
+        "kind": "p",
+        "text": "Nosso site e nossos apps podem incluir links para sites ou serviços de terceiros que não controlamos. Esta política não os abrange; consulte as políticas de privacidade deles."
+      },
+      {
+        "kind": "h2",
+        "text": "15. Alterações nesta política"
+      },
+      {
+        "kind": "p",
+        "text": "Podemos atualizar esta política de tempos em tempos. Alterações relevantes serão refletidas na data de \"Última atualização\" acima e, quando apropriado, anunciadas no app ou por e-mail. O uso contínuo da {name} após uma atualização significa que você aceita a política revisada."
+      },
+      {
+        "kind": "h2",
+        "text": "16. Fale conosco"
+      },
+      {
+        "kind": "p",
+        "text": "Dúvidas, solicitações ou reclamações sobre privacidade? Escreva para nós em <mail>{email}</mail> e teremos prazer em ajudar."
+      }
+    ]
+  },
+  "registerPage": {
+    "metaTitle": "Crie sua conta",
+    "metaDescription": "Crie sua conta MistyVPN. Comece de graça e depois assine para liberar acesso ilimitado e em velocidade total.",
+    "heading": "Crie sua conta",
+    "subtitle": "Comece de graça e depois assine para liberar tudo.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "voce@exemplo.com",
+    "passwordLabel": "Senha",
+    "passwordPlaceholder": "Pelo menos 8 caracteres",
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "submit": "Criar conta",
+    "submitting": "Criando…",
+    "haveAccount": "Já tem uma conta?",
+    "signIn": "Entrar",
+    "errorGeneric": "Algo deu errado",
+    "loading": "Carregando…"
+  },
+  "resetPasswordPage": {
+    "metaTitle": "Redefinir senha",
+    "metaDescription": "Redefina a senha da sua conta MistyVPN.",
+    "verifying": "Verificando seu link…",
+    "noToken": "Nenhum token de redefinição encontrado.",
+    "invalidLink": "Link inválido.",
+    "serverUnreachable": "Não foi possível conectar ao servidor. Tente de novo.",
+    "requestNewLink": "Solicitar um novo link de redefinição",
+    "formHeading": "Definir nova senha",
+    "formSubtitle": "Escolha uma senha forte (mín. 8 caracteres).",
+    "newPasswordPlaceholder": "Nova senha",
+    "confirmPasswordPlaceholder": "Confirmar senha",
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "passwordsDontMatch": "As senhas não coincidem.",
+    "passwordTooShort": "A senha deve ter pelo menos 8 caracteres.",
+    "somethingWrong": "Algo deu errado.",
+    "submit": "Atualizar Senha",
+    "submitting": "Atualizando…",
+    "successTitle": "Senha atualizada!",
+    "successBody": "Agora você pode entrar com sua nova senha no app MistyVPN."
+  },
+  "routerPage": {
+    "metaTitle": "VPN para Roteadores — DD-WRT, Asus, OpenWRT e mais (OpenVPN)",
+    "metaDescription": "Configure a MistyVPN no seu roteador com OpenVPN e proteja todos os dispositivos da sua casa — TVs, consoles, equipamentos de casa inteligente. Guias passo a passo para DD-WRT, Asus, OpenWRT, Tomato, pfSense e GL.iNet.",
+    "crumbDownload": "Baixar",
+    "crumbRouter": "VPN para Roteador",
+    "eyebrow": "VPN para Roteador",
+    "h1": "Coloque a MistyVPN no seu roteador",
+    "lede": "Configure a MistyVPN uma vez no seu roteador e todos os dispositivos por trás dele ficam protegidos — smart TVs, consoles, aparelhos de streaming e equipamentos de casa inteligente que não conseguem rodar um app de VPN sozinhos. A MistyVPN é compatível com <strong>OpenVPN</strong>, então qualquer roteador com cliente OpenVPN funciona.",
+    "udpProfile": "Perfil UDP",
+    "tcpProfile": "Perfil TCP",
+    "serverList": "Lista de servidores",
+    "beforeYouStart": "Antes de começar",
+    "chooseYourRouter": "Escolha seu roteador",
+    "chooseYourRouterBody": "Escolha seu roteador ou firmware para ver as instruções passo a passo.",
+    "viewGuide": "Ver guia →"
+  },
+  "serversPage": {
+    "metaTitle": "Lista de Servidores — cada localidade e protocolo da MistyVPN",
+    "metaDescription": "O diretório completo de servidores da MistyVPN: cada localidade, o hostname do servidor e os protocolos que ele suporta — WireGuard, VLESS (Reality), Hysteria2, OpenVPN e ShadowTLS. Use-os no app, em roteadores ou na configuração manual.",
+    "breadcrumbSupport": "Suporte",
+    "breadcrumbServerList": "Lista de Servidores",
+    "eyebrow": "Lista de Servidores",
+    "title": "Cada localidade, cada protocolo",
+    "intro": "{locations} localidades em {countries} países. Todos os servidores da MistyVPN são provisionados de forma idêntica, então <strong>todos os protocolos funcionam em todos os servidores</strong>. Use o hostname abaixo para conectar pelo app, por um roteador ou por uma configuração manual — escolha o protocolo que combina com a sua rede.",
+    "colLocation": "Localidade",
+    "colHostname": "Hostname do servidor",
+    "protocolSupported": "{protocol} suportado",
+    "footerNote": "WireGuard, VLESS (Reality) e Hysteria2 rodam nos apps da MistyVPN; OpenVPN (UDP/TCP) também funciona para roteadores e configuração manual. A ofuscação furtiva é aplicada automaticamente sempre que uma rede precisar. A saúde e a carga dos servidores em tempo real chegam em breve a esta página."
+  },
+  "supportPage": {
+    "metaTitle": "Ajuda e Suporte — fale com um humano, rápido",
+    "metaDescription": "Receba ajuda com a MistyVPN. Mande mensagem no WhatsApp ou e-mail para support@mistyvpn.com — pessoas de verdade, respostas rápidas, 24/7. Soluções ágeis e respostas para perguntas comuns.",
+    "breadcrumb": "Suporte",
+    "hero": {
+      "eyebrow": "Suporte",
+      "title": "Estamos aqui para ajudar — o tempo todo.",
+      "subtitle": "Pessoas de verdade, respostas rápidas. Fale conosco no WhatsApp ou por e-mail e vamos deixar você conectado de novo."
+    },
+    "whatsapp": {
+      "title": "Converse no WhatsApp",
+      "body": "A forma mais rápida de falar conosco. Abre o WhatsApp no seu celular ou o WhatsApp Web no seu computador.",
+      "button": "Mande mensagem no WhatsApp"
+    },
+    "email": {
+      "title": "Envie um e-mail",
+      "body": "Prefere e-mail? Escreva pra gente quando quiser e respondemos em poucas horas com uma resposta de verdade — sem ficar de um lado para o outro com tickets.",
+      "button": "E-mail para o suporte"
+    },
+    "trust": [
+      {
+        "label": "Respostas em menos de 2 horas",
+        "sub": "tempo de resposta típico"
+      },
+      {
+        "label": "Pessoas de verdade, sem bots",
+        "sub": "suporte humano"
+      },
+      {
+        "label": "Disponível 24/7",
+        "sub": "todos os dias"
+      },
+      {
+        "label": "Rígido no-logs",
+        "sub": "não conseguimos ver sua atividade"
+      }
+    ],
+    "quickFixes": {
+      "eyebrow": "Antes de nos chamar",
+      "title": "Soluções de 60 segundos",
+      "body": "A maioria dos perrengues se resolve com uma destas. Ainda travado depois de tentar? Estamos a uma mensagem de distância.",
+      "items": [
+        "Atualize para a versão mais recente do app.",
+        "Defina o Protocolo como Automático e escolha um servidor próximo.",
+        "Confira se o Modo Furtivo está ativado.",
+        "Desligue e ligue a VPN, ou reinicie o app.",
+        "Verifique se sua internet funciona com a VPN desconectada."
+      ]
+    },
+    "faq": {
+      "eyebrow": "Respostas",
+      "title": "Perguntas comuns"
+    },
+    "faqs": [
+      {
+        "q": "Não consigo conectar — o que devo tentar primeiro?",
+        "a": "Mude o protocolo para Automático (Configurações → Protocolo), escolha um servidor próximo e confira se o Modo Furtivo está ativado. Em redes rígidas, o Furtivo disfarça sua conexão como HTTPS normal para que ela passe. Se ainda assim não conectar, mande uma mensagem que a gente resolve em minutos."
+      },
+      {
+        "q": "Como gerencio ou cancelo minha assinatura?",
+        "a": "As assinaturas são cobradas pelo seu Apple ID ou pela sua conta Google. Gerencie ou cancele quando quiser nas configurações de conta do seu dispositivo — Apple: Ajustes → seu nome → Assinaturas; Google: Play Store → Assinaturas. Seu acesso continua até o fim do período pago."
+      },
+      {
+        "q": "Como funcionam os reembolsos?",
+        "a": "Como a cobrança é feita pela Apple e pelo Google, os reembolsos são emitidos por eles. Ficamos felizes em ajudar você no processo — é só falar com a gente que indicamos o caminho mais rápido."
+      },
+      {
+        "q": "Vocês guardam registros do que eu faço?",
+        "a": "Não. A MistyVPN é rigorosamente sem logs — não registramos sua navegação, tráfego nem atividade. Literalmente não podemos entregar o que nunca coletamos. Veja nossa promessa sem logs para todos os detalhes."
+      },
+      {
+        "q": "Qual servidor é melhor para streaming?",
+        "a": "Escolha um servidor no país cujo conteúdo você quer e conecte-se. Se um serviço não carregar, tente outra cidade no mesmo país ou ative o Modo Furtivo. Pergunte pra gente qual é a melhor escolha do momento — a gente fica de olho nisso."
+      },
+      {
+        "q": "Funciona em Wi-Fi restrito ou público?",
+        "a": "Sim. O Modo Furtivo foi feito exatamente para isso — cafés, hotéis, aeroportos, escritórios e redes com filtros pesados. Ele vem ativado por padrão, sem nada para configurar."
+      }
+    ],
+    "closing": {
+      "title": "Ainda travado? Vamos resolver juntos.",
+      "body": "Mande uma mensagem e uma pessoa de verdade vai ajudar você a se conectar — normalmente em menos de duas horas.",
+      "button": "Fale conosco no WhatsApp"
+    }
+  },
+  "termsPage": {
+    "metaTitle": "Termos de Serviço",
+    "metaDescription": "Os termos que regem o seu uso da {name}.",
+    "eyebrow": "Legal",
+    "h1": "Termos de Serviço",
+    "lastUpdated": "Última atualização: {date}",
+    "lastUpdatedDate": "9 de junho de 2026",
+    "intro": "Estes Termos regem o seu uso da {name}, um serviço operado pela {company}, uma empresa registrada em {registeredIn} (nº da empresa {number}), com sede registrada em {office}. Ao usar o serviço, você concorda com estes Termos.",
+    "sections": [
+      {
+        "heading": "Uso aceitável",
+        "paragraphs": [
+          "A {name} foi feita para proteger sua privacidade e segurança. Você concorda em não usar o serviço para atividades ilícitas, para prejudicar terceiros, para enviar spam ou malware, ou para violar direitos de propriedade intelectual. Você é responsável por cumprir as leis que se aplicam a você, incluindo quaisquer regras locais sobre o uso de VPN."
+        ]
+      },
+      {
+        "heading": "Contas",
+        "paragraphs": [
+          "Você é responsável por manter suas credenciais de conta seguras. O acesso gratuito é fornecido de forma limitada; as assinaturas pagas liberam o acesso completo."
+        ]
+      },
+      {
+        "heading": "Assinaturas e cobrança",
+        "paragraphs": [
+          "As assinaturas são vendidas por cartão via checkout seguro neste site, ou pela Apple App Store e pelo Google Play. Nas compras feitas em loja, a cobrança, as renovações e os reembolsos estão sujeitos às políticas dessas lojas — gerencie ou cancele pela conta da sua loja. Nas compras feitas neste site, gerencie ou cancele quando quiser na página da sua conta."
+        ]
+      },
+      {
+        "heading": "Garantia de reembolso de 14 dias",
+        "paragraphs": [
+          "Todo plano pago tem garantia de reembolso de 14 dias. Se você não ficar satisfeito em até 14 dias da compra inicial, fale conosco em {email} para receber o reembolso integral — sem perguntas. Nas compras feitas neste site, reembolsamos a forma de pagamento original diretamente. Nas compras feitas pela Apple App Store ou pelo Google Play, os reembolsos são processados pelo processo de reembolso da respectiva loja, com o qual ajudaremos você. A garantia se aplica à sua primeira compra e não às renovações seguintes."
+        ]
+      },
+      {
+        "heading": "Disponibilidade do serviço",
+        "paragraphs": [
+          "Trabalhamos para manter o serviço confiável, mas não garantimos acesso ininterrupto. Condições de rede, restrições de terceiros e manutenções podem afetar a disponibilidade."
+        ]
+      },
+      {
+        "heading": "Isenção e limitação de responsabilidade",
+        "paragraphs": [
+          "O serviço é fornecido \"no estado em que se encontra\", sem garantias de qualquer tipo, na medida permitida por lei. Na máxima extensão permitida por lei, a {name} não se responsabiliza por danos indiretos ou consequenciais decorrentes do seu uso do serviço."
+        ]
+      },
+      {
+        "heading": "Alterações nestes termos",
+        "paragraphs": [
+          "Podemos atualizar estes Termos de tempos em tempos. O uso contínuo após as alterações entrarem em vigor constitui aceitação."
+        ]
+      }
+    ],
+    "contact": {
+      "heading": "Contato",
+      "body": "Dúvidas sobre estes Termos? Escreva para <link>{email}</link>."
+    }
+  },
+  "tvLoginPage": {
+    "metaTitle": "Entrar na TV",
+    "metaDescription": "Entre para autorizar seu app MistyVPN na TV.",
+    "brandSubtitle": "Entrar na TV",
+    "stepEnterCode": "Digite o Código",
+    "stepSignIn": "Entrar",
+    "codeHeading": "Digite o Código da TV",
+    "codeSubtitle": "Digite o código que aparece na tela da sua TV, ou escaneie o QR code para preenchê-lo automaticamente.",
+    "codeLabel": "Código da sua TV",
+    "codePlaceholder": "ex.: FJLX8JYJ",
+    "codeTooShort": "Digite o código que aparece na sua TV.",
+    "continue": "Continuar",
+    "loginHeading": "Entrar",
+    "loginSubtitle": "Entre com sua conta MistyVPN para autorizar o código <hl>{code}</hl>.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "voce@exemplo.com",
+    "passwordLabel": "Senha",
+    "passwordPlaceholder": "••••••••",
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "invalidCredentials": "E-mail ou senha inválidos",
+    "codeExpiredInvalid": "Este código expirou ou é inválido. Volte à sua TV e pegue um novo código.",
+    "authorizeFailed": "Não foi possível autorizar a TV. Tente de novo.",
+    "serverUnreachable": "Não foi possível conectar ao servidor. Verifique sua conexão e tente de novo.",
+    "signInAuthorize": "Entrar e Autorizar TV",
+    "signingIn": "Entrando…",
+    "authorizingTv": "Autorizando a TV…",
+    "changeCode": "← Trocar código",
+    "successTitle": "TV Conectada!",
+    "successBody": "Sua TV vai atualizar automaticamente em alguns segundos. Você pode fechar esta página.",
+    "expiredTitle": "Código Expirado",
+    "expiredBodyFallback": "Volte à sua TV e pegue um novo código.",
+    "tryAgain": "Tentar de novo",
+    "footer": "mistyvpn.com · VPN segura para todos os dispositivos"
+  },
+  "unblockPage": {
+    "metaTitle": "Desbloqueie tudo, em qualquer lugar — sites, apps e streaming",
+    "metaDescription": "O Modo Furtivo da MistyVPN leva você além dos bloqueios e de volta à internet aberta — seus sites, seus apps, suas séries em HD — mesmo nas redes mais restritas. Comece grátis.",
+    "crumb": "Desbloquear",
+    "eyebrow": "Desbloquear",
+    "h1": "Tenha a internet inteira de volta",
+    "lede": "Bloqueado no trabalho, na faculdade, no Wi-Fi do hotel ou atrás de um firewall nacional? O Modo Furtivo da MistyVPN mantém você conectado aos sites, apps e séries que você quer — com privacidade e em velocidade total.",
+    "bullets": [
+      "O Modo Furtivo passa por bloqueios que outras VPNs não conseguem",
+      "Assista suas séries em HD nítido de qualquer lugar",
+      "O split tunneling mantém apps do banco e locais rápidos",
+      "Mais de 40 localidades, com mais sendo adicionadas ao longo do tempo",
+      "Rígido no-logs — sua atividade continua sendo sua",
+      "Comece grátis, sem cartão de crédito"
+    ],
+    "sections": [
+      {
+        "h2": "Por que as coisas são bloqueadas — e como a MistyVPN resolve",
+        "body": [
+          "Redes restritas não bloqueiam só endereços; muitas detectam e derrubam o tráfego de VPN no instante em que o percebem. É por isso que tantas VPNs simplesmente param de funcionar no trabalho, na escola, em hotéis ou em regiões com censura.",
+          "O Modo Furtivo da MistyVPN faz sua conexão parecer navegação comum, do dia a dia. Não há assinatura óbvia de VPN para sinalizar — então você continua conectado onde outros apps são cortados."
+        ]
+      },
+      {
+        "h2": "Streaming que não trava",
+        "body": [
+          "Uma VPN só serve para streaming se for rápida. A MistyVPN roda tecnologia enxuta e moderna em mais de 40 localidades otimizadas, então o vídeo em alta definição fica fluido em vez de travar.",
+          "Escolha uma localidade, toque em conectar e dê play — é simples assim."
+        ]
+      },
+      {
+        "h2": "Continue rápido com o split tunneling",
+        "body": [
+          "Você não precisa mandar tudo pela VPN. Com o split tunneling, dá para direcionar só o seu streaming e a sua navegação pela MistyVPN enquanto o app do banco, serviços locais e jogos ficam na sua conexão normal — velocidade total, sem abrir mão de nada."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "A MistyVPN vai funcionar onde outras VPNs são bloqueadas?",
+        "a": "Sim. O Modo Furtivo disfarça sua conexão como tráfego comum da web, então a MistyVPN continua funcionando em redes restritas — trabalho, escolas, hotéis e regiões com censura pesada — onde as VPNs comuns são detectadas e bloqueadas."
+      },
+      {
+        "q": "Dá para fazer streaming em HD?",
+        "a": "Sim. A MistyVPN é otimizada para streaming rápido em alta definição em mais de 40 localidades, e o split tunneling deixa você direcionar só os apps de streaming pela VPN em velocidade total."
+      },
+      {
+        "q": "Vai deixar meus outros apps mais lentos?",
+        "a": "Não, se você não quiser. O split tunneling deixa você manter apps do banco, sites locais e jogos na sua conexão normal enquanto só os apps que você escolher usam a VPN."
+      },
+      {
+        "q": "Existe um jeito grátis de experimentar?",
+        "a": "Sim — comece de graça e ganhe minutos grátis, sem conta nem cartão de crédito."
+      }
+    ]
+  }
+}

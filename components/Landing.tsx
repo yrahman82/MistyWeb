@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Container, SectionHeading, Button, Card, Eyebrow } from "@/components/ui";
 import { CheckIcon } from "@/components/Icons";
 import JsonLd from "@/components/JsonLd";
@@ -27,6 +28,7 @@ export function Landing({
   sections,
   faqs,
 }: LandingProps) {
+  const t = useTranslations("landing");
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -51,10 +53,10 @@ export function Landing({
           <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">{lede}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="/download" className="px-8">
-              Get MistyVPN free
+              {t("getFree")}
             </Button>
             <Button href="/features" variant="secondary">
-              How it works
+              {t("howItWorks")}
             </Button>
           </div>
         </Container>
@@ -99,7 +101,7 @@ export function Landing({
 
       <section className="py-12">
         <Container>
-          <SectionHeading center eyebrow="FAQ" title="Common questions" />
+          <SectionHeading center eyebrow={t("faqEyebrow")} title={t("faqTitle")} />
           <div className="mx-auto mt-10 max-w-3xl divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/[0.03]">
             {faqs.map((f) => (
               <details key={f.q} className="group p-5 sm:p-6">
@@ -120,14 +122,14 @@ export function Landing({
         <Container>
           <Card className="px-6 py-14 text-center">
             <h2 className="text-3xl font-semibold tracking-tight">
-              Ready when you are
+              {t("ctaTitle")}
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-slate-300">
-              Free to start, no credit card, strict no-logs.
+              {t("ctaBody")}
             </p>
             <div className="mt-8 flex justify-center">
               <Button href="/download" className="px-8">
-                Get MistyVPN free
+                {t("getFree")}
               </Button>
             </div>
           </Card>
