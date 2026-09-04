@@ -56,6 +56,9 @@ export default function Header() {
         className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-6 lg:px-8"
         aria-label="Primary"
       >
+        {/* Left group: logo + nav together (keeps them spaced, and left-aligns the nav so long
+            translated labels never collide with the logo the way justify-between allowed). */}
+        <div className="flex items-center gap-6 xl:gap-8">
         <Link href="/" className="flex items-center gap-2.5" aria-label={`${site.name} home`}>
           <Logo className="h-8 w-8" />
           <span className="text-lg font-semibold tracking-tight text-white">
@@ -63,15 +66,15 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden items-center gap-6 lg:flex">
+        {/* Desktop nav (collapses to the hamburger below xl so longer-label languages fit) */}
+        <div className="hidden items-center gap-5 xl:flex">
           {navItems.map((item) =>
             item.children ? (
               <div key={item.key} className="group relative">
                 <Link
                   href={item.href}
                   aria-current={isActive(item.href) ? "page" : undefined}
-                  className={`flex items-center gap-1 text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-1 whitespace-nowrap text-sm font-medium transition-colors ${
                     isActive(item.href) ? "text-brand" : "text-slate-300 hover:text-white"
                   }`}
                 >
@@ -103,7 +106,7 @@ export default function Header() {
                 key={item.key}
                 href={item.href}
                 aria-current={isActive(item.href) ? "page" : undefined}
-                className={`text-sm font-medium transition-colors ${
+                className={`whitespace-nowrap text-sm font-medium transition-colors ${
                   isActive(item.href) ? "text-brand" : "text-slate-300 hover:text-white"
                 }`}
               >
@@ -112,8 +115,9 @@ export default function Header() {
             )
           )}
         </div>
+        </div>
 
-        <div className="hidden items-center gap-5 lg:flex">
+        <div className="hidden items-center gap-5 xl:flex">
           <LanguageSwitcher />
           {loggedIn ? (
             <Link
@@ -139,7 +143,7 @@ export default function Header() {
         </div>
 
         {/* Mobile: language picker (bottom sheet) + menu toggle */}
-        <div className="flex items-center gap-1 lg:hidden">
+        <div className="flex items-center gap-1 xl:hidden">
           <MobileLanguageSwitcher />
           <button
             type="button"
@@ -155,7 +159,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open ? (
-        <div className="border-t border-white/10 bg-ink md:hidden">
+        <div className="border-t border-white/10 bg-ink xl:hidden">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-5 py-4 sm:px-6">
             {navItems.map((item) =>
               item.children ? (
