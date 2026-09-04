@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 
 // Small rounded chip housing a brand mark (kept tiny for the announcement strip).
@@ -54,20 +54,17 @@ function UsdcMark() {
   return <span className="inline-flex h-5 items-center gap-0.5 rounded bg-[#2775CA] px-1.5 text-white"><span className="text-[10px] font-bold">$</span><span className="text-[10px] font-semibold">USDC</span></span>;
 }
 
-// Payment-methods slide: the localized label AND a compact row of brand marks (both, so the
-// icons are recognizable and the names stay clear for non-technical visitors).
-function PaymentsSlide({ label }: { label: string }) {
+// Payment-methods slide: brand marks only (no text) — the icons are recognizable and fit on one
+// line, so this slide never needs to scroll. Returned as a fragment so the parent controls layout.
+function PaymentsSlide() {
   return (
-    <span className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
-      <span>{label}</span>
-      <span className="flex items-center gap-1">
-        <ApplePayMark />
-        <GooglePayMark />
-        <VisaMark />
-        <MastercardMark />
-        <UsdtMark />
-        <UsdcMark />
-      </span>
+    <span className="inline-flex items-center gap-1.5">
+      <ApplePayMark />
+      <GooglePayMark />
+      <VisaMark />
+      <MastercardMark />
+      <UsdtMark />
+      <UsdcMark />
     </span>
   );
 }
@@ -103,11 +100,16 @@ export default function AnnouncementBar() {
   const slides = [
     { key: "blocked", node: <><ShieldGlobe /><span>{t("blocked")}</span></> },
     { key: "free", node: <><ClockMark /><span>{t("free")}</span></> },
-    { key: "payments", node: <PaymentsSlide label={t("payments")} /> },
+    { key: "payments", node: <PaymentsSlide /> },
     { key: "streaming", node: <><PlayMark /><span>{t("streaming")}</span></> },
   ];
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [reduceMotion, setReduceMotion] = useState(false);
+  const [shift, setShift] = useState(0); // px the current line overflows the bar (0 = fits)
+
+  const viewportRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   // Rotate announcement-by-announcement (whole message swap, never character-by-character).
   useEffect(() => {
@@ -115,6 +117,37 @@ export default function AnnouncementBar() {
     const id = setInterval(() => setI((v) => (v + 1) % slides.length), 6000);
     return () => clearInterval(id);
   }, [paused, slides.length]);
+
+  useEffect(() => {
+    const mq = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+    if (!mq) return;
+    const apply = () => setReduceMotion(mq.matches);
+    apply();
+    mq.addEventListener?.("change", apply);
+    return () => mq.removeEventListener?.("change", apply);
+  }, []);
+
+  // Measure whether the current line overflows the bar (re-measured on slide + resize). When it
+  // does, we scroll it horizontally so the whole announcement can be read; otherwise it stays static.
+  useEffect(() => {
+    const vp = viewportRef.current;
+    const ct = contentRef.current;
+    if (!vp || !ct || reduceMotion) {
+      setShift(0);
+      return;
+    }
+    const measure = () => setShift(Math.max(0, Math.ceil(ct.scrollWidth - vp.clientWidth)));
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(vp);
+    return () => ro.disconnect();
+  }, [i, reduceMotion]);
+
+  const marquee = !reduceMotion && shift > 0;
+  const duration = Math.min(14, Math.max(5, shift / 30)); // longer lines scroll a little longer
+  const contentStyle = marquee
+    ? ({ "--ann-shift": `-${shift}px`, "--ann-dur": `${duration.toFixed(1)}s`, animationPlayState: paused ? "paused" : "running" } as React.CSSProperties)
+    : undefined;
 
   return (
     <div
@@ -124,9 +157,22 @@ export default function AnnouncementBar() {
       role="region"
       aria-label="Announcements"
     >
-      <style>{`@keyframes annFade{from{opacity:0;transform:translateY(2px)}to{opacity:1;transform:none}}.ann-fade{animation:annFade .45s ease}`}</style>
-      <div className="mx-auto flex min-h-11 max-w-6xl items-center justify-center px-4 py-2.5 text-center text-[13px] font-medium leading-tight sm:text-sm" aria-live="polite">
-        <div key={slides[i].key} className="ann-fade flex flex-wrap items-center justify-center gap-2">
+      <style>{`@keyframes annFade{from{opacity:0;transform:translateY(2px)}to{opacity:1;transform:none}}.ann-fade{animation:annFade .45s ease}@keyframes annScroll{0%,14%{transform:translateX(0)}50%,64%{transform:translateX(var(--ann-shift))}100%{transform:translateX(0)}}.ann-scroll{animation:annScroll var(--ann-dur) ease-in-out infinite}`}</style>
+      <div
+        ref={viewportRef}
+        className={`mx-auto flex min-h-11 max-w-6xl items-center overflow-hidden px-4 py-2.5 text-[13px] font-medium leading-tight sm:text-sm ${marquee ? "justify-start" : "justify-center text-center"}`}
+        aria-live="polite"
+      >
+        <div
+          key={slides[i].key}
+          ref={contentRef}
+          style={contentStyle}
+          className={`inline-flex items-center gap-2 ${
+            reduceMotion
+              ? "flex-wrap justify-center"
+              : "flex-nowrap whitespace-nowrap shrink-0"
+          } ${marquee ? "ann-scroll" : "ann-fade"}`}
+        >
           {slides[i].node}
         </div>
       </div>
