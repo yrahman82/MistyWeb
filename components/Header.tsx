@@ -9,6 +9,7 @@ import { Button } from "@/components/ui";
 import { MenuIcon, CloseIcon } from "@/components/Icons";
 import { Logo } from "@/components/Logo";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import MobileLanguageSwitcher from "@/components/MobileLanguageSwitcher";
 
 // Nav structure lives in code (hrefs never change); labels come from the `nav` message catalog.
 type NavEntry = { key: string; href: string; children?: { key: string; href: string }[] };
@@ -137,16 +138,19 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white lg:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
-        </button>
+        {/* Mobile: language picker (bottom sheet) + menu toggle */}
+        <div className="flex items-center gap-1 lg:hidden">
+          <MobileLanguageSwitcher />
+          <button
+            type="button"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -194,9 +198,6 @@ export default function Header() {
             >
               {loggedIn ? t("account") : t("signInUp")}
             </Link>
-            <div className="px-3 py-3">
-              <LanguageSwitcher />
-            </div>
             <Button href="/download" variant="primary" className="mt-3 w-full">
               {t("getApp")}
             </Button>
