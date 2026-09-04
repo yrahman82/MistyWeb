@@ -42,8 +42,11 @@ export default async function MarketingLayout({
         }}
       />
       <JsonLd data={orgLd} />
-      <AnnouncementBar />
-      <Header />
+      {/* Announcement bar + menu stick together at the top while scrolling. */}
+      <div className="sticky top-0 z-50">
+        <AnnouncementBar />
+        <Header />
+      </div>
       <main className="flex-1">{children}</main>
       <Footer />
     </div>

@@ -1415,9 +1415,9 @@
     }
   },
   "announce": {
-    "payments": "Apple Pay, Google Pay, kaarten en crypto — betaal zoals je wilt",
-    "blocked": "Werkt in het Midden-Oosten, China, Rusland en elk geblokkeerd land",
-    "free": "Probeer voor je koopt — 90 gratis minuten, geen kaart of account nodig",
-    "streaming": "Alle grote streamingdiensten — gedeblokkeerd in elke grote regio"
+    "blocked": "Werkt in China, Rusland en elk geblokkeerd land",
+    "free": "90 gratis minuten — geen kaart, geen account",
+    "payments": "Apple Pay, Google Pay, kaarten en crypto",
+    "streaming": "Alles streamen — wereldwijd gedeblokkeerd"
   }
 }

@@ -1415,9 +1415,9 @@
     }
   },
   "announce": {
-    "payments": "Apple Pay, Google Pay, tarjetas y cripto: paga como prefieras",
-    "blocked": "Funciona en Oriente Medio, China, Rusia y todos los países bloqueados",
-    "free": "Pruébalo antes de comprar: 90 minutos gratis, sin tarjeta ni cuenta",
-    "streaming": "Todos los grandes servicios de streaming, desbloqueados en las principales regiones"
+    "blocked": "Funciona en China, Rusia y todo país bloqueado",
+    "free": "90 minutos gratis — sin tarjeta ni cuenta",
+    "payments": "Apple Pay, Google Pay, tarjetas y cripto",
+    "streaming": "Todo el streaming — desbloqueado en todo el mundo"
   }
 }

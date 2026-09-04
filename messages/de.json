@@ -1415,9 +1415,9 @@
     }
   },
   "announce": {
-    "payments": "Apple Pay, Google Pay, Karten & Krypto — zahlen Sie, wie Sie möchten",
-    "blocked": "Funktioniert im Nahen Osten, in China, Russland und jedem blockierten Land",
-    "free": "Erst testen, dann kaufen — 90 Freiminuten, ohne Karte oder Konto",
-    "streaming": "Alle großen Streaming-Dienste — in jeder wichtigen Region entsperrt"
+    "blocked": "Funktioniert in China, Russland & jedem gesperrten Land",
+    "free": "90 Freiminuten — ohne Karte, ohne Konto",
+    "payments": "Apple Pay, Google Pay, Karten & Krypto",
+    "streaming": "Alles streamen — weltweit entsperrt"
   }
 }

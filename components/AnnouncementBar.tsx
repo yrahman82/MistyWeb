@@ -11,7 +11,6 @@ function Chip({ children }: { children: React.ReactNode }) {
     </span>
   );
 }
-
 function ApplePayMark() {
   return (
     <span className="inline-flex h-5 items-center gap-1 rounded bg-black px-1.5 text-white ring-1 ring-white/15">
@@ -22,7 +21,6 @@ function ApplePayMark() {
     </span>
   );
 }
-
 function GooglePayMark() {
   return (
     <Chip>
@@ -36,7 +34,6 @@ function GooglePayMark() {
     </Chip>
   );
 }
-
 function VisaMark() {
   return <Chip><span className="text-[10px] font-bold italic tracking-tight text-[#1434CB]">VISA</span></Chip>;
 }
@@ -50,7 +47,6 @@ function MastercardMark() {
     </Chip>
   );
 }
-
 function UsdtMark() {
   return <span className="inline-flex h-5 items-center gap-0.5 rounded bg-[#26A17B] px-1.5 text-white"><span className="text-[10px] font-bold">₮</span><span className="text-[10px] font-semibold">USDT</span></span>;
 }
@@ -58,7 +54,8 @@ function UsdcMark() {
   return <span className="inline-flex h-5 items-center gap-0.5 rounded bg-[#2775CA] px-1.5 text-white"><span className="text-[10px] font-bold">$</span><span className="text-[10px] font-semibold">USDC</span></span>;
 }
 
-// The payment-methods slide: the localized label plus a compact row of brand marks.
+// Payment-methods slide: the localized label AND a compact row of brand marks (both, so the
+// icons are recognizable and the names stay clear for non-technical visitors).
 function PaymentsSlide({ label }: { label: string }) {
   return (
     <span className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
@@ -102,7 +99,7 @@ function PlayMark() {
 
 export default function AnnouncementBar() {
   const t = useTranslations("announce");
-  // Order (per request): blocked countries → 90 free minutes → payment methods → streaming.
+  // Order: blocked countries → 90 free minutes → payment methods → streaming.
   const slides = [
     { key: "blocked", node: <><ShieldGlobe /><span>{t("blocked")}</span></> },
     { key: "free", node: <><ClockMark /><span>{t("free")}</span></> },
@@ -115,7 +112,7 @@ export default function AnnouncementBar() {
   // Rotate announcement-by-announcement (whole message swap, never character-by-character).
   useEffect(() => {
     if (paused) return;
-    const id = setInterval(() => setI((v) => (v + 1) % slides.length), 4000);
+    const id = setInterval(() => setI((v) => (v + 1) % slides.length), 6000);
     return () => clearInterval(id);
   }, [paused, slides.length]);
 
@@ -128,7 +125,7 @@ export default function AnnouncementBar() {
       aria-label="Announcements"
     >
       <style>{`@keyframes annFade{from{opacity:0;transform:translateY(2px)}to{opacity:1;transform:none}}.ann-fade{animation:annFade .45s ease}`}</style>
-      <div className="mx-auto flex min-h-9 max-w-6xl items-center justify-center px-4 py-2 text-center text-[11px] font-medium leading-tight sm:text-xs" aria-live="polite">
+      <div className="mx-auto flex min-h-11 max-w-6xl items-center justify-center px-4 py-2.5 text-center text-[13px] font-medium leading-tight sm:text-sm" aria-live="polite">
         <div key={slides[i].key} className="ann-fade flex flex-wrap items-center justify-center gap-2">
           {slides[i].node}
         </div>

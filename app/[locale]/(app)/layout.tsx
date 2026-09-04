@@ -19,7 +19,9 @@ export default function AppLayout({ children }: { children: ReactNode }) {
             "radial-gradient(50rem 32rem at 70% -10%, rgba(56,189,248,0.16), transparent 60%), linear-gradient(180deg, #0a1628 0%, #060d1a 100%)",
         }}
       />
-      <Header />
+      <div className="sticky top-0 z-50">
+        <Header />
+      </div>
       <main className="flex flex-1 items-start justify-center px-5 py-12 sm:items-center">
         {children}
       </main>

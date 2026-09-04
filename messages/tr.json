@@ -1415,9 +1415,9 @@
     }
   },
   "announce": {
-    "payments": "Apple Pay, Google Pay, kartlar ve kripto — nasıl isterseniz öyle ödeyin",
-    "blocked": "Orta Doğu, Çin, Rusya ve tüm engelli ülkelerde çalışır",
-    "free": "Almadan önce deneyin — 90 ücretsiz dakika, kart veya hesap gerekmez",
-    "streaming": "Tüm büyük yayın servisleri — her büyük bölgede engelsiz"
+    "blocked": "Çin, Rusya ve tüm engelli ülkelerde çalışır",
+    "free": "90 ücretsiz dakika — kart ya da hesap yok",
+    "payments": "Apple Pay, Google Pay, kartlar ve kripto",
+    "streaming": "Her şeyi izleyin — dünya çapında engelsiz"
   }
 }

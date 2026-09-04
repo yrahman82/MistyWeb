@@ -1415,9 +1415,9 @@
     }
   },
   "announce": {
-    "payments": "Apple Pay、Google Pay、银行卡和加密货币——随你选择支付方式",
-    "blocked": "在中东、中国、俄罗斯及所有被封锁的国家都能使用",
-    "free": "先试后买——免费 90 分钟，无需银行卡或账户",
-    "streaming": "所有主流流媒体服务——在各大地区畅享无阻"
+    "blocked": "在中国、俄罗斯及所有被封锁的国家可用",
+    "free": "免费 90 分钟——无需银行卡或账户",
+    "payments": "Apple Pay、Google Pay、银行卡和加密货币",
+    "streaming": "畅享所有流媒体——全球无阻"
   }
 }
