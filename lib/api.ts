@@ -134,10 +134,12 @@ export async function getPlans(): Promise<Plan[]> {
   return cfg.plans ?? [];
 }
 
-export function createCheckoutSession(plan: string) {
+export function createCheckoutSession(plan: string, locale?: string) {
   return req<{ clientSecret: string }>("/api/stripe/create-checkout-session", {
     auth: true,
-    body: { plan },
+    // locale = the site's active locale; the BE maps it to a Stripe-supported Checkout
+    // Session locale so the Stripe-rendered payment UI + receipts match the site language.
+    body: { plan, locale },
   });
 }
 

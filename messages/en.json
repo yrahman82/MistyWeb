@@ -715,7 +715,62 @@
     "bestValue": "Best value",
     "pricesNote": "Prices in USD, billed through secure checkout on the web or via the App Store / Google Play; taxes and local pricing are applied at checkout. Cancel any time.",
     "faqEyebrow": "FAQ",
-    "faqTitle": "Pricing questions"
+    "faqTitle": "Pricing questions",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "note": "No card needed",
+        "blurb": "Get started for free and earn free minutes as you go — on the iOS and Android apps.",
+        "features": [
+          "iOS & Android apps only",
+          "Earn free minutes",
+          "All protocols & Stealth Mode",
+          "1 device",
+          "No account required"
+        ],
+        "cta": "Start free"
+      },
+      "monthly": {
+        "name": "Monthly",
+        "cadence": "/ month",
+        "note": "Billed monthly",
+        "blurb": "Unlimited, full-speed protection on all your devices.",
+        "features": [
+          "Unlimited data & speed",
+          "All 40+ locations",
+          "Stealth Mode & Split Tunneling",
+          "Up to 10 devices",
+          "Priority support"
+        ],
+        "cta": "Get Premium"
+      },
+      "sixmonth": {
+        "name": "6 Months",
+        "cadence": "/ 6 months",
+        "note": "Just {perMonth}",
+        "blurb": "The same Premium, billed every six months.",
+        "features": [
+          "Everything in Premium",
+          "Save 37% vs monthly",
+          "Up to 10 devices",
+          "Priority support"
+        ],
+        "cta": "Get 6 months"
+      },
+      "annual": {
+        "name": "Annual",
+        "cadence": "/ year",
+        "note": "Just {perMonth} — best value",
+        "blurb": "Our lowest price, billed once a year.",
+        "features": [
+          "Everything in Premium",
+          "Save 62% vs monthly",
+          "Up to 10 devices",
+          "Priority support"
+        ],
+        "cta": "Get Annual"
+      }
+    }
   },
   "privacyPage": {
     "metaTitle": "Privacy Policy",
@@ -1288,5 +1343,75 @@
         "a": "Yes — start free and earn free minutes, with no account or credit card required."
       }
     ]
+  },
+  "payments": {
+    "title": "Check out in one tap — no card typing",
+    "body": "Pay in a single tap with <b>Apple Pay</b> or <b>Google Pay</b> — your card details never touch our site. Prefer a card? We accept all major cards, on secure Stripe checkout.",
+    "orCard": "or pay by card",
+    "andMore": "& more",
+    "orCrypto": "or pay with crypto",
+    "cryptoChains": "on TRON · Ethereum · BSC",
+    "guarantee": "14-day money-back guarantee — no questions asked",
+    "refund": "Not happy in your first {days} days? Email us for a full refund — no questions asked."
+  },
+  "checkout": {
+    "loading": "Loading secure checkout…",
+    "orCard": "or pay by card",
+    "loadingCard": "Loading secure card form…",
+    "failed": "Payment failed. Please try again.",
+    "processing": "Processing…",
+    "subscribe": "Subscribe",
+    "subscribePrice": "Subscribe · {price}",
+    "loadingShort": "Loading…",
+    "secured": "Secured by Stripe · cancel anytime · 14-day money-back guarantee"
+  },
+  "crypto": {
+    "backToMethods": "← Choose a different payment method",
+    "title": "Pay with crypto",
+    "chooseCoinNetwork": "Choose the coin and network you'll pay from.",
+    "loadingOptions": "Loading options…",
+    "notAvailable": "Crypto payments aren't available right now.",
+    "preparingAddress": "Preparing your payment address…",
+    "pickNetworkHint": "Pick the network your wallet or exchange supports — network fees vary by where you send from.",
+    "changeCoin": "← Change coin",
+    "sendExactly": "Send exactly",
+    "on": "on",
+    "warning": "Send <b>{coin}</b> on <b>{network}</b> only — a different coin or network will be lost.",
+    "paymentAddress": "Payment address",
+    "copy": "Copy",
+    "copied": "Copied",
+    "paidActivating": "Payment received — activating…",
+    "confirming": "Payment detected — confirming ({confirmations})…",
+    "expiredNotice": "This window timed out. If you already sent it, it can still complete — use “I've already sent it” below, or start over.",
+    "waiting": "Waiting for your payment…",
+    "window": "Window: {time}",
+    "startOver": "Start over",
+    "errors": {
+      "loadOptions": "Couldn't load crypto options. Please try again.",
+      "startPayment": "Couldn't start the payment."
+    },
+    "claim": {
+      "openLink": "Already sent it? Enter your transaction hash",
+      "pastePrompt": "Paste the transaction hash of your crypto payment:",
+      "placeholder": "0x… (EVM) or a TRON tx id",
+      "cancel": "Cancel",
+      "verify": "Verify payment",
+      "checking": "Checking…",
+      "confirmed": "Payment confirmed — activating your subscription…",
+      "notFound": "Not found yet — if you just sent it, wait for confirmations and try again.",
+      "errVerify": "Couldn't verify that transaction."
+    }
+  },
+  "card": {
+    "loadingForm": "Loading secure payment form…",
+    "cancel": "Cancel",
+    "save": "Save payment method",
+    "saving": "Saving…",
+    "loading": "Loading…",
+    "errors": {
+      "startUpdate": "Could not start card update",
+      "updateFailed": "Couldn't update your payment method",
+      "saveFailed": "Could not save payment method"
+    }
   }
 }

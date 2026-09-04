@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   CheckoutElementsProvider,
   useCheckoutElements,
@@ -40,6 +41,9 @@ export default function CheckoutForm({
   onPaid: () => void;
 }) {
   // Pin the Stripe promise + options once so the provider never re-initializes (avoids field jank).
+  // NOTE: the Stripe elements' language is inherited from the Checkout Session's `locale` (set
+  // server-side when the session is created — see createCheckoutSession + the BE), not from here;
+  // the Checkout-Sessions Elements options don't accept a locale field.
   const [stripePromise] = useState(() => getStripe());
   const [options] = useState<StripeCheckoutElementsSdkOptions>(() => ({
     clientSecret,
@@ -62,6 +66,7 @@ function Inner({
   priceLabel?: string;
   onPaid: () => void;
 }) {
+  const t = useTranslations("checkout");
   const result = useCheckoutElements();
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
@@ -77,7 +82,7 @@ function Inner({
   if (result.type === "loading") {
     return (
       <div className="flex min-h-[240px] items-center justify-center">
-        <Spinner tone="dark" label="Loading secure checkout…" />
+        <Spinner tone="dark" label={t("loading")} />
       </div>
     );
   }
@@ -89,7 +94,7 @@ function Inner({
 
   function handleResult(r: StripeCheckoutConfirmResult) {
     if (r.type === "error") {
-      setErr(r.error.message || "Payment failed. Please try again.");
+      setErr(r.error.message || t("failed"));
       setBusy(false);
       return;
     }
@@ -129,7 +134,7 @@ function Inner({
       {hasWallet ? (
         <div className="my-5 flex items-center gap-3 text-xs font-medium uppercase tracking-wider text-slate-400">
           <span className="h-px flex-1 bg-slate-200" />
-          or pay by card
+          {t("orCard")}
           <span className="h-px flex-1 bg-slate-200" />
         </div>
       ) : null}
@@ -138,7 +143,7 @@ function Inner({
       <div className="relative min-h-[220px]">
         {!ready ? (
           <div className="absolute inset-0 flex items-center justify-center">
-            <Spinner tone="dark" label="Loading secure card form…" />
+            <Spinner tone="dark" label={t("loadingCard")} />
           </div>
         ) : null}
         <div className={ready ? "" : "pointer-events-none opacity-0"}>
@@ -153,11 +158,17 @@ function Inner({
         disabled={busy || !ready}
         className="mt-5 w-full rounded-xl bg-[#0074d4] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#0063b8] disabled:opacity-50"
       >
-        {busy ? "Processing…" : ready ? `Subscribe${priceLabel ? ` · ${priceLabel}` : ""}` : "Loading…"}
+        {busy
+          ? t("processing")
+          : ready
+            ? priceLabel
+              ? t("subscribePrice", { price: priceLabel })
+              : t("subscribe")
+            : t("loadingShort")}
       </button>
 
       <p className="mt-3 text-center text-xs text-slate-400">
-        Secured by Stripe · cancel anytime · 14-day money-back guarantee
+        {t("secured")}
       </p>
     </div>
   );

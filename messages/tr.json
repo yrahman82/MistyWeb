@@ -715,7 +715,62 @@
     "bestValue": "En iyi değer",
     "pricesNote": "Fiyatlar USD cinsindendir, web'de güvenli ödemeyle ya da App Store / Google Play üzerinden faturalandırılır; vergiler ve yerel fiyatlandırma ödeme sırasında uygulanır. İstediğiniz zaman iptal edin.",
     "faqEyebrow": "SSS",
-    "faqTitle": "Fiyatlandırma soruları"
+    "faqTitle": "Fiyatlandırma soruları",
+    "plans": {
+      "free": {
+        "name": "Ücretsiz",
+        "note": "Kart gerekmez",
+        "blurb": "Ücretsiz başlayın ve kullandıkça ücretsiz dakikalar kazanın — iOS ve Android uygulamalarında.",
+        "features": [
+          "Yalnızca iOS ve Android uygulamaları",
+          "Ücretsiz dakikalar kazanın",
+          "Tüm protokoller ve Gizli Mod",
+          "1 cihaz",
+          "Hesap gerekmez"
+        ],
+        "cta": "Ücretsiz başla"
+      },
+      "monthly": {
+        "name": "Aylık",
+        "cadence": "/ ay",
+        "note": "Aylık faturalandırma",
+        "blurb": "Tüm cihazlarınızda sınırsız ve tam hızda koruma.",
+        "features": [
+          "Sınırsız veri ve hız",
+          "40+ konumun tümü",
+          "Gizli Mod ve Bölünmüş Tünelleme",
+          "10 cihaza kadar",
+          "Öncelikli destek"
+        ],
+        "cta": "Premium al"
+      },
+      "sixmonth": {
+        "name": "6 Ay",
+        "cadence": "/ 6 ay",
+        "note": "Yalnızca {perMonth}",
+        "blurb": "Aynı Premium, altı ayda bir faturalandırılır.",
+        "features": [
+          "Premium’daki her şey",
+          "Aylığa göre %37 tasarruf",
+          "10 cihaza kadar",
+          "Öncelikli destek"
+        ],
+        "cta": "6 ay al"
+      },
+      "annual": {
+        "name": "Yıllık",
+        "cadence": "/ yıl",
+        "note": "Yalnızca {perMonth} — en avantajlısı",
+        "blurb": "En düşük fiyatımız, yılda bir kez faturalandırılır.",
+        "features": [
+          "Premium’daki her şey",
+          "Aylığa göre %62 tasarruf",
+          "10 cihaza kadar",
+          "Öncelikli destek"
+        ],
+        "cta": "Yıllık al"
+      }
+    }
   },
   "privacyPage": {
     "metaTitle": "Gizlilik Politikası",
@@ -1288,5 +1343,75 @@
         "a": "Evet — ücretsiz başlayın ve ücretsiz dakika kazanın, hesap ya da kredi kartı gerekmez."
       }
     ]
+  },
+  "payments": {
+    "title": "Tek dokunuşla ödeyin — kart yazmadan",
+    "body": "<b>Apple Pay</b> veya <b>Google Pay</b> ile tek dokunuşta ödeyin — kart bilgileriniz sitemize hiç ulaşmaz. Kartı mı tercih edersiniz? Güvenli Stripe ödemesinde tüm büyük kartları kabul ediyoruz.",
+    "orCard": "veya kartla ödeyin",
+    "andMore": "ve daha fazlası",
+    "orCrypto": "veya kripto ile ödeyin",
+    "cryptoChains": "TRON · Ethereum · BSC üzerinde",
+    "guarantee": "14 günlük para iade garantisi — hiçbir soru sorulmadan",
+    "refund": "İlk {days} gününüzde memnun kalmadınız mı? Bize e-posta gönderin, tam iade alın — hiçbir soru sorulmadan."
+  },
+  "checkout": {
+    "loading": "Güvenli ödeme yükleniyor…",
+    "orCard": "veya kartla ödeyin",
+    "loadingCard": "Güvenli kart formu yükleniyor…",
+    "failed": "Ödeme başarısız oldu. Lütfen tekrar deneyin.",
+    "processing": "İşleniyor…",
+    "subscribe": "Abone ol",
+    "subscribePrice": "Abone ol · {price}",
+    "loadingShort": "Yükleniyor…",
+    "secured": "Stripe ile güvence altında · istediğiniz zaman iptal · 14 günlük para iade garantisi"
+  },
+  "crypto": {
+    "backToMethods": "← Başka bir ödeme yöntemi seç",
+    "title": "Kripto ile öde",
+    "chooseCoinNetwork": "Ödeme yapacağınız coin’i ve ağı seçin.",
+    "loadingOptions": "Seçenekler yükleniyor…",
+    "notAvailable": "Kripto ödemeleri şu anda kullanılamıyor.",
+    "preparingAddress": "Ödeme adresiniz hazırlanıyor…",
+    "pickNetworkHint": "Cüzdanınızın veya borsanızın desteklediği ağı seçin — ağ ücretleri gönderdiğiniz yere göre değişir.",
+    "changeCoin": "← Coin değiştir",
+    "sendExactly": "Tam olarak şu kadar gönderin",
+    "on": "ağı:",
+    "warning": "<b>{coin}</b> yalnızca <b>{network}</b> üzerinden gönderin — farklı bir coin veya ağ kaybolur.",
+    "paymentAddress": "Ödeme adresi",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı",
+    "paidActivating": "Ödeme alındı — etkinleştiriliyor…",
+    "confirming": "Ödeme algılandı — onaylanıyor ({confirmations})…",
+    "expiredNotice": "Bu süre doldu. Zaten gönderdiyseniz yine de tamamlanabilir — aşağıdaki “Zaten gönderdim” seçeneğini kullanın veya baştan başlayın.",
+    "waiting": "Ödemeniz bekleniyor…",
+    "window": "Süre: {time}",
+    "startOver": "Baştan başla",
+    "errors": {
+      "loadOptions": "Kripto seçenekleri yüklenemedi. Lütfen tekrar deneyin.",
+      "startPayment": "Ödeme başlatılamadı."
+    },
+    "claim": {
+      "openLink": "Zaten gönderdiniz mi? İşlem hash’inizi girin",
+      "pastePrompt": "Kripto ödemenizin işlem hash’ini yapıştırın:",
+      "placeholder": "0x… (EVM) veya bir TRON tx kimliği",
+      "cancel": "İptal",
+      "verify": "Ödemeyi doğrula",
+      "checking": "Kontrol ediliyor…",
+      "confirmed": "Ödeme onaylandı — aboneliğiniz etkinleştiriliyor…",
+      "notFound": "Henüz bulunamadı — yeni gönderdiyseniz onayları bekleyin ve tekrar deneyin.",
+      "errVerify": "O işlem doğrulanamadı."
+    }
+  },
+  "card": {
+    "loadingForm": "Güvenli ödeme formu yükleniyor…",
+    "cancel": "İptal",
+    "save": "Ödeme yöntemini kaydet",
+    "saving": "Kaydediliyor…",
+    "loading": "Yükleniyor…",
+    "errors": {
+      "startUpdate": "Kart güncellemesi başlatılamadı",
+      "updateFailed": "Ödeme yönteminiz güncellenemedi",
+      "saveFailed": "Ödeme yöntemi kaydedilemedi"
+    }
   }
 }

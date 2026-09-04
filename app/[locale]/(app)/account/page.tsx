@@ -2,7 +2,7 @@
 
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
 import CheckoutForm from "@/components/CheckoutForm";
 import ChangeCardForm from "@/components/ChangeCardForm";
@@ -37,6 +37,7 @@ type View = "overview" | "plans" | "method" | "confirm" | "checkout" | "crypto";
 
 function AccountInner() {
   const t = useTranslations("accountPage");
+  const locale = useLocale();
   const router = useRouter();
   const params = useSearchParams();
   const planParam = params.get("plan");
@@ -116,13 +117,13 @@ function AccountInner() {
     setView("checkout");
     setClientSecret(null);
     try {
-      const { clientSecret } = await createCheckoutSession(planKey);
+      const { clientSecret } = await createCheckoutSession(planKey, locale);
       setClientSecret(clientSecret);
     } catch (e) {
       setErr(e instanceof Error ? e.message : t("errStartCheckout"));
       setView("plans");
     }
-  }, [t]);
+  }, [t, locale]);
 
   // The Stripe (card/PayPal/wallets) path: returning user with a saved method → CONFIRM charging it;
   // else the full Stripe checkout. (We don't collect a NEW method in confirm — an account has one

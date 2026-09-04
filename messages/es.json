@@ -715,7 +715,62 @@
     "bestValue": "Mejor relación calidad-precio",
     "pricesNote": "Precios en USD, facturados mediante pago seguro en la web o a través del App Store / Google Play; los impuestos y precios locales se aplican al finalizar la compra. Cancela cuando quieras.",
     "faqEyebrow": "Preguntas frecuentes",
-    "faqTitle": "Preguntas sobre precios"
+    "faqTitle": "Preguntas sobre precios",
+    "plans": {
+      "free": {
+        "name": "Gratis",
+        "note": "Sin tarjeta",
+        "blurb": "Empieza gratis y gana minutos gratis a medida que lo usas, en las apps de iOS y Android.",
+        "features": [
+          "Solo apps de iOS y Android",
+          "Gana minutos gratis",
+          "Todos los protocolos y Modo camuflaje",
+          "1 dispositivo",
+          "Sin necesidad de cuenta"
+        ],
+        "cta": "Empezar gratis"
+      },
+      "monthly": {
+        "name": "Mensual",
+        "cadence": "/ mes",
+        "note": "Facturación mensual",
+        "blurb": "Protección ilimitada y a máxima velocidad en todos tus dispositivos.",
+        "features": [
+          "Datos y velocidad ilimitados",
+          "Las más de 40 ubicaciones",
+          "Modo camuflaje y Túnel dividido",
+          "Hasta 10 dispositivos",
+          "Soporte prioritario"
+        ],
+        "cta": "Obtener Premium"
+      },
+      "sixmonth": {
+        "name": "6 meses",
+        "cadence": "/ 6 meses",
+        "note": "Solo {perMonth}",
+        "blurb": "El mismo Premium, con facturación cada seis meses.",
+        "features": [
+          "Todo lo de Premium",
+          "Ahorra un 37% frente al mensual",
+          "Hasta 10 dispositivos",
+          "Soporte prioritario"
+        ],
+        "cta": "Obtener 6 meses"
+      },
+      "annual": {
+        "name": "Anual",
+        "cadence": "/ año",
+        "note": "Solo {perMonth}: la mejor opción",
+        "blurb": "Nuestro precio más bajo, con facturación una vez al año.",
+        "features": [
+          "Todo lo de Premium",
+          "Ahorra un 62% frente al mensual",
+          "Hasta 10 dispositivos",
+          "Soporte prioritario"
+        ],
+        "cta": "Obtener Anual"
+      }
+    }
   },
   "privacyPage": {
     "metaTitle": "Política de privacidad",
@@ -1288,5 +1343,75 @@
         "a": "Sí — empieza gratis y gana minutos gratis, sin cuenta ni tarjeta de crédito."
       }
     ]
+  },
+  "payments": {
+    "title": "Paga en un toque, sin escribir la tarjeta",
+    "body": "Paga con un solo toque con <b>Apple Pay</b> o <b>Google Pay</b>: los datos de tu tarjeta nunca pasan por nuestro sitio. ¿Prefieres tarjeta? Aceptamos todas las principales en el pago seguro de Stripe.",
+    "orCard": "o paga con tarjeta",
+    "andMore": "y más",
+    "orCrypto": "o paga con cripto",
+    "cryptoChains": "en TRON · Ethereum · BSC",
+    "guarantee": "Garantía de reembolso de 14 días, sin preguntas",
+    "refund": "¿No estás contento en tus primeros {days} días? Escríbenos y te devolvemos todo, sin preguntas."
+  },
+  "checkout": {
+    "loading": "Cargando el pago seguro…",
+    "orCard": "o paga con tarjeta",
+    "loadingCard": "Cargando el formulario seguro de tarjeta…",
+    "failed": "El pago ha fallado. Inténtalo de nuevo.",
+    "processing": "Procesando…",
+    "subscribe": "Suscribirse",
+    "subscribePrice": "Suscribirse · {price}",
+    "loadingShort": "Cargando…",
+    "secured": "Protegido por Stripe · cancela cuando quieras · garantía de reembolso de 14 días"
+  },
+  "crypto": {
+    "backToMethods": "← Elegir otro método de pago",
+    "title": "Paga con cripto",
+    "chooseCoinNetwork": "Elige la moneda y la red desde las que vas a pagar.",
+    "loadingOptions": "Cargando opciones…",
+    "notAvailable": "Los pagos con cripto no están disponibles ahora mismo.",
+    "preparingAddress": "Preparando tu dirección de pago…",
+    "pickNetworkHint": "Elige la red que admite tu monedero o exchange: las comisiones de red varían según desde dónde envíes.",
+    "changeCoin": "← Cambiar moneda",
+    "sendExactly": "Envía exactamente",
+    "on": "en",
+    "warning": "Envía <b>{coin}</b> solo en <b>{network}</b>: otra moneda u otra red se perderán.",
+    "paymentAddress": "Dirección de pago",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "paidActivating": "Pago recibido: activando…",
+    "confirming": "Pago detectado: confirmando ({confirmations})…",
+    "expiredNotice": "Esta ventana ha caducado. Si ya lo enviaste, aún puede completarse: usa «Ya lo he enviado» abajo, o vuelve a empezar.",
+    "waiting": "Esperando tu pago…",
+    "window": "Ventana: {time}",
+    "startOver": "Volver a empezar",
+    "errors": {
+      "loadOptions": "No se pudieron cargar las opciones de cripto. Inténtalo de nuevo.",
+      "startPayment": "No se pudo iniciar el pago."
+    },
+    "claim": {
+      "openLink": "¿Ya lo enviaste? Introduce el hash de la transacción",
+      "pastePrompt": "Pega el hash de la transacción de tu pago con cripto:",
+      "placeholder": "0x… (EVM) o un id de tx de TRON",
+      "cancel": "Cancelar",
+      "verify": "Verificar pago",
+      "checking": "Comprobando…",
+      "confirmed": "Pago confirmado: activando tu suscripción…",
+      "notFound": "Aún no se encuentra: si acabas de enviarlo, espera a las confirmaciones e inténtalo de nuevo.",
+      "errVerify": "No se pudo verificar esa transacción."
+    }
+  },
+  "card": {
+    "loadingForm": "Cargando el formulario de pago seguro…",
+    "cancel": "Cancelar",
+    "save": "Guardar método de pago",
+    "saving": "Guardando…",
+    "loading": "Cargando…",
+    "errors": {
+      "startUpdate": "No se pudo iniciar la actualización de la tarjeta",
+      "updateFailed": "No se pudo actualizar tu método de pago",
+      "saveFailed": "No se pudo guardar el método de pago"
+    }
   }
 }

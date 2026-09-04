@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   Elements,
   PaymentElement,
@@ -32,6 +33,7 @@ export default function ChangeCardForm({
   onDone: (card: Card) => void;
   onCancel: () => void;
 }) {
+  const t = useTranslations("card");
   const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [err, setErr] = useState("");
   // getStripe() is a singleton, but pin the promise once so the `stripe` prop reference never changes.
@@ -41,9 +43,9 @@ export default function ChangeCardForm({
     createSetupIntent()
       .then((r) => setClientSecret(r.clientSecret))
       .catch((e) =>
-        setErr(e instanceof Error ? e.message : "Could not start card update"),
+        setErr(e instanceof Error ? e.message : t("errors.startUpdate")),
       );
-  }, []);
+  }, [t]);
 
   // Stable options object — only rebuilt when the client secret actually changes.
   const options = useMemo<StripeElementsOptions | null>(
@@ -55,7 +57,7 @@ export default function ChangeCardForm({
   if (!options)
     return (
       <div className="flex min-h-[120px] items-center justify-center">
-        <Spinner label="Loading secure payment form…" />
+        <Spinner label={t("loadingForm")} />
       </div>
     );
 
@@ -73,6 +75,7 @@ function Inner({
   onDone: (card: Card) => void;
   onCancel: () => void;
 }) {
+  const t = useTranslations("card");
   const stripe = useStripe();
   const elements = useElements();
   const [busy, setBusy] = useState(false);
@@ -97,7 +100,7 @@ function Inner({
     });
 
     if (error) {
-      setErr(error.message || "Couldn't update your payment method");
+      setErr(error.message || t("errors.updateFailed"));
       setBusy(false);
       return;
     }
@@ -113,7 +116,7 @@ function Inner({
       const card = await updatePaymentMethod(pmId);
       onDone(card);
     } catch (e2) {
-      setErr(e2 instanceof Error ? e2.message : "Could not save payment method");
+      setErr(e2 instanceof Error ? e2.message : t("errors.saveFailed"));
       setBusy(false);
     }
   }
@@ -127,7 +130,7 @@ function Inner({
       <div className="relative min-h-[200px] rounded-xl border border-white/10 bg-white/[0.03] p-4">
         {!ready ? (
           <div className="absolute inset-0 flex items-center justify-center">
-            <Spinner label="Loading secure payment form…" />
+            <Spinner label={t("loadingForm")} />
           </div>
         ) : null}
         <div className={ready ? "" : "pointer-events-none opacity-0"}>
@@ -143,14 +146,14 @@ function Inner({
           disabled={busy}
           className="rounded-full border border-white/15 px-4 py-2 text-sm text-white hover:bg-white/5 disabled:opacity-50"
         >
-          Cancel
+          {t("cancel")}
         </button>
         <button
           type="submit"
           disabled={busy || !ready || !stripe}
           className="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-ink hover:bg-white disabled:opacity-50"
         >
-          {busy ? "Saving…" : !ready ? "Loading…" : "Save payment method"}
+          {busy ? t("saving") : !ready ? t("loading") : t("save")}
         </button>
       </div>
     </form>

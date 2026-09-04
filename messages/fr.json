@@ -715,7 +715,62 @@
     "bestValue": "Meilleur rapport qualité-prix",
     "pricesNote": "Prix en USD, facturés via un paiement sécurisé sur le web ou via l’App Store / Google Play ; les taxes et la tarification locale sont appliquées au moment du paiement. Annulez à tout moment.",
     "faqEyebrow": "FAQ",
-    "faqTitle": "Questions sur les tarifs"
+    "faqTitle": "Questions sur les tarifs",
+    "plans": {
+      "free": {
+        "name": "Gratuit",
+        "note": "Sans carte",
+        "blurb": "Commencez gratuitement et gagnez des minutes gratuites au fil de votre utilisation — sur les applis iOS et Android.",
+        "features": [
+          "Applis iOS et Android uniquement",
+          "Gagnez des minutes gratuites",
+          "Tous les protocoles et le Mode furtif",
+          "1 appareil",
+          "Aucun compte requis"
+        ],
+        "cta": "Commencer gratuitement"
+      },
+      "monthly": {
+        "name": "Mensuel",
+        "cadence": "/ mois",
+        "note": "Facturation mensuelle",
+        "blurb": "Une protection illimitée et à pleine vitesse sur tous vos appareils.",
+        "features": [
+          "Données et vitesse illimitées",
+          "Les 40+ emplacements",
+          "Mode furtif et Tunneling divisé",
+          "Jusqu’à 10 appareils",
+          "Assistance prioritaire"
+        ],
+        "cta": "Passer à Premium"
+      },
+      "sixmonth": {
+        "name": "6 mois",
+        "cadence": "/ 6 mois",
+        "note": "Seulement {perMonth}",
+        "blurb": "Le même Premium, facturé tous les six mois.",
+        "features": [
+          "Tout Premium",
+          "Économisez 37 % par rapport au mensuel",
+          "Jusqu’à 10 appareils",
+          "Assistance prioritaire"
+        ],
+        "cta": "Prendre 6 mois"
+      },
+      "annual": {
+        "name": "Annuel",
+        "cadence": "/ an",
+        "note": "Seulement {perMonth} — le meilleur prix",
+        "blurb": "Notre prix le plus bas, facturé une fois par an.",
+        "features": [
+          "Tout Premium",
+          "Économisez 62 % par rapport au mensuel",
+          "Jusqu’à 10 appareils",
+          "Assistance prioritaire"
+        ],
+        "cta": "Prendre l’annuel"
+      }
+    }
   },
   "privacyPage": {
     "metaTitle": "Politique de confidentialité",
@@ -1288,5 +1343,75 @@
         "a": "Oui — commencez gratuitement et gagnez des minutes gratuites, sans compte ni carte bancaire."
       }
     ]
+  },
+  "payments": {
+    "title": "Payez en un geste, sans saisir de carte",
+    "body": "Payez en un seul geste avec <b>Apple Pay</b> ou <b>Google Pay</b> — les données de votre carte ne passent jamais par notre site. Vous préférez la carte ? Nous acceptons toutes les grandes cartes via le paiement sécurisé Stripe.",
+    "orCard": "ou payer par carte",
+    "andMore": "et plus",
+    "orCrypto": "ou payer en crypto",
+    "cryptoChains": "sur TRON · Ethereum · BSC",
+    "guarantee": "Garantie satisfait ou remboursé de 14 jours, sans condition",
+    "refund": "Pas satisfait durant vos {days} premiers jours ? Écrivez-nous pour un remboursement intégral, sans condition."
+  },
+  "checkout": {
+    "loading": "Chargement du paiement sécurisé…",
+    "orCard": "ou payer par carte",
+    "loadingCard": "Chargement du formulaire de carte sécurisé…",
+    "failed": "Le paiement a échoué. Veuillez réessayer.",
+    "processing": "Traitement…",
+    "subscribe": "S’abonner",
+    "subscribePrice": "S’abonner · {price}",
+    "loadingShort": "Chargement…",
+    "secured": "Sécurisé par Stripe · annulez à tout moment · garantie satisfait ou remboursé de 14 jours"
+  },
+  "crypto": {
+    "backToMethods": "← Choisir un autre moyen de paiement",
+    "title": "Payer en crypto",
+    "chooseCoinNetwork": "Choisissez la cryptomonnaie et le réseau depuis lesquels vous paierez.",
+    "loadingOptions": "Chargement des options…",
+    "notAvailable": "Les paiements en crypto ne sont pas disponibles pour le moment.",
+    "preparingAddress": "Préparation de votre adresse de paiement…",
+    "pickNetworkHint": "Choisissez le réseau pris en charge par votre portefeuille ou votre plateforme — les frais de réseau varient selon l’origine de l’envoi.",
+    "changeCoin": "← Changer de cryptomonnaie",
+    "sendExactly": "Envoyez exactement",
+    "on": "sur",
+    "warning": "Envoyez des <b>{coin}</b> uniquement sur <b>{network}</b> — une autre cryptomonnaie ou un autre réseau seront perdus.",
+    "paymentAddress": "Adresse de paiement",
+    "copy": "Copier",
+    "copied": "Copié",
+    "paidActivating": "Paiement reçu — activation…",
+    "confirming": "Paiement détecté — confirmation ({confirmations})…",
+    "expiredNotice": "Ce délai a expiré. Si vous l’avez déjà envoyé, il peut toujours aboutir — utilisez « Je l’ai déjà envoyé » ci-dessous, ou recommencez.",
+    "waiting": "En attente de votre paiement…",
+    "window": "Délai : {time}",
+    "startOver": "Recommencer",
+    "errors": {
+      "loadOptions": "Impossible de charger les options crypto. Veuillez réessayer.",
+      "startPayment": "Impossible de démarrer le paiement."
+    },
+    "claim": {
+      "openLink": "Déjà envoyé ? Saisissez votre hash de transaction",
+      "pastePrompt": "Collez le hash de transaction de votre paiement en crypto :",
+      "placeholder": "0x… (EVM) ou un id de tx TRON",
+      "cancel": "Annuler",
+      "verify": "Vérifier le paiement",
+      "checking": "Vérification…",
+      "confirmed": "Paiement confirmé — activation de votre abonnement…",
+      "notFound": "Introuvable pour l’instant — si vous venez de l’envoyer, attendez les confirmations et réessayez.",
+      "errVerify": "Impossible de vérifier cette transaction."
+    }
+  },
+  "card": {
+    "loadingForm": "Chargement du formulaire de paiement sécurisé…",
+    "cancel": "Annuler",
+    "save": "Enregistrer le moyen de paiement",
+    "saving": "Enregistrement…",
+    "loading": "Chargement…",
+    "errors": {
+      "startUpdate": "Impossible de démarrer la mise à jour de la carte",
+      "updateFailed": "Impossible de mettre à jour votre moyen de paiement",
+      "saveFailed": "Impossible d’enregistrer le moyen de paiement"
+    }
   }
 }

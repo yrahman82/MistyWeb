@@ -46,19 +46,21 @@ export async function getPaywallPlans(): Promise<Record<string, PaywallPlan>> {
 }
 
 // Static plan copy merged with live DB prices. The Free tier is marketing-only (not in the paywall)
-// so it always keeps its static definition.
-export async function getPlans(): Promise<DisplayPlan[]> {
+// so it always keeps its static definition. `perMonth` (e.g. "$2.50/mo") is exposed so localized
+// callers can build their own note text ("Just {perMonth}") from the message catalog.
+export type PricedPlan = DisplayPlan & { perMonth: string };
+export async function getPlans(): Promise<PricedPlan[]> {
   const paywall = await getPaywallPlans();
   return staticPlans.map((plan) => {
     const pw = paywall[plan.key];
-    if (!pw) return plan; // free tier, or paywall unavailable → static fallback
+    if (!pw) return { ...plan, perMonth: "" }; // free tier, or paywall unavailable → static fallback
     const note =
       plan.key === "monthly"
         ? plan.note
         : plan.highlight
           ? `Just ${pw.perMonth} — best value`
           : `Just ${pw.perMonth}`;
-    return { ...plan, price: pw.price, cadence: cadenceFromUnit(pw.unit), note };
+    return { ...plan, price: pw.price, cadence: cadenceFromUnit(pw.unit), note, perMonth: pw.perMonth };
   });
 }
 

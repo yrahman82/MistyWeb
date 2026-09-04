@@ -715,7 +715,62 @@
     "bestValue": "Beste keuze",
     "pricesNote": "Prijzen in USD, gefactureerd via beveiligd afrekenen op het web of via de App Store / Google Play; belastingen en lokale prijzen worden bij het afrekenen toegepast. Zeg op elk moment op.",
     "faqEyebrow": "FAQ",
-    "faqTitle": "Vragen over prijzen"
+    "faqTitle": "Vragen over prijzen",
+    "plans": {
+      "free": {
+        "name": "Gratis",
+        "note": "Geen kaart nodig",
+        "blurb": "Begin gratis en verdien gratis minuten terwijl je het gebruikt — in de iOS- en Android-apps.",
+        "features": [
+          "Alleen iOS- en Android-apps",
+          "Verdien gratis minuten",
+          "Alle protocollen en Stealth Mode",
+          "1 apparaat",
+          "Geen account nodig"
+        ],
+        "cta": "Gratis beginnen"
+      },
+      "monthly": {
+        "name": "Maandelijks",
+        "cadence": "/ maand",
+        "note": "Maandelijkse facturering",
+        "blurb": "Onbeperkte bescherming op volle snelheid op al je apparaten.",
+        "features": [
+          "Onbeperkte data en snelheid",
+          "Alle 40+ locaties",
+          "Stealth Mode en Split Tunneling",
+          "Tot 10 apparaten",
+          "Prioriteitssupport"
+        ],
+        "cta": "Premium nemen"
+      },
+      "sixmonth": {
+        "name": "6 maanden",
+        "cadence": "/ 6 maanden",
+        "note": "Slechts {perMonth}",
+        "blurb": "Hetzelfde Premium, elke zes maanden gefactureerd.",
+        "features": [
+          "Alles van Premium",
+          "Bespaar 37% t.o.v. maandelijks",
+          "Tot 10 apparaten",
+          "Prioriteitssupport"
+        ],
+        "cta": "6 maanden nemen"
+      },
+      "annual": {
+        "name": "Jaarlijks",
+        "cadence": "/ jaar",
+        "note": "Slechts {perMonth} — beste keuze",
+        "blurb": "Onze laagste prijs, één keer per jaar gefactureerd.",
+        "features": [
+          "Alles van Premium",
+          "Bespaar 62% t.o.v. maandelijks",
+          "Tot 10 apparaten",
+          "Prioriteitssupport"
+        ],
+        "cta": "Jaarabonnement nemen"
+      }
+    }
   },
   "privacyPage": {
     "metaTitle": "Privacybeleid",
@@ -1288,5 +1343,75 @@
         "a": "Ja — begin gratis en verdien gratis minuten, zonder account of creditcard."
       }
     ]
+  },
+  "payments": {
+    "title": "Afrekenen met één tik — geen kaart typen",
+    "body": "Betaal met één tik via <b>Apple Pay</b> of <b>Google Pay</b> — je kaartgegevens komen nooit op onze site. Liever met kaart? We accepteren alle grote kaarten via de beveiligde Stripe-checkout.",
+    "orCard": "of betaal met kaart",
+    "andMore": "en meer",
+    "orCrypto": "of betaal met crypto",
+    "cryptoChains": "op TRON · Ethereum · BSC",
+    "guarantee": "14 dagen niet-goed-geld-terug — zonder vragen",
+    "refund": "Niet tevreden in je eerste {days} dagen? Mail ons voor een volledige terugbetaling — zonder vragen."
+  },
+  "checkout": {
+    "loading": "Beveiligde checkout laden…",
+    "orCard": "of betaal met kaart",
+    "loadingCard": "Beveiligd kaartformulier laden…",
+    "failed": "Betaling mislukt. Probeer het opnieuw.",
+    "processing": "Bezig met verwerken…",
+    "subscribe": "Abonneren",
+    "subscribePrice": "Abonneren · {price}",
+    "loadingShort": "Laden…",
+    "secured": "Beveiligd door Stripe · altijd opzegbaar · 14 dagen niet-goed-geld-terug"
+  },
+  "crypto": {
+    "backToMethods": "← Kies een andere betaalmethode",
+    "title": "Betalen met crypto",
+    "chooseCoinNetwork": "Kies de munt en het netwerk waarmee je betaalt.",
+    "loadingOptions": "Opties laden…",
+    "notAvailable": "Crypto-betalingen zijn momenteel niet beschikbaar.",
+    "preparingAddress": "Je betaaladres wordt voorbereid…",
+    "pickNetworkHint": "Kies het netwerk dat je wallet of exchange ondersteunt — netwerkkosten verschillen per plek waar je vandaan verstuurt.",
+    "changeCoin": "← Munt wijzigen",
+    "sendExactly": "Stuur precies",
+    "on": "op",
+    "warning": "Stuur <b>{coin}</b> alleen via <b>{network}</b> — een andere munt of ander netwerk gaat verloren.",
+    "paymentAddress": "Betaaladres",
+    "copy": "Kopiëren",
+    "copied": "Gekopieerd",
+    "paidActivating": "Betaling ontvangen — activeren…",
+    "confirming": "Betaling gedetecteerd — bevestigen ({confirmations})…",
+    "expiredNotice": "Deze periode is verlopen. Als je het al hebt verzonden, kan het alsnog lukken — gebruik “Ik heb het al verzonden” hieronder, of begin opnieuw.",
+    "waiting": "Wachten op je betaling…",
+    "window": "Venster: {time}",
+    "startOver": "Opnieuw beginnen",
+    "errors": {
+      "loadOptions": "Kon de crypto-opties niet laden. Probeer het opnieuw.",
+      "startPayment": "Kon de betaling niet starten."
+    },
+    "claim": {
+      "openLink": "Al verzonden? Voer je transactiehash in",
+      "pastePrompt": "Plak de transactiehash van je crypto-betaling:",
+      "placeholder": "0x… (EVM) of een TRON-tx-id",
+      "cancel": "Annuleren",
+      "verify": "Betaling verifiëren",
+      "checking": "Controleren…",
+      "confirmed": "Betaling bevestigd — je abonnement wordt geactiveerd…",
+      "notFound": "Nog niet gevonden — als je het net hebt verzonden, wacht op bevestigingen en probeer het opnieuw.",
+      "errVerify": "Kon die transactie niet verifiëren."
+    }
+  },
+  "card": {
+    "loadingForm": "Beveiligd betaalformulier laden…",
+    "cancel": "Annuleren",
+    "save": "Betaalmethode opslaan",
+    "saving": "Opslaan…",
+    "loading": "Laden…",
+    "errors": {
+      "startUpdate": "Kon de kaartupdate niet starten",
+      "updateFailed": "Kon je betaalmethode niet bijwerken",
+      "saveFailed": "Kon de betaalmethode niet opslaan"
+    }
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { moneyBack } from "@/lib/site";
 import { getCryptoAssets } from "@/lib/api";
 import { Usdt, Usdc } from "@/components/PayBrands";
@@ -73,6 +74,7 @@ function Amex() {
 }
 
 export default function PaymentMethods() {
+  const t = useTranslations("payments");
   // Show the crypto row only where crypto is enabled (backend flag). Public endpoint, no auth.
   const [cryptoEnabled, setCryptoEnabled] = useState(false);
   useEffect(() => {
@@ -81,12 +83,10 @@ export default function PaymentMethods() {
   return (
     <div className="mx-auto mt-12 max-w-3xl rounded-3xl border border-white/10 bg-white/[0.03] p-8 text-center">
       <h2 className="text-xl font-semibold text-white sm:text-2xl">
-        Check out in one tap — no card typing
+        {t("title")}
       </h2>
       <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-slate-300">
-        Pay in a single tap with <span className="font-medium text-white">Apple&nbsp;Pay</span> or{" "}
-        <span className="font-medium text-white">Google&nbsp;Pay</span> — your card details never
-        touch our site. Prefer a card? We accept all major cards, on secure Stripe checkout.
+        {t.rich("body", { b: (c) => <span className="font-medium text-white">{c}</span> })}
       </p>
 
       {/* Wallets — the prominent, one-tap options */}
@@ -98,13 +98,13 @@ export default function PaymentMethods() {
       {/* Cards */}
       <div className="mt-6 flex flex-col items-center gap-3">
         <span className="text-xs font-medium uppercase tracking-wider text-slate-500">
-          or pay by card
+          {t("orCard")}
         </span>
         <div className="flex flex-wrap items-center justify-center gap-2.5">
           <Visa />
           <Mastercard />
           <Amex />
-          <span className="text-sm text-slate-400">&amp; more</span>
+          <span className="text-sm text-slate-400">{t("andMore")}</span>
         </div>
       </div>
 
@@ -112,12 +112,12 @@ export default function PaymentMethods() {
       {cryptoEnabled ? (
         <div className="mt-6 flex flex-col items-center gap-3">
           <span className="text-xs font-medium uppercase tracking-wider text-slate-500">
-            or pay with crypto
+            {t("orCrypto")}
           </span>
           <div className="flex flex-wrap items-center justify-center gap-2.5">
             <Usdt />
             <Usdc />
-            <span className="text-sm text-slate-400">on TRON · Ethereum · BSC</span>
+            <span className="text-sm text-slate-400">{t("cryptoChains")}</span>
           </div>
         </div>
       ) : null}
@@ -129,12 +129,11 @@ export default function PaymentMethods() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" />
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
           </svg>
-          {moneyBack.headline}
+          {t("guarantee")}
         </span>
       </div>
       <p className="mx-auto mt-2 max-w-lg text-xs leading-6 text-slate-500">
-        Not happy in your first {moneyBack.days} days? Email us for a full refund — no questions
-        asked.
+        {t("refund", { days: moneyBack.days })}
       </p>
     </div>
   );

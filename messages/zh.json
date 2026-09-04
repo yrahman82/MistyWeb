@@ -715,7 +715,62 @@
     "bestValue": "最超值",
     "pricesNote": "价格以美元计，通过网页安全结账或经由 App Store / Google Play 收费；税费和本地价格在结账时计算。随时可取消。",
     "faqEyebrow": "常见问题",
-    "faqTitle": "价格相关问题"
+    "faqTitle": "价格相关问题",
+    "plans": {
+      "free": {
+        "name": "免费",
+        "note": "无需银行卡",
+        "blurb": "免费开始使用，边用边赚取免费时长——支持 iOS 和 Android 应用。",
+        "features": [
+          "仅限 iOS 和 Android 应用",
+          "赚取免费时长",
+          "全部协议与隐身模式",
+          "1 台设备",
+          "无需账户"
+        ],
+        "cta": "免费开始"
+      },
+      "monthly": {
+        "name": "按月",
+        "cadence": "/ 月",
+        "note": "按月计费",
+        "blurb": "在你的所有设备上享受无限速、不限量的保护。",
+        "features": [
+          "不限流量与速度",
+          "全部 40+ 个节点",
+          "隐身模式与分应用代理",
+          "最多 10 台设备",
+          "优先支持"
+        ],
+        "cta": "开通 Premium"
+      },
+      "sixmonth": {
+        "name": "6 个月",
+        "cadence": "/ 6 个月",
+        "note": "仅需 {perMonth}",
+        "blurb": "同样的 Premium，每六个月扣费一次。",
+        "features": [
+          "包含 Premium 全部功能",
+          "比按月省 37%",
+          "最多 10 台设备",
+          "优先支持"
+        ],
+        "cta": "购买 6 个月"
+      },
+      "annual": {
+        "name": "年付",
+        "cadence": "/ 年",
+        "note": "仅需 {perMonth}——超值之选",
+        "blurb": "我们的最低价格，每年扣费一次。",
+        "features": [
+          "包含 Premium 全部功能",
+          "比按月省 62%",
+          "最多 10 台设备",
+          "优先支持"
+        ],
+        "cta": "购买年付"
+      }
+    }
   },
   "privacyPage": {
     "metaTitle": "隐私政策",
@@ -1288,5 +1343,75 @@
         "a": "有——免费开始并赚取免费时长，无需账户或信用卡。"
       }
     ]
+  },
+  "payments": {
+    "title": "一键结账——无需输入卡号",
+    "body": "使用 <b>Apple Pay</b> 或 <b>Google Pay</b> 一键付款——你的卡片信息绝不会经过我们的网站。更喜欢用银行卡？我们通过安全的 Stripe 结账支持所有主流银行卡。",
+    "orCard": "或使用银行卡付款",
+    "andMore": "等更多",
+    "orCrypto": "或使用加密货币付款",
+    "cryptoChains": "支持 TRON · Ethereum · BSC",
+    "guarantee": "14 天退款保证——无需任何理由",
+    "refund": "前 {days} 天内不满意？给我们发邮件即可全额退款——无需任何理由。"
+  },
+  "checkout": {
+    "loading": "正在加载安全结账…",
+    "orCard": "或使用银行卡付款",
+    "loadingCard": "正在加载安全卡片表单…",
+    "failed": "付款失败，请重试。",
+    "processing": "处理中…",
+    "subscribe": "订阅",
+    "subscribePrice": "订阅 · {price}",
+    "loadingShort": "加载中…",
+    "secured": "由 Stripe 提供安全保障 · 随时可取消 · 14 天退款保证"
+  },
+  "crypto": {
+    "backToMethods": "← 选择其他付款方式",
+    "title": "使用加密货币付款",
+    "chooseCoinNetwork": "选择你要用来付款的币种和网络。",
+    "loadingOptions": "正在加载选项…",
+    "notAvailable": "加密货币付款目前不可用。",
+    "preparingAddress": "正在准备你的付款地址…",
+    "pickNetworkHint": "选择你的钱包或交易所支持的网络——网络手续费因转出方而异。",
+    "changeCoin": "← 更换币种",
+    "sendExactly": "请准确转账",
+    "on": "通过",
+    "warning": "只能通过 <b>{network}</b> 转 <b>{coin}</b>——使用其他币种或网络将导致资金丢失。",
+    "paymentAddress": "付款地址",
+    "copy": "复制",
+    "copied": "已复制",
+    "paidActivating": "已收到付款——正在激活…",
+    "confirming": "已检测到付款——正在确认（{confirmations}）…",
+    "expiredNotice": "此窗口已超时。如果你已经转账，仍可能完成——请点击下方“我已转账”，或重新开始。",
+    "waiting": "正在等待你的付款…",
+    "window": "剩余时间：{time}",
+    "startOver": "重新开始",
+    "errors": {
+      "loadOptions": "无法加载加密货币选项，请重试。",
+      "startPayment": "无法开始付款。"
+    },
+    "claim": {
+      "openLink": "已经转账了？输入你的交易哈希",
+      "pastePrompt": "粘贴你加密货币付款的交易哈希：",
+      "placeholder": "0x…（EVM）或 TRON 交易 ID",
+      "cancel": "取消",
+      "verify": "验证付款",
+      "checking": "正在检查…",
+      "confirmed": "付款已确认——正在激活你的订阅…",
+      "notFound": "尚未找到——如果你刚刚转账，请等待确认后再试。",
+      "errVerify": "无法验证该交易。"
+    }
+  },
+  "card": {
+    "loadingForm": "正在加载安全付款表单…",
+    "cancel": "取消",
+    "save": "保存付款方式",
+    "saving": "正在保存…",
+    "loading": "加载中…",
+    "errors": {
+      "startUpdate": "无法开始更新银行卡",
+      "updateFailed": "无法更新你的付款方式",
+      "saveFailed": "无法保存付款方式"
+    }
   }
 }

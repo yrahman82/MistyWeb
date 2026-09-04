@@ -715,7 +715,62 @@
     "bestValue": "Bestes Preis-Leistungs-Verhältnis",
     "pricesNote": "Preise in USD, abgerechnet über sicheren Checkout im Web oder über den App Store / Google Play; Steuern und lokale Preise werden beim Checkout angewendet. Jederzeit kündbar.",
     "faqEyebrow": "FAQ",
-    "faqTitle": "Fragen zu den Preisen"
+    "faqTitle": "Fragen zu den Preisen",
+    "plans": {
+      "free": {
+        "name": "Kostenlos",
+        "note": "Keine Karte nötig",
+        "blurb": "Starten Sie kostenlos und verdienen Sie Freiminuten während der Nutzung — in den iOS- und Android-Apps.",
+        "features": [
+          "Nur iOS- und Android-Apps",
+          "Freiminuten verdienen",
+          "Alle Protokolle und Stealth-Modus",
+          "1 Gerät",
+          "Kein Konto erforderlich"
+        ],
+        "cta": "Kostenlos starten"
+      },
+      "monthly": {
+        "name": "Monatlich",
+        "cadence": "/ Monat",
+        "note": "Monatliche Abrechnung",
+        "blurb": "Unbegrenzter Schutz mit voller Geschwindigkeit auf all Ihren Geräten.",
+        "features": [
+          "Unbegrenzte Daten und Geschwindigkeit",
+          "Alle über 40 Standorte",
+          "Stealth-Modus und Split Tunneling",
+          "Bis zu 10 Geräte",
+          "Priorisierter Support"
+        ],
+        "cta": "Premium holen"
+      },
+      "sixmonth": {
+        "name": "6 Monate",
+        "cadence": "/ 6 Monate",
+        "note": "Nur {perMonth}",
+        "blurb": "Dasselbe Premium, alle sechs Monate abgerechnet.",
+        "features": [
+          "Alles aus Premium",
+          "37 % günstiger als monatlich",
+          "Bis zu 10 Geräte",
+          "Priorisierter Support"
+        ],
+        "cta": "6 Monate holen"
+      },
+      "annual": {
+        "name": "Jährlich",
+        "cadence": "/ Jahr",
+        "note": "Nur {perMonth} — bestes Angebot",
+        "blurb": "Unser günstigster Preis, einmal jährlich abgerechnet.",
+        "features": [
+          "Alles aus Premium",
+          "62 % günstiger als monatlich",
+          "Bis zu 10 Geräte",
+          "Priorisierter Support"
+        ],
+        "cta": "Jahresabo holen"
+      }
+    }
   },
   "privacyPage": {
     "metaTitle": "Datenschutzerklärung",
@@ -1288,5 +1343,75 @@
         "a": "Ja – starten Sie kostenlos und verdienen Sie Freiminuten, ohne Konto oder Kreditkarte."
       }
     ]
+  },
+  "payments": {
+    "title": "Mit einem Tippen bezahlen — ohne Karte einzugeben",
+    "body": "Bezahlen Sie mit einem einzigen Tippen per <b>Apple Pay</b> oder <b>Google Pay</b> — Ihre Kartendaten gelangen nie auf unsere Website. Lieber per Karte? Wir akzeptieren alle gängigen Karten über den sicheren Stripe-Bezahlvorgang.",
+    "orCard": "oder mit Karte bezahlen",
+    "andMore": "und mehr",
+    "orCrypto": "oder mit Krypto bezahlen",
+    "cryptoChains": "über TRON · Ethereum · BSC",
+    "guarantee": "14 Tage Geld-zurück-Garantie — ohne Wenn und Aber",
+    "refund": "In Ihren ersten {days} Tagen nicht zufrieden? Schreiben Sie uns eine E-Mail für eine vollständige Rückerstattung — ohne Wenn und Aber."
+  },
+  "checkout": {
+    "loading": "Sicherer Bezahlvorgang wird geladen…",
+    "orCard": "oder mit Karte bezahlen",
+    "loadingCard": "Sicheres Kartenformular wird geladen…",
+    "failed": "Zahlung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "processing": "Wird verarbeitet…",
+    "subscribe": "Abonnieren",
+    "subscribePrice": "Abonnieren · {price}",
+    "loadingShort": "Wird geladen…",
+    "secured": "Abgesichert durch Stripe · jederzeit kündbar · 14 Tage Geld-zurück-Garantie"
+  },
+  "crypto": {
+    "backToMethods": "← Andere Zahlungsmethode wählen",
+    "title": "Mit Krypto bezahlen",
+    "chooseCoinNetwork": "Wählen Sie die Coin und das Netzwerk, von dem aus Sie bezahlen.",
+    "loadingOptions": "Optionen werden geladen…",
+    "notAvailable": "Krypto-Zahlungen sind derzeit nicht verfügbar.",
+    "preparingAddress": "Ihre Zahlungsadresse wird vorbereitet…",
+    "pickNetworkHint": "Wählen Sie das Netzwerk, das Ihr Wallet oder Ihre Börse unterstützt — die Netzwerkgebühren hängen davon ab, von wo Sie senden.",
+    "changeCoin": "← Coin ändern",
+    "sendExactly": "Senden Sie genau",
+    "on": "über",
+    "warning": "Senden Sie <b>{coin}</b> ausschließlich über <b>{network}</b> — eine andere Coin oder ein anderes Netzwerk gehen verloren.",
+    "paymentAddress": "Zahlungsadresse",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "paidActivating": "Zahlung erhalten — wird aktiviert…",
+    "confirming": "Zahlung erkannt — wird bestätigt ({confirmations})…",
+    "expiredNotice": "Dieses Zeitfenster ist abgelaufen. Wenn Sie bereits gesendet haben, kann es trotzdem abgeschlossen werden — nutzen Sie unten „Ich habe bereits gesendet“ oder beginnen Sie neu.",
+    "waiting": "Warten auf Ihre Zahlung…",
+    "window": "Zeitfenster: {time}",
+    "startOver": "Neu beginnen",
+    "errors": {
+      "loadOptions": "Krypto-Optionen konnten nicht geladen werden. Bitte versuchen Sie es erneut.",
+      "startPayment": "Zahlung konnte nicht gestartet werden."
+    },
+    "claim": {
+      "openLink": "Schon gesendet? Geben Sie Ihren Transaktions-Hash ein",
+      "pastePrompt": "Fügen Sie den Transaktions-Hash Ihrer Krypto-Zahlung ein:",
+      "placeholder": "0x… (EVM) oder eine TRON-Tx-ID",
+      "cancel": "Abbrechen",
+      "verify": "Zahlung prüfen",
+      "checking": "Wird geprüft…",
+      "confirmed": "Zahlung bestätigt — Ihr Abo wird aktiviert…",
+      "notFound": "Noch nicht gefunden — wenn Sie gerade erst gesendet haben, warten Sie auf die Bestätigungen und versuchen Sie es erneut.",
+      "errVerify": "Diese Transaktion konnte nicht geprüft werden."
+    }
+  },
+  "card": {
+    "loadingForm": "Sicheres Zahlungsformular wird geladen…",
+    "cancel": "Abbrechen",
+    "save": "Zahlungsmethode speichern",
+    "saving": "Wird gespeichert…",
+    "loading": "Wird geladen…",
+    "errors": {
+      "startUpdate": "Kartenaktualisierung konnte nicht gestartet werden",
+      "updateFailed": "Ihre Zahlungsmethode konnte nicht aktualisiert werden",
+      "saveFailed": "Zahlungsmethode konnte nicht gespeichert werden"
+    }
   }
 }

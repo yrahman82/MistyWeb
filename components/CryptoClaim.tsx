@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { claimCrypto } from "@/lib/api";
 
 // Reusable "I paid but it's not showing — verify my transaction" form. Used in TWO places:
@@ -16,6 +17,7 @@ export default function CryptoClaim({
   onPaid?: () => void;
   variant?: "inline" | "section";
 }) {
+  const t = useTranslations("crypto");
   const [open, setOpen] = useState(variant === "section"); // account page: always open; pay screen: link first
   const [txHash, setTxHash] = useState("");
   const [busy, setBusy] = useState(false);
@@ -31,13 +33,13 @@ export default function CryptoClaim({
       const r = await claimCrypto(tx, invoiceId);
       if (r.status === "paid") {
         setOk(true);
-        setMsg("Payment confirmed — activating your subscription…");
+        setMsg(t("claim.confirmed"));
         onPaid?.();
         return;
       }
-      setMsg(r.message ?? "Not found yet — if you just sent it, wait for confirmations and try again.");
+      setMsg(r.message ?? t("claim.notFound"));
     } catch (e) {
-      setMsg(e instanceof Error ? e.message : "Couldn't verify that transaction.");
+      setMsg(e instanceof Error ? e.message : t("claim.errVerify"));
     } finally {
       setBusy(false);
     }
@@ -46,18 +48,18 @@ export default function CryptoClaim({
   if (!open) {
     return (
       <button onClick={() => setOpen(true)} className="text-xs text-brand hover:underline">
-        Already sent it? Enter your transaction hash
+        {t("claim.openLink")}
       </button>
     );
   }
 
   return (
     <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
-      <p className="mb-2 text-xs text-slate-400">Paste the transaction hash of your crypto payment:</p>
+      <p className="mb-2 text-xs text-slate-400">{t("claim.pastePrompt")}</p>
       <input
         value={txHash}
         onChange={(e) => setTxHash(e.target.value)}
-        placeholder="0x… (EVM) or a TRON tx id"
+        placeholder={t("claim.placeholder")}
         className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 font-mono text-xs text-white outline-none focus:border-brand"
       />
       {msg ? <p className={`mt-2 text-xs ${ok ? "text-mint" : "text-amber-300/90"}`}>{msg}</p> : null}
@@ -67,7 +69,7 @@ export default function CryptoClaim({
             onClick={() => setOpen(false)}
             className="rounded-full border border-white/15 px-4 py-1.5 text-xs text-white hover:bg-white/5"
           >
-            Cancel
+            {t("claim.cancel")}
           </button>
         ) : null}
         <button
@@ -75,7 +77,7 @@ export default function CryptoClaim({
           disabled={busy || !txHash.trim()}
           className="rounded-full bg-brand px-4 py-1.5 text-xs font-semibold text-ink hover:bg-white disabled:opacity-50"
         >
-          {busy ? "Checking…" : "Verify payment"}
+          {busy ? t("claim.checking") : t("claim.verify")}
         </button>
       </div>
     </div>

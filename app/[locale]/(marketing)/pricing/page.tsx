@@ -83,23 +83,23 @@ export default async function PricingPage({
                     {t("bestValue")}
                   </span>
                 ) : null}
-                <h2 className="text-lg font-semibold text-white">{plan.name}</h2>
+                <h2 className="text-lg font-semibold text-white">{t(`plans.${plan.key}.name`)}</h2>
                 <div className="mt-4 flex items-end gap-1">
                   <span className="text-4xl font-bold tracking-tight text-white">
                     {plan.price}
                   </span>
-                  {plan.cadence ? (
+                  {plan.key !== "free" ? (
                     <span className="mb-1 text-sm text-slate-400">
-                      {plan.cadence}
+                      {t(`plans.${plan.key}.cadence`)}
                     </span>
                   ) : null}
                 </div>
-                {plan.note ? (
-                  <p className="mt-1 text-xs font-medium text-brand">{plan.note}</p>
-                ) : null}
-                <p className="mt-3 text-sm text-slate-400">{plan.blurb}</p>
+                <p className="mt-1 text-xs font-medium text-brand">
+                  {t(`plans.${plan.key}.note`, { perMonth: plan.perMonth })}
+                </p>
+                <p className="mt-3 text-sm text-slate-400">{t(`plans.${plan.key}.blurb`)}</p>
                 <ul className="mt-6 flex-1 space-y-3">
-                  {plan.features.map((f) => (
+                  {(t.raw(`plans.${plan.key}.features`) as string[]).map((f) => (
                     <li key={f} className="flex items-start gap-3 text-sm text-slate-200">
                       <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-mint" />
                       {f}
@@ -112,7 +112,7 @@ export default async function PricingPage({
                     variant={plan.highlight ? "primary" : "secondary"}
                     className="w-full"
                   >
-                    {plan.cta}
+                    {t(`plans.${plan.key}.cta`)}
                   </Button>
                 </div>
               </div>

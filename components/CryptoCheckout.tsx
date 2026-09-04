@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { QRCodeSVG } from "qrcode.react";
 import { Spinner, Loader } from "@/components/ui";
 import CryptoClaim from "@/components/CryptoClaim";
@@ -35,6 +36,7 @@ export default function CryptoCheckout({
   onPaid: () => void;
   onBack: () => void;
 }) {
+  const t = useTranslations("crypto");
   const [assets, setAssets] = useState<CryptoAsset[] | null>(null);
   const [enabled, setEnabled] = useState(true);
   const [invoice, setInvoice] = useState<CryptoInvoice | null>(null);
@@ -54,8 +56,8 @@ export default function CryptoCheckout({
           ),
         );
       })
-      .catch(() => setErr("Couldn't load crypto options. Please try again."));
-  }, []);
+      .catch(() => setErr(t("errors.loadOptions")));
+  }, [t]);
 
   const pick = useCallback(
     async (coin: string, chain: string) => {
@@ -64,12 +66,12 @@ export default function CryptoCheckout({
       try {
         setInvoice(await createCryptoInvoice(plan, coin, chain));
       } catch (e) {
-        setErr(e instanceof Error ? e.message : "Couldn't start the payment.");
+        setErr(e instanceof Error ? e.message : t("errors.startPayment"));
       } finally {
         setCreating(false);
       }
     },
-    [plan],
+    [plan, t],
   );
 
   if (invoice) {
@@ -89,24 +91,24 @@ export default function CryptoCheckout({
   return (
     <div className="w-full max-w-lg">
       <button onClick={onBack} className="text-sm text-slate-400 hover:text-white">
-        ← Choose a different payment method
+        {t("backToMethods")}
       </button>
       <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-        <h1 className="text-xl font-semibold">Pay with crypto</h1>
+        <h1 className="text-xl font-semibold">{t("title")}</h1>
         <p className="mt-1 text-sm text-slate-400">
-          {planLabel ? `${planLabel} · ` : ""}Choose the coin and network you&apos;ll pay from.
+          {planLabel ? `${planLabel} · ` : ""}{t("chooseCoinNetwork")}
         </p>
 
         {!assets ? (
-          <Loader label="Loading options…" className="mt-6" />
+          <Loader label={t("loadingOptions")} className="mt-6" />
         ) : !enabled ? (
-          <p className="mt-6 text-sm text-slate-400">Crypto payments aren&apos;t available right now.</p>
+          <p className="mt-6 text-sm text-slate-400">{t("notAvailable")}</p>
         ) : creating ? (
-          <Loader label="Preparing your payment address…" className="mt-6" />
+          <Loader label={t("preparingAddress")} className="mt-6" />
         ) : (
           <div className="mt-5">
             <p className="mb-3 text-xs text-slate-500">
-              Pick the network your wallet or exchange supports — network fees vary by where you send from.
+              {t("pickNetworkHint")}
             </p>
             <div className="space-y-3">
               {assets.map((a) => (
@@ -142,6 +144,7 @@ function CryptoPay({
   onPaid: () => void;
   onStartOver: () => void;
 }) {
+  const t = useTranslations("crypto");
   const [inv, setInv] = useState<CryptoInvoice>(invoice);
   const [copied, setCopied] = useState(false);
   const [now, setNow] = useState(Date.now());
@@ -189,19 +192,19 @@ function CryptoPay({
   return (
     <div className="w-full max-w-lg">
       <button onClick={onStartOver} className="text-sm text-slate-400 hover:text-white">
-        ← Change coin
+        {t("changeCoin")}
       </button>
 
       <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
         {/* Amount + selected coin/network — big, iconic, bold so it can't be misread */}
         <div className="text-center">
-          <p className="text-sm text-slate-400">Send exactly</p>
+          <p className="text-sm text-slate-400">{t("sendExactly")}</p>
           <p className="mt-1 text-4xl font-bold tracking-tight text-white">
             {amount} <span className="text-brand">{inv.coin}</span>
           </p>
           <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
             {inv.coin === "USDT" ? <Usdt /> : <Usdc />}
-            <span className="text-sm text-slate-400">on</span>
+            <span className="text-sm text-slate-400">{t("on")}</span>
             <NetworkBadge chain={inv.chain} />
             <span className="text-sm font-semibold text-white">{netLabel(inv.chain)}</span>
           </div>
@@ -209,8 +212,11 @@ function CryptoPay({
 
         {/* Critical wrong-coin/network warning — bold names */}
         <div className="mt-4 rounded-xl border border-amber-400/30 bg-amber-400/[0.08] p-3 text-center text-xs text-amber-200">
-          Send <b className="text-white">{inv.coin}</b> on <b className="text-white">{netLabel(inv.chain)}</b> only —
-          a different coin or network will be lost.
+          {t.rich("warning", {
+            coin: inv.coin,
+            network: netLabel(inv.chain),
+            b: (chunks) => <b className="text-white">{chunks}</b>,
+          })}
         </div>
 
         {/* QR — client-side render; the address never leaves the browser to a 3rd party */}
@@ -222,7 +228,7 @@ function CryptoPay({
 
         {/* Address + copy */}
         <div className="mt-5">
-          <p className="mb-1 text-xs text-slate-400">Payment address</p>
+          <p className="mb-1 text-xs text-slate-400">{t("paymentAddress")}</p>
           <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] p-3">
             <span className="min-w-0 flex-1 break-all font-mono text-xs text-white">{inv.address}</span>
             <button
@@ -233,7 +239,7 @@ function CryptoPay({
               }}
               className="shrink-0 rounded-full border border-white/15 px-3 py-1.5 text-xs text-white hover:bg-white/5"
             >
-              {copied ? "Copied" : "Copy"}
+              {copied ? t("copied") : t("copy")}
             </button>
           </div>
         </div>
@@ -241,19 +247,18 @@ function CryptoPay({
         {/* Status */}
         <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-4 text-center">
           {inv.status === "paid" ? (
-            <p className="text-sm font-medium text-mint">Payment received — activating…</p>
+            <p className="text-sm font-medium text-mint">{t("paidActivating")}</p>
           ) : inv.confirmations > 0 ? (
-            <Spinner label={`Payment detected — confirming (${inv.confirmations})…`} className="justify-center" />
+            <Spinner label={t("confirming", { confirmations: inv.confirmations })} className="justify-center" />
           ) : expired ? (
             <p className="text-sm text-slate-300">
-              This window timed out. If you already sent it, it can still complete — use
-              &ldquo;I&apos;ve already sent it&rdquo; below, or start over.
+              {t("expiredNotice")}
             </p>
           ) : (
             <div>
-              <Spinner label="Waiting for your payment…" className="justify-center" />
+              <Spinner label={t("waiting")} className="justify-center" />
               <p className="mt-2 text-xs text-slate-500">
-                Window: {mm}:{ss.toString().padStart(2, "0")}
+                {t("window", { time: `${mm}:${ss.toString().padStart(2, "0")}` })}
               </p>
             </div>
           )}
@@ -269,7 +274,7 @@ function CryptoPay({
             onClick={onStartOver}
             className="mt-4 w-full rounded-full border border-white/15 px-5 py-2.5 text-sm text-white hover:bg-white/5"
           >
-            Start over
+            {t("startOver")}
           </button>
         ) : null}
       </div>
