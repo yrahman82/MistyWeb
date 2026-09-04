@@ -4,7 +4,18 @@ import Script from "next/script";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+
+// Only these namespaces are consumed by client components (verified by grepping every
+// "use client" file's useTranslations call). Server components read the full catalog via
+// getTranslations, so we ship ONLY these to the browser — keeping the big server-only
+// namespaces (home, common, privacyPage, termsPage, all marketing pages) out of the client
+// bundle/HTML and off the hydration path. Add a namespace here if a NEW client component needs it.
+const CLIENT_NAMESPACES = [
+  "nav", "announce", "payments", "checkout", "crypto", "card", "downloadGrid",
+  "notFound", "accountPage", "pricingPage", "loginPage", "registerPage",
+  "resetPasswordPage", "tvLoginPage",
+] as const;
 import "../globals.css";
 import { site } from "@/lib/site";
 import Analytics from "@/components/Analytics";
@@ -68,13 +79,19 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
+  // Ship only the client-needed namespaces to the browser (see CLIENT_NAMESPACES above).
+  const allMessages = await getMessages();
+  const clientMessages = Object.fromEntries(
+    CLIENT_NAMESPACES.filter((ns) => ns in allMessages).map((ns) => [ns, allMessages[ns]]),
+  );
+
   return (
     <html
       lang={htmlLang[locale as Locale]}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={clientMessages}>{children}</NextIntlClientProvider>
         {GA_ID ? (
           <>
             <Script
