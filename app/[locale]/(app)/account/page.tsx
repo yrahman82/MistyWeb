@@ -37,6 +37,11 @@ type View = "overview" | "plans" | "method" | "confirm" | "checkout" | "crypto";
 
 function AccountInner() {
   const t = useTranslations("accountPage");
+  // Plan display text comes from the SAME catalog the pricing page uses (pricingPage.plans),
+  // keyed by plan.key, so both surfaces show identical localized names. Prices stay from the DB.
+  const tp = useTranslations("pricingPage");
+  const planName = (p: { key: string; title: string }) =>
+    tp.has(`plans.${p.key}.name`) ? tp(`plans.${p.key}.name`) : p.title;
   const locale = useLocale();
   const router = useRouter();
   const params = useSearchParams();
@@ -282,7 +287,7 @@ function AccountInner() {
         <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
           <h1 className="text-xl font-semibold">{t("payHeading")}</h1>
           {selected ? (
-            <p className="mt-1 text-sm text-slate-400">{selected.title} · {selected.price}{selected.unit}</p>
+            <p className="mt-1 text-sm text-slate-400">{planName(selected)} · {selected.price}{selected.unit}</p>
           ) : null}
           <div className="mt-5 space-y-3">
             {/* Card & wallets — brands come from the shared PayBrands (single source; no PayPal until live) */}
@@ -324,7 +329,7 @@ function AccountInner() {
     return (
       <CryptoCheckout
         plan={plan}
-        planLabel={selected ? `${selected.title} · ${selected.price}${selected.unit}` : undefined}
+        planLabel={selected ? `${planName(selected)} · ${selected.price}${selected.unit}` : undefined}
         onPaid={onPaid}
         onBack={() => setView("method")}
       />
@@ -445,9 +450,9 @@ function AccountInner() {
               <button key={p.key} onClick={() => choosePlan(p.key)} disabled={busy}
                 className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left transition-colors hover:border-brand/50 disabled:opacity-50">
                 <div>
-                  <div className="font-semibold text-white">{p.title}</div>
+                  <div className="font-semibold text-white">{planName(p)}</div>
                   <div className="text-xs text-slate-400">
-                    {p.badge ? `${p.perMonth} · ${p.badge.toLowerCase()}` : p.perMonth}
+                    {p.badge ? `${p.perMonth} · ${tp("bestValue")}` : p.perMonth}
                   </div>
                 </div>
                 <div className="text-lg font-bold text-white">
