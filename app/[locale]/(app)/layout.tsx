@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 
 // Account/auth pages: not indexable. Use the same top menu as the marketing site
@@ -20,6 +21,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
         }}
       />
       <div className="sticky top-0 z-50">
+        <AnnouncementBar />
         <Header />
       </div>
       <main className="flex flex-1 items-start justify-center px-5 py-12 sm:items-center">
