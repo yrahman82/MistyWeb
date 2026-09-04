@@ -108,8 +108,8 @@ export default function ChatWidget() {
           aria-label={t("bubble")}
           className="fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand text-ink shadow-xl shadow-black/40 transition-transform hover:scale-105"
         >
-          <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a8 8 0 0 1-8 8H7l-4 3v-5.5A8 8 0 1 1 21 12Z" />
+          <svg className="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+            <path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z" />
           </svg>
         </button>
       ) : null}
