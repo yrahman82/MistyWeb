@@ -95,7 +95,10 @@ export default async function PricingPage({
                   ) : null}
                 </div>
                 <p className="mt-1 text-xs font-medium text-brand">
-                  {t(`plans.${plan.key}.note`, { perMonth: plan.perMonth })}
+                  {t(`plans.${plan.key}.note`, {
+                    // Swap the DB "/mo" abbreviation for the proper localized month cadence.
+                    perMonth: `${plan.perMonth.split("/")[0]}${t("plans.monthly.cadence")}`,
+                  })}
                 </p>
                 <p className="mt-3 text-sm text-slate-400">{t(`plans.${plan.key}.blurb`)}</p>
                 <ul className="mt-6 flex-1 space-y-3">

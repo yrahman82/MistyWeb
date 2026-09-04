@@ -42,6 +42,12 @@ function AccountInner() {
   const tp = useTranslations("pricingPage");
   const planName = (p: { key: string; title: string }) =>
     tp.has(`plans.${p.key}.name`) ? tp(`plans.${p.key}.name`) : p.title;
+  // Proper, localized cadence ("/ month" …) from the catalog instead of the DB's "/mo" abbreviation.
+  const planCadence = (p: { key: string; unit: string }) =>
+    tp.has(`plans.${p.key}.cadence`) ? tp(`plans.${p.key}.cadence`) : p.unit;
+  // The per-month equivalent ("$2.50/mo"): keep the DB price, swap the "/mo" for the localized month cadence.
+  const monthlyCadence = tp.has("plans.monthly.cadence") ? tp("plans.monthly.cadence") : "/mo";
+  const perMonthText = (p: { perMonth: string }) => `${p.perMonth.split("/")[0]}${monthlyCadence}`;
   const locale = useLocale();
   const router = useRouter();
   const params = useSearchParams();
@@ -287,7 +293,7 @@ function AccountInner() {
         <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
           <h1 className="text-xl font-semibold">{t("payHeading")}</h1>
           {selected ? (
-            <p className="mt-1 text-sm text-slate-400">{planName(selected)} · {selected.price}{selected.unit}</p>
+            <p className="mt-1 text-sm text-slate-400">{planName(selected)} · {selected.price}{planCadence(selected)}</p>
           ) : null}
           <div className="mt-5 space-y-3">
             {/* Card & wallets — brands come from the shared PayBrands (single source; no PayPal until live) */}
@@ -329,7 +335,7 @@ function AccountInner() {
     return (
       <CryptoCheckout
         plan={plan}
-        planLabel={selected ? `${planName(selected)} · ${selected.price}${selected.unit}` : undefined}
+        planLabel={selected ? `${planName(selected)} · ${selected.price}${planCadence(selected)}` : undefined}
         onPaid={onPaid}
         onBack={() => setView("method")}
       />
@@ -394,7 +400,7 @@ function AccountInner() {
                   <span className="text-slate-400">{t("labelPlan")}</span>
                   <span className="text-white">
                     {selected?.title ?? t("premiumName")}
-                    {selected ? ` · ${selected.price}${selected.unit}` : ""}
+                    {selected ? ` · ${selected.price}${planCadence(selected)}` : ""}
                   </span>
                 </div>
                 <div className="flex items-start justify-between gap-4">
@@ -452,11 +458,11 @@ function AccountInner() {
                 <div>
                   <div className="font-semibold text-white">{planName(p)}</div>
                   <div className="text-xs text-slate-400">
-                    {p.badge ? `${p.perMonth} · ${tp("bestValue")}` : p.perMonth}
+                    {p.badge ? `${perMonthText(p)} · ${tp("bestValue")}` : perMonthText(p)}
                   </div>
                 </div>
                 <div className="text-lg font-bold text-white">
-                  {p.price}<span className="ml-1 text-xs font-normal text-slate-400">{p.unit}</span>
+                  {p.price}<span className="ml-1 text-xs font-normal text-slate-400">{planCadence(p)}</span>
                 </div>
               </button>
             ))}
