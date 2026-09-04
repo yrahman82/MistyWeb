@@ -119,8 +119,8 @@
         "body": "Have MistyVPN connect the moment your device starts, so you're protected automatically — never accidentally exposed."
       },
       {
-        "title": "Earn free minutes",
-        "body": "Out of free time? Top up your free minutes any time — no account and no credit card required."
+        "title": "90 free minutes",
+        "body": "Start with 90 free minutes on the app to try everything — no account and no credit card required."
       }
     ],
     "steps": [
@@ -156,7 +156,7 @@
       },
       {
         "q": "Is there a free version?",
-        "a": "Yes. Start free and earn free minutes as you go — no account or credit card required. Upgrade to Premium any time for unlimited, full-speed access."
+        "a": "Yes. Start with 90 free minutes — no account or credit card required. Upgrade to Premium any time for unlimited, full-speed access."
       },
       {
         "q": "How do I pay?",
@@ -175,7 +175,7 @@
   "home": {
     "metaTitle": "MistyVPN — Private, unblocked, fast on every device",
     "hero": {
-      "eyebrow": "Start free · No card required",
+      "eyebrow": "90 free minutes · No card required",
       "titleLead": "Private internet that",
       "titleHighlight": "actually works",
       "titleTrail": ", everywhere.",
@@ -340,7 +340,7 @@
         {
           "label": "Free tier",
           "values": [
-            "Yes — earn free minutes",
+            "Yes — 90 free minutes",
             "No",
             "No",
             "No"
@@ -454,7 +454,7 @@
       "cards": {
         "freeTier": {
           "title": "A real free tier",
-          "body": "Most premium VPNs have no free option at all. MistyVPN lets you start for free and earn free minutes — no card, no commitment."
+          "body": "Most premium VPNs have no free option at all. MistyVPN gives you 90 free minutes to start — no card, no commitment."
         },
         "vault": {
           "title": "Password manager + 2FA, free",
@@ -536,7 +536,7 @@
     "trust": [
       {
         "title": "Start free",
-        "body": "No credit card. Earn free minutes and try the full app before you pay a penny."
+        "body": "No credit card. Get 90 free minutes and try the full app before you pay a penny."
       },
       {
         "title": "Password manager & 2FA included",
@@ -627,8 +627,8 @@
         "body": "Have MistyVPN connect the moment your device starts, so you're protected automatically — never accidentally exposed."
       },
       {
-        "title": "Earn free minutes",
-        "body": "Out of free time? Top up your free minutes any time — no account and no credit card required."
+        "title": "90 free minutes",
+        "body": "Start with 90 free minutes on the app to try everything — no account and no credit card required."
       }
     ],
     "underHood": {
@@ -707,7 +707,7 @@
   },
   "pricingPage": {
     "metaTitle": "Pricing — free to start, Premium from $2.50/mo",
-    "metaDescription": "Simple MistyVPN pricing. Start free and earn free minutes, or go Premium from $2.50/month for unlimited speed on up to 10 devices. Manage it all in the app.",
+    "metaDescription": "Simple MistyVPN pricing. Start with 90 free minutes, or go Premium from $2.50/month for unlimited speed on up to 10 devices. Manage it all in the app.",
     "breadcrumb": "Pricing",
     "eyebrow": "Pricing",
     "title": "Simple pricing. Everything included.",
@@ -720,10 +720,10 @@
       "free": {
         "name": "Free",
         "note": "No card needed",
-        "blurb": "Get started for free and earn free minutes as you go — on the iOS and Android apps.",
+        "blurb": "Start with 90 free minutes on the iOS and Android apps — try everything before you pay.",
         "features": [
           "iOS & Android apps only",
-          "Earn free minutes",
+          "90 free minutes",
           "All protocols & Stealth Mode",
           "1 device",
           "No account required"
@@ -1340,7 +1340,7 @@
       },
       {
         "q": "Is there a free way to try it?",
-        "a": "Yes — start free and earn free minutes, with no account or credit card required."
+        "a": "Yes — start with 90 free minutes, with no account or credit card required."
       }
     ]
   },
@@ -1413,5 +1413,11 @@
       "updateFailed": "Couldn't update your payment method",
       "saveFailed": "Could not save payment method"
     }
+  },
+  "announce": {
+    "payments": "Apple Pay, Google Pay, cards & crypto — pay however you like",
+    "blocked": "Works in the Middle East, China, Russia & every blocked country",
+    "free": "Test before you buy — 90 free minutes, no card or account needed",
+    "streaming": "All major streaming services — unblocked in every major region"
   }
 }

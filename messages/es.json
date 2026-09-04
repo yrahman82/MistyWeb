@@ -119,8 +119,8 @@
         "body": "Haz que MistyVPN se conecte en cuanto arranca tu dispositivo, para estar protegido automáticamente y no quedar expuesto sin querer."
       },
       {
-        "title": "Gana minutos gratis",
-        "body": "¿Se te acabó el tiempo gratis? Recarga tus minutos gratis cuando quieras — sin cuenta ni tarjeta de crédito."
+        "title": "90 minutos gratis",
+        "body": "Empieza con 90 minutos gratis en la app para probarlo todo, sin cuenta ni tarjeta de crédito."
       }
     ],
     "steps": [
@@ -156,7 +156,7 @@
       },
       {
         "q": "¿Hay una versión gratuita?",
-        "a": "Sí. Empieza gratis y gana minutos gratis sobre la marcha — sin cuenta ni tarjeta de crédito. Pásate a Premium cuando quieras para acceso ilimitado y a toda velocidad."
+        "a": "Sí. Empieza con 90 minutos gratis, sin cuenta ni tarjeta de crédito. Pasa a Premium cuando quieras para acceso ilimitado y a máxima velocidad."
       },
       {
         "q": "¿Cómo pago?",
@@ -175,7 +175,7 @@
   "home": {
     "metaTitle": "MistyVPN — Privado, sin bloqueos y rápido en todos tus dispositivos",
     "hero": {
-      "eyebrow": "Empieza gratis · Sin tarjeta",
+      "eyebrow": "90 minutos gratis · Sin tarjeta",
       "titleLead": "Internet privado que",
       "titleHighlight": "de verdad funciona",
       "titleTrail": ", en todas partes.",
@@ -340,7 +340,7 @@
         {
           "label": "Plan gratuito",
           "values": [
-            "Sí — gana minutos gratis",
+            "Sí — 90 minutos gratis",
             "No",
             "No",
             "No"
@@ -454,7 +454,7 @@
       "cards": {
         "freeTier": {
           "title": "Un plan gratuito de verdad",
-          "body": "La mayoría de las VPN premium no tienen ninguna opción gratuita. MistyVPN te deja empezar gratis y ganar minutos gratis — sin tarjeta, sin compromiso."
+          "body": "La mayoría de los VPN premium no tienen ninguna opción gratis. MistyVPN te da 90 minutos gratis para empezar, sin tarjeta y sin compromiso."
         },
         "vault": {
           "title": "Gestor de contraseñas + 2FA, gratis",
@@ -536,7 +536,7 @@
     "trust": [
       {
         "title": "Empieza gratis",
-        "body": "Sin tarjeta de crédito. Gana minutos gratis y prueba la app completa antes de pagar un céntimo."
+        "body": "Sin tarjeta de crédito. Consigue 90 minutos gratis y prueba la app completa antes de pagar un céntimo."
       },
       {
         "title": "Gestor de contraseñas y 2FA incluidos",
@@ -627,8 +627,8 @@
         "body": "Haz que MistyVPN se conecte en cuanto arranca tu dispositivo, para estar protegido automáticamente y no quedar expuesto sin querer."
       },
       {
-        "title": "Gana minutos gratis",
-        "body": "¿Se te acabó el tiempo gratis? Recarga tus minutos gratis cuando quieras — sin cuenta ni tarjeta de crédito."
+        "title": "90 minutos gratis",
+        "body": "Empieza con 90 minutos gratis en la app para probarlo todo, sin cuenta ni tarjeta de crédito."
       }
     ],
     "underHood": {
@@ -707,7 +707,7 @@
   },
   "pricingPage": {
     "metaTitle": "Precios — gratis para empezar, Premium desde $2.50/mes",
-    "metaDescription": "Precios sencillos de MistyVPN. Empieza gratis y gana minutos gratis, o pásate a Premium desde $2.50 al mes para velocidad ilimitada en hasta 10 dispositivos. Gestiónalo todo en la app.",
+    "metaDescription": "Precios sencillos de MistyVPN. Empieza con 90 minutos gratis, o pásate a Premium desde $2.50/mes para máxima velocidad en hasta 10 dispositivos. Gestiónalo todo desde la app.",
     "breadcrumb": "Precios",
     "eyebrow": "Precios",
     "title": "Precios sencillos. Todo incluido.",
@@ -720,10 +720,10 @@
       "free": {
         "name": "Gratis",
         "note": "Sin tarjeta",
-        "blurb": "Empieza gratis y gana minutos gratis a medida que lo usas, en las apps de iOS y Android.",
+        "blurb": "Empieza con 90 minutos gratis en las apps de iOS y Android: pruébalo todo antes de pagar.",
         "features": [
           "Solo apps de iOS y Android",
-          "Gana minutos gratis",
+          "90 minutos gratis",
           "Todos los protocolos y Modo camuflaje",
           "1 dispositivo",
           "Sin necesidad de cuenta"
@@ -1340,7 +1340,7 @@
       },
       {
         "q": "¿Hay una forma gratuita de probarla?",
-        "a": "Sí — empieza gratis y gana minutos gratis, sin cuenta ni tarjeta de crédito."
+        "a": "Sí: empieza con 90 minutos gratis, sin cuenta ni tarjeta de crédito."
       }
     ]
   },
@@ -1413,5 +1413,11 @@
       "updateFailed": "No se pudo actualizar tu método de pago",
       "saveFailed": "No se pudo guardar el método de pago"
     }
+  },
+  "announce": {
+    "payments": "Apple Pay, Google Pay, tarjetas y cripto: paga como prefieras",
+    "blocked": "Funciona en Oriente Medio, China, Rusia y todos los países bloqueados",
+    "free": "Pruébalo antes de comprar: 90 minutos gratis, sin tarjeta ni cuenta",
+    "streaming": "Todos los grandes servicios de streaming, desbloqueados en las principales regiones"
   }
 }

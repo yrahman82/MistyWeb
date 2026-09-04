@@ -119,8 +119,8 @@
         "body": "Laat MistyVPN verbinden zodra je apparaat opstart, zodat je automatisch beschermd bent — nooit per ongeluk onbeschermd."
       },
       {
-        "title": "Verdien gratis minuten",
-        "body": "Geen gratis tijd meer over? Vul je gratis minuten op elk moment aan — zonder account en zonder creditcard."
+        "title": "90 gratis minuten",
+        "body": "Begin met 90 gratis minuten in de app om alles te proberen — zonder account en zonder creditcard."
       }
     ],
     "steps": [
@@ -156,7 +156,7 @@
       },
       {
         "q": "Is er een gratis versie?",
-        "a": "Ja. Begin gratis en verdien onderweg gratis minuten — zonder account of creditcard. Upgrade op elk moment naar Premium voor onbeperkte toegang op volle snelheid."
+        "a": "Ja. Begin met 90 gratis minuten — zonder account en zonder creditcard. Stap wanneer je wilt over naar Premium voor onbeperkte toegang op volle snelheid."
       },
       {
         "q": "Hoe betaal ik?",
@@ -175,7 +175,7 @@
   "home": {
     "metaTitle": "MistyVPN — Privé, zonder blokkades, snel op elk apparaat",
     "hero": {
-      "eyebrow": "Gratis beginnen · Geen kaart nodig",
+      "eyebrow": "90 gratis minuten · Geen kaart nodig",
       "titleLead": "Privé-internet dat",
       "titleHighlight": "echt werkt",
       "titleTrail": ", overal.",
@@ -340,7 +340,7 @@
         {
           "label": "Gratis versie",
           "values": [
-            "Ja — verdien gratis minuten",
+            "Ja — 90 gratis minuten",
             "Nee",
             "Nee",
             "Nee"
@@ -454,7 +454,7 @@
       "cards": {
         "freeTier": {
           "title": "Een echte gratis versie",
-          "body": "De meeste premium-VPN's hebben helemaal geen gratis optie. Met MistyVPN begin je gratis en verdien je gratis minuten — geen kaart, geen verplichting."
+          "body": "De meeste premium-VPN's hebben helemaal geen gratis optie. MistyVPN geeft je 90 gratis minuten om te beginnen — zonder kaart, zonder verplichting."
         },
         "vault": {
           "title": "Wachtwoordmanager + 2FA, gratis",
@@ -536,7 +536,7 @@
     "trust": [
       {
         "title": "Gratis beginnen",
-        "body": "Geen creditcard. Verdien gratis minuten en probeer de volledige app voordat je een cent betaalt."
+        "body": "Geen creditcard. Krijg 90 gratis minuten en probeer de volledige app voordat je een cent betaalt."
       },
       {
         "title": "Wachtwoordmanager & 2FA inbegrepen",
@@ -627,8 +627,8 @@
         "body": "Laat MistyVPN verbinden zodra je apparaat opstart, zodat je automatisch beschermd bent — nooit per ongeluk onbeschermd."
       },
       {
-        "title": "Verdien gratis minuten",
-        "body": "Geen gratis tijd meer over? Vul je gratis minuten op elk moment aan — zonder account en zonder creditcard."
+        "title": "90 gratis minuten",
+        "body": "Begin met 90 gratis minuten in de app om alles te proberen — zonder account en zonder creditcard."
       }
     ],
     "underHood": {
@@ -707,7 +707,7 @@
   },
   "pricingPage": {
     "metaTitle": "Prijzen — gratis te beginnen, Premium vanaf $2.50/mnd",
-    "metaDescription": "Eenvoudige MistyVPN-prijzen. Begin gratis en verdien gratis minuten, of ga Premium vanaf $2.50/maand voor onbeperkte snelheid op tot 10 apparaten. Beheer alles in de app.",
+    "metaDescription": "Eenvoudige MistyVPN-prijzen. Begin met 90 gratis minuten, of ga voor Premium vanaf $2.50/maand voor volle snelheid op maximaal 10 apparaten. Beheer alles in de app.",
     "breadcrumb": "Prijzen",
     "eyebrow": "Prijzen",
     "title": "Eenvoudige prijzen. Alles inbegrepen.",
@@ -720,10 +720,10 @@
       "free": {
         "name": "Gratis",
         "note": "Geen kaart nodig",
-        "blurb": "Begin gratis en verdien gratis minuten terwijl je het gebruikt — in de iOS- en Android-apps.",
+        "blurb": "Begin met 90 gratis minuten in de iOS- en Android-apps — probeer alles voordat je betaalt.",
         "features": [
           "Alleen iOS- en Android-apps",
-          "Verdien gratis minuten",
+          "90 gratis minuten",
           "Alle protocollen en Stealth Mode",
           "1 apparaat",
           "Geen account nodig"
@@ -1340,7 +1340,7 @@
       },
       {
         "q": "Is er een gratis manier om het te proberen?",
-        "a": "Ja — begin gratis en verdien gratis minuten, zonder account of creditcard."
+        "a": "Ja — begin met 90 gratis minuten, zonder account en zonder creditcard."
       }
     ]
   },
@@ -1413,5 +1413,11 @@
       "updateFailed": "Kon je betaalmethode niet bijwerken",
       "saveFailed": "Kon de betaalmethode niet opslaan"
     }
+  },
+  "announce": {
+    "payments": "Apple Pay, Google Pay, kaarten en crypto — betaal zoals je wilt",
+    "blocked": "Werkt in het Midden-Oosten, China, Rusland en elk geblokkeerd land",
+    "free": "Probeer voor je koopt — 90 gratis minuten, geen kaart of account nodig",
+    "streaming": "Alle grote streamingdiensten — gedeblokkeerd in elke grote regio"
   }
 }

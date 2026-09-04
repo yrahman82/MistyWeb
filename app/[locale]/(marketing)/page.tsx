@@ -70,7 +70,7 @@ export default async function HomePage({
       <JsonLd data={websiteLd} />
 
       {/* Hero */}
-      <section className="relative pt-20 pb-20 sm:pt-28">
+      <section className="relative pt-10 pb-16 sm:pt-28 sm:pb-20">
         <Container className="text-center">
           <div className="flex justify-center">
             <Eyebrow>{t("hero.eyebrow")}</Eyebrow>

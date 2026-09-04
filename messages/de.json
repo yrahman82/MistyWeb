@@ -119,8 +119,8 @@
         "body": "Lassen Sie MistyVPN sich verbinden, sobald Ihr Gerät startet – so sind Sie automatisch geschützt und nie versehentlich ungeschützt."
       },
       {
-        "title": "Freiminuten verdienen",
-        "body": "Freie Zeit aufgebraucht? Laden Sie Ihre Freiminuten jederzeit auf – ohne Konto und ohne Kreditkarte."
+        "title": "90 Freiminuten",
+        "body": "Starten Sie mit 90 Freiminuten in der App und testen Sie alles — ohne Konto und ohne Kreditkarte."
       }
     ],
     "steps": [
@@ -156,7 +156,7 @@
       },
       {
         "q": "Gibt es eine kostenlose Version?",
-        "a": "Ja. Starten Sie kostenlos und verdienen Sie unterwegs Freiminuten – ohne Konto oder Kreditkarte. Steigen Sie jederzeit auf Premium um für unbegrenzten Zugang mit voller Geschwindigkeit."
+        "a": "Ja. Starten Sie mit 90 Freiminuten — ohne Konto und ohne Kreditkarte. Wechseln Sie jederzeit zu Premium für unbegrenzten Zugang mit voller Geschwindigkeit."
       },
       {
         "q": "Wie bezahle ich?",
@@ -175,7 +175,7 @@
   "home": {
     "metaTitle": "MistyVPN – Privat, entsperrt, schnell auf jedem Gerät",
     "hero": {
-      "eyebrow": "Kostenlos starten · Keine Karte nötig",
+      "eyebrow": "90 Freiminuten · Keine Karte nötig",
       "titleLead": "Privates Internet, das",
       "titleHighlight": "wirklich funktioniert",
       "titleTrail": " – überall.",
@@ -340,7 +340,7 @@
         {
           "label": "Kostenloser Tarif",
           "values": [
-            "Ja – Freiminuten verdienen",
+            "Ja — 90 Freiminuten",
             "Nein",
             "Nein",
             "Nein"
@@ -454,7 +454,7 @@
       "cards": {
         "freeTier": {
           "title": "Ein echter kostenloser Tarif",
-          "body": "Die meisten Premium-VPNs haben überhaupt keine kostenlose Option. Mit MistyVPN starten Sie kostenlos und verdienen Freiminuten – keine Karte, keine Bindung."
+          "body": "Die meisten Premium-VPNs haben gar keine kostenlose Option. MistyVPN gibt Ihnen 90 Freiminuten für den Start — ohne Karte, ohne Verpflichtung."
         },
         "vault": {
           "title": "Passwort-Manager + 2FA, kostenlos",
@@ -536,7 +536,7 @@
     "trust": [
       {
         "title": "Kostenlos starten",
-        "body": "Keine Kreditkarte. Verdienen Sie Freiminuten und testen Sie die komplette App, bevor Sie einen Cent zahlen."
+        "body": "Keine Kreditkarte. Sichern Sie sich 90 Freiminuten und testen Sie die komplette App, bevor Sie einen Cent zahlen."
       },
       {
         "title": "Passwort-Manager & 2FA inklusive",
@@ -627,8 +627,8 @@
         "body": "Lassen Sie MistyVPN sich verbinden, sobald Ihr Gerät startet – so sind Sie automatisch geschützt und nie versehentlich ungeschützt."
       },
       {
-        "title": "Freiminuten verdienen",
-        "body": "Freie Zeit aufgebraucht? Laden Sie Ihre Freiminuten jederzeit auf – ohne Konto und ohne Kreditkarte."
+        "title": "90 Freiminuten",
+        "body": "Starten Sie mit 90 Freiminuten in der App und testen Sie alles — ohne Konto und ohne Kreditkarte."
       }
     ],
     "underHood": {
@@ -707,7 +707,7 @@
   },
   "pricingPage": {
     "metaTitle": "Preise – kostenlos starten, Premium ab $2.50/Mon.",
-    "metaDescription": "Einfache MistyVPN-Preise. Starten Sie kostenlos und verdienen Sie Freiminuten, oder holen Sie sich Premium ab $2.50/Monat für unbegrenzte Geschwindigkeit auf bis zu 10 Geräten. Verwalten Sie alles in der App.",
+    "metaDescription": "Einfache MistyVPN-Preise. Starten Sie mit 90 Freiminuten oder wechseln Sie ab $2.50/Monat zu Premium für volle Geschwindigkeit auf bis zu 10 Geräten. Alles in der App verwalten.",
     "breadcrumb": "Preise",
     "eyebrow": "Preise",
     "title": "Einfache Preise. Alles inklusive.",
@@ -720,10 +720,10 @@
       "free": {
         "name": "Kostenlos",
         "note": "Keine Karte nötig",
-        "blurb": "Starten Sie kostenlos und verdienen Sie Freiminuten während der Nutzung — in den iOS- und Android-Apps.",
+        "blurb": "Starten Sie mit 90 Freiminuten in den iOS- und Android-Apps — testen Sie alles, bevor Sie zahlen.",
         "features": [
           "Nur iOS- und Android-Apps",
-          "Freiminuten verdienen",
+          "90 Freiminuten",
           "Alle Protokolle und Stealth-Modus",
           "1 Gerät",
           "Kein Konto erforderlich"
@@ -1340,7 +1340,7 @@
       },
       {
         "q": "Gibt es eine kostenlose Möglichkeit, es auszuprobieren?",
-        "a": "Ja – starten Sie kostenlos und verdienen Sie Freiminuten, ohne Konto oder Kreditkarte."
+        "a": "Ja — starten Sie mit 90 Freiminuten, ohne Konto und ohne Kreditkarte."
       }
     ]
   },
@@ -1413,5 +1413,11 @@
       "updateFailed": "Ihre Zahlungsmethode konnte nicht aktualisiert werden",
       "saveFailed": "Zahlungsmethode konnte nicht gespeichert werden"
     }
+  },
+  "announce": {
+    "payments": "Apple Pay, Google Pay, Karten & Krypto — zahlen Sie, wie Sie möchten",
+    "blocked": "Funktioniert im Nahen Osten, in China, Russland und jedem blockierten Land",
+    "free": "Erst testen, dann kaufen — 90 Freiminuten, ohne Karte oder Konto",
+    "streaming": "Alle großen Streaming-Dienste — in jeder wichtigen Region entsperrt"
   }
 }

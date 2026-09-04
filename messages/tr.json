@@ -119,8 +119,8 @@
         "body": "MistyVPN'in cihazınız açılır açılmaz bağlanmasını sağlayın, böylece otomatik olarak korunun — asla yanlışlıkla açıkta kalmayın."
       },
       {
-        "title": "Ücretsiz dakika kazanın",
-        "body": "Ücretsiz süreniz mi bitti? Ücretsiz dakikalarınızı istediğiniz zaman yükleyin — hesap ya da kredi kartı gerekmez."
+        "title": "90 ücretsiz dakika",
+        "body": "Uygulamada 90 ücretsiz dakikayla başlayın ve her şeyi deneyin — hesap ve kredi kartı gerekmez."
       }
     ],
     "steps": [
@@ -156,7 +156,7 @@
       },
       {
         "q": "Ücretsiz sürümü var mı?",
-        "a": "Evet. Ücretsiz başlayın ve kullandıkça ücretsiz dakika kazanın — hesap ya da kredi kartı gerekmez. Sınırsız, tam hızlı erişim için istediğiniz zaman Premium'a geçin."
+        "a": "Evet. 90 ücretsiz dakikayla başlayın — hesap ve kredi kartı gerekmez. Sınırsız ve tam hızlı erişim için istediğiniz zaman Premium’a geçin."
       },
       {
         "q": "Nasıl ödeme yaparım?",
@@ -175,7 +175,7 @@
   "home": {
     "metaTitle": "MistyVPN — Her cihazda gizli, engelsiz, hızlı",
     "hero": {
-      "eyebrow": "Ücretsiz başlayın · Kart gerekmez",
+      "eyebrow": "90 ücretsiz dakika · Kart gerekmez",
       "titleLead": "Gerçekten her yerde",
       "titleHighlight": "çalışan",
       "titleTrail": " gizli internet.",
@@ -340,7 +340,7 @@
         {
           "label": "Ücretsiz katman",
           "values": [
-            "Evet — ücretsiz dakika kazan",
+            "Evet — 90 ücretsiz dakika",
             "Hayır",
             "Hayır",
             "Hayır"
@@ -454,7 +454,7 @@
       "cards": {
         "freeTier": {
           "title": "Gerçek bir ücretsiz katman",
-          "body": "Premium VPN'lerin çoğunun hiç ücretsiz seçeneği yoktur. MistyVPN ücretsiz başlamanıza ve ücretsiz dakika kazanmanıza olanak tanır — kart yok, taahhüt yok."
+          "body": "Çoğu premium VPN’in ücretsiz bir seçeneği hiç yoktur. MistyVPN başlamanız için size 90 ücretsiz dakika verir — kart yok, taahhüt yok."
         },
         "vault": {
           "title": "Parola yöneticisi + 2FA, ücretsiz",
@@ -536,7 +536,7 @@
     "trust": [
       {
         "title": "Ücretsiz başlayın",
-        "body": "Kredi kartı yok. Ücretsiz dakika kazanın ve tek kuruş ödemeden önce uygulamanın tamamını deneyin."
+        "body": "Kredi kartı yok. 90 ücretsiz dakika kazanın ve tek kuruş ödemeden önce uygulamanın tamamını deneyin."
       },
       {
         "title": "Parola yöneticisi ve 2FA dahil",
@@ -627,8 +627,8 @@
         "body": "MistyVPN'in cihazınız açılır açılmaz bağlanmasını sağlayın, böylece otomatik olarak korunun — asla yanlışlıkla açıkta kalmayın."
       },
       {
-        "title": "Ücretsiz dakika kazanın",
-        "body": "Ücretsiz süreniz mi bitti? Ücretsiz dakikalarınızı istediğiniz zaman yükleyin — hesap ya da kredi kartı gerekmez."
+        "title": "90 ücretsiz dakika",
+        "body": "Uygulamada 90 ücretsiz dakikayla başlayın ve her şeyi deneyin — hesap ve kredi kartı gerekmez."
       }
     ],
     "underHood": {
@@ -707,7 +707,7 @@
   },
   "pricingPage": {
     "metaTitle": "Fiyatlandırma — başlaması ücretsiz, Premium aylık $2.50'den",
-    "metaDescription": "Basit MistyVPN fiyatlandırması. Ücretsiz başlayın ve ücretsiz dakika kazanın ya da 10 cihaza kadar sınırsız hız için aylık $2.50'den Premium'a geçin. Hepsini uygulamada yönetin.",
+    "metaDescription": "Basit MistyVPN fiyatları. 90 ücretsiz dakikayla başlayın veya 10 cihaza kadar tam hız için aylık $2.50’den Premium’a geçin. Her şeyi uygulamadan yönetin.",
     "breadcrumb": "Fiyatlandırma",
     "eyebrow": "Fiyatlandırma",
     "title": "Basit fiyatlandırma. Her şey dahil.",
@@ -720,10 +720,10 @@
       "free": {
         "name": "Ücretsiz",
         "note": "Kart gerekmez",
-        "blurb": "Ücretsiz başlayın ve kullandıkça ücretsiz dakikalar kazanın — iOS ve Android uygulamalarında.",
+        "blurb": "iOS ve Android uygulamalarında 90 ücretsiz dakikayla başlayın — ödemeden önce her şeyi deneyin.",
         "features": [
           "Yalnızca iOS ve Android uygulamaları",
-          "Ücretsiz dakikalar kazanın",
+          "90 ücretsiz dakika",
           "Tüm protokoller ve Gizli Mod",
           "1 cihaz",
           "Hesap gerekmez"
@@ -1340,7 +1340,7 @@
       },
       {
         "q": "Ücretsiz deneme yolu var mı?",
-        "a": "Evet — ücretsiz başlayın ve ücretsiz dakika kazanın, hesap ya da kredi kartı gerekmez."
+        "a": "Evet — 90 ücretsiz dakikayla başlayın, hesap ve kredi kartı gerekmez."
       }
     ]
   },
@@ -1413,5 +1413,11 @@
       "updateFailed": "Ödeme yönteminiz güncellenemedi",
       "saveFailed": "Ödeme yöntemi kaydedilemedi"
     }
+  },
+  "announce": {
+    "payments": "Apple Pay, Google Pay, kartlar ve kripto — nasıl isterseniz öyle ödeyin",
+    "blocked": "Orta Doğu, Çin, Rusya ve tüm engelli ülkelerde çalışır",
+    "free": "Almadan önce deneyin — 90 ücretsiz dakika, kart veya hesap gerekmez",
+    "streaming": "Tüm büyük yayın servisleri — her büyük bölgede engelsiz"
   }
 }
