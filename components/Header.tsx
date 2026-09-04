@@ -58,8 +58,8 @@ export default function Header() {
       >
         {/* Left group: logo + nav together (keeps them spaced, and left-aligns the nav so long
             translated labels never collide with the logo the way justify-between allowed). */}
-        <div className="flex items-center gap-6 xl:gap-8">
-        <Link href="/" className="flex items-center gap-2.5" aria-label={`${site.name} home`}>
+        <div className="flex items-center">
+        <Link href="/" className="flex items-center gap-2.5 xl:mr-8" aria-label={`${site.name} home`}>
           <Logo className="h-8 w-8" />
           <span className="text-lg font-semibold tracking-tight text-white">
             {site.name}
