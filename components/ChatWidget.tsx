@@ -106,7 +106,7 @@ export default function ChatWidget() {
           type="button"
           onClick={() => setOpen(true)}
           aria-label={t("bubble")}
-          className="fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand text-ink shadow-xl shadow-black/40 transition-transform hover:scale-105"
+          className="fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-accent to-indigo-600 text-white shadow-xl shadow-indigo-600/40 ring-1 ring-white/15 transition-transform hover:scale-105"
         >
           <svg className="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
             <path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z" />
