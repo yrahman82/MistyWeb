@@ -50,7 +50,7 @@ export default function MobileLanguageSwitcher() {
         aria-label={t("language")}
         aria-haspopup="dialog"
         aria-expanded={open}
-        className="inline-flex h-9 items-center gap-1.5 rounded-full border border-white/15 bg-white/5 pl-2.5 pr-2 text-white transition-colors hover:bg-white/10"
+        className="inline-flex h-9 items-center gap-1.5 rounded-full border border-white/15 bg-white/5 ps-2.5 pe-2 text-white transition-colors hover:bg-white/10"
       >
         <span className="text-base leading-none" aria-hidden>{localeFlags[current]}</span>
         <svg className="h-3.5 w-3.5 text-slate-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden>

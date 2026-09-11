@@ -23,7 +23,7 @@ export default function LanguageSwitcher() {
           <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clipRule="evenodd" />
         </svg>
       </summary>
-      <div className="absolute right-0 top-full z-50 mt-2 max-h-80 w-44 overflow-y-auto rounded-xl border border-white/10 bg-ink py-1.5 shadow-xl shadow-black/40">
+      <div className="absolute end-0 top-full z-50 mt-2 max-h-80 w-44 overflow-y-auto rounded-xl border border-white/10 bg-ink py-1.5 shadow-xl shadow-black/40">
         {locales.map((l) => (
           <Link
             key={l}

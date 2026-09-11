@@ -299,7 +299,7 @@ function AccountInner() {
             {/* Card & wallets — brands come from the shared PayBrands (single source; no PayPal until live) */}
             <button
               onClick={() => plan && goStripe(plan)}
-              className="group block w-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition-colors hover:border-brand/50"
+              className="group block w-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-start transition-colors hover:border-brand/50"
             >
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-white">{t("payCardWallets")}</span>
@@ -310,7 +310,7 @@ function AccountInner() {
             {/* Crypto — show both coins + all networks so the full set (2 coins × 3 networks) is clear */}
             <button
               onClick={() => setView("crypto")}
-              className="group block w-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition-colors hover:border-brand/50"
+              className="group block w-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-start transition-colors hover:border-brand/50"
             >
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-white">{t("payCrypto")}</span>
@@ -405,7 +405,7 @@ function AccountInner() {
                 </div>
                 <div className="flex items-start justify-between gap-4">
                   <span className="shrink-0 text-slate-400">{t("labelPayment")}</span>
-                  <span className="min-w-0 break-words text-right text-white">{savedMethodLabel(status, t)}</span>
+                  <span className="min-w-0 break-words text-end text-white">{savedMethodLabel(status, t)}</span>
                 </div>
               </div>
               <p className="mt-4 text-sm text-slate-300">
@@ -454,7 +454,7 @@ function AccountInner() {
           <div className="mt-5 space-y-3">
             {plans.map((p) => (
               <button key={p.key} onClick={() => choosePlan(p.key)} disabled={busy}
-                className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left transition-colors hover:border-brand/50 disabled:opacity-50">
+                className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-start transition-colors hover:border-brand/50 disabled:opacity-50">
                 <div>
                   <div className="font-semibold text-white">{planName(p)}</div>
                   <div className="text-xs text-slate-400">
@@ -462,7 +462,7 @@ function AccountInner() {
                   </div>
                 </div>
                 <div className="text-lg font-bold text-white">
-                  {p.price}<span className="ml-1 text-xs font-normal text-slate-400">{planCadence(p)}</span>
+                  {p.price}<span className="ms-1 text-xs font-normal text-slate-400">{planCadence(p)}</span>
                 </div>
               </button>
             ))}
@@ -711,7 +711,7 @@ function CopyRow({ label, value }: { label: string; value: string }) {
     <div className="flex items-center justify-between gap-4 py-1.5">
       <span className="text-sm text-slate-400">{label}</span>
       <div className="flex items-center gap-3">
-        <span className="font-mono text-sm text-white">{value || "—"}</span>
+        <span dir="ltr" className="font-mono text-sm text-white">{value || "—"}</span>
         <button
           onClick={async () => { if (!value) return; await navigator.clipboard.writeText(value); setCopied(true); setTimeout(() => setCopied(false), 1200); }}
           className="text-xs text-brand hover:underline">
@@ -812,7 +812,7 @@ function AccountActions({ email, onDeleted }: { email?: string; onDeleted: () =>
         </div>
       ) : null}
       {!pwOpen ? (
-        <button onClick={() => setPwOpen(true)} className="flex w-full items-center justify-between py-2 text-left">
+        <button onClick={() => setPwOpen(true)} className="flex w-full items-center justify-between py-2 text-start">
           <span className="text-sm text-white">{t("changePassword")}</span>
           <span className="text-slate-500">›</span>
         </button>
@@ -836,7 +836,7 @@ function AccountActions({ email, onDeleted }: { email?: string; onDeleted: () =>
       {msg ? <p className="mt-1 text-sm text-mint">{msg}</p> : null}
 
       <div className="mt-1 border-t border-white/5 pt-1">
-        <button onClick={onDelete} disabled={busy} className="flex w-full items-center justify-between py-2 text-left disabled:opacity-50">
+        <button onClick={onDelete} disabled={busy} className="flex w-full items-center justify-between py-2 text-start disabled:opacity-50">
           <span className="text-sm text-red-400">{busy ? t("deleting") : t("deleteAccount")}</span>
           <span className="text-red-400/50">›</span>
         </button>

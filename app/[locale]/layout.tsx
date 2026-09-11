@@ -21,7 +21,7 @@ import { site } from "@/lib/site";
 import Analytics from "@/components/Analytics";
 import ChatWidget from "@/components/ChatWidget";
 import { GA_ID } from "@/lib/analytics";
-import { routing, htmlLang, type Locale } from "@/i18n/routing";
+import { routing, htmlLang, dirFor, type Locale } from "@/i18n/routing";
 import { localeUrl, alternatesFor } from "@/lib/seo";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"], display: "swap" });
@@ -89,6 +89,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={htmlLang[locale as Locale]}
+      dir={dirFor(locale)}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">

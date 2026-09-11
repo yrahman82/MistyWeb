@@ -66,14 +66,14 @@ function RegisterInner() {
               minLength={8}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 pr-16 text-white outline-none focus:border-brand"
+              className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 pe-16 text-white outline-none focus:border-brand"
               placeholder={t("passwordPlaceholder")}
               autoComplete="new-password"
             />
             <button
               type="button"
               onClick={() => setShow((s) => !s)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
+              className="absolute end-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
             >
               {show ? t("hide") : t("show")}
             </button>

@@ -60,8 +60,8 @@ export default async function ServersPage({
         <table className="w-full min-w-[860px] border-collapse text-center">
           <thead>
             <tr className="border-b border-white/10">
-              <th className="p-4 text-left text-sm font-medium text-slate-400">{t("colLocation")}</th>
-              <th className="p-4 text-left text-sm font-medium text-slate-400">{t("colHostname")}</th>
+              <th className="p-4 text-start text-sm font-medium text-slate-400">{t("colLocation")}</th>
+              <th className="p-4 text-start text-sm font-medium text-slate-400">{t("colHostname")}</th>
               {serverProtocols.map((p) => (
                 <th key={p} className="whitespace-nowrap p-4 text-sm font-medium text-slate-400">
                   {p}
@@ -72,7 +72,7 @@ export default async function ServersPage({
           <tbody>
             {serverLocations.map((s) => (
               <tr key={s.host} className="border-b border-white/5 last:border-0 hover:bg-white/[0.02]">
-                <td className="p-4 text-left">
+                <td className="p-4 text-start">
                   <span className="flex items-center gap-2.5">
                     <span className="text-lg leading-none" aria-hidden>{s.flag}</span>
                     <span>
@@ -81,7 +81,7 @@ export default async function ServersPage({
                     </span>
                   </span>
                 </td>
-                <td className="p-4 text-left">
+                <td className="p-4 text-start">
                   <code className="rounded bg-white/5 px-2 py-1 text-xs text-slate-200">{s.host}</code>
                 </td>
                 {serverProtocols.map((p) => (

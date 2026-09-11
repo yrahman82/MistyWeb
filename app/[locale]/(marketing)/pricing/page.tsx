@@ -79,7 +79,7 @@ export default async function PricingPage({
                 }`}
               >
                 {plan.highlight ? (
-                  <span className="absolute -top-3 left-8 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-ink">
+                  <span className="absolute -top-3 start-8 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-ink">
                     {t("bestValue")}
                   </span>
                 ) : null}

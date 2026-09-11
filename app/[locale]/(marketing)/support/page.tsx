@@ -103,7 +103,7 @@ export default async function SupportPage({
             <Card className="relative overflow-hidden p-8">
               <div
                 aria-hidden
-                className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full"
+                className="pointer-events-none absolute -end-10 -top-10 h-40 w-40 rounded-full"
                 style={{ background: "radial-gradient(closest-side, rgba(37,211,102,0.25), transparent)" }}
               />
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#25D366]/15 text-[#25D366]">
@@ -126,7 +126,7 @@ export default async function SupportPage({
             <Card className="relative overflow-hidden p-8">
               <div
                 aria-hidden
-                className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full"
+                className="pointer-events-none absolute -end-10 -top-10 h-40 w-40 rounded-full"
                 style={{ background: "radial-gradient(closest-side, rgba(56,189,248,0.25), transparent)" }}
               />
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/15 text-brand">

@@ -66,7 +66,7 @@ export default function DownloadGrid() {
                 <div className="text-xs text-slate-400">
                   {p.store}
                   {isMine ? (
-                    <span className="ml-1.5 font-semibold text-brand">· {t("yourDevice")}</span>
+                    <span className="ms-1.5 font-semibold text-brand">· {t("yourDevice")}</span>
                   ) : null}
                 </div>
               </div>
@@ -103,7 +103,7 @@ export default function DownloadGrid() {
                   ) : null}
                 </>
               ) : (
-                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-center text-xs font-medium text-slate-300 sm:text-left">
+                <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-center text-xs font-medium text-slate-300 sm:text-start">
                   {t("comingSoon")}
                 </span>
               )}

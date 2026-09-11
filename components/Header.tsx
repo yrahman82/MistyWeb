@@ -56,7 +56,7 @@ export default function Header() {
         className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8"
         aria-label="Primary"
       >
-        {/* Left group: logo + nav together (keeps them spaced, and left-aligns the nav so long
+        {/* Left group: logo + nav together (keeps them spaced, and start-aligns the nav so long
             translated labels never collide with the logo the way justify-between allowed). */}
         <div className="flex items-center">
         <Link href="/" className="flex items-center gap-2" aria-label={`${site.name} home`}>
@@ -67,8 +67,8 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav (collapses to the hamburger below xl so longer-label languages fit).
-            pl-8 keeps a reliable distance from the logo (padding is intrinsic to the box). */}
-        <div className="hidden items-center gap-5 xl:flex xl:pl-8">
+            ps-8 keeps a reliable distance from the logo (padding is intrinsic to the box). */}
+        <div className="hidden items-center gap-5 xl:flex xl:ps-8">
           {navItems.map((item) =>
             item.children ? (
               <div key={item.key} className="group relative">
@@ -172,7 +172,7 @@ export default function Header() {
                   >
                     {t(item.key)}
                   </Link>
-                  <div className="ml-3 flex flex-col border-l border-white/10 pl-3">
+                  <div className="ms-3 flex flex-col border-l border-white/10 ps-3">
                     {item.children.map((c) => (
                       <Link
                         key={c.key}

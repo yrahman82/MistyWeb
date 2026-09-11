@@ -180,10 +180,10 @@ function TvLoginInner() {
                       placeholder={t("passwordPlaceholder")}
                       required
                       autoComplete="current-password"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 pr-12 text-white placeholder-white/20 text-sm focus:outline-none focus:border-[#4FC3F7] transition"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 pe-12 text-white placeholder-white/20 text-sm focus:outline-none focus:border-[#4FC3F7] transition"
                     />
                     <button type="button" onClick={() => setShowPw(p => !p)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 text-xs transition">
+                      className="absolute end-3 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 text-xs transition">
                       {showPw ? t("hide") : t("show")}
                     </button>
                   </div>

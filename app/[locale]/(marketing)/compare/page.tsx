@@ -101,7 +101,7 @@ export default async function ComparePage({
             <table className="w-full min-w-[640px] border-collapse text-center">
               <thead>
                 <tr className="border-b border-white/10">
-                  <th className="p-4 text-left text-sm font-medium text-slate-400">
+                  <th className="p-4 text-start text-sm font-medium text-slate-400">
                     {t("table.featureHeader")}
                   </th>
                   {providers.map((p, i) => (
@@ -122,7 +122,7 @@ export default async function ComparePage({
                     key={row.label}
                     className={ri % 2 ? "bg-white/[0.02]" : ""}
                   >
-                    <td className="p-4 text-left text-sm text-slate-300">
+                    <td className="p-4 text-start text-sm text-slate-300">
                       {row.label}
                     </td>
                     {row.values.map((v, ci) => (

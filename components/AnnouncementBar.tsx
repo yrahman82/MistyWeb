@@ -30,7 +30,7 @@ function GooglePayMark() {
         <path fill="#FBBC05" d="M5.29 14.31A7.16 7.16 0 0 1 4.91 12c0-.8.14-1.58.38-2.31V6.6H1.29A12 12 0 0 0 0 12c0 1.94.46 3.77 1.29 5.4l4-3.09z" />
         <path fill="#EA4335" d="M12 4.75c1.76 0 3.34.61 4.58 1.8l3.44-3.44C17.95 1.19 15.24 0 12 0A12 12 0 0 0 1.29 6.6l4 3.09C6.24 6.86 8.88 4.75 12 4.75z" />
       </svg>
-      <span className="ml-0.5 text-[10px] font-semibold text-[#3c4043]">Pay</span>
+      <span className="ms-0.5 text-[10px] font-semibold text-[#3c4043]">Pay</span>
     </Chip>
   );
 }

@@ -92,10 +92,10 @@ function ResetPasswordInner() {
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 required
-                className="w-full bg-white/7 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 text-sm pr-10 focus:outline-none focus:border-[#4FC3F7]"
+                className="w-full bg-white/7 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 text-sm pe-10 focus:outline-none focus:border-[#4FC3F7]"
               />
               <button type="button" onClick={() => setShowPw(p => !p)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 text-xs">
+                className="absolute end-3 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 text-xs">
                 {showPw ? t("hide") : t("show")}
               </button>
             </div>

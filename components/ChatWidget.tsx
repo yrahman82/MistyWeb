@@ -106,7 +106,7 @@ export default function ChatWidget() {
           type="button"
           onClick={() => setOpen(true)}
           aria-label={t("bubble")}
-          className="fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-accent to-indigo-600 text-white shadow-xl shadow-indigo-600/40 ring-1 ring-white/15 transition-transform hover:scale-105"
+          className="fixed bottom-5 end-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-accent to-indigo-600 text-white shadow-xl shadow-indigo-600/40 ring-1 ring-white/15 transition-transform hover:scale-105"
         >
           <svg className="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
             <path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z" />
@@ -116,7 +116,7 @@ export default function ChatWidget() {
 
       {/* Panel */}
       {open ? (
-        <div className="fixed bottom-5 right-5 z-40 flex h-[70vh] max-h-[560px] w-[calc(100vw-2.5rem)] max-w-sm flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink shadow-2xl shadow-black/50">
+        <div className="fixed bottom-5 end-5 z-40 flex h-[70vh] max-h-[560px] w-[calc(100vw-2.5rem)] max-w-sm flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink shadow-2xl shadow-black/50">
           <div className="flex items-center justify-between border-b border-white/10 bg-gradient-to-r from-brand/15 to-accent/15 px-4 py-3">
             <div>
               <p className="text-sm font-semibold text-white">{t("title")}</p>

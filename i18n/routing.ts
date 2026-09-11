@@ -1,10 +1,16 @@
 import { defineRouting } from "next-intl/routing";
 
-// The 14 LTR locales the website ships (mirrors the app's language set, minus ar/ur — we deliberately
-// skip the two RTL languages to avoid RTL layout complexity on the marketing site). English is the
-// default and lives at the root (no /en prefix); every other locale is prefixed (/es, /de, /zh …).
+// The locales the website ships (mirrors the app's language set). English is the default and lives at
+// the root (no /en prefix); every other locale is prefixed (/es, /de, /zh …).
+// `fa` (Persian) is the FIRST RTL locale — Iran became the dominant organic market (Sep 2026) and the
+// web checkout is the only rail they can pay through, so it had to stop being English-only. Direction
+// comes from `rtlLocales` below -> <html dir> in [locale]/layout.tsx; the CSS uses Tailwind LOGICAL
+// properties (ms-/me-/ps-/pe-/text-start/start-/end-) so nothing needs per-locale branching.
+// ar/ur are still absent here (app-only) — they can be added to `locales` + `rtlLocales` with no other
+// code change now that the RTL plumbing exists.
 export const locales = [
   "en", // English (default)
+  "fa", // Persian / Farsi (RTL)
   "zh", // Chinese (Simplified)
   "hi", // Hindi
   "bn", // Bengali
@@ -27,6 +33,7 @@ export const defaultLocale: Locale = "en";
 // Human-readable names for the language switcher (native name shown to the user).
 export const localeNames: Record<Locale, string> = {
   en: "English",
+  fa: "فارسی",
   zh: "中文",
   hi: "हिन्दी",
   bn: "বাংলা",
@@ -46,6 +53,7 @@ export const localeNames: Record<Locale, string> = {
 // (Flags map to a country, not a language — these are the conventional choices for each.)
 export const localeFlags: Record<Locale, string> = {
   en: "🇬🇧",
+  fa: "🇮🇷",
   zh: "🇨🇳",
   hi: "🇮🇳",
   bn: "🇧🇩",
@@ -64,6 +72,7 @@ export const localeFlags: Record<Locale, string> = {
 // BCP-47 tags for <html lang> / hreflang (a couple differ from the short locale code).
 export const htmlLang: Record<Locale, string> = {
   en: "en",
+  fa: "fa",
   zh: "zh-Hans",
   hi: "hi",
   bn: "bn",
@@ -78,6 +87,18 @@ export const htmlLang: Record<Locale, string> = {
   ko: "ko",
   nl: "nl",
 };
+
+// Locales written right-to-left. Drives <html dir> only — there is no layout mirroring code to write,
+// because the stylesheets use logical properties.
+export const rtlLocales = new Set<Locale>(["fa"]);
+
+export function isRtl(locale: string): boolean {
+  return rtlLocales.has(locale as Locale);
+}
+
+export function dirFor(locale: string): "rtl" | "ltr" {
+  return isRtl(locale) ? "rtl" : "ltr";
+}
 
 export const routing = defineRouting({
   locales,

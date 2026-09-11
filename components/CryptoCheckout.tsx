@@ -115,7 +115,7 @@ export default function CryptoCheckout({
                 <button
                   key={`${a.coin}-${a.chain}`}
                   onClick={() => pick(a.coin, a.chain)}
-                  className="group flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left transition-colors hover:border-brand/50 hover:bg-white/[0.05]"
+                  className="group flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-start transition-colors hover:border-brand/50 hover:bg-white/[0.05]"
                 >
                   <span className="flex items-center gap-3">
                     {a.coin === "USDT" ? <Usdt /> : <Usdc />}
@@ -230,7 +230,7 @@ function CryptoPay({
         <div className="mt-5">
           <p className="mb-1 text-xs text-slate-400">{t("paymentAddress")}</p>
           <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] p-3">
-            <span className="min-w-0 flex-1 break-all font-mono text-xs text-white">{inv.address}</span>
+            <span dir="ltr" className="min-w-0 flex-1 break-all font-mono text-xs text-white">{inv.address}</span>
             <button
               onClick={async () => {
                 await navigator.clipboard.writeText(inv.address);

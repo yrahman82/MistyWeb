@@ -10,7 +10,7 @@ export function Prose({ children }: { children: ReactNode }) {
         [&_p]:mt-4
         [&_a]:text-brand [&_a]:underline [&_a]:underline-offset-2
         [&_strong]:text-white
-        [&_ul]:mt-4 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6
+        [&_ul]:mt-4 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:ps-6
         [&_li]:marker:text-brand"
     >
       {children}

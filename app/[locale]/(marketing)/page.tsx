@@ -202,7 +202,7 @@ export default async function HomePage({
       {/* Comparison teaser */}
       <section className="py-16">
         <Container>
-          <Card className="flex flex-col items-center gap-6 px-6 py-12 text-center md:flex-row md:justify-between md:text-left">
+          <Card className="flex flex-col items-center gap-6 px-6 py-12 text-center md:flex-row md:justify-between md:text-start">
             <div>
               <h2 className="text-2xl font-semibold text-white sm:text-3xl">{t("compare.title")}</h2>
               <p className="mt-2 max-w-xl text-slate-300">{t("compare.body")}</p>
