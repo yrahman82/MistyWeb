@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import {
   Elements,
   PaymentElement,
@@ -9,7 +9,8 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 import type { StripeElementsOptions } from "@stripe/stripe-js";
-import { getStripe } from "@/lib/stripe";
+import { getStripe, stripeDir } from "@/lib/stripe";
+import { dirFor } from "@/i18n/routing";
 import { createSetupIntent, updatePaymentMethod } from "@/lib/api";
 import { Spinner } from "@/components/ui";
 
@@ -37,6 +38,7 @@ export default function ChangeCardForm({
   const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [err, setErr] = useState("");
   // getStripe() is a singleton, but pin the promise once so the `stripe` prop reference never changes.
+  const locale = useLocale();
   const [stripePromise] = useState(() => getStripe());
 
   useEffect(() => {
@@ -61,10 +63,14 @@ export default function ChangeCardForm({
       </div>
     );
 
+  // Same as CheckoutForm: outside Stripe's 34 locales it renders English, so pin the direction it is
+  // actually drawing in rather than inheriting the page's RTL.
   return (
-    <Elements stripe={stripePromise} options={options}>
-      <Inner onDone={onDone} onCancel={onCancel} />
-    </Elements>
+    <div dir={stripeDir(locale, dirFor(locale))}>
+      <Elements stripe={stripePromise} options={options}>
+        <Inner onDone={onDone} onCancel={onCancel} />
+      </Elements>
+    </div>
   );
 }
 

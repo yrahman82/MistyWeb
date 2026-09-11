@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import {
   CheckoutElementsProvider,
   useCheckoutElements,
@@ -14,7 +14,8 @@ import type {
   StripeExpressCheckoutElementReadyEvent,
   StripeCheckoutConfirmResult,
 } from "@stripe/stripe-js";
-import { getStripe } from "@/lib/stripe";
+import { getStripe, stripeDir } from "@/lib/stripe";
+import { dirFor } from "@/i18n/routing";
 import { Spinner } from "@/components/ui";
 
 // Custom (Elements-based) Checkout Session — renders on OUR page instead of Stripe's iframe:
@@ -44,16 +45,24 @@ export default function CheckoutForm({
   // NOTE: the Stripe elements' language is inherited from the Checkout Session's `locale` (set
   // server-side when the session is created — see createCheckoutSession + the BE), not from here;
   // the Checkout-Sessions Elements options don't accept a locale field.
+  const locale = useLocale();
   const [stripePromise] = useState(() => getStripe());
   const [options] = useState<StripeCheckoutElementsSdkOptions>(() => ({
     clientSecret,
     elementsOptions: { appearance: APPEARANCE },
   }));
 
+  // Stripe has no Persian (or any other locale outside its 34) — it renders ENGLISH there. Pin this
+  // subtree to the direction Stripe is actually drawing in, so an RTL page doesn't right-align
+  // Stripe's English card fields and errors.
+  const dir = stripeDir(locale, dirFor(locale));
+
   return (
-    <CheckoutElementsProvider stripe={stripePromise} options={options}>
-      <Inner returnUrl={returnUrl} priceLabel={priceLabel} onPaid={onPaid} />
-    </CheckoutElementsProvider>
+    <div dir={dir}>
+      <CheckoutElementsProvider stripe={stripePromise} options={options}>
+        <Inner returnUrl={returnUrl} priceLabel={priceLabel} onPaid={onPaid} />
+      </CheckoutElementsProvider>
+    </div>
   );
 }
 
