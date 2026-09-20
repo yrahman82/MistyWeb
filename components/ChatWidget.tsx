@@ -18,6 +18,7 @@ export default function ChatWidget() {
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
+  const [unread, setUnread] = useState(0);
   const cursor = useRef(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -57,9 +58,11 @@ export default function ChatWidget() {
     return () => { ok = false; };
   }, [open, session, failed, locale]);
 
-  // Short-poll for agent replies while the panel is open.
+  // Short-poll for agent replies. This runs whether or not the panel is open: a visitor who closes
+  // the panel must still learn that the agent answered (unread badge on the bubble). Closed polling
+  // is slower — the reply is still waiting on the relay, it just doesn't need 3s latency.
   useEffect(() => {
-    if (!open || !session) return;
+    if (!session) return;
     let ok = true;
     const tick = async () => {
       try {
@@ -70,11 +73,12 @@ export default function ChatWidget() {
         if (Array.isArray(d.messages) && d.messages.length) {
           setMessages((m) => [...m, ...d.messages.map((x: { text: string }) => ({ from: "agent" as const, text: x.text }))]);
           cursor.current = d.cursor;
+          if (!open) setUnread((n) => n + d.messages.length);
           scrollDown();
         }
       } catch { /* ignore transient poll errors */ }
     };
-    const id = setInterval(tick, 3000);
+    const id = setInterval(tick, open ? 3000 : 15000);
     tick();
     return () => { ok = false; clearInterval(id); };
   }, [open, session, scrollDown]);
@@ -104,19 +108,31 @@ export default function ChatWidget() {
       {!open ? (
         <button
           type="button"
-          onClick={() => setOpen(true)}
+          onClick={() => { setOpen(true); setUnread(0); }}   // opening it = the visitor has seen them
           aria-label={t("bubble")}
-          className="fixed bottom-5 end-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-accent to-indigo-600 text-white shadow-xl shadow-indigo-600/40 ring-1 ring-white/15 transition-transform hover:scale-105"
+          className="fixed bottom-[calc(1.25rem+env(safe-area-inset-bottom))] end-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-accent to-indigo-600 text-white shadow-xl shadow-indigo-600/40 ring-1 ring-white/15 transition-transform hover:scale-105"
         >
           <svg className="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
             <path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z" />
           </svg>
+          {/* The agent answered while the panel was closed. Purely visual — no push notifications,
+              no permission prompt. The count is language-neutral, so it needs no translation. */}
+          {unread > 0 ? (
+            <>
+              <span aria-hidden className="absolute -end-0.5 -top-0.5 inline-flex h-5 w-5 animate-ping rounded-full bg-rose-500/60" />
+              <span className="absolute -end-0.5 -top-0.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-rose-500 px-1 text-[11px] font-bold leading-none text-white ring-2 ring-ink">
+                {unread > 9 ? "9+" : unread}
+              </span>
+            </>
+          ) : null}
         </button>
       ) : null}
 
-      {/* Panel */}
+      {/* Panel. On phones it is pinned to both side edges (no 100vw arithmetic — 100vw ignores the
+          scrollbar and overflows) and sized in dvh, which tracks the visible area as mobile browser
+          chrome shows and hides. Fixed vh units are what pushed the panel off-screen. */}
       {open ? (
-        <div className="fixed bottom-5 end-5 z-40 flex h-[70vh] max-h-[560px] w-[calc(100vw-2.5rem)] max-w-sm flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink shadow-2xl shadow-black/50">
+        <div className="fixed inset-x-3 bottom-[calc(0.75rem+env(safe-area-inset-bottom))] z-40 flex h-[70dvh] max-h-[560px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink shadow-2xl shadow-black/50 sm:inset-x-auto sm:bottom-5 sm:end-5 sm:w-[22rem]">
           <div className="flex items-center justify-between border-b border-white/10 bg-gradient-to-r from-brand/15 to-accent/15 px-4 py-3">
             <div>
               <p className="text-sm font-semibold text-white">{t("title")}</p>
