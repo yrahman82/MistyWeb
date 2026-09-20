@@ -21,9 +21,9 @@ export default function ChatWidget() {
   const [unread, setUnread] = useState(0);
   const cursor = useRef(0);
   const scrollRef = useRef<HTMLDivElement>(null);
-  // How much of the viewport the on-screen keyboard is covering, and the visible height.
-  const [kb, setKb] = useState(0);
-  const [vvh, setVvh] = useState(0);
+  // The visible area, straight from the visual viewport, plus whether we're on a phone.
+  const [vv, setVv] = useState<{ top: number; height: number } | null>(null);
+  const [phone, setPhone] = useState(false);
 
   // Is the relay live? (silent no-op if not)
   useEffect(() => {
@@ -35,20 +35,26 @@ export default function ChatWidget() {
     return () => { ok = false; };
   }, []);
 
-  // iOS Safari does NOT shrink the layout viewport for the on-screen keyboard — only the VISUAL
-  // viewport shrinks — so a position:fixed panel keeps its full height and the keyboard covers the
-  // bottom of it. dvh can't fix that. Track the visual viewport and lift/shrink the panel by hand.
+  // On phones the panel is anchored to the VISUAL viewport rather than positioned with bottom/dvh.
+  // Focusing the input makes iOS scroll the document to reveal it, which drags a position:fixed
+  // element out of view — no computed bottom offset survives that. Reading visualViewport's own
+  // offsetTop/height and pinning top+height to it means the panel always covers exactly what the
+  // user can actually see, keyboard up or down, scrolled or not.
   useEffect(() => {
-    const vv = window.visualViewport;
-    if (!vv) return;
-    const sync = () => {
-      setKb(Math.max(0, Math.round(window.innerHeight - vv.height - vv.offsetTop)));
-      setVvh(Math.round(vv.height));
-    };
+    const m = window.matchMedia("(max-width: 639px)");
+    const onMq = () => setPhone(m.matches);
+    onMq();
+    m.addEventListener("change", onMq);
+    const v = window.visualViewport;
+    const sync = () => v && setVv({ top: Math.round(v.offsetTop), height: Math.round(v.height) });
     sync();
-    vv.addEventListener("resize", sync);
-    vv.addEventListener("scroll", sync);
-    return () => { vv.removeEventListener("resize", sync); vv.removeEventListener("scroll", sync); };
+    v?.addEventListener("resize", sync);
+    v?.addEventListener("scroll", sync);
+    return () => {
+      m.removeEventListener("change", onMq);
+      v?.removeEventListener("resize", sync);
+      v?.removeEventListener("scroll", sync);
+    };
   }, []);
 
   const scrollDown = useCallback(() => {
@@ -102,7 +108,7 @@ export default function ChatWidget() {
     return () => { ok = false; clearInterval(id); };
   }, [open, session, scrollDown]);
 
-  useEffect(() => { if (open && kb > 0) scrollDown(); }, [open, kb, scrollDown]);
+  useEffect(() => { if (open) scrollDown(); }, [open, vv, scrollDown]);
 
   // While the panel is open, stop the page behind it from scrolling. Beyond the obvious, this is
   // what stops iOS Safari scrolling the document to "reveal" the focused input — that scroll is
@@ -164,9 +170,10 @@ export default function ChatWidget() {
           chrome shows and hides. Fixed vh units are what pushed the panel off-screen. */}
       {open ? (
         <div
-          // With the keyboard up, sit directly on top of it and take the space that is actually
-          // visible. With it down, the Tailwind classes below apply unchanged.
-          style={kb > 0 ? { bottom: kb + 12, height: Math.max(200, vvh - 24), maxHeight: "none" } : undefined}
+          // Phone: a full-screen sheet pinned to the visual viewport, so the keyboard can never
+          // cover it and Safari's reveal-scroll can never move it. Desktop: the floating panel,
+          // untouched (the inline style is simply not applied).
+          style={phone && vv ? { top: vv.top, height: vv.height, left: 0, right: 0, bottom: "auto", maxHeight: "none", borderRadius: 0 } : undefined}
           className="fixed inset-x-3 bottom-[calc(0.75rem+env(safe-area-inset-bottom))] z-40 flex h-[70dvh] max-h-[560px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink shadow-2xl shadow-black/50 sm:inset-x-auto sm:bottom-5 sm:end-5 sm:w-[22rem]"
         >
           <div className="flex items-center justify-between border-b border-white/10 bg-gradient-to-r from-brand/15 to-accent/15 px-4 py-3">
@@ -199,7 +206,7 @@ export default function ChatWidget() {
           {!failed ? (
             <form
               onSubmit={(e) => { e.preventDefault(); send(); }}
-              className="flex items-center gap-2 border-t border-white/10 px-3 py-3"
+              className="flex items-center gap-2 border-t border-white/10 px-3 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]"
             >
               <input
                 value={input}
