@@ -104,6 +104,16 @@ export default function ChatWidget() {
 
   useEffect(() => { if (open && kb > 0) scrollDown(); }, [open, kb, scrollDown]);
 
+  // While the panel is open, stop the page behind it from scrolling. Beyond the obvious, this is
+  // what stops iOS Safari scrolling the document to "reveal" the focused input — that scroll is
+  // what drags a position:fixed panel out of view when the keyboard opens.
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = prev; };
+  }, [open]);
+
   const send = useCallback(async () => {
     const text = input.trim();
     if (!text || !session || busy) return;
