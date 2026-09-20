@@ -213,7 +213,10 @@ export default function ChatWidget() {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder={session ? t("placeholder") : t("connecting")}
                 disabled={!session || busy}
-                className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 px-3.5 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-brand/50 focus:outline-none disabled:opacity-60"
+                // MUST stay >= 16px on phones: Safari silently ZOOMS the whole page when you focus an
+                // input smaller than 16px, which is what threw the panel out of the viewport. 14px is
+                // fine from sm: up, where there is no touch keyboard and no auto-zoom.
+                className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 px-3.5 py-2.5 text-base sm:text-sm text-white placeholder:text-slate-500 focus:border-brand/50 focus:outline-none disabled:opacity-60"
               />
               <button
                 type="submit"
