@@ -15,7 +15,7 @@ export const site = {
   // channel exists and every Telegram call-to-action on the site turns itself on: the announcement
   // bar slide and the support-page card. Leave "" and none of it renders, so the site never shows a
   // link to a channel that does not exist yet.
-  telegram: { handle: "mistyvpn_updates" },   // https://t.me/mistyvpn_updates
+  telegram: { handle: "mistyvpn_official" },   // https://t.me/mistyvpn_official
   // Owning legal entity — shown in the footer so the domain is verifiably associated with the
   // organization (e.g. for Apple Developer org enrollment). Fill `number` with the Companies House
   // registration number; leave "" to hide the "(company no. …)" clause until confirmed.
