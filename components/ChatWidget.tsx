@@ -21,6 +21,9 @@ export default function ChatWidget() {
   const [unread, setUnread] = useState(0);
   const cursor = useRef(0);
   const scrollRef = useRef<HTMLDivElement>(null);
+  // How much of the viewport the on-screen keyboard is covering, and the visible height.
+  const [kb, setKb] = useState(0);
+  const [vvh, setVvh] = useState(0);
 
   // Is the relay live? (silent no-op if not)
   useEffect(() => {
@@ -30,6 +33,22 @@ export default function ChatWidget() {
       .then((d) => ok && setEnabled(!!d.enabled))
       .catch(() => ok && setEnabled(false));
     return () => { ok = false; };
+  }, []);
+
+  // iOS Safari does NOT shrink the layout viewport for the on-screen keyboard — only the VISUAL
+  // viewport shrinks — so a position:fixed panel keeps its full height and the keyboard covers the
+  // bottom of it. dvh can't fix that. Track the visual viewport and lift/shrink the panel by hand.
+  useEffect(() => {
+    const vv = window.visualViewport;
+    if (!vv) return;
+    const sync = () => {
+      setKb(Math.max(0, Math.round(window.innerHeight - vv.height - vv.offsetTop)));
+      setVvh(Math.round(vv.height));
+    };
+    sync();
+    vv.addEventListener("resize", sync);
+    vv.addEventListener("scroll", sync);
+    return () => { vv.removeEventListener("resize", sync); vv.removeEventListener("scroll", sync); };
   }, []);
 
   const scrollDown = useCallback(() => {
@@ -83,6 +102,8 @@ export default function ChatWidget() {
     return () => { ok = false; clearInterval(id); };
   }, [open, session, scrollDown]);
 
+  useEffect(() => { if (open && kb > 0) scrollDown(); }, [open, kb, scrollDown]);
+
   const send = useCallback(async () => {
     const text = input.trim();
     if (!text || !session || busy) return;
@@ -132,7 +153,12 @@ export default function ChatWidget() {
           scrollbar and overflows) and sized in dvh, which tracks the visible area as mobile browser
           chrome shows and hides. Fixed vh units are what pushed the panel off-screen. */}
       {open ? (
-        <div className="fixed inset-x-3 bottom-[calc(0.75rem+env(safe-area-inset-bottom))] z-40 flex h-[70dvh] max-h-[560px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink shadow-2xl shadow-black/50 sm:inset-x-auto sm:bottom-5 sm:end-5 sm:w-[22rem]">
+        <div
+          // With the keyboard up, sit directly on top of it and take the space that is actually
+          // visible. With it down, the Tailwind classes below apply unchanged.
+          style={kb > 0 ? { bottom: kb + 12, height: Math.max(200, vvh - 24), maxHeight: "none" } : undefined}
+          className="fixed inset-x-3 bottom-[calc(0.75rem+env(safe-area-inset-bottom))] z-40 flex h-[70dvh] max-h-[560px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink shadow-2xl shadow-black/50 sm:inset-x-auto sm:bottom-5 sm:end-5 sm:w-[22rem]"
+        >
           <div className="flex items-center justify-between border-b border-white/10 bg-gradient-to-r from-brand/15 to-accent/15 px-4 py-3">
             <div>
               <p className="text-sm font-semibold text-white">{t("title")}</p>
