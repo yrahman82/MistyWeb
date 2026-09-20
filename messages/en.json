@@ -1197,6 +1197,11 @@
       "title": "Still stuck? Let's fix it together.",
       "body": "Send us a message and a real person will help you get connected — usually in under two hours.",
       "button": "WhatsApp us"
+    },
+    "telegram": {
+      "title": "Telegram channel",
+      "body": "Follow us for status updates, new locations and announcements. Problems? Send us a direct message and we'll sort it out.",
+      "button": "Join the channel"
     }
   },
   "termsPage": {
@@ -1424,8 +1429,9 @@
   "announce": {
     "blocked": "Works in China, Russia & every blocked country",
     "free": "90 free minutes — no card, no account",
-    "payments": "Apple Pay, Google Pay, cards & crypto",
-    "streaming": "Stream anything — unblocked worldwide"
+    "payments": "Apple Pay, Google Pay, cards, crypto & Telegram Stars",
+    "streaming": "Stream anything — unblocked worldwide",
+    "channel": "Join our Telegram channel for updates"
   },
   "notFound": {
     "code": "404",

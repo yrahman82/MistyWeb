@@ -1197,6 +1197,11 @@
       "title": "まだ解決しませんか？一緒に直しましょう。",
       "body": "メッセージをお送りいただければ、本物の人が接続できるようお手伝いします。たいていは2時間以内です。",
       "button": "WhatsAppで連絡"
+    },
+    "telegram": {
+      "title": "Telegram チャンネル",
+      "body": "稼働状況や新しい拠点、お知らせを配信しています。お困りのときはダイレクトメッセージをお送りください。すぐに対応します。",
+      "button": "チャンネルに参加"
     }
   },
   "termsPage": {
@@ -1424,8 +1429,9 @@
   "announce": {
     "blocked": "中国・ロシアなど、規制対象の国でも使える",
     "free": "無料 90 分——カードもアカウントも不要",
-    "payments": "Apple Pay、Google Pay、カード、暗号資産",
-    "streaming": "あらゆる配信を——世界中でブロック解除"
+    "payments": "Apple Pay、Google Pay、カード、暗号資産、Telegram Stars",
+    "streaming": "あらゆる配信を——世界中でブロック解除",
+    "channel": "Telegram チャンネルで最新情報をチェック"
   },
   "notFound": {
     "code": "404",

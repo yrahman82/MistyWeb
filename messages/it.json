@@ -1197,6 +1197,11 @@
       "title": "Ancora bloccato? Risolviamolo insieme.",
       "body": "Inviaci un messaggio e una persona vera ti aiuterà a rimetterti online — di solito in meno di due ore.",
       "button": "Scrivici su WhatsApp"
+    },
+    "telegram": {
+      "title": "Canale Telegram",
+      "body": "Seguici per stato del servizio, nuove località e annunci. Problemi? Scrivici in privato e risolviamo.",
+      "button": "Entra nel canale"
     }
   },
   "termsPage": {
@@ -1424,8 +1429,9 @@
   "announce": {
     "blocked": "Funziona in Cina, Russia e in ogni paese bloccato",
     "free": "90 minuti gratis — senza carta né account",
-    "payments": "Apple Pay, Google Pay, carte e cripto",
-    "streaming": "Tutto lo streaming — sbloccato in tutto il mondo"
+    "payments": "Apple Pay, Google Pay, carte, cripto e Telegram Stars",
+    "streaming": "Tutto lo streaming — sbloccato in tutto il mondo",
+    "channel": "Entra nel nostro canale Telegram"
   },
   "notFound": {
     "code": "404",

@@ -26,6 +26,13 @@ export async function generateMetadata({
   });
 }
 
+function TelegramGlyph({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden>
+      <path d="M21.8 4.2 18.6 19c-.24 1.06-.87 1.32-1.77.82l-4.9-3.6-2.36 2.27c-.26.26-.48.48-.98.48l.35-4.98 9.06-8.19c.4-.35-.08-.54-.6-.2L6.2 12.06l-4.83-1.5c-1.05-.33-1.07-1.05.22-1.56l18.9-7.28c.87-.32 1.64.2 1.31 2.48z" />
+    </svg>
+  );
+}
 function WhatsAppGlyph({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
@@ -121,6 +128,36 @@ export default async function SupportPage({
                 </WhatsAppButton>
               </div>
             </Card>
+
+            {/* Telegram channel — announcements, broadcast-only. Rendered ONLY when
+                site.telegram.handle is set, so the site never links to a channel that
+                does not exist yet. */}
+            {site.telegram.handle ? (
+              <Card className="relative overflow-hidden p-8">
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute -end-10 -top-10 h-40 w-40 rounded-full"
+                  style={{ background: "radial-gradient(closest-side, rgba(42,171,238,0.25), transparent)" }}
+                />
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#2AABEE]/15 text-[#2AABEE]">
+                  <TelegramGlyph className="h-6 w-6" />
+                </div>
+                <h2 className="mt-5 text-2xl font-semibold text-white">{t("telegram.title")}</h2>
+                <p className="mt-3 text-slate-300">{t("telegram.body")}</p>
+                <p className="mt-4 font-mono text-lg text-white">@{site.telegram.handle}</p>
+                <div className="mt-6">
+                  <a
+                    href={`https://t.me/${site.telegram.handle}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#2AABEE] px-6 text-sm font-semibold text-white shadow-[0_8px_30px_-8px_rgba(42,171,238,0.6)] transition-all duration-200 hover:brightness-110"
+                  >
+                    <TelegramGlyph className="h-5 w-5" />
+                    {t("telegram.button")}
+                  </a>
+                </div>
+              </Card>
+            ) : null}
 
             {/* Email */}
             <Card className="relative overflow-hidden p-8">

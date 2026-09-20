@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { site } from "@/lib/site";
 
 // Small rounded chip housing a brand mark (kept tiny for the announcement strip).
 function Chip({ children }: { children: React.ReactNode }) {
@@ -47,6 +48,16 @@ function MastercardMark() {
     </Chip>
   );
 }
+function TelegramMark() {
+  return (
+    <span className="inline-flex h-5 items-center gap-1 rounded bg-[#2AABEE] px-1.5 text-white">
+      <svg viewBox="0 0 24 24" className="h-3 w-3" fill="currentColor" aria-hidden>
+        <path d="M21.8 4.2 18.6 19c-.24 1.06-.87 1.32-1.77.82l-4.9-3.6-2.36 2.27c-.26.26-.48.48-.98.48l.35-4.98 9.06-8.19c.4-.35-.08-.54-.6-.2L6.2 12.06l-4.83-1.5c-1.05-.33-1.07-1.05.22-1.56l18.9-7.28c.87-.32 1.64.2 1.31 2.48z" />
+      </svg>
+      <span className="text-[10px] font-semibold">Stars</span>
+    </span>
+  );
+}
 function UsdtMark() {
   return <span className="inline-flex h-5 items-center gap-0.5 rounded bg-[#26A17B] px-1.5 text-white"><span className="text-[10px] font-bold">₮</span><span className="text-[10px] font-semibold">USDT</span></span>;
 }
@@ -65,6 +76,7 @@ function PaymentsSlide() {
       <MastercardMark />
       <UsdtMark />
       <UsdcMark />
+      <TelegramMark />
     </span>
   );
 }
@@ -102,6 +114,23 @@ export default function AnnouncementBar() {
     { key: "free", node: <><ClockMark /><span>{t("free")}</span></> },
     { key: "payments", node: <PaymentsSlide /> },
     { key: "streaming", node: <><PlayMark /><span>{t("streaming")}</span></> },
+    // Only rendered once site.telegram.handle is set — no link to a channel that does not exist.
+    ...(site.telegram.handle
+      ? [{
+          key: "channel",
+          node: (
+            <a
+              href={`https://t.me/${site.telegram.handle}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 hover:underline"
+            >
+              <TelegramMark />
+              <span>{t("channel")}</span>
+            </a>
+          ),
+        }]
+      : []),
   ];
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);

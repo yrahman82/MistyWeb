@@ -11,6 +11,11 @@ export const site = {
   // Support contact — WhatsApp is the fastest channel. `number` is E.164 without "+" for wa.me/web links;
   // `display` is the human-readable form shown on the page.
   whatsapp: { number: "17206049798", display: "+1 720 604 9798" },
+  // Telegram announcement channel — broadcast only (users cannot post). Set `handle` once the
+  // channel exists and every Telegram call-to-action on the site turns itself on: the announcement
+  // bar slide and the support-page card. Leave "" and none of it renders, so the site never shows a
+  // link to a channel that does not exist yet.
+  telegram: { handle: "" },   // e.g. "mistyvpn" -> https://t.me/mistyvpn
   // Owning legal entity — shown in the footer so the domain is verifiably associated with the
   // organization (e.g. for Apple Developer org enrollment). Fill `number` with the Companies House
   // registration number; leave "" to hide the "(company no. …)" clause until confirmed.

@@ -1197,6 +1197,11 @@
       "title": "Nog steeds vast? Laten we het samen oplossen.",
       "body": "Stuur ons een bericht en een echt persoon helpt je weer verbonden te raken — meestal binnen twee uur.",
       "button": "WhatsApp ons"
+    },
+    "telegram": {
+      "title": "Telegram-kanaal",
+      "body": "Volg ons voor de status van de dienst, nieuwe locaties en aankondigingen. Problemen? Stuur ons een direct bericht, dan lossen we het op.",
+      "button": "Kanaal volgen"
     }
   },
   "termsPage": {
@@ -1424,8 +1429,9 @@
   "announce": {
     "blocked": "Werkt in China, Rusland en elk geblokkeerd land",
     "free": "90 gratis minuten — geen kaart, geen account",
-    "payments": "Apple Pay, Google Pay, kaarten en crypto",
-    "streaming": "Alles streamen — wereldwijd gedeblokkeerd"
+    "payments": "Apple Pay, Google Pay, kaarten, crypto en Telegram Stars",
+    "streaming": "Alles streamen — wereldwijd gedeblokkeerd",
+    "channel": "Volg ons Telegram-kanaal"
   },
   "notFound": {
     "code": "404",

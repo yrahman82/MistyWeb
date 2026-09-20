@@ -1197,6 +1197,11 @@
       "title": "Toujours bloqué ? Réglons ça ensemble.",
       "body": "Envoyez-nous un message et une vraie personne vous aidera à vous reconnecter — généralement en moins de deux heures.",
       "button": "Nous écrire sur WhatsApp"
+    },
+    "telegram": {
+      "title": "Canal Telegram",
+      "body": "Suivez-nous pour l'état du service, les nouveaux emplacements et les annonces. Un problème ? Envoyez-nous un message privé, on s'en occupe.",
+      "button": "Rejoindre le canal"
     }
   },
   "termsPage": {
@@ -1424,8 +1429,9 @@
   "announce": {
     "blocked": "Fonctionne en Chine, Russie et tout pays bloqué",
     "free": "90 minutes gratuites — sans carte ni compte",
-    "payments": "Apple Pay, Google Pay, cartes et crypto",
-    "streaming": "Tout le streaming — débloqué partout"
+    "payments": "Apple Pay, Google Pay, cartes, crypto et Telegram Stars",
+    "streaming": "Tout le streaming — débloqué partout",
+    "channel": "Rejoignez notre canal Telegram"
   },
   "notFound": {
     "code": "404",

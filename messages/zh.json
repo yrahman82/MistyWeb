@@ -1197,6 +1197,11 @@
       "title": "还是卡住？我们一起来解决。",
       "body": "给我们发条消息，真人会帮你重新连上网——通常两小时内搞定。",
       "button": "在 WhatsApp 联系我们"
+    },
+    "telegram": {
+      "title": "Telegram 频道",
+      "body": "关注我们，及时了解服务状态、新增节点和公告。遇到问题？直接给我们发私信，我们来解决。",
+      "button": "加入频道"
     }
   },
   "termsPage": {
@@ -1424,8 +1429,9 @@
   "announce": {
     "blocked": "在中国、俄罗斯及所有被封锁的国家可用",
     "free": "免费 90 分钟——无需银行卡或账户",
-    "payments": "Apple Pay、Google Pay、银行卡和加密货币",
-    "streaming": "畅享所有流媒体——全球无阻"
+    "payments": "Apple Pay、Google Pay、银行卡、加密货币和 Telegram Stars",
+    "streaming": "畅享所有流媒体——全球无阻",
+    "channel": "加入我们的 Telegram 频道获取最新消息"
   },
   "notFound": {
     "code": "404",

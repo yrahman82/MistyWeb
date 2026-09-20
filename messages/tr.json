@@ -1197,6 +1197,11 @@
       "title": "Hâlâ takıldınız mı? Birlikte çözelim.",
       "body": "Bize bir mesaj gönderin, gerçek bir kişi bağlanmanıza yardım etsin — genellikle iki saatten kısa sürede.",
       "button": "Bize WhatsApp'tan yazın"
+    },
+    "telegram": {
+      "title": "Telegram kanalı",
+      "body": "Servis durumu, yeni lokasyonlar ve duyurular için bizi takip et. Sorun mu var? Özelden yaz, hallederiz.",
+      "button": "Kanala katıl"
     }
   },
   "termsPage": {
@@ -1424,8 +1429,9 @@
   "announce": {
     "blocked": "Çin, Rusya ve tüm engelli ülkelerde çalışır",
     "free": "90 ücretsiz dakika — kart ya da hesap yok",
-    "payments": "Apple Pay, Google Pay, kartlar ve kripto",
-    "streaming": "Her şeyi izleyin — dünya çapında engelsiz"
+    "payments": "Apple Pay, Google Pay, kart, kripto ve Telegram Stars",
+    "streaming": "Her şeyi izleyin — dünya çapında engelsiz",
+    "channel": "Telegram kanalımıza katıl"
   },
   "notFound": {
     "code": "404",

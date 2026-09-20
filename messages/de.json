@@ -1197,6 +1197,11 @@
       "title": "Immer noch festgefahren? Lösen wir es gemeinsam.",
       "body": "Schreiben Sie uns eine Nachricht, und ein echter Mensch hilft Ihnen, wieder online zu kommen – meist in unter zwei Stunden.",
       "button": "Per WhatsApp schreiben"
+    },
+    "telegram": {
+      "title": "Telegram-Kanal",
+      "body": "Folge uns für Statusmeldungen, neue Standorte und Ankündigungen. Probleme? Schreib uns direkt, wir kümmern uns darum.",
+      "button": "Kanal beitreten"
     }
   },
   "termsPage": {
@@ -1424,8 +1429,9 @@
   "announce": {
     "blocked": "Funktioniert in China, Russland & jedem gesperrten Land",
     "free": "90 Freiminuten — ohne Karte, ohne Konto",
-    "payments": "Apple Pay, Google Pay, Karten & Krypto",
-    "streaming": "Alles streamen — weltweit entsperrt"
+    "payments": "Apple Pay, Google Pay, Karten, Krypto und Telegram Stars",
+    "streaming": "Alles streamen — weltweit entsperrt",
+    "channel": "Folge unserem Telegram-Kanal"
   },
   "notFound": {
     "code": "404",
