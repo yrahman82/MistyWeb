@@ -34,6 +34,8 @@ export default function CryptoClaim({
       if (r.status === "paid") {
         setOk(true);
         setMsg(t("claim.confirmed"));
+        // The CALLER shows the confirmation overlay — it must survive this form being unmounted
+        // when the view switches back to the account overview.
         onPaid?.();
         return;
       }

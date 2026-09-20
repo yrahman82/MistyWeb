@@ -1404,7 +1404,9 @@
       "checking": "正在检查…",
       "confirmed": "付款已确认——正在激活你的订阅…",
       "notFound": "尚未找到——如果你刚刚转账，请等待确认后再试。",
-      "errVerify": "无法验证该交易。"
+      "errVerify": "无法验证该交易。",
+      "successTitle": "付款已确认",
+      "done": "完成"
     }
   },
   "card": {
@@ -1462,6 +1464,8 @@
     "loading": "加载中…",
     "notAvailable": "Telegram Stars 暂时无法使用，请选择其他付款方式。",
     "afterPaying": "收到激活码了吗？",
-    "afterPayingOpened": "机器人发来激活码后，粘贴到这里"
+    "afterPayingOpened": "机器人发来激活码后，粘贴到这里",
+    "successTitle": "订阅已开通",
+    "done": "完成"
   }
 }

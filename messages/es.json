@@ -1404,7 +1404,9 @@
       "checking": "Comprobando…",
       "confirmed": "Pago confirmado: activando tu suscripción…",
       "notFound": "Aún no se encuentra: si acabas de enviarlo, espera a las confirmaciones e inténtalo de nuevo.",
-      "errVerify": "No se pudo verificar esa transacción."
+      "errVerify": "No se pudo verificar esa transacción.",
+      "successTitle": "Pago confirmado",
+      "done": "Listo"
     }
   },
   "card": {
@@ -1462,6 +1464,8 @@
     "loading": "Cargando…",
     "notAvailable": "Telegram Stars no está disponible ahora mismo. Elige otra forma de pago.",
     "afterPaying": "¿Ya tienes tu código?",
-    "afterPayingOpened": "Pega el código en cuanto el bot te lo envíe"
+    "afterPayingOpened": "Pega el código en cuanto el bot te lo envíe",
+    "successTitle": "Suscripción activa",
+    "done": "Listo"
   }
 }

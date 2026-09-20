@@ -1404,7 +1404,9 @@
       "checking": "Wird geprüft…",
       "confirmed": "Zahlung bestätigt — Ihr Abo wird aktiviert…",
       "notFound": "Noch nicht gefunden — wenn Sie gerade erst gesendet haben, warten Sie auf die Bestätigungen und versuchen Sie es erneut.",
-      "errVerify": "Diese Transaktion konnte nicht geprüft werden."
+      "errVerify": "Diese Transaktion konnte nicht geprüft werden.",
+      "successTitle": "Zahlung bestätigt",
+      "done": "Fertig"
     }
   },
   "card": {
@@ -1462,6 +1464,8 @@
     "loading": "Wird geladen…",
     "notAvailable": "Telegram Stars sind gerade nicht verfügbar. Bitte wähle eine andere Zahlungsart.",
     "afterPaying": "Code schon bekommen?",
-    "afterPayingOpened": "Füge den Code ein, sobald der Bot ihn schickt"
+    "afterPayingOpened": "Füge den Code ein, sobald der Bot ihn schickt",
+    "successTitle": "Abo ist aktiv",
+    "done": "Fertig"
   }
 }

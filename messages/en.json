@@ -1404,7 +1404,9 @@
       "checking": "Checking…",
       "confirmed": "Payment confirmed — activating your subscription…",
       "notFound": "Not found yet — if you just sent it, wait for confirmations and try again.",
-      "errVerify": "Couldn't verify that transaction."
+      "errVerify": "Couldn't verify that transaction.",
+      "successTitle": "Payment confirmed",
+      "done": "Done"
     }
   },
   "card": {
@@ -1462,6 +1464,8 @@
     "loading": "Loading…",
     "notAvailable": "Telegram Stars aren't available right now. Please choose another way to pay.",
     "afterPaying": "Got your code?",
-    "afterPayingOpened": "Paste your code as soon as the bot sends it"
+    "afterPayingOpened": "Paste your code as soon as the bot sends it",
+    "successTitle": "Subscription active",
+    "done": "Done"
   }
 }

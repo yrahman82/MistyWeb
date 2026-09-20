@@ -24,6 +24,8 @@ export default function StarsRedeem({ onRedeemed }: { onRedeemed?: () => void })
       await redeemStarsCode(c);
       setOk(true);
       setMsg(t("redeemed"));
+      // The CALLER shows the confirmation overlay — it has to survive this form being unmounted
+      // when the view switches back to the account overview.
       onRedeemed?.();
     } catch (e) {
       // The backend already returns a human-readable reason (invalid / already used / refunded),

@@ -1404,7 +1404,9 @@
       "checking": "Kontrol ediliyor…",
       "confirmed": "Ödeme onaylandı — aboneliğiniz etkinleştiriliyor…",
       "notFound": "Henüz bulunamadı — yeni gönderdiyseniz onayları bekleyin ve tekrar deneyin.",
-      "errVerify": "O işlem doğrulanamadı."
+      "errVerify": "O işlem doğrulanamadı.",
+      "successTitle": "Ödeme onaylandı",
+      "done": "Tamam"
     }
   },
   "card": {
@@ -1462,6 +1464,8 @@
     "loading": "Yükleniyor…",
     "notAvailable": "Telegram Stars şu anda kullanılamıyor. Lütfen başka bir ödeme yöntemi seç.",
     "afterPaying": "Kodun geldi mi?",
-    "afterPayingOpened": "Bot kodu gönderir göndermez buraya yapıştır"
+    "afterPayingOpened": "Bot kodu gönderir göndermez buraya yapıştır",
+    "successTitle": "Abonelik aktif",
+    "done": "Tamam"
   }
 }

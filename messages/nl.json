@@ -1404,7 +1404,9 @@
       "checking": "Controleren…",
       "confirmed": "Betaling bevestigd — je abonnement wordt geactiveerd…",
       "notFound": "Nog niet gevonden — als je het net hebt verzonden, wacht op bevestigingen en probeer het opnieuw.",
-      "errVerify": "Kon die transactie niet verifiëren."
+      "errVerify": "Kon die transactie niet verifiëren.",
+      "successTitle": "Betaling bevestigd",
+      "done": "Klaar"
     }
   },
   "card": {
@@ -1462,6 +1464,8 @@
     "loading": "Laden…",
     "notAvailable": "Telegram Stars is nu niet beschikbaar. Kies een andere betaalmethode.",
     "afterPaying": "Heb je je code?",
-    "afterPayingOpened": "Plak de code zodra de bot hem stuurt"
+    "afterPayingOpened": "Plak de code zodra de bot hem stuurt",
+    "successTitle": "Abonnement actief",
+    "done": "Klaar"
   }
 }

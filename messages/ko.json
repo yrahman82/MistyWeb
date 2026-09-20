@@ -1404,7 +1404,9 @@
       "checking": "확인 중…",
       "confirmed": "결제가 확인되었습니다 — 구독을 활성화하는 중…",
       "notFound": "아직 찾을 수 없습니다 — 방금 보내셨다면 승인을 기다린 후 다시 시도하세요.",
-      "errVerify": "해당 트랜잭션을 확인할 수 없습니다."
+      "errVerify": "해당 트랜잭션을 확인할 수 없습니다.",
+      "successTitle": "결제가 확인되었습니다",
+      "done": "완료"
     }
   },
   "card": {
@@ -1462,6 +1464,8 @@
     "loading": "불러오는 중…",
     "notAvailable": "지금은 Telegram Stars를 사용할 수 없습니다. 다른 결제 수단을 선택해 주세요.",
     "afterPaying": "코드를 받으셨나요?",
-    "afterPayingOpened": "봇이 코드를 보내면 바로 붙여넣으세요"
+    "afterPayingOpened": "봇이 코드를 보내면 바로 붙여넣으세요",
+    "successTitle": "구독이 활성화되었습니다",
+    "done": "완료"
   }
 }

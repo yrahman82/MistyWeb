@@ -1404,7 +1404,9 @@
       "checking": "Vérification…",
       "confirmed": "Paiement confirmé — activation de votre abonnement…",
       "notFound": "Introuvable pour l’instant — si vous venez de l’envoyer, attendez les confirmations et réessayez.",
-      "errVerify": "Impossible de vérifier cette transaction."
+      "errVerify": "Impossible de vérifier cette transaction.",
+      "successTitle": "Paiement confirmé",
+      "done": "Terminé"
     }
   },
   "card": {
@@ -1462,6 +1464,8 @@
     "loading": "Chargement…",
     "notAvailable": "Les Telegram Stars ne sont pas disponibles pour le moment. Choisissez un autre moyen de paiement.",
     "afterPaying": "Vous avez votre code ?",
-    "afterPayingOpened": "Collez le code dès que le bot vous l'envoie"
+    "afterPayingOpened": "Collez le code dès que le bot vous l'envoie",
+    "successTitle": "Abonnement actif",
+    "done": "Terminé"
   }
 }

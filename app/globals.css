@@ -52,3 +52,17 @@ body {
     scroll-behavior: auto;
   }
 }
+
+/* iOS Safari zooms the whole page in whenever a focused field's text is under 16px, and the zoomed
+   viewport then scrolls sideways past the edge of the screen — the page looks broken and the user
+   has to pinch back out. There is no way to opt out (user-scalable=no is ignored), so the only cure
+   is to keep every field at 16px on touch devices. Applied globally, once: doing it per-component
+   meant every new input reintroduced the bug (it was fixed on the chat box alone, then came back on
+   the crypto and Stars code fields). Desktop keeps the designed sizes. */
+@media (pointer: coarse) {
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}

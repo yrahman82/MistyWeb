@@ -10,6 +10,7 @@ import CryptoCheckout from "@/components/CryptoCheckout";
 import CryptoClaim from "@/components/CryptoClaim";
 import StarsRedeem from "@/components/StarsRedeem";
 import StarsCheckout from "@/components/StarsCheckout";
+import SuccessDialog from "@/components/SuccessDialog";
 import { SupportedBrandsRow, Usdt, Usdc } from "@/components/PayBrands";
 import { Spinner, Loader } from "@/components/ui";
 import { getStripe } from "@/lib/stripe";
@@ -43,6 +44,9 @@ function AccountInner() {
   // Plan display text comes from the SAME catalog the pricing page uses (pricingPage.plans),
   // keyed by plan.key, so both surfaces show identical localized names. Prices stay from the DB.
   const tp = useTranslations("pricingPage");
+  // The activation overlay's copy belongs to the rail that succeeded, so read both catalogs here.
+  const ts = useTranslations("stars");
+  const tc = useTranslations("crypto");
   const planName = (p: { key: string; title: string }) =>
     tp.has(`plans.${p.key}.name`) ? tp(`plans.${p.key}.name`) : p.title;
   // Proper, localized cadence ("/ month" …) from the catalog instead of the DB's "/mo" abbreviation.
@@ -73,6 +77,11 @@ function AccountInner() {
   const [busy, setBusy] = useState(false);
   const [activating, setActivating] = useState(false);
   const [confirmChanging, setConfirmChanging] = useState(false); // change method inside the confirm view
+  // Which rail just succeeded, so the confirmation overlay can name it. Owned HERE, not by the
+  // activation forms: onPaid switches the view, which unmounts them — a dialog inside one would
+  // flash and vanish. The forms sit low on long pages and the keyboard scrolls them mid-screen, so
+  // an inline success line is routinely off-screen; this overlay is what the user actually sees.
+  const [paidVia, setPaidVia] = useState<"crypto" | "stars" | null>(null);
   const autoStarted = useRef(false);
 
   // Is crypto available? (backend-flag gated). Kept in a ref too so choosePlan's stable callback reads
@@ -370,7 +379,7 @@ function AccountInner() {
       <StarsCheckout
         plan={plan}
         planLabel={selected ? `${planName(selected)} · ${selected.price}${planCadence(selected)}` : undefined}
-        onRedeemed={onPaid}
+        onRedeemed={() => { setPaidVia("stars"); onPaid(); }}
         onBack={() => setView("method")}
       />
     );
@@ -383,7 +392,7 @@ function AccountInner() {
       <CryptoCheckout
         plan={plan}
         planLabel={selected ? `${planName(selected)} · ${selected.price}${planCadence(selected)}` : undefined}
-        onPaid={onPaid}
+        onPaid={() => { setPaidVia("crypto"); onPaid(); }}
         onBack={() => setView("method")}
       />
     );
@@ -524,6 +533,16 @@ function AccountInner() {
   const canManage = status?.platform === "web";
   return (
     <div className="w-full max-w-lg space-y-5">
+      {/* Every successful activation lands back on this view — the checkout screens switch to it —
+          so one dialog here covers the rail checkouts and the recovery sections alike. */}
+      {paidVia ? (
+        <SuccessDialog
+          title={paidVia === "stars" ? ts("successTitle") : tc("claim.successTitle")}
+          body={paidVia === "stars" ? ts("redeemed") : tc("claim.confirmed")}
+          cta={paidVia === "stars" ? ts("done") : tc("claim.done")}
+          onClose={() => setPaidVia(null)}
+        />
+      ) : null}
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-semibold tracking-tight">{t("accountHeading")}</h1>
         <button onClick={() => { logout(); router.replace("/"); }} className="text-sm text-slate-400 hover:text-white">
@@ -685,7 +704,7 @@ function AccountInner() {
           <p className="mb-3 text-xs text-slate-500">
             {t("cryptoSectionBody")}
           </p>
-          <CryptoClaim onPaid={() => refresh().catch(() => {})} variant="section" />
+          <CryptoClaim onPaid={() => { setPaidVia("crypto"); refresh().catch(() => {}); }} variant="section" />
         </Section>
       ) : null}
 
@@ -693,7 +712,7 @@ function AccountInner() {
           One-off term like crypto: nothing renews, and there is deliberately no refund control here. */}
       {starsEnabled ? (
         <Section title={t("sectionPaidWithStars")}>
-          <StarsRedeem onRedeemed={() => refresh().catch(() => {})} />
+          <StarsRedeem onRedeemed={() => { setPaidVia("stars"); refresh().catch(() => {}); }} />
         </Section>
       ) : null}
 
