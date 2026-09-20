@@ -14,7 +14,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 const CLIENT_NAMESPACES = [
   "nav", "announce", "payments", "checkout", "crypto", "card", "downloadGrid",
   "notFound", "accountPage", "pricingPage", "loginPage", "registerPage",
-  "resetPasswordPage", "tvLoginPage", "chat",
+  "resetPasswordPage", "tvLoginPage", "chat", "stars",
 ] as const;
 import "../globals.css";
 import { site } from "@/lib/site";

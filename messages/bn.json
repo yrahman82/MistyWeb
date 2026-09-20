@@ -259,6 +259,7 @@
     "sectionSubscription": "সাবস্ক্রিপশন",
     "sectionPaymentMethod": "পেমেন্ট মেথড",
     "sectionPaidWithCrypto": "ক্রিপ্টো দিয়ে পেমেন্ট করেছেন?",
+    "sectionPaidWithStars": "Telegram Stars দিয়ে পেমেন্ট",
     "sectionOpenvpnCredentials": "OpenVPN ক্রেডেনশিয়াল",
     "sectionAccount": "অ্যাকাউন্ট",
     "activating": "আপনার সাবস্ক্রিপশন সক্রিয় হচ্ছে… এতে কয়েক সেকেন্ড লাগে।",
@@ -1438,5 +1439,13 @@
     "connecting": "সংযোগ করা হচ্ছে…",
     "unavailable": "লাইভ চ্যাট এখন অফলাইন — support@mistyvpn.com-এ ইমেল করুন, আমরা দ্রুত উত্তর দেব।",
     "close": "বন্ধ করুন"
+  },
+  "stars": {
+    "pastePrompt": "Telegram Stars দিয়ে পেমেন্ট করেছেন? সাবস্ক্রিপশন চালু করতে আপনার কোডটি দিন।",
+    "redeem": "চালু করুন",
+    "checking": "চালু হচ্ছে…",
+    "redeemed": "হয়ে গেছে — আপনার সাবস্ক্রিপশন চালু আছে।",
+    "errRedeem": "কোডটি চালু করা যায়নি। আবার চেষ্টা করুন।",
+    "placeholder": "MV-XXXX-XXXX-XXXX"
   }
 }

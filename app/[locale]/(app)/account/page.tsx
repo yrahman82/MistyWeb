@@ -8,6 +8,7 @@ import CheckoutForm from "@/components/CheckoutForm";
 import ChangeCardForm from "@/components/ChangeCardForm";
 import CryptoCheckout from "@/components/CryptoCheckout";
 import CryptoClaim from "@/components/CryptoClaim";
+import StarsRedeem from "@/components/StarsRedeem";
 import { SupportedBrandsRow, Usdt, Usdc } from "@/components/PayBrands";
 import { Spinner, Loader } from "@/components/ui";
 import { getStripe } from "@/lib/stripe";
@@ -22,6 +23,7 @@ import {
   resumeSubscription,
   updatePaymentMethod,
   getCryptoAssets,
+  getStarsConfig,
   changePassword,
   deleteAccount,
   logout,
@@ -75,10 +77,12 @@ function AccountInner() {
   // Is crypto available? (backend-flag gated). Kept in a ref too so choosePlan's stable callback reads
   // the latest value without re-creating (mirrors statusRef).
   const [cryptoEnabled, setCryptoEnabled] = useState(false);
+  const [starsEnabled, setStarsEnabled] = useState(false);
   const cryptoEnabledRef = useRef(false);
   useEffect(() => { cryptoEnabledRef.current = cryptoEnabled; }, [cryptoEnabled]);
   useEffect(() => {
     getCryptoAssets().then((c) => setCryptoEnabled(c.enabled && c.assets.length > 0)).catch(() => {});
+    getStarsConfig().then((c) => setStarsEnabled(c.enabled)).catch(() => {});
   }, []);
 
   // Latest status kept in a ref so choosePlan can read `hasSavedCard` without depending on `status`
@@ -639,6 +643,14 @@ function AccountInner() {
             {t("cryptoSectionBody")}
           </p>
           <CryptoClaim onPaid={() => refresh().catch(() => {})} variant="section" />
+        </Section>
+      ) : null}
+
+      {/* Telegram Stars — the purchase happens in the pay bot; this redeems the code it hands back.
+          One-off term like crypto: nothing renews, and there is deliberately no refund control here. */}
+      {starsEnabled ? (
+        <Section title={t("sectionPaidWithStars")}>
+          <StarsRedeem onRedeemed={() => refresh().catch(() => {})} />
         </Section>
       ) : null}
 

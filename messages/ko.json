@@ -259,6 +259,7 @@
     "sectionSubscription": "구독",
     "sectionPaymentMethod": "결제 수단",
     "sectionPaidWithCrypto": "암호화폐로 결제하셨나요?",
+    "sectionPaidWithStars": "Telegram Stars로 결제함",
     "sectionOpenvpnCredentials": "OpenVPN 자격 증명",
     "sectionAccount": "계정",
     "activating": "구독을 활성화하는 중… 몇 초 정도 걸립니다.",
@@ -1438,5 +1439,13 @@
     "connecting": "연결 중…",
     "unavailable": "실시간 채팅이 현재 오프라인입니다 — support@mistyvpn.com으로 이메일 주시면 빠르게 답변드리겠습니다.",
     "close": "닫기"
+  },
+  "stars": {
+    "pastePrompt": "Telegram Stars로 결제하셨나요? 코드를 입력해 구독을 활성화하세요.",
+    "redeem": "활성화",
+    "checking": "활성화 중…",
+    "redeemed": "완료됐습니다. 구독이 활성화되었어요.",
+    "errRedeem": "코드를 활성화하지 못했습니다. 다시 시도해 주세요.",
+    "placeholder": "MV-XXXX-XXXX-XXXX"
   }
 }

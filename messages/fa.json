@@ -445,6 +445,7 @@
     "sectionSubscription": "اشتراک",
     "sectionPaymentMethod": "روش پرداخت",
     "sectionPaidWithCrypto": "با ارز دیجیتال پرداخت کرده‌اید؟",
+    "sectionPaidWithStars": "پرداخت‌شده با Telegram Stars",
     "sectionOpenvpnCredentials": "اطلاعات ورود OpenVPN",
     "sectionAccount": "حساب کاربری",
     "activating": "در حال فعال‌سازی اشتراک شما… چند ثانیه طول می‌کشد.",
@@ -1438,5 +1439,13 @@
         "text": "سؤال، درخواست یا شکایتی درباره حریم خصوصی دارید؟ به <mail>{email}</mail> ایمیل بزنید، با کمال میل کمک می‌کنیم."
       }
     ]
+  },
+  "stars": {
+    "pastePrompt": "با Telegram Stars پرداخت کرده‌اید؟ برای فعال‌سازی اشتراک، کدتان را وارد کنید.",
+    "redeem": "فعال‌سازی",
+    "checking": "در حال فعال‌سازی…",
+    "redeemed": "انجام شد — اشتراک شما فعال است.",
+    "errRedeem": "این کد فعال نشد. دوباره تلاش کنید.",
+    "placeholder": "MV-XXXX-XXXX-XXXX"
   }
 }

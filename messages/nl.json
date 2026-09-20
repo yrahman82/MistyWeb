@@ -259,6 +259,7 @@
     "sectionSubscription": "Abonnement",
     "sectionPaymentMethod": "Betaalmethode",
     "sectionPaidWithCrypto": "Met crypto betaald?",
+    "sectionPaidWithStars": "Betaald met Telegram Stars",
     "sectionOpenvpnCredentials": "OpenVPN-inloggegevens",
     "sectionAccount": "Account",
     "activating": "Je abonnement wordt geactiveerd… dit duurt een paar seconden.",
@@ -1438,5 +1439,13 @@
     "connecting": "Verbinden…",
     "unavailable": "De livechat is nu offline — mail support@mistyvpn.com en we reageren snel.",
     "close": "Sluiten"
+  },
+  "stars": {
+    "pastePrompt": "Betaald met Telegram Stars? Voer je code in om je abonnement te activeren.",
+    "redeem": "Activeren",
+    "checking": "Bezig met activeren…",
+    "redeemed": "Klaar – je abonnement is actief.",
+    "errRedeem": "Deze code kon niet worden geactiveerd. Probeer het opnieuw.",
+    "placeholder": "MV-XXXX-XXXX-XXXX"
   }
 }

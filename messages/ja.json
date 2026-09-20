@@ -259,6 +259,7 @@
     "sectionSubscription": "契約",
     "sectionPaymentMethod": "支払い方法",
     "sectionPaidWithCrypto": "暗号資産で支払いましたか？",
+    "sectionPaidWithStars": "Telegram Stars で購入",
     "sectionOpenvpnCredentials": "OpenVPN認証情報",
     "sectionAccount": "アカウント",
     "activating": "契約を有効化しています…数秒お待ちください。",
@@ -1438,5 +1439,13 @@
     "connecting": "接続中…",
     "unavailable": "ライブチャットは現在オフラインです。support@mistyvpn.com までメールいただければ、すぐに返信します。",
     "close": "閉じる"
+  },
+  "stars": {
+    "pastePrompt": "Telegram Stars で購入しましたか？コードを入力してサブスクリプションを有効にしてください。",
+    "redeem": "有効にする",
+    "checking": "処理中…",
+    "redeemed": "完了しました。サブスクリプションが有効になりました。",
+    "errRedeem": "このコードを有効にできませんでした。もう一度お試しください。",
+    "placeholder": "MV-XXXX-XXXX-XXXX"
   }
 }

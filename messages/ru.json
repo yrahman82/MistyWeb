@@ -259,6 +259,7 @@
     "sectionSubscription": "Подписка",
     "sectionPaymentMethod": "Способ оплаты",
     "sectionPaidWithCrypto": "Оплатили криптой?",
+    "sectionPaidWithStars": "Оплачено через Telegram Stars",
     "sectionOpenvpnCredentials": "Данные OpenVPN",
     "sectionAccount": "Аккаунт",
     "activating": "Активируем вашу подписку… это займёт несколько секунд.",
@@ -1438,5 +1439,13 @@
     "connecting": "Подключение…",
     "unavailable": "Онлайн-чат сейчас офлайн — напишите на support@mistyvpn.com, мы быстро ответим.",
     "close": "Закрыть"
+  },
+  "stars": {
+    "pastePrompt": "Оплатили через Telegram Stars? Введите код, чтобы активировать подписку.",
+    "redeem": "Активировать",
+    "checking": "Активируем…",
+    "redeemed": "Готово — подписка активна.",
+    "errRedeem": "Не удалось активировать код. Попробуйте ещё раз.",
+    "placeholder": "MV-XXXX-XXXX-XXXX"
   }
 }

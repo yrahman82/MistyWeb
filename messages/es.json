@@ -259,6 +259,7 @@
     "sectionSubscription": "Suscripción",
     "sectionPaymentMethod": "Método de pago",
     "sectionPaidWithCrypto": "¿Pagaste con cripto?",
+    "sectionPaidWithStars": "Pagado con Telegram Stars",
     "sectionOpenvpnCredentials": "Credenciales de OpenVPN",
     "sectionAccount": "Cuenta",
     "activating": "Activando tu suscripción… esto tarda unos segundos.",
@@ -1438,5 +1439,13 @@
     "connecting": "Conectando…",
     "unavailable": "El chat está desconectado ahora mismo: escríbenos a support@mistyvpn.com y te responderemos rápido.",
     "close": "Cerrar"
+  },
+  "stars": {
+    "pastePrompt": "¿Pagaste con Telegram Stars? Introduce tu código para activar tu suscripción.",
+    "redeem": "Activar",
+    "checking": "Activando…",
+    "redeemed": "Listo: tu suscripción está activa.",
+    "errRedeem": "No se pudo activar ese código. Inténtalo de nuevo.",
+    "placeholder": "MV-XXXX-XXXX-XXXX"
   }
 }

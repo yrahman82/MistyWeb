@@ -259,6 +259,7 @@
     "sectionSubscription": "订阅",
     "sectionPaymentMethod": "付款方式",
     "sectionPaidWithCrypto": "用加密货币付过款？",
+    "sectionPaidWithStars": "已用 Telegram Stars 付款",
     "sectionOpenvpnCredentials": "OpenVPN 凭据",
     "sectionAccount": "账户",
     "activating": "正在激活你的订阅…只需几秒。",
@@ -1438,5 +1439,13 @@
     "connecting": "连接中…",
     "unavailable": "在线客服暂时离线——请发邮件至 support@mistyvpn.com，我们会尽快回复。",
     "close": "关闭"
+  },
+  "stars": {
+    "pastePrompt": "用 Telegram Stars 付款了？输入兑换码即可开通订阅。",
+    "redeem": "开通",
+    "checking": "开通中…",
+    "redeemed": "已完成，订阅已开通。",
+    "errRedeem": "兑换码无法使用，请重试。",
+    "placeholder": "MV-XXXX-XXXX-XXXX"
   }
 }

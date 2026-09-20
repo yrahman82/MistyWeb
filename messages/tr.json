@@ -259,6 +259,7 @@
     "sectionSubscription": "Abonelik",
     "sectionPaymentMethod": "Ödeme Yöntemi",
     "sectionPaidWithCrypto": "Kripto ile mi ödediniz?",
+    "sectionPaidWithStars": "Telegram Stars ile ödendi",
     "sectionOpenvpnCredentials": "OpenVPN Kimlik Bilgileri",
     "sectionAccount": "Hesap",
     "activating": "Aboneliğiniz etkinleştiriliyor… bu birkaç saniye sürer.",
@@ -1438,5 +1439,13 @@
     "connecting": "Bağlanıyor…",
     "unavailable": "Canlı sohbet şu anda çevrimdışı — support@mistyvpn.com adresine yazın, hızlıca yanıtlayalım.",
     "close": "Kapat"
+  },
+  "stars": {
+    "pastePrompt": "Telegram Stars ile mi ödediniz? Aboneliğinizi etkinleştirmek için kodunuzu girin.",
+    "redeem": "Etkinleştir",
+    "checking": "Etkinleştiriliyor…",
+    "redeemed": "Hazır — aboneliğiniz etkin.",
+    "errRedeem": "Bu kod etkinleştirilemedi. Lütfen tekrar deneyin.",
+    "placeholder": "MV-XXXX-XXXX-XXXX"
   }
 }
