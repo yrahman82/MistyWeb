@@ -315,7 +315,9 @@
     "deleting": "削除中…",
     "confirmDelete": "アカウントを完全に削除しますか？この操作は取り消せません。",
     "errDeleteAccount": "アカウントを削除できませんでした",
-    "errLoadAccount": "アカウントを読み込めませんでした。接続を確認して、もう一度お試しください。"
+    "errLoadAccount": "アカウントを読み込めませんでした。接続を確認して、もう一度お試しください。",
+    "payStars": "Telegram Stars — カード不要",
+    "starsNoCard": "Telegram 内で支払い"
   },
   "comparePage": {
     "metaTitle": "MistyVPN vs NordVPN・ExpressVPN・PureVPN",
@@ -1353,7 +1355,9 @@
     "orCrypto": "または暗号資産で支払う",
     "cryptoChains": "TRON · Ethereum · BSC 対応",
     "guarantee": "14 日間の返金保証 — 理由は問いません",
-    "refund": "最初の {days} 日間でご満足いただけない場合は、メールでご連絡ください。全額返金いたします — 理由は問いません。"
+    "refund": "最初の {days} 日間でご満足いただけない場合は、メールでご連絡ください。全額返金いたします — 理由は問いません。",
+    "orStars": "または Telegram で",
+    "starsNoCard": "Stars — カード不要"
   },
   "checkout": {
     "loading": "安全な決済を読み込み中…",
@@ -1446,6 +1450,18 @@
     "checking": "処理中…",
     "redeemed": "完了しました。サブスクリプションが有効になりました。",
     "errRedeem": "このコードを有効にできませんでした。もう一度お試しください。",
-    "placeholder": "MV-XXXX-XXXX-XXXX"
+    "placeholder": "MV-XXXX-XXXX-XXXX",
+    "checkoutTitle": "Telegram Stars で支払う",
+    "priceLabel": "このプランの料金",
+    "topUpHint": "Stars をお持ちでなくても大丈夫です。支払い時に Telegram がチャージをご案内します。",
+    "step1": "Telegram で決済ボットを開き、支払いを確定します。",
+    "step2": "ボットから 1 回かぎりのアクティベーションコードが届きます。",
+    "step3": "このページに戻ってコードを貼り付けると、アカウントが有効になります。",
+    "openTelegram": "Telegram を開いて支払う",
+    "backToMethods": "← ほかの支払い方法を選ぶ",
+    "loading": "読み込み中…",
+    "notAvailable": "Telegram Stars は現在ご利用いただけません。ほかの支払い方法をお選びください。",
+    "afterPaying": "コードは届きましたか？",
+    "afterPayingOpened": "ボットからコードが届いたら貼り付けてください"
   }
 }

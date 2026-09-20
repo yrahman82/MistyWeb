@@ -192,11 +192,21 @@ export type CryptoConfig = { enabled: boolean; assets: CryptoAsset[] };
 // Whether crypto is enabled + the coin/chain menu. Backend-flag gated. PUBLIC (no auth) so the
 // logged-out pricing page can show/hide the crypto option.
 // ── Telegram Stars ────────────────────────────────────────────────────────────────────────────
-// Stars are bought in the Telegram pay bot, which hands the buyer a one-time code. This is the only
-// piece the website needs: redeeming that code against the signed-in account. Like crypto, a Stars
-// purchase is a ONE-OFF term — it never renews.
+// Stars are bought in the Telegram pay bot, which hands the buyer a one-time code. The site owns the
+// two ends of that trip: it deep-links into the bot with the chosen plan, and it redeems the code
+// that comes back against the signed-in account. Like crypto, a Stars purchase is a ONE-OFF term —
+// it never renews.
+export type StarsConfig = {
+  enabled: boolean;
+  /// The pay bot's @username (no "@"), from the backend — the site deep-links to t.me/<bot>?start=<plan>.
+  bot: string;
+  monthly: number;
+  sixmonth: number;
+  annual: number;
+};
+
 export function getStarsConfig() {
-  return req<{ enabled: boolean; monthly: number; sixmonth: number; annual: number }>("/api/stars/prices");
+  return req<StarsConfig>("/api/stars/prices");
 }
 
 export function redeemStarsCode(code: string) {

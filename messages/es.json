@@ -315,7 +315,9 @@
     "deleting": "Eliminando…",
     "confirmDelete": "¿Eliminar tu cuenta de forma permanente? Esto no se puede deshacer.",
     "errDeleteAccount": "No se pudo eliminar la cuenta",
-    "errLoadAccount": "No pudimos cargar tu cuenta. Comprueba tu conexión e inténtalo de nuevo."
+    "errLoadAccount": "No pudimos cargar tu cuenta. Comprueba tu conexión e inténtalo de nuevo.",
+    "payStars": "Telegram Stars: sin tarjeta",
+    "starsNoCard": "se paga dentro de Telegram"
   },
   "comparePage": {
     "metaTitle": "MistyVPN frente a NordVPN, ExpressVPN y PureVPN",
@@ -1353,7 +1355,9 @@
     "orCrypto": "o paga con cripto",
     "cryptoChains": "en TRON · Ethereum · BSC",
     "guarantee": "Garantía de reembolso de 14 días, sin preguntas",
-    "refund": "¿No estás contento en tus primeros {days} días? Escríbenos y te devolvemos todo, sin preguntas."
+    "refund": "¿No estás contento en tus primeros {days} días? Escríbenos y te devolvemos todo, sin preguntas.",
+    "orStars": "o con Telegram",
+    "starsNoCard": "Stars: sin tarjeta"
   },
   "checkout": {
     "loading": "Cargando el pago seguro…",
@@ -1446,6 +1450,18 @@
     "checking": "Activando…",
     "redeemed": "Listo: tu suscripción está activa.",
     "errRedeem": "No se pudo activar ese código. Inténtalo de nuevo.",
-    "placeholder": "MV-XXXX-XXXX-XXXX"
+    "placeholder": "MV-XXXX-XXXX-XXXX",
+    "checkoutTitle": "Paga con Telegram Stars",
+    "priceLabel": "Este plan cuesta",
+    "topUpHint": "¿Aún no tienes Stars? Telegram te ofrece recargar al pagar.",
+    "step1": "Abre nuestro bot de pago en Telegram y confirma el pago.",
+    "step2": "El bot te envía un código de activación de un solo uso.",
+    "step3": "Vuelve aquí y pega el código para activar esta cuenta.",
+    "openTelegram": "Abrir Telegram y pagar",
+    "backToMethods": "← Elegir otra forma de pago",
+    "loading": "Cargando…",
+    "notAvailable": "Telegram Stars no está disponible ahora mismo. Elige otra forma de pago.",
+    "afterPaying": "¿Ya tienes tu código?",
+    "afterPayingOpened": "Pega el código en cuanto el bot te lo envíe"
   }
 }

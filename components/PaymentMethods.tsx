@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { moneyBack } from "@/lib/site";
-import { getCryptoAssets } from "@/lib/api";
+import { getCryptoAssets, getStarsConfig } from "@/lib/api";
 import { Usdt, Usdc } from "@/components/PayBrands";
 
 // Prominent "how you pay" trust band for the pricing page. The point users care about:
@@ -77,8 +77,10 @@ export default function PaymentMethods() {
   const t = useTranslations("payments");
   // Show the crypto row only where crypto is enabled (backend flag). Public endpoint, no auth.
   const [cryptoEnabled, setCryptoEnabled] = useState(false);
+  const [starsEnabled, setStarsEnabled] = useState(false);
   useEffect(() => {
     getCryptoAssets().then((c) => setCryptoEnabled(c.enabled && c.assets.length > 0)).catch(() => {});
+    getStarsConfig().then((c) => setStarsEnabled(c.enabled)).catch(() => {});
   }, []);
   return (
     <div className="mx-auto mt-12 max-w-3xl rounded-3xl border border-white/10 bg-white/[0.03] p-8 text-center">
@@ -118,6 +120,24 @@ export default function PaymentMethods() {
             <Usdt />
             <Usdc />
             <span className="text-sm text-slate-400">{t("cryptoChains")}</span>
+          </div>
+        </div>
+      ) : null}
+
+      {/* Telegram Stars — the no-card, no-wallet rail. Shown only when enabled (flag). */}
+      {starsEnabled ? (
+        <div className="mt-6 flex flex-col items-center gap-3">
+          <span className="text-xs font-medium uppercase tracking-wider text-slate-500">
+            {t("orStars")}
+          </span>
+          <div className="flex flex-wrap items-center justify-center gap-2.5">
+            <span className="inline-flex h-9 items-center gap-1.5 rounded-lg bg-[#2AABEE] px-2.5 text-white shadow-sm">
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
+                <path d="M21.8 4.2 18.6 19c-.24 1.06-.87 1.32-1.77.82l-4.9-3.6-2.36 2.27c-.26.26-.48.48-.98.48l.35-4.98 9.06-8.19c.4-.35-.08-.54-.6-.2L6.2 12.06l-4.83-1.5c-1.05-.33-1.07-1.05.22-1.56l18.9-7.28c.87-.32 1.64.2 1.31 2.48z" />
+              </svg>
+              <span className="text-xs font-semibold">Telegram</span>
+            </span>
+            <span className="text-sm text-slate-400">{t("starsNoCard")}</span>
           </div>
         </div>
       ) : null}

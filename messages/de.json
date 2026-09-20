@@ -315,7 +315,9 @@
     "deleting": "Wird gelöscht…",
     "confirmDelete": "Ihr Konto endgültig löschen? Das kann nicht rückgängig gemacht werden.",
     "errDeleteAccount": "Konto konnte nicht gelöscht werden",
-    "errLoadAccount": "Ihr Konto konnte nicht geladen werden. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut."
+    "errLoadAccount": "Ihr Konto konnte nicht geladen werden. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "payStars": "Telegram Stars – ohne Karte",
+    "starsNoCard": "Zahlung in Telegram"
   },
   "comparePage": {
     "metaTitle": "MistyVPN vs. NordVPN, ExpressVPN & PureVPN",
@@ -1353,7 +1355,9 @@
     "orCrypto": "oder mit Krypto bezahlen",
     "cryptoChains": "über TRON · Ethereum · BSC",
     "guarantee": "14 Tage Geld-zurück-Garantie — ohne Wenn und Aber",
-    "refund": "In Ihren ersten {days} Tagen nicht zufrieden? Schreiben Sie uns eine E-Mail für eine vollständige Rückerstattung — ohne Wenn und Aber."
+    "refund": "In Ihren ersten {days} Tagen nicht zufrieden? Schreiben Sie uns eine E-Mail für eine vollständige Rückerstattung — ohne Wenn und Aber.",
+    "orStars": "oder mit Telegram",
+    "starsNoCard": "Stars – ohne Karte"
   },
   "checkout": {
     "loading": "Sicherer Bezahlvorgang wird geladen…",
@@ -1446,6 +1450,18 @@
     "checking": "Wird aktiviert …",
     "redeemed": "Fertig – dein Abo ist aktiv.",
     "errRedeem": "Der Code konnte nicht aktiviert werden. Bitte versuch es erneut.",
-    "placeholder": "MV-XXXX-XXXX-XXXX"
+    "placeholder": "MV-XXXX-XXXX-XXXX",
+    "checkoutTitle": "Mit Telegram Stars bezahlen",
+    "priceLabel": "Dieser Tarif kostet",
+    "topUpHint": "Noch keine Stars? Telegram bietet dir beim Bezahlen das Aufladen an.",
+    "step1": "Öffne unseren Bezahl-Bot in Telegram und bestätige die Zahlung.",
+    "step2": "Der Bot schickt dir einen einmaligen Aktivierungscode.",
+    "step3": "Komm hierher zurück und füge den Code ein, um dieses Konto freizuschalten.",
+    "openTelegram": "Telegram öffnen und bezahlen",
+    "backToMethods": "← Andere Zahlungsart wählen",
+    "loading": "Wird geladen…",
+    "notAvailable": "Telegram Stars sind gerade nicht verfügbar. Bitte wähle eine andere Zahlungsart.",
+    "afterPaying": "Code schon bekommen?",
+    "afterPayingOpened": "Füge den Code ein, sobald der Bot ihn schickt"
   }
 }

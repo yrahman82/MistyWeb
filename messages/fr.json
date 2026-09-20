@@ -315,7 +315,9 @@
     "deleting": "Suppression…",
     "confirmDelete": "Supprimer définitivement votre compte ? Cette action est irréversible.",
     "errDeleteAccount": "Impossible de supprimer le compte",
-    "errLoadAccount": "Impossible de charger votre compte. Vérifiez votre connexion et réessayez."
+    "errLoadAccount": "Impossible de charger votre compte. Vérifiez votre connexion et réessayez.",
+    "payStars": "Telegram Stars — sans carte",
+    "starsNoCard": "paiement dans Telegram"
   },
   "comparePage": {
     "metaTitle": "MistyVPN face à NordVPN, ExpressVPN et PureVPN",
@@ -1353,7 +1355,9 @@
     "orCrypto": "ou payer en crypto",
     "cryptoChains": "sur TRON · Ethereum · BSC",
     "guarantee": "Garantie satisfait ou remboursé de 14 jours, sans condition",
-    "refund": "Pas satisfait durant vos {days} premiers jours ? Écrivez-nous pour un remboursement intégral, sans condition."
+    "refund": "Pas satisfait durant vos {days} premiers jours ? Écrivez-nous pour un remboursement intégral, sans condition.",
+    "orStars": "ou avec Telegram",
+    "starsNoCard": "Stars — sans carte"
   },
   "checkout": {
     "loading": "Chargement du paiement sécurisé…",
@@ -1446,6 +1450,18 @@
     "checking": "Activation…",
     "redeemed": "C'est fait : votre abonnement est actif.",
     "errRedeem": "Impossible d'activer ce code. Réessayez.",
-    "placeholder": "MV-XXXX-XXXX-XXXX"
+    "placeholder": "MV-XXXX-XXXX-XXXX",
+    "checkoutTitle": "Payer avec les Telegram Stars",
+    "priceLabel": "Ce forfait coûte",
+    "topUpHint": "Pas encore de Stars ? Telegram vous propose de recharger au moment de payer.",
+    "step1": "Ouvrez notre bot de paiement dans Telegram et confirmez le paiement.",
+    "step2": "Le bot vous envoie un code d'activation à usage unique.",
+    "step3": "Revenez ici et collez le code pour activer ce compte.",
+    "openTelegram": "Ouvrir Telegram et payer",
+    "backToMethods": "← Choisir un autre moyen de paiement",
+    "loading": "Chargement…",
+    "notAvailable": "Les Telegram Stars ne sont pas disponibles pour le moment. Choisissez un autre moyen de paiement.",
+    "afterPaying": "Vous avez votre code ?",
+    "afterPayingOpened": "Collez le code dès que le bot vous l'envoie"
   }
 }

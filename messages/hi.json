@@ -315,7 +315,9 @@
     "deleting": "डिलीट हो रहा है…",
     "confirmDelete": "अपना अकाउंट हमेशा के लिए डिलीट करें? इसे वापस नहीं किया जा सकता।",
     "errDeleteAccount": "अकाउंट डिलीट नहीं हो सका",
-    "errLoadAccount": "आपका अकाउंट लोड नहीं हो सका। अपना कनेक्शन जाँचें और दोबारा कोशिश करें।"
+    "errLoadAccount": "आपका अकाउंट लोड नहीं हो सका। अपना कनेक्शन जाँचें और दोबारा कोशिश करें।",
+    "payStars": "Telegram Stars — कार्ड की ज़रूरत नहीं",
+    "starsNoCard": "भुगतान Telegram में ही"
   },
   "comparePage": {
     "metaTitle": "MistyVPN बनाम NordVPN, ExpressVPN और PureVPN",
@@ -1353,7 +1355,9 @@
     "orCrypto": "या क्रिप्टो से भुगतान करें",
     "cryptoChains": "TRON · Ethereum · BSC पर",
     "guarantee": "14-दिन की मनी-बैक गारंटी — बिना कोई सवाल",
-    "refund": "पहले {days} दिनों में संतुष्ट नहीं हैं? हमें ईमेल करें और पूरा रिफंड पाएँ — बिना कोई सवाल।"
+    "refund": "पहले {days} दिनों में संतुष्ट नहीं हैं? हमें ईमेल करें और पूरा रिफंड पाएँ — बिना कोई सवाल।",
+    "orStars": "या Telegram से",
+    "starsNoCard": "Stars — बिना कार्ड"
   },
   "checkout": {
     "loading": "सुरक्षित चेकआउट लोड हो रहा है…",
@@ -1446,6 +1450,18 @@
     "checking": "चालू हो रहा है…",
     "redeemed": "हो गया — आपका सब्सक्रिप्शन चालू है।",
     "errRedeem": "यह कोड चालू नहीं हो सका। कृपया दोबारा कोशिश करें।",
-    "placeholder": "MV-XXXX-XXXX-XXXX"
+    "placeholder": "MV-XXXX-XXXX-XXXX",
+    "checkoutTitle": "Telegram Stars से भुगतान करें",
+    "priceLabel": "इस प्लान की कीमत",
+    "topUpHint": "अभी Stars नहीं हैं? भुगतान करते समय Telegram खुद टॉप-अप का विकल्प देगा।",
+    "step1": "Telegram में हमारा पेमेंट बॉट खोलें और भुगतान पूरा करें।",
+    "step2": "बॉट आपको एक बार चलने वाला एक्टिवेशन कोड भेजेगा।",
+    "step3": "यहाँ वापस आकर कोड पेस्ट करें और अकाउंट चालू करें।",
+    "openTelegram": "Telegram खोलें और भुगतान करें",
+    "backToMethods": "← भुगतान का दूसरा तरीका चुनें",
+    "loading": "लोड हो रहा है…",
+    "notAvailable": "Telegram Stars अभी उपलब्ध नहीं है। कृपया भुगतान का कोई दूसरा तरीका चुनें।",
+    "afterPaying": "कोड मिल गया?",
+    "afterPayingOpened": "बॉट से कोड आते ही उसे यहाँ पेस्ट करें"
   }
 }

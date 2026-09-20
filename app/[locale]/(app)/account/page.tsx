@@ -9,6 +9,7 @@ import ChangeCardForm from "@/components/ChangeCardForm";
 import CryptoCheckout from "@/components/CryptoCheckout";
 import CryptoClaim from "@/components/CryptoClaim";
 import StarsRedeem from "@/components/StarsRedeem";
+import StarsCheckout from "@/components/StarsCheckout";
 import { SupportedBrandsRow, Usdt, Usdc } from "@/components/PayBrands";
 import { Spinner, Loader } from "@/components/ui";
 import { getStripe } from "@/lib/stripe";
@@ -35,7 +36,7 @@ import { trackBeginCheckout, trackPurchase } from "@/lib/analytics";
 // Translator type shared by the module-level label helpers (they run inside render where `t` exists).
 type Translator = ReturnType<typeof useTranslations>;
 
-type View = "overview" | "plans" | "method" | "confirm" | "checkout" | "crypto";
+type View = "overview" | "plans" | "method" | "confirm" | "checkout" | "crypto" | "stars";
 
 function AccountInner() {
   const t = useTranslations("accountPage");
@@ -79,11 +80,16 @@ function AccountInner() {
   const [cryptoEnabled, setCryptoEnabled] = useState(false);
   const [starsEnabled, setStarsEnabled] = useState(false);
   const cryptoEnabledRef = useRef(false);
+  const starsEnabledRef = useRef(false);
   useEffect(() => { cryptoEnabledRef.current = cryptoEnabled; }, [cryptoEnabled]);
+  useEffect(() => { starsEnabledRef.current = starsEnabled; }, [starsEnabled]);
   useEffect(() => {
     getCryptoAssets().then((c) => setCryptoEnabled(c.enabled && c.assets.length > 0)).catch(() => {});
     getStarsConfig().then((c) => setStarsEnabled(c.enabled)).catch(() => {});
   }, []);
+  // More than one way to pay → ask WHICH before sending them anywhere. With Stripe alone there is
+  // nothing to choose, so the rail screen is skipped entirely (original behavior).
+  const multiRail = cryptoEnabled || starsEnabled;
 
   // Latest status kept in a ref so choosePlan can read `hasSavedCard` without depending on `status`
   // (which the load effect sets — a dep on it would loop the effect that also calls choosePlan).
@@ -156,7 +162,7 @@ function AccountInner() {
     trackBeginCheckout(planKey, priceForPlan(planKey));
     // Stripe used to render every payment option itself. Crypto is a SEPARATE rail, so when it's
     // available we present the rail choice first; otherwise go straight to Stripe (unchanged behavior).
-    if (cryptoEnabledRef.current) { setView("method"); return; }
+    if (cryptoEnabledRef.current || starsEnabledRef.current) { setView("method"); return; }
     goStripe(planKey);
   }, [goStripe]);
 
@@ -277,16 +283,16 @@ function AccountInner() {
 
   function backFromCheckout() {
     setClientSecret(null);
-    // With crypto available the user came through the rail selector — go back there (consistent with
-    // the crypto flow's back). Without crypto, keep the original behavior.
-    if (cryptoEnabled) { setView("method"); return; }
+    // With another rail available the user came through the rail selector — go back there (consistent
+    // with the crypto/stars back). With Stripe alone, keep the original behavior.
+    if (multiRail) { setView("method"); return; }
     if (cameFromPricing) router.push("/pricing");
     else setView("plans");
   }
 
   if (loading) return <Loader label={t("loadingAccount")} />;
 
-  // ── Choose payment rail (Stripe card/PayPal/wallets vs Crypto) ──
+  // ── Choose payment rail (Stripe card/PayPal/wallets vs Crypto vs Telegram Stars) ──
   if (view === "method") {
     const selected = plans.find((p) => p.key === plan);
     return (
@@ -312,24 +318,61 @@ function AccountInner() {
               <SupportedBrandsRow className="mt-3" />
             </button>
             {/* Crypto — show both coins + all networks so the full set (2 coins × 3 networks) is clear */}
-            <button
-              onClick={() => setView("crypto")}
-              className="group block w-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-start transition-colors hover:border-brand/50"
-            >
-              <div className="flex items-center justify-between">
-                <span className="font-semibold text-white">{t("payCrypto")}</span>
-                <span className="text-slate-500 group-hover:text-white">›</span>
-              </div>
-              <div className="mt-3 flex flex-wrap items-center gap-2">
-                <Usdt />
-                <Usdc />
-                <span className="text-xs text-slate-400">{t("cryptoNetworks")}</span>
-              </div>
-            </button>
+            {cryptoEnabled ? (
+              <button
+                onClick={() => setView("crypto")}
+                className="group block w-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-start transition-colors hover:border-brand/50"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="font-semibold text-white">{t("payCrypto")}</span>
+                  <span className="text-slate-500 group-hover:text-white">›</span>
+                </div>
+                <div className="mt-3 flex flex-wrap items-center gap-2">
+                  <Usdt />
+                  <Usdc />
+                  <span className="text-xs text-slate-400">{t("cryptoNetworks")}</span>
+                </div>
+              </button>
+            ) : null}
+            {/* Telegram Stars — the one rail that needs no card and no crypto wallet, which is the
+                whole point of it in markets where both are out of reach. */}
+            {starsEnabled ? (
+              <button
+                onClick={() => setView("stars")}
+                className="group block w-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-start transition-colors hover:border-brand/50"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="font-semibold text-white">{t("payStars")}</span>
+                  <span className="text-slate-500 group-hover:text-white">›</span>
+                </div>
+                <div className="mt-3 flex flex-wrap items-center gap-2">
+                  <span className="inline-flex h-9 items-center gap-1.5 rounded-lg bg-[#2AABEE] px-2.5 text-white shadow-sm">
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
+                      <path d="M21.8 4.2 18.6 19c-.24 1.06-.87 1.32-1.77.82l-4.9-3.6-2.36 2.27c-.26.26-.48.48-.98.48l.35-4.98 9.06-8.19c.4-.35-.08-.54-.6-.2L6.2 12.06l-4.83-1.5c-1.05-.33-1.07-1.05.22-1.56l18.9-7.28c.87-.32 1.64.2 1.31 2.48z" />
+                    </svg>
+                    <span className="text-xs font-semibold">Telegram</span>
+                  </span>
+                  <span className="text-xs text-slate-400">{t("starsNoCard")}</span>
+                </div>
+              </button>
+            ) : null}
           </div>
           {err ? <p className="mt-4 text-sm text-red-400">{err}</p> : null}
         </div>
       </div>
+    );
+  }
+
+  // ── Telegram Stars (hand-off to the pay bot → redeem the code it returns) ──
+  if (view === "stars" && plan) {
+    const selected = plans.find((p) => p.key === plan);
+    return (
+      <StarsCheckout
+        plan={plan}
+        planLabel={selected ? `${planName(selected)} · ${selected.price}${planCadence(selected)}` : undefined}
+        onRedeemed={onPaid}
+        onBack={() => setView("method")}
+      />
     );
   }
 
@@ -351,7 +394,7 @@ function AccountInner() {
     return (
       <div className="w-full max-w-lg">
         <button onClick={backFromCheckout} className="text-sm text-slate-400 hover:text-white">
-          {cryptoEnabled ? t("checkoutBackChooseMethod") : cameFromPricing ? t("checkoutBackToPlans") : t("checkoutChangePlan")}
+          {multiRail ? t("checkoutBackChooseMethod") : cameFromPricing ? t("checkoutBackToPlans") : t("checkoutChangePlan")}
         </button>
         <div className="mt-4 overflow-hidden rounded-2xl bg-white">
           {clientSecret ? (

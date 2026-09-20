@@ -315,7 +315,9 @@
     "deleting": "Excluindo…",
     "confirmDelete": "Excluir sua conta permanentemente? Isso não pode ser desfeito.",
     "errDeleteAccount": "Não foi possível excluir a conta",
-    "errLoadAccount": "Não foi possível carregar sua conta. Verifique sua conexão e tente de novo."
+    "errLoadAccount": "Não foi possível carregar sua conta. Verifique sua conexão e tente de novo.",
+    "payStars": "Telegram Stars — sem cartão",
+    "starsNoCard": "pagamento dentro do Telegram"
   },
   "comparePage": {
     "metaTitle": "MistyVPN vs NordVPN, ExpressVPN e PureVPN",
@@ -1353,7 +1355,9 @@
     "orCrypto": "ou pague com cripto",
     "cryptoChains": "em TRON · Ethereum · BSC",
     "guarantee": "Garantia de reembolso de 14 dias — sem perguntas",
-    "refund": "Não gostou nos seus primeiros {days} dias? Envie um e-mail para nós e receba o reembolso total — sem perguntas."
+    "refund": "Não gostou nos seus primeiros {days} dias? Envie um e-mail para nós e receba o reembolso total — sem perguntas.",
+    "orStars": "ou pelo Telegram",
+    "starsNoCard": "Stars — sem cartão"
   },
   "checkout": {
     "loading": "Carregando o checkout seguro…",
@@ -1446,6 +1450,18 @@
     "checking": "Ativando…",
     "redeemed": "Pronto: sua assinatura está ativa.",
     "errRedeem": "Não foi possível ativar esse código. Tente novamente.",
-    "placeholder": "MV-XXXX-XXXX-XXXX"
+    "placeholder": "MV-XXXX-XXXX-XXXX",
+    "checkoutTitle": "Pague com Telegram Stars",
+    "priceLabel": "Este plano custa",
+    "topUpHint": "Ainda sem Stars? O Telegram oferece a recarga na hora de pagar.",
+    "step1": "Abra nosso bot de pagamento no Telegram e confirme o pagamento.",
+    "step2": "O bot envia um código de ativação de uso único.",
+    "step3": "Volte aqui e cole o código para ativar esta conta.",
+    "openTelegram": "Abrir o Telegram e pagar",
+    "backToMethods": "← Escolher outra forma de pagamento",
+    "loading": "Carregando…",
+    "notAvailable": "O Telegram Stars não está disponível agora. Escolha outra forma de pagamento.",
+    "afterPaying": "Já está com o código?",
+    "afterPayingOpened": "Cole o código assim que o bot enviar"
   }
 }

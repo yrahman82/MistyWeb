@@ -315,7 +315,9 @@
     "deleting": "Deleting…",
     "confirmDelete": "Delete your account permanently? This cannot be undone.",
     "errDeleteAccount": "Could not delete account",
-    "errLoadAccount": "Couldn’t load your account. Check your connection and try again."
+    "errLoadAccount": "Couldn’t load your account. Check your connection and try again.",
+    "payStars": "Telegram Stars — no card needed",
+    "starsNoCard": "pay inside Telegram"
   },
   "comparePage": {
     "metaTitle": "MistyVPN vs NordVPN, ExpressVPN & PureVPN",
@@ -1353,7 +1355,9 @@
     "orCrypto": "or pay with crypto",
     "cryptoChains": "on TRON · Ethereum · BSC",
     "guarantee": "14-day money-back guarantee — no questions asked",
-    "refund": "Not happy in your first {days} days? Email us for a full refund — no questions asked."
+    "refund": "Not happy in your first {days} days? Email us for a full refund — no questions asked.",
+    "orStars": "or with Telegram",
+    "starsNoCard": "Stars — no card needed"
   },
   "checkout": {
     "loading": "Loading secure checkout…",
@@ -1446,6 +1450,18 @@
     "checking": "Activating…",
     "redeemed": "Done — your subscription is active.",
     "errRedeem": "Couldn't activate that code. Please try again.",
-    "placeholder": "MV-XXXX-XXXX-XXXX"
+    "placeholder": "MV-XXXX-XXXX-XXXX",
+    "checkoutTitle": "Pay with Telegram Stars",
+    "priceLabel": "This plan costs",
+    "topUpHint": "No Stars yet? Telegram offers to top up while you pay.",
+    "step1": "Open our pay bot in Telegram and confirm the payment.",
+    "step2": "The bot sends you a one-time activation code.",
+    "step3": "Come back here and paste the code to activate this account.",
+    "openTelegram": "Open Telegram and pay",
+    "backToMethods": "← Choose a different payment method",
+    "loading": "Loading…",
+    "notAvailable": "Telegram Stars aren't available right now. Please choose another way to pay.",
+    "afterPaying": "Got your code?",
+    "afterPayingOpened": "Paste your code as soon as the bot sends it"
   }
 }

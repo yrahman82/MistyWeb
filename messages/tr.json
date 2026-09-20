@@ -315,7 +315,9 @@
     "deleting": "Siliniyor…",
     "confirmDelete": "Hesabınızı kalıcı olarak silmek istiyor musunuz? Bu geri alınamaz.",
     "errDeleteAccount": "Hesap silinemedi",
-    "errLoadAccount": "Hesabınız yüklenemedi. Bağlantınızı kontrol edip tekrar deneyin."
+    "errLoadAccount": "Hesabınız yüklenemedi. Bağlantınızı kontrol edip tekrar deneyin.",
+    "payStars": "Telegram Stars — kart gerekmez",
+    "starsNoCard": "ödeme Telegram içinde"
   },
   "comparePage": {
     "metaTitle": "MistyVPN'e karşı NordVPN, ExpressVPN ve PureVPN",
@@ -1353,7 +1355,9 @@
     "orCrypto": "veya kripto ile ödeyin",
     "cryptoChains": "TRON · Ethereum · BSC üzerinde",
     "guarantee": "14 günlük para iade garantisi — hiçbir soru sorulmadan",
-    "refund": "İlk {days} gününüzde memnun kalmadınız mı? Bize e-posta gönderin, tam iade alın — hiçbir soru sorulmadan."
+    "refund": "İlk {days} gününüzde memnun kalmadınız mı? Bize e-posta gönderin, tam iade alın — hiçbir soru sorulmadan.",
+    "orStars": "veya Telegram ile",
+    "starsNoCard": "Stars — kart gerekmez"
   },
   "checkout": {
     "loading": "Güvenli ödeme yükleniyor…",
@@ -1446,6 +1450,18 @@
     "checking": "Etkinleştiriliyor…",
     "redeemed": "Hazır — aboneliğiniz etkin.",
     "errRedeem": "Bu kod etkinleştirilemedi. Lütfen tekrar deneyin.",
-    "placeholder": "MV-XXXX-XXXX-XXXX"
+    "placeholder": "MV-XXXX-XXXX-XXXX",
+    "checkoutTitle": "Telegram Stars ile öde",
+    "priceLabel": "Bu paketin ücreti",
+    "topUpHint": "Henüz Stars yok mu? Telegram ödeme sırasında yükleme yapmanı önerir.",
+    "step1": "Telegram'da ödeme botumuzu aç ve ödemeyi onayla.",
+    "step2": "Bot sana tek kullanımlık bir etkinleştirme kodu gönderir.",
+    "step3": "Buraya dönüp kodu yapıştır, hesabın açılsın.",
+    "openTelegram": "Telegram'ı aç ve öde",
+    "backToMethods": "← Başka bir ödeme yöntemi seç",
+    "loading": "Yükleniyor…",
+    "notAvailable": "Telegram Stars şu anda kullanılamıyor. Lütfen başka bir ödeme yöntemi seç.",
+    "afterPaying": "Kodun geldi mi?",
+    "afterPayingOpened": "Bot kodu gönderir göndermez buraya yapıştır"
   }
 }

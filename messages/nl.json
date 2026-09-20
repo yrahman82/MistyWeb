@@ -315,7 +315,9 @@
     "deleting": "Verwijderen…",
     "confirmDelete": "Je account definitief verwijderen? Dit kan niet ongedaan worden gemaakt.",
     "errDeleteAccount": "Account verwijderen mislukt",
-    "errLoadAccount": "Je account kon niet worden geladen. Controleer je verbinding en probeer het opnieuw."
+    "errLoadAccount": "Je account kon niet worden geladen. Controleer je verbinding en probeer het opnieuw.",
+    "payStars": "Telegram Stars — geen kaart nodig",
+    "starsNoCard": "betalen in Telegram"
   },
   "comparePage": {
     "metaTitle": "MistyVPN vs NordVPN, ExpressVPN & PureVPN",
@@ -1353,7 +1355,9 @@
     "orCrypto": "of betaal met crypto",
     "cryptoChains": "op TRON · Ethereum · BSC",
     "guarantee": "14 dagen niet-goed-geld-terug — zonder vragen",
-    "refund": "Niet tevreden in je eerste {days} dagen? Mail ons voor een volledige terugbetaling — zonder vragen."
+    "refund": "Niet tevreden in je eerste {days} dagen? Mail ons voor een volledige terugbetaling — zonder vragen.",
+    "orStars": "of met Telegram",
+    "starsNoCard": "Stars — geen kaart nodig"
   },
   "checkout": {
     "loading": "Beveiligde checkout laden…",
@@ -1446,6 +1450,18 @@
     "checking": "Bezig met activeren…",
     "redeemed": "Klaar – je abonnement is actief.",
     "errRedeem": "Deze code kon niet worden geactiveerd. Probeer het opnieuw.",
-    "placeholder": "MV-XXXX-XXXX-XXXX"
+    "placeholder": "MV-XXXX-XXXX-XXXX",
+    "checkoutTitle": "Betalen met Telegram Stars",
+    "priceLabel": "Dit abonnement kost",
+    "topUpHint": "Nog geen Stars? Telegram biedt je tijdens het betalen aan om op te waarderen.",
+    "step1": "Open onze betaalbot in Telegram en bevestig de betaling.",
+    "step2": "De bot stuurt je een eenmalige activatiecode.",
+    "step3": "Kom hier terug en plak de code om dit account te activeren.",
+    "openTelegram": "Telegram openen en betalen",
+    "backToMethods": "← Een andere betaalmethode kiezen",
+    "loading": "Laden…",
+    "notAvailable": "Telegram Stars is nu niet beschikbaar. Kies een andere betaalmethode.",
+    "afterPaying": "Heb je je code?",
+    "afterPayingOpened": "Plak de code zodra de bot hem stuurt"
   }
 }

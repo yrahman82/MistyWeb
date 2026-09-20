@@ -315,7 +315,9 @@
     "deleting": "삭제 중…",
     "confirmDelete": "계정을 영구적으로 삭제하시겠어요? 이 작업은 되돌릴 수 없습니다.",
     "errDeleteAccount": "계정을 삭제할 수 없습니다",
-    "errLoadAccount": "계정을 불러올 수 없습니다. 연결을 확인하고 다시 시도하세요."
+    "errLoadAccount": "계정을 불러올 수 없습니다. 연결을 확인하고 다시 시도하세요.",
+    "payStars": "Telegram Stars — 카드 불필요",
+    "starsNoCard": "Telegram 안에서 결제"
   },
   "comparePage": {
     "metaTitle": "MistyVPN vs NordVPN, ExpressVPN, PureVPN",
@@ -1353,7 +1355,9 @@
     "orCrypto": "또는 암호화폐로 결제",
     "cryptoChains": "TRON · Ethereum · BSC 지원",
     "guarantee": "14일 환불 보장 — 이유를 묻지 않습니다",
-    "refund": "처음 {days}일 안에 만족하지 못하셨나요? 이메일을 보내주시면 전액 환불해 드립니다 — 이유를 묻지 않습니다."
+    "refund": "처음 {days}일 안에 만족하지 못하셨나요? 이메일을 보내주시면 전액 환불해 드립니다 — 이유를 묻지 않습니다.",
+    "orStars": "또는 Telegram으로",
+    "starsNoCard": "Stars — 카드 불필요"
   },
   "checkout": {
     "loading": "안전한 결제를 불러오는 중…",
@@ -1446,6 +1450,18 @@
     "checking": "활성화 중…",
     "redeemed": "완료됐습니다. 구독이 활성화되었어요.",
     "errRedeem": "코드를 활성화하지 못했습니다. 다시 시도해 주세요.",
-    "placeholder": "MV-XXXX-XXXX-XXXX"
+    "placeholder": "MV-XXXX-XXXX-XXXX",
+    "checkoutTitle": "Telegram Stars로 결제",
+    "priceLabel": "이 요금제 가격",
+    "topUpHint": "Stars가 없어도 괜찮아요. 결제할 때 Telegram이 충전을 안내합니다.",
+    "step1": "Telegram에서 결제 봇을 열고 결제를 완료하세요.",
+    "step2": "봇이 일회용 활성화 코드를 보내드립니다.",
+    "step3": "이 페이지로 돌아와 코드를 붙여넣으면 계정이 열립니다.",
+    "openTelegram": "Telegram 열고 결제하기",
+    "backToMethods": "← 다른 결제 수단 선택",
+    "loading": "불러오는 중…",
+    "notAvailable": "지금은 Telegram Stars를 사용할 수 없습니다. 다른 결제 수단을 선택해 주세요.",
+    "afterPaying": "코드를 받으셨나요?",
+    "afterPayingOpened": "봇이 코드를 보내면 바로 붙여넣으세요"
   }
 }

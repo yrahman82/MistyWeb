@@ -315,7 +315,9 @@
     "deleting": "删除中…",
     "confirmDelete": "要永久删除你的账户吗？此操作无法撤销。",
     "errDeleteAccount": "无法删除账户",
-    "errLoadAccount": "无法加载你的账户。请检查网络后重试。"
+    "errLoadAccount": "无法加载你的账户。请检查网络后重试。",
+    "payStars": "Telegram Stars——无需银行卡",
+    "starsNoCard": "在 Telegram 里付款"
   },
   "comparePage": {
     "metaTitle": "MistyVPN 对比 NordVPN、ExpressVPN 和 PureVPN",
@@ -1353,7 +1355,9 @@
     "orCrypto": "或使用加密货币付款",
     "cryptoChains": "支持 TRON · Ethereum · BSC",
     "guarantee": "14 天退款保证——无需任何理由",
-    "refund": "前 {days} 天内不满意？给我们发邮件即可全额退款——无需任何理由。"
+    "refund": "前 {days} 天内不满意？给我们发邮件即可全额退款——无需任何理由。",
+    "orStars": "或使用 Telegram",
+    "starsNoCard": "Stars——无需银行卡"
   },
   "checkout": {
     "loading": "正在加载安全结账…",
@@ -1446,6 +1450,18 @@
     "checking": "开通中…",
     "redeemed": "已完成，订阅已开通。",
     "errRedeem": "兑换码无法使用，请重试。",
-    "placeholder": "MV-XXXX-XXXX-XXXX"
+    "placeholder": "MV-XXXX-XXXX-XXXX",
+    "checkoutTitle": "使用 Telegram Stars 支付",
+    "priceLabel": "本套餐价格",
+    "topUpHint": "还没有 Stars？付款时 Telegram 会直接提示充值。",
+    "step1": "在 Telegram 中打开我们的支付机器人，确认付款。",
+    "step2": "机器人会发给你一个一次性激活码。",
+    "step3": "回到这个页面粘贴激活码，即可开通账号。",
+    "openTelegram": "打开 Telegram 付款",
+    "backToMethods": "← 选择其他付款方式",
+    "loading": "加载中…",
+    "notAvailable": "Telegram Stars 暂时无法使用，请选择其他付款方式。",
+    "afterPaying": "收到激活码了吗？",
+    "afterPayingOpened": "机器人发来激活码后，粘贴到这里"
   }
 }

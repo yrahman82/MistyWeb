@@ -315,7 +315,9 @@
     "deleting": "Eliminazione…",
     "confirmDelete": "Eliminare definitivamente il tuo account? L'operazione è irreversibile.",
     "errDeleteAccount": "Impossibile eliminare l'account",
-    "errLoadAccount": "Impossibile caricare il tuo account. Controlla la connessione e riprova."
+    "errLoadAccount": "Impossibile caricare il tuo account. Controlla la connessione e riprova.",
+    "payStars": "Telegram Stars — senza carta",
+    "starsNoCard": "si paga dentro Telegram"
   },
   "comparePage": {
     "metaTitle": "MistyVPN vs NordVPN, ExpressVPN e PureVPN",
@@ -1353,7 +1355,9 @@
     "orCrypto": "oppure paga con cripto",
     "cryptoChains": "su TRON · Ethereum · BSC",
     "guarantee": "Garanzia di rimborso di 14 giorni — senza domande",
-    "refund": "Non sei soddisfatto nei tuoi primi {days} giorni? Scrivici per un rimborso completo — senza domande."
+    "refund": "Non sei soddisfatto nei tuoi primi {days} giorni? Scrivici per un rimborso completo — senza domande.",
+    "orStars": "oppure con Telegram",
+    "starsNoCard": "Stars — senza carta"
   },
   "checkout": {
     "loading": "Caricamento del checkout sicuro…",
@@ -1446,6 +1450,18 @@
     "checking": "Attivazione…",
     "redeemed": "Fatto: il tuo abbonamento è attivo.",
     "errRedeem": "Non è stato possibile attivare il codice. Riprova.",
-    "placeholder": "MV-XXXX-XXXX-XXXX"
+    "placeholder": "MV-XXXX-XXXX-XXXX",
+    "checkoutTitle": "Paga con le Telegram Stars",
+    "priceLabel": "Questo piano costa",
+    "topUpHint": "Non hai ancora le Stars? Telegram ti propone la ricarica mentre paghi.",
+    "step1": "Apri il nostro bot di pagamento su Telegram e conferma il pagamento.",
+    "step2": "Il bot ti invia un codice di attivazione monouso.",
+    "step3": "Torna qui e incolla il codice per attivare questo account.",
+    "openTelegram": "Apri Telegram e paga",
+    "backToMethods": "← Scegli un altro metodo di pagamento",
+    "loading": "Caricamento…",
+    "notAvailable": "Le Telegram Stars non sono disponibili al momento. Scegli un altro metodo di pagamento.",
+    "afterPaying": "Hai già il codice?",
+    "afterPayingOpened": "Incolla il codice appena il bot te lo invia"
   }
 }
