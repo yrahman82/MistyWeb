@@ -316,7 +316,7 @@
     "confirmDelete": "अपना अकाउंट हमेशा के लिए डिलीट करें? इसे वापस नहीं किया जा सकता।",
     "errDeleteAccount": "अकाउंट डिलीट नहीं हो सका",
     "errLoadAccount": "आपका अकाउंट लोड नहीं हो सका। अपना कनेक्शन जाँचें और दोबारा कोशिश करें।",
-    "payStars": "Telegram Stars — कार्ड की ज़रूरत नहीं",
+    "payStars": "Telegram — कार्ड की ज़रूरत नहीं",
     "starsNoCard": "भुगतान Telegram में ही"
   },
   "comparePage": {
@@ -1362,7 +1362,7 @@
     "guarantee": "14-दिन की मनी-बैक गारंटी — बिना कोई सवाल",
     "refund": "पहले {days} दिनों में संतुष्ट नहीं हैं? हमें ईमेल करें और पूरा रिफंड पाएँ — बिना कोई सवाल।",
     "orStars": "या Telegram से",
-    "starsNoCard": "Stars — बिना कार्ड"
+    "starsNoCard": "Telegram — बिना कार्ड"
   },
   "checkout": {
     "loading": "सुरक्षित चेकआउट लोड हो रहा है…",
@@ -1429,7 +1429,7 @@
   "announce": {
     "blocked": "चीन, रूस और हर ब्लॉक देश में काम करता है",
     "free": "90 मुफ़्त मिनट — न कार्ड, न अकाउंट",
-    "payments": "Apple Pay, Google Pay, कार्ड, क्रिप्टो और Telegram Stars",
+    "payments": "Apple Pay, Google Pay, कार्ड, क्रिप्टो और Telegram",
     "streaming": "कुछ भी स्ट्रीम करें — दुनिया भर में अनब्लॉक",
     "channel": "अपडेट के लिए हमारा Telegram चैनल जॉइन करें"
   },

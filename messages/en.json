@@ -316,7 +316,7 @@
     "confirmDelete": "Delete your account permanently? This cannot be undone.",
     "errDeleteAccount": "Could not delete account",
     "errLoadAccount": "Couldn’t load your account. Check your connection and try again.",
-    "payStars": "Telegram Stars — no card needed",
+    "payStars": "Telegram — no card needed",
     "starsNoCard": "pay inside Telegram"
   },
   "comparePage": {
@@ -1362,7 +1362,7 @@
     "guarantee": "14-day money-back guarantee — no questions asked",
     "refund": "Not happy in your first {days} days? Email us for a full refund — no questions asked.",
     "orStars": "or with Telegram",
-    "starsNoCard": "Stars — no card needed"
+    "starsNoCard": "Telegram — no card needed"
   },
   "checkout": {
     "loading": "Loading secure checkout…",
@@ -1429,7 +1429,7 @@
   "announce": {
     "blocked": "Works in China, Russia & every blocked country",
     "free": "90 free minutes — no card, no account",
-    "payments": "Apple Pay, Google Pay, cards, crypto & Telegram Stars",
+    "payments": "Apple Pay, Google Pay, cards, crypto & Telegram",
     "streaming": "Stream anything — unblocked worldwide",
     "channel": "Join our Telegram channel for updates"
   },

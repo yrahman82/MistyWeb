@@ -316,7 +316,7 @@
     "confirmDelete": "Je account definitief verwijderen? Dit kan niet ongedaan worden gemaakt.",
     "errDeleteAccount": "Account verwijderen mislukt",
     "errLoadAccount": "Je account kon niet worden geladen. Controleer je verbinding en probeer het opnieuw.",
-    "payStars": "Telegram Stars — geen kaart nodig",
+    "payStars": "Telegram — geen kaart nodig",
     "starsNoCard": "betalen in Telegram"
   },
   "comparePage": {
@@ -1362,7 +1362,7 @@
     "guarantee": "14 dagen niet-goed-geld-terug — zonder vragen",
     "refund": "Niet tevreden in je eerste {days} dagen? Mail ons voor een volledige terugbetaling — zonder vragen.",
     "orStars": "of met Telegram",
-    "starsNoCard": "Stars — geen kaart nodig"
+    "starsNoCard": "Telegram — geen kaart nodig"
   },
   "checkout": {
     "loading": "Beveiligde checkout laden…",
@@ -1429,7 +1429,7 @@
   "announce": {
     "blocked": "Werkt in China, Rusland en elk geblokkeerd land",
     "free": "90 gratis minuten — geen kaart, geen account",
-    "payments": "Apple Pay, Google Pay, kaarten, crypto en Telegram Stars",
+    "payments": "Apple Pay, Google Pay, kaarten, crypto en Telegram",
     "streaming": "Alles streamen — wereldwijd gedeblokkeerd",
     "channel": "Volg ons Telegram-kanaal"
   },

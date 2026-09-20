@@ -57,7 +57,7 @@
   "announce": {
     "blocked": "در ایران، چین، روسیه و هر کشور محدودشده‌ای کار می‌کند",
     "free": "۹۰ دقیقه رایگان — بدون کارت، بدون حساب",
-    "payments": "Apple Pay، Google Pay، کارت، رمزارز و Telegram Stars",
+    "payments": "Apple Pay، Google Pay، کارت، رمزارز و Telegram",
     "streaming": "هر چه بخواهید تماشا کنید — بدون محدودیت",
     "channel": "به کانال تلگرام ما بپیوندید"
   },
@@ -90,7 +90,7 @@
     "guarantee": "۱۴ روز ضمانت بازگشت وجه — بدون پرسش و پاسخ",
     "refund": "در {days} روز اول راضی نبودید؟ برای ما ایمیل بزنید تا کل مبلغ را برگردانیم — بدون هیچ سؤالی.",
     "orStars": "یا با تلگرام",
-    "starsNoCard": "Stars — بدون کارت"
+    "starsNoCard": "Telegram — بدون کارت"
   },
   "checkout": {
     "loading": "در حال باز کردن درگاه امن…",
@@ -507,7 +507,7 @@
     "confirmDelete": "حساب‌تان برای همیشه حذف شود؟ این کار برگشت‌پذیر نیست.",
     "errDeleteAccount": "حساب حذف نشد",
     "errLoadAccount": "حساب شما بارگذاری نشد. اتصال‌تان را بررسی کنید و دوباره تلاش کنید.",
-    "payStars": "Telegram Stars — بدون نیاز به کارت",
+    "payStars": "Telegram — بدون نیاز به کارت",
     "starsNoCard": "پرداخت داخل تلگرام"
   },
   "home": {

@@ -316,7 +316,7 @@
     "confirmDelete": "要永久删除你的账户吗？此操作无法撤销。",
     "errDeleteAccount": "无法删除账户",
     "errLoadAccount": "无法加载你的账户。请检查网络后重试。",
-    "payStars": "Telegram Stars——无需银行卡",
+    "payStars": "Telegram——无需银行卡",
     "starsNoCard": "在 Telegram 里付款"
   },
   "comparePage": {
@@ -1362,7 +1362,7 @@
     "guarantee": "14 天退款保证——无需任何理由",
     "refund": "前 {days} 天内不满意？给我们发邮件即可全额退款——无需任何理由。",
     "orStars": "或使用 Telegram",
-    "starsNoCard": "Stars——无需银行卡"
+    "starsNoCard": "Telegram——无需银行卡"
   },
   "checkout": {
     "loading": "正在加载安全结账…",
@@ -1429,7 +1429,7 @@
   "announce": {
     "blocked": "在中国、俄罗斯及所有被封锁的国家可用",
     "free": "免费 90 分钟——无需银行卡或账户",
-    "payments": "Apple Pay、Google Pay、银行卡、加密货币和 Telegram Stars",
+    "payments": "Apple Pay、Google Pay、银行卡、加密货币和 Telegram",
     "streaming": "畅享所有流媒体——全球无阻",
     "channel": "加入我们的 Telegram 频道获取最新消息"
   },

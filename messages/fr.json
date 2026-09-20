@@ -316,7 +316,7 @@
     "confirmDelete": "Supprimer définitivement votre compte ? Cette action est irréversible.",
     "errDeleteAccount": "Impossible de supprimer le compte",
     "errLoadAccount": "Impossible de charger votre compte. Vérifiez votre connexion et réessayez.",
-    "payStars": "Telegram Stars — sans carte",
+    "payStars": "Telegram — sans carte",
     "starsNoCard": "paiement dans Telegram"
   },
   "comparePage": {
@@ -1362,7 +1362,7 @@
     "guarantee": "Garantie satisfait ou remboursé de 14 jours, sans condition",
     "refund": "Pas satisfait durant vos {days} premiers jours ? Écrivez-nous pour un remboursement intégral, sans condition.",
     "orStars": "ou avec Telegram",
-    "starsNoCard": "Stars — sans carte"
+    "starsNoCard": "Telegram — sans carte"
   },
   "checkout": {
     "loading": "Chargement du paiement sécurisé…",
@@ -1429,7 +1429,7 @@
   "announce": {
     "blocked": "Fonctionne en Chine, Russie et tout pays bloqué",
     "free": "90 minutes gratuites — sans carte ni compte",
-    "payments": "Apple Pay, Google Pay, cartes, crypto et Telegram Stars",
+    "payments": "Apple Pay, Google Pay, cartes, crypto et Telegram",
     "streaming": "Tout le streaming — débloqué partout",
     "channel": "Rejoignez notre canal Telegram"
   },

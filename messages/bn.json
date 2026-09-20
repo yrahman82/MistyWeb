@@ -316,7 +316,7 @@
     "confirmDelete": "আপনার অ্যাকাউন্ট স্থায়ীভাবে মুছবেন? এটা আর ফেরানো যাবে না।",
     "errDeleteAccount": "অ্যাকাউন্ট মুছে ফেলা গেল না",
     "errLoadAccount": "আপনার অ্যাকাউন্ট লোড করা গেল না। আপনার কানেকশন দেখে আবার চেষ্টা করুন।",
-    "payStars": "Telegram Stars — কার্ড লাগবে না",
+    "payStars": "Telegram — কার্ড লাগবে না",
     "starsNoCard": "পেমেন্ট Telegram-এর ভিতরেই"
   },
   "comparePage": {
@@ -1362,7 +1362,7 @@
     "guarantee": "১৪ দিনের মানি-ব্যাক গ্যারান্টি — কোনো প্রশ্ন ছাড়াই",
     "refund": "প্রথম {days} দিনে সন্তুষ্ট নন? আমাদের ইমেল করুন, পুরো রিফান্ড পাবেন — কোনো প্রশ্ন ছাড়াই।",
     "orStars": "অথবা Telegram দিয়ে",
-    "starsNoCard": "Stars — কার্ড ছাড়াই"
+    "starsNoCard": "Telegram — কার্ড ছাড়াই"
   },
   "checkout": {
     "loading": "নিরাপদ চেকআউট লোড হচ্ছে…",
@@ -1429,7 +1429,7 @@
   "announce": {
     "blocked": "চীন, রাশিয়া ও সব ব্লক দেশে কাজ করে",
     "free": "৯০ মিনিট ফ্রি — কার্ড বা অ্যাকাউন্ট ছাড়াই",
-    "payments": "Apple Pay, Google Pay, কার্ড, ক্রিপ্টো ও Telegram Stars",
+    "payments": "Apple Pay, Google Pay, কার্ড, ক্রিপ্টো ও Telegram",
     "streaming": "যা খুশি স্ট্রিম করুন — বিশ্বজুড়ে আনব্লকড",
     "channel": "আপডেটের জন্য আমাদের Telegram চ্যানেলে যোগ দিন"
   },

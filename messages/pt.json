@@ -316,7 +316,7 @@
     "confirmDelete": "Excluir sua conta permanentemente? Isso não pode ser desfeito.",
     "errDeleteAccount": "Não foi possível excluir a conta",
     "errLoadAccount": "Não foi possível carregar sua conta. Verifique sua conexão e tente de novo.",
-    "payStars": "Telegram Stars — sem cartão",
+    "payStars": "Telegram — sem cartão",
     "starsNoCard": "pagamento dentro do Telegram"
   },
   "comparePage": {
@@ -1362,7 +1362,7 @@
     "guarantee": "Garantia de reembolso de 14 dias — sem perguntas",
     "refund": "Não gostou nos seus primeiros {days} dias? Envie um e-mail para nós e receba o reembolso total — sem perguntas.",
     "orStars": "ou pelo Telegram",
-    "starsNoCard": "Stars — sem cartão"
+    "starsNoCard": "Telegram — sem cartão"
   },
   "checkout": {
     "loading": "Carregando o checkout seguro…",
@@ -1429,7 +1429,7 @@
   "announce": {
     "blocked": "Funciona na China, Rússia e todo país bloqueado",
     "free": "90 minutos grátis — sem cartão nem conta",
-    "payments": "Apple Pay, Google Pay, cartões, cripto e Telegram Stars",
+    "payments": "Apple Pay, Google Pay, cartões, cripto e Telegram",
     "streaming": "Todo o streaming — desbloqueado no mundo todo",
     "channel": "Entre no nosso canal do Telegram"
   },

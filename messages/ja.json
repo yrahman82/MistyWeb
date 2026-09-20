@@ -316,7 +316,7 @@
     "confirmDelete": "アカウントを完全に削除しますか？この操作は取り消せません。",
     "errDeleteAccount": "アカウントを削除できませんでした",
     "errLoadAccount": "アカウントを読み込めませんでした。接続を確認して、もう一度お試しください。",
-    "payStars": "Telegram Stars — カード不要",
+    "payStars": "Telegram — カード不要",
     "starsNoCard": "Telegram 内で支払い"
   },
   "comparePage": {
@@ -1362,7 +1362,7 @@
     "guarantee": "14 日間の返金保証 — 理由は問いません",
     "refund": "最初の {days} 日間でご満足いただけない場合は、メールでご連絡ください。全額返金いたします — 理由は問いません。",
     "orStars": "または Telegram で",
-    "starsNoCard": "Stars — カード不要"
+    "starsNoCard": "Telegram — カード不要"
   },
   "checkout": {
     "loading": "安全な決済を読み込み中…",
@@ -1429,7 +1429,7 @@
   "announce": {
     "blocked": "中国・ロシアなど、規制対象の国でも使える",
     "free": "無料 90 分——カードもアカウントも不要",
-    "payments": "Apple Pay、Google Pay、カード、暗号資産、Telegram Stars",
+    "payments": "Apple Pay、Google Pay、カード、暗号資産、Telegram",
     "streaming": "あらゆる配信を——世界中でブロック解除",
     "channel": "Telegram チャンネルで最新情報をチェック"
   },

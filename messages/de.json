@@ -316,7 +316,7 @@
     "confirmDelete": "Ihr Konto endgültig löschen? Das kann nicht rückgängig gemacht werden.",
     "errDeleteAccount": "Konto konnte nicht gelöscht werden",
     "errLoadAccount": "Ihr Konto konnte nicht geladen werden. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
-    "payStars": "Telegram Stars – ohne Karte",
+    "payStars": "Telegram – ohne Karte",
     "starsNoCard": "Zahlung in Telegram"
   },
   "comparePage": {
@@ -1362,7 +1362,7 @@
     "guarantee": "14 Tage Geld-zurück-Garantie — ohne Wenn und Aber",
     "refund": "In Ihren ersten {days} Tagen nicht zufrieden? Schreiben Sie uns eine E-Mail für eine vollständige Rückerstattung — ohne Wenn und Aber.",
     "orStars": "oder mit Telegram",
-    "starsNoCard": "Stars – ohne Karte"
+    "starsNoCard": "Telegram – ohne Karte"
   },
   "checkout": {
     "loading": "Sicherer Bezahlvorgang wird geladen…",
@@ -1429,7 +1429,7 @@
   "announce": {
     "blocked": "Funktioniert in China, Russland & jedem gesperrten Land",
     "free": "90 Freiminuten — ohne Karte, ohne Konto",
-    "payments": "Apple Pay, Google Pay, Karten, Krypto und Telegram Stars",
+    "payments": "Apple Pay, Google Pay, Karten, Krypto und Telegram",
     "streaming": "Alles streamen — weltweit entsperrt",
     "channel": "Folge unserem Telegram-Kanal"
   },

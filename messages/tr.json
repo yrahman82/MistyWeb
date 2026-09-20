@@ -316,7 +316,7 @@
     "confirmDelete": "Hesabınızı kalıcı olarak silmek istiyor musunuz? Bu geri alınamaz.",
     "errDeleteAccount": "Hesap silinemedi",
     "errLoadAccount": "Hesabınız yüklenemedi. Bağlantınızı kontrol edip tekrar deneyin.",
-    "payStars": "Telegram Stars — kart gerekmez",
+    "payStars": "Telegram — kart gerekmez",
     "starsNoCard": "ödeme Telegram içinde"
   },
   "comparePage": {
@@ -1362,7 +1362,7 @@
     "guarantee": "14 günlük para iade garantisi — hiçbir soru sorulmadan",
     "refund": "İlk {days} gününüzde memnun kalmadınız mı? Bize e-posta gönderin, tam iade alın — hiçbir soru sorulmadan.",
     "orStars": "veya Telegram ile",
-    "starsNoCard": "Stars — kart gerekmez"
+    "starsNoCard": "Telegram — kart gerekmez"
   },
   "checkout": {
     "loading": "Güvenli ödeme yükleniyor…",
@@ -1429,7 +1429,7 @@
   "announce": {
     "blocked": "Çin, Rusya ve tüm engelli ülkelerde çalışır",
     "free": "90 ücretsiz dakika — kart ya da hesap yok",
-    "payments": "Apple Pay, Google Pay, kart, kripto ve Telegram Stars",
+    "payments": "Apple Pay, Google Pay, kart, kripto ve Telegram",
     "streaming": "Her şeyi izleyin — dünya çapında engelsiz",
     "channel": "Telegram kanalımıza katıl"
   },
