@@ -785,7 +785,7 @@
     "sections": [
       {
         "kind": "p",
-        "text": "{name} (\"{name}\", \"noi\", \"ci\" o \"nostro\") fornisce un servizio di rete privata virtuale (VPN) no-log su iPhone, iPad, Android, Mac e Android TV. {name} è un nome commerciale di {legalName}, società registrata in {registeredIn} (n. società {companyNumber}), con sede legale in {registeredOffice}. {legalName} è il titolare del trattamento ai fini della presente Informativa sulla privacy. La presente informativa spiega cosa raccogliamo, le cose che deliberatamente <b>non</b> raccogliamo, come usiamo e condividiamo le informazioni e i diritti che hai sui tuoi dati. Si applica alle nostre app, al nostro sito web e ai nostri sistemi di account e abbonamento."
+        "text": "{name} (\"{name}\", \"noi\", \"ci\" o \"nostro\") fornisce un servizio di rete privata virtuale (VPN) no-log su dispositivi mobili, computer e TV. {name} è un nome commerciale di {legalName}, società registrata in {registeredIn} (n. società {companyNumber}), con sede legale in {registeredOffice}. {legalName} è il titolare del trattamento ai fini della presente Informativa sulla privacy. La presente informativa spiega cosa raccogliamo, le cose che deliberatamente <b>non</b> raccogliamo, come usiamo e condividiamo le informazioni e i diritti che hai sui tuoi dati. Si applica alle nostre app, al nostro sito web e ai nostri sistemi di account e abbonamento."
       },
       {
         "kind": "p",
@@ -852,7 +852,7 @@
       },
       {
         "kind": "p",
-        "text": "Gli abbonamenti vengono acquistati e gestiti tramite l'<b>Apple App Store</b>, <b>Google Play</b> o — sul web — <b>Stripe</b>. Riceviamo una convalida dello stato del tuo abbonamento (attivo, scaduto, disdetto) e un identificativo della transazione. <b>Non</b> riceviamo né memorizziamo il numero completo della tua carta o i dati bancari; questi sono gestiti interamente dallo store o dal processore di pagamento."
+        "text": "Gli abbonamenti si acquistano e si gestiscono nello store da cui hai installato l'app, oppure tramite il nostro gestore dei pagamenti sul web. Riceviamo una conferma dello stato dell'abbonamento (attivo, scaduto, disdetto) e un identificativo della transazione. <b>Non</b> riceviamo né conserviamo il numero completo della tua carta o le tue coordinate bancarie: se ne occupano interamente lo store o il gestore dei pagamenti."
       },
       {
         "kind": "h3",
@@ -932,7 +932,7 @@
       },
       {
         "kind": "p",
-        "text": "Gli abbonamenti in-app sono elaborati dall'Apple App Store e da Google Play secondo i loro termini e le loro informative sulla privacy. Gli abbonamenti web sono elaborati da Stripe. I dati di pagamento che inserisci sono gestiti da tali provider — {name} non vede mai i dati completi della tua carta o del tuo conto bancario. Puoi visualizzare, modificare o disdire un abbonamento dal tuo account dello store o dal portale dell'account in qualsiasi momento."
+        "text": "Gli abbonamenti sottoscritti nell'app sono gestiti dallo store in cui hai acquistato, secondo i suoi termini e la sua informativa sulla privacy. Gli abbonamenti web sono gestiti dal nostro gestore dei pagamenti. I dati di pagamento che inserisci sono trattati da questi fornitori: {name} non vede mai i dati completi della tua carta o del tuo conto. Puoi visualizzare, modificare o disdire un abbonamento dal tuo account dello store o dal portale del tuo account in qualsiasi momento."
       },
       {
         "kind": "h2",
@@ -945,8 +945,8 @@
       {
         "kind": "ul",
         "items": [
-          "<b>Apple e Google</b> — per convalidare e gestire gli abbonamenti in-app.",
-          "<b>Stripe</b> — per elaborare i pagamenti degli abbonamenti web.",
+          "<b>Store di applicazioni</b> — per verificare e gestire gli abbonamenti sottoscritti nell'app.",
+          "<b>Gestori dei pagamenti</b> — per elaborare i pagamenti degli abbonamenti web.",
           "<b>Sentry</b> — per ricevere report di crash ed errori ripuliti per la privacy.",
           "<b>Fornitori di infrastruttura e hosting</b> — per gestire i nostri server e il backend."
         ]

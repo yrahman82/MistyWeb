@@ -785,7 +785,7 @@
     "sections": [
       {
         "kind": "p",
-        "text": "{name} (« {name} », « nous » ou « notre ») fournit un service de réseau privé virtuel (VPN) sans journaux sur iPhone, iPad, Android, Mac et Android TV. {name} est un nom commercial de {legalName}, société immatriculée en {registeredIn} (n° de société {companyNumber}), dont le siège social est situé au {registeredOffice}. {legalName} est le responsable du traitement des données aux fins de la présente Politique de confidentialité. Cette politique explique ce que nous collectons, ce que nous choisissons délibérément de <b>ne pas</b> collecter, comment nous utilisons et partageons les informations, et les droits dont vous disposez sur vos données. Elle s’applique à nos applications, à notre site web ainsi qu’à nos systèmes de comptes et d’abonnements."
+        "text": "{name} (« {name} », « nous » ou « notre ») fournit un service de réseau privé virtuel (VPN) sans journaux sur appareils mobiles, ordinateurs et téléviseurs. {name} est un nom commercial de {legalName}, société immatriculée en {registeredIn} (n° de société {companyNumber}), dont le siège social est situé au {registeredOffice}. {legalName} est le responsable du traitement des données aux fins de la présente Politique de confidentialité. Cette politique explique ce que nous collectons, ce que nous choisissons délibérément de <b>ne pas</b> collecter, comment nous utilisons et partageons les informations, et les droits dont vous disposez sur vos données. Elle s’applique à nos applications, à notre site web ainsi qu’à nos systèmes de comptes et d’abonnements."
       },
       {
         "kind": "p",
@@ -852,7 +852,7 @@
       },
       {
         "kind": "p",
-        "text": "Les abonnements sont achetés et gérés via l’<b>Apple App Store</b>, <b>Google Play</b> ou — sur le web — <b>Stripe</b>. Nous recevons une validation du statut de votre abonnement (actif, expiré, annulé) et un identifiant de transaction. Nous ne recevons ni ne stockons <b>pas</b> votre numéro de carte complet ni vos coordonnées bancaires ; ceux-ci sont entièrement traités par la boutique ou le prestataire de paiement."
+        "text": "Les abonnements sont achetés et gérés depuis la boutique d'applications où vous avez installé l'app, ou via notre prestataire de paiement sur le web. Nous recevons une validation du statut de votre abonnement (actif, expiré, résilié) et un identifiant de transaction. Nous ne recevons ni ne conservons <b>pas</b> votre numéro de carte complet ni vos coordonnées bancaires : tout cela est traité exclusivement par la boutique ou le prestataire de paiement."
       },
       {
         "kind": "h3",
@@ -932,7 +932,7 @@
       },
       {
         "kind": "p",
-        "text": "Les abonnements souscrits dans l’application sont traités par l’Apple App Store et Google Play selon leurs propres conditions et politiques de confidentialité. Les abonnements web sont traités par Stripe. Les coordonnées de paiement que vous saisissez sont traitées par ces prestataires — {name} ne voit jamais l’intégralité de vos informations de carte ou bancaires. Vous pouvez consulter, modifier ou annuler un abonnement depuis votre compte de boutique ou le portail de compte à tout moment."
+        "text": "Les abonnements souscrits dans l'app sont traités par la boutique d'applications où vous avez acheté, selon ses propres conditions et sa politique de confidentialité. Les abonnements web sont traités par notre prestataire de paiement. Les informations de paiement que vous saisissez sont gérées par ces prestataires — {name} ne voit jamais vos coordonnées bancaires ou de carte complètes. Vous pouvez consulter, modifier ou résilier un abonnement depuis votre compte de la boutique ou depuis votre espace client à tout moment."
       },
       {
         "kind": "h2",
@@ -945,8 +945,8 @@
       {
         "kind": "ul",
         "items": [
-          "<b>Apple et Google</b> — pour valider et gérer les abonnements achetés dans l’application.",
-          "<b>Stripe</b> — pour traiter les paiements des abonnements web.",
+          "<b>Boutiques d'applications</b> — pour valider et gérer les abonnements souscrits dans l'app.",
+          "<b>Prestataires de paiement</b> — pour traiter les paiements des abonnements web.",
           "<b>Sentry</b> — pour recevoir des rapports de plantage et d’erreur nettoyés dans un souci de confidentialité.",
           "<b>Fournisseurs d’infrastructure et d’hébergement</b> — pour exploiter nos serveurs et notre backend."
         ]

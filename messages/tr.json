@@ -785,7 +785,7 @@
     "sections": [
       {
         "kind": "p",
-        "text": "{name} (\"{name}\", \"biz\" veya \"bizim\"), iPhone, iPad, Android, Mac ve Android TV'de kayıt tutmayan bir sanal özel ağ (VPN) hizmeti sunar. {name}, {registeredIn} ülkesinde kayıtlı bir şirket olan {legalName} markasının ticari adıdır (şirket no. {companyNumber}); kayıtlı ofisi {registeredOffice} adresindedir. {legalName}, bu Gizlilik Politikası kapsamında veri sorumlusudur. Bu politika neleri topladığımızı, bilerek <b>toplamadığımız</b> şeyleri, bilgileri nasıl kullanıp paylaştığımızı ve verileriniz üzerindeki haklarınızı açıklar. Uygulamalarımız, web sitemiz ve hesap ile abonelik sistemlerimiz için geçerlidir."
+        "text": "{name} (\"{name}\", \"biz\" veya \"bizim\"), mobil cihazlar, bilgisayarlar ve televizyonlar'de kayıt tutmayan bir sanal özel ağ (VPN) hizmeti sunar. {name}, {registeredIn} ülkesinde kayıtlı bir şirket olan {legalName} markasının ticari adıdır (şirket no. {companyNumber}); kayıtlı ofisi {registeredOffice} adresindedir. {legalName}, bu Gizlilik Politikası kapsamında veri sorumlusudur. Bu politika neleri topladığımızı, bilerek <b>toplamadığımız</b> şeyleri, bilgileri nasıl kullanıp paylaştığımızı ve verileriniz üzerindeki haklarınızı açıklar. Uygulamalarımız, web sitemiz ve hesap ile abonelik sistemlerimiz için geçerlidir."
       },
       {
         "kind": "p",
@@ -852,7 +852,7 @@
       },
       {
         "kind": "p",
-        "text": "Abonelikler <b>Apple App Store</b>, <b>Google Play</b> ya da — web'de — <b>Stripe</b> üzerinden satın alınır ve yönetilir. Abonelik durumunuzun bir doğrulamasını (etkin, süresi dolmuş, iptal edilmiş) ve bir işlem tanımlayıcısını alırız. Tam kart numaranızı ya da banka bilgilerinizi <b>almaz</b> veya saklamayız; bunlar tamamen mağaza ya da ödeme işlemcisi tarafından yürütülür."
+        "text": "Abonelikler, uygulamayı kurduğunuz uygulama mağazasından ya da web'de ödeme sağlayıcımız aracılığıyla satın alınır ve yönetilir. Bize yalnızca abonelik durumunuzun doğrulaması (etkin, süresi dolmuş, iptal edilmiş) ve bir işlem kimliği ulaşır. Kart numaranızın tamamını veya banka bilgilerinizi <b>almayız</b> ve saklamayız; bunlarla tamamen mağaza ya da ödeme sağlayıcısı ilgilenir."
       },
       {
         "kind": "h3",
@@ -932,7 +932,7 @@
       },
       {
         "kind": "p",
-        "text": "Uygulama içi abonelikler, Apple App Store ve Google Play tarafından kendi şart ve gizlilik politikaları kapsamında işlenir. Web abonelikleri Stripe tarafından işlenir. Girdiğiniz ödeme bilgileri bu sağlayıcılar tarafından yürütülür — {name} tam kart ya da banka bilgilerinizi asla görmez. Bir aboneliği mağaza hesabınızdan ya da hesap portalından istediğiniz zaman görüntüleyebilir, değiştirebilir veya iptal edebilirsiniz."
+        "text": "Uygulama içi abonelikler, satın aldığınız uygulama mağazası tarafından, kendi koşulları ve gizlilik politikası kapsamında işlenir. Web abonelikleri ödeme sağlayıcımız tarafından işlenir. Girdiğiniz ödeme bilgilerini bu sağlayıcılar yönetir — {name} kartınızın veya banka hesabınızın tam bilgilerini hiçbir zaman görmez. Aboneliğinizi dilediğiniz zaman mağaza hesabınızdan veya hesap portalından görüntüleyebilir, değiştirebilir ya da iptal edebilirsiniz."
       },
       {
         "kind": "h2",
@@ -945,8 +945,8 @@
       {
         "kind": "ul",
         "items": [
-          "<b>Apple ve Google</b> — uygulama içi abonelikleri doğrulamak ve yönetmek için.",
-          "<b>Stripe</b> — web abonelik ödemelerini işlemek için.",
+          "<b>Uygulama mağazaları</b> — uygulama içi abonelikleri doğrulamak ve yönetmek için.",
+          "<b>Ödeme sağlayıcıları</b> — web aboneliklerinin ödemelerini işlemek için.",
           "<b>Sentry</b> — gizlilik adına arındırılmış çökme ve hata raporlarını almak için.",
           "<b>Altyapı ve barındırma sağlayıcıları</b> — sunucularımızı ve arka ucumuzu işletmek için."
         ]

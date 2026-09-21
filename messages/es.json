@@ -785,7 +785,7 @@
     "sections": [
       {
         "kind": "p",
-        "text": "{name} («{name}», «nosotros» o «nuestro») ofrece un servicio de red privada virtual (VPN) sin registros para iPhone, iPad, Android, Mac y Android TV. {name} es un nombre comercial de {legalName}, una empresa registrada en {registeredIn} (n.º de empresa {companyNumber}), con domicilio social en {registeredOffice}. {legalName} es el responsable del tratamiento a efectos de esta Política de privacidad. Esta política explica qué recopilamos, lo que deliberadamente <b>no</b> recopilamos, cómo usamos y compartimos la información y los derechos que tienes sobre tus datos. Se aplica a nuestras apps, nuestro sitio web y nuestros sistemas de cuentas y suscripciones."
+        "text": "{name} («{name}», «nosotros» o «nuestro») ofrece un servicio de red privada virtual (VPN) sin registros para dispositivos móviles, de escritorio y de televisión. {name} es un nombre comercial de {legalName}, una empresa registrada en {registeredIn} (n.º de empresa {companyNumber}), con domicilio social en {registeredOffice}. {legalName} es el responsable del tratamiento a efectos de esta Política de privacidad. Esta política explica qué recopilamos, lo que deliberadamente <b>no</b> recopilamos, cómo usamos y compartimos la información y los derechos que tienes sobre tus datos. Se aplica a nuestras apps, nuestro sitio web y nuestros sistemas de cuentas y suscripciones."
       },
       {
         "kind": "p",
@@ -852,7 +852,7 @@
       },
       {
         "kind": "p",
-        "text": "Las suscripciones se compran y gestionan a través de la <b>Apple App Store</b>, <b>Google Play</b> o — en la web — <b>Stripe</b>. Recibimos una validación del estado de tu suscripción (activa, caducada, cancelada) y un identificador de transacción. <b>No</b> recibimos ni almacenamos el número completo de tu tarjeta ni tus datos bancarios; de eso se encargan íntegramente la tienda o el procesador de pagos."
+        "text": "Las suscripciones se compran y se gestionan en la tienda de aplicaciones desde la que instalaste la app, o a través de nuestro procesador de pagos en la web. Recibimos una validación del estado de tu suscripción (activa, caducada, cancelada) y un identificador de transacción. <b>No</b> recibimos ni almacenamos el número completo de tu tarjeta ni tus datos bancarios; de eso se encarga por completo la tienda o el procesador de pagos."
       },
       {
         "kind": "h3",
@@ -932,7 +932,7 @@
       },
       {
         "kind": "p",
-        "text": "Las suscripciones dentro de la app las procesan la Apple App Store y Google Play conforme a sus propios términos y políticas de privacidad. Las suscripciones web las procesa Stripe. Los datos de pago que introduces los gestionan esos proveedores — {name} nunca ve tu información completa de tarjeta o banco. Puedes ver, cambiar o cancelar una suscripción desde tu cuenta de la tienda o desde el portal de cuenta en cualquier momento."
+        "text": "Las suscripciones dentro de la app las procesa la tienda de aplicaciones en la que compraste, según sus propios términos y su política de privacidad. Las suscripciones web las procesa nuestro procesador de pagos. Los datos de pago que introduces los gestionan esos proveedores: {name} nunca ve tu tarjeta ni tus datos bancarios completos. Puedes ver, cambiar o cancelar una suscripción desde tu cuenta de la tienda o desde el portal de cuenta en cualquier momento."
       },
       {
         "kind": "h2",
@@ -945,8 +945,8 @@
       {
         "kind": "ul",
         "items": [
-          "<b>Apple y Google</b> — para validar y gestionar las suscripciones dentro de la app.",
-          "<b>Stripe</b> — para procesar los pagos de las suscripciones web.",
+          "<b>Tiendas de aplicaciones</b> — para validar y gestionar las suscripciones dentro de la app.",
+          "<b>Procesadores de pagos</b> — para procesar los pagos de las suscripciones web.",
           "<b>Sentry</b> — para recibir informes de fallos y errores depurados por privacidad.",
           "<b>Proveedores de infraestructura y alojamiento</b> — para operar nuestros servidores y backend."
         ]

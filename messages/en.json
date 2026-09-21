@@ -785,7 +785,7 @@
     "sections": [
       {
         "kind": "p",
-        "text": "{name} (\"{name}\", \"we\", \"us\", or \"our\") provides a no-logs virtual private network (VPN) service across iPhone, iPad, Android, Mac, and Android TV. {name} is a trading name of {legalName}, a company registered in {registeredIn} (company no. {companyNumber}), with its registered office at {registeredOffice}. {legalName} is the data controller for the purposes of this Privacy Policy. This policy explains what we collect, the things we deliberately do <b>not</b> collect, how we use and share information, and the rights you have over your data. It applies to our apps, our website, and our account and subscription systems."
+        "text": "{name} (\"{name}\", \"we\", \"us\", or \"our\") provides a no-logs virtual private network (VPN) service across mobile, desktop and TV devices. {name} is a trading name of {legalName}, a company registered in {registeredIn} (company no. {companyNumber}), with its registered office at {registeredOffice}. {legalName} is the data controller for the purposes of this Privacy Policy. This policy explains what we collect, the things we deliberately do <b>not</b> collect, how we use and share information, and the rights you have over your data. It applies to our apps, our website, and our account and subscription systems."
       },
       {
         "kind": "p",
@@ -852,7 +852,7 @@
       },
       {
         "kind": "p",
-        "text": "Subscriptions are purchased and managed through the <b>Apple App Store</b>, <b>Google Play</b>, or — on the web — <b>Stripe</b>. We receive a validation of your subscription status (active, expired, cancelled) and a transaction identifier. We do <b>not</b> receive or store your full card number or bank details; those are handled entirely by the store or payment processor."
+        "text": "Subscriptions are purchased and managed through the app store you installed from, or through our payment processor on the web. We receive a validation of your subscription status (active, expired, cancelled) and a transaction identifier. We do <b>not</b> receive or store your full card number or bank details; those are handled entirely by the store or payment processor."
       },
       {
         "kind": "h3",
@@ -932,7 +932,7 @@
       },
       {
         "kind": "p",
-        "text": "In-app subscriptions are processed by the Apple App Store and Google Play under their own terms and privacy policies. Web subscriptions are processed by Stripe. Payment details you enter are handled by those providers — {name} never sees your full card or bank information. You can view, change, or cancel a subscription from your store account or the account portal at any time."
+        "text": "In-app subscriptions are processed by the app store you purchased from, under its own terms and privacy policy. Web subscriptions are processed by our payment processor. Payment details you enter are handled by those providers — {name} never sees your full card or bank information. You can view, change, or cancel a subscription from your store account or the account portal at any time."
       },
       {
         "kind": "h2",
@@ -945,8 +945,8 @@
       {
         "kind": "ul",
         "items": [
-          "<b>Apple and Google</b> — to validate and manage in-app subscriptions.",
-          "<b>Stripe</b> — to process web subscription payments.",
+          "<b>App stores</b> — to validate and manage in-app subscriptions.",
+          "<b>Payment processors</b> — to process web subscription payments.",
           "<b>Sentry</b> — to receive privacy-scrubbed crash and error reports.",
           "<b>Infrastructure and hosting providers</b> — to operate our servers and backend."
         ]

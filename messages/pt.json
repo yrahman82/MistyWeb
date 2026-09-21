@@ -785,7 +785,7 @@
     "sections": [
       {
         "kind": "p",
-        "text": "A {name} (\"{name}\", \"nós\" ou \"nosso\") oferece um serviço de rede privada virtual (VPN) sem logs no iPhone, iPad, Android, Mac e Android TV. {name} é um nome comercial de {legalName}, uma empresa registrada em {registeredIn} (nº da empresa {companyNumber}), com sede registrada em {registeredOffice}. A {legalName} é a controladora dos dados para os fins desta Política de Privacidade. Esta política explica o que coletamos, o que deliberadamente <b>não</b> coletamos, como usamos e compartilhamos informações e os direitos que você tem sobre seus dados. Ela se aplica aos nossos apps, ao nosso site e aos nossos sistemas de conta e assinatura."
+        "text": "A {name} (\"{name}\", \"nós\" ou \"nosso\") oferece um serviço de rede privada virtual (VPN) sem logs no dispositivos móveis, computadores e TVs. {name} é um nome comercial de {legalName}, uma empresa registrada em {registeredIn} (nº da empresa {companyNumber}), com sede registrada em {registeredOffice}. A {legalName} é a controladora dos dados para os fins desta Política de Privacidade. Esta política explica o que coletamos, o que deliberadamente <b>não</b> coletamos, como usamos e compartilhamos informações e os direitos que você tem sobre seus dados. Ela se aplica aos nossos apps, ao nosso site e aos nossos sistemas de conta e assinatura."
       },
       {
         "kind": "p",
@@ -852,7 +852,7 @@
       },
       {
         "kind": "p",
-        "text": "As assinaturas são compradas e gerenciadas pela <b>Apple App Store</b>, pelo <b>Google Play</b> ou — na web — pelo <b>Stripe</b>. Recebemos uma validação do status da sua assinatura (ativa, expirada, cancelada) e um identificador de transação. Nós <b>não</b> recebemos nem armazenamos o número completo do seu cartão ou dados bancários; isso é tratado inteiramente pela loja ou pelo processador de pagamentos."
+        "text": "As assinaturas são compradas e gerenciadas na loja de aplicativos de onde você instalou o app, ou pelo nosso processador de pagamentos na web. Recebemos uma validação do status da assinatura (ativa, expirada, cancelada) e um identificador de transação. <b>Não</b> recebemos nem armazenamos o número completo do seu cartão ou dados bancários; isso fica inteiramente com a loja ou o processador de pagamentos."
       },
       {
         "kind": "h3",
@@ -932,7 +932,7 @@
       },
       {
         "kind": "p",
-        "text": "As assinaturas no app são processadas pela Apple App Store e pelo Google Play, sob seus próprios termos e políticas de privacidade. As assinaturas na web são processadas pelo Stripe. Os dados de pagamento que você insere são tratados por esses provedores — a {name} nunca vê o número completo do seu cartão nem seus dados bancários. Você pode ver, alterar ou cancelar uma assinatura na conta da sua loja ou no portal da conta a qualquer momento."
+        "text": "As assinaturas feitas no app são processadas pela loja de aplicativos onde você comprou, sob os termos e a política de privacidade dela. As assinaturas web são processadas pelo nosso processador de pagamentos. Os dados de pagamento que você informa são tratados por esses fornecedores — o {name} nunca vê seu cartão ou seus dados bancários completos. Você pode ver, alterar ou cancelar uma assinatura pela sua conta na loja ou pelo portal da conta a qualquer momento."
       },
       {
         "kind": "h2",
@@ -945,8 +945,8 @@
       {
         "kind": "ul",
         "items": [
-          "<b>Apple e Google</b> — para validar e gerenciar assinaturas no app.",
-          "<b>Stripe</b> — para processar pagamentos de assinaturas na web.",
+          "<b>Lojas de aplicativos</b> — para validar e gerenciar assinaturas feitas no app.",
+          "<b>Processadores de pagamento</b> — para processar pagamentos de assinaturas web.",
           "<b>Sentry</b> — para receber relatórios de falha e erro com a privacidade higienizada.",
           "<b>Provedores de infraestrutura e hospedagem</b> — para operar nossos servidores e backend."
         ]

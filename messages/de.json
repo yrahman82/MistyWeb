@@ -785,7 +785,7 @@
     "sections": [
       {
         "kind": "p",
-        "text": "{name} („{name}“, „wir“, „uns“ oder „unser“) stellt einen No-Logs-VPN-Dienst (Virtual Private Network) für iPhone, iPad, Android, Mac und Android TV bereit. {name} ist ein Handelsname von {legalName}, einem in {registeredIn} eingetragenen Unternehmen (Handelsregisternr. {companyNumber}), mit eingetragenem Sitz in {registeredOffice}. {legalName} ist der Verantwortliche im Sinne dieser Datenschutzerklärung. Diese Erklärung legt dar, was wir erfassen, was wir bewusst <b>nicht</b> erfassen, wie wir Informationen nutzen und weitergeben und welche Rechte Sie an Ihren Daten haben. Sie gilt für unsere Apps, unsere Website sowie unsere Konto- und Abo-Systeme."
+        "text": "{name} („{name}“, „wir“, „uns“ oder „unser“) stellt einen No-Logs-VPN-Dienst (Virtual Private Network) für Mobilgeräten, Computern und Fernsehern bereit. {name} ist ein Handelsname von {legalName}, einem in {registeredIn} eingetragenen Unternehmen (Handelsregisternr. {companyNumber}), mit eingetragenem Sitz in {registeredOffice}. {legalName} ist der Verantwortliche im Sinne dieser Datenschutzerklärung. Diese Erklärung legt dar, was wir erfassen, was wir bewusst <b>nicht</b> erfassen, wie wir Informationen nutzen und weitergeben und welche Rechte Sie an Ihren Daten haben. Sie gilt für unsere Apps, unsere Website sowie unsere Konto- und Abo-Systeme."
       },
       {
         "kind": "p",
@@ -852,7 +852,7 @@
       },
       {
         "kind": "p",
-        "text": "Abos werden über den <b>Apple App Store</b>, <b>Google Play</b> oder – im Web – <b>Stripe</b> gekauft und verwaltet. Wir erhalten eine Bestätigung Ihres Abo-Status (aktiv, abgelaufen, gekündigt) und eine Transaktionskennung. Ihre vollständige Kartennummer oder Bankdaten erhalten oder speichern wir <b>nicht</b>; diese werden ausschließlich vom Store oder Zahlungsdienstleister verarbeitet."
+        "text": "Abonnements werden über den App-Store gekauft und verwaltet, aus dem Sie die App installiert haben, oder im Web über unseren Zahlungsdienstleister. Wir erhalten eine Bestätigung des Abo-Status (aktiv, abgelaufen, gekündigt) und eine Transaktionskennung. Ihre vollständige Kartennummer oder Bankverbindung erhalten und speichern wir <b>nicht</b>; darum kümmern sich ausschließlich der Store oder der Zahlungsdienstleister."
       },
       {
         "kind": "h3",
@@ -932,7 +932,7 @@
       },
       {
         "kind": "p",
-        "text": "In-App-Abos werden vom Apple App Store und von Google Play nach deren eigenen Bedingungen und Datenschutzrichtlinien abgewickelt. Web-Abos werden von Stripe abgewickelt. Zahlungsdaten, die Sie eingeben, werden von diesen Anbietern verarbeitet – {name} sieht Ihre vollständigen Karten- oder Bankinformationen nie. Sie können ein Abo jederzeit über Ihr Store-Konto oder das Konto-Portal einsehen, ändern oder kündigen."
+        "text": "In-App-Abonnements werden von dem App-Store verarbeitet, in dem Sie gekauft haben, nach dessen eigenen Bedingungen und Datenschutzrichtlinien. Web-Abonnements verarbeitet unser Zahlungsdienstleister. Die von Ihnen eingegebenen Zahlungsdaten verarbeiten diese Anbieter — {name} sieht Ihre vollständigen Karten- oder Bankdaten nie. Sie können ein Abonnement jederzeit über Ihr Store-Konto oder das Kontoportal einsehen, ändern oder kündigen."
       },
       {
         "kind": "h2",
@@ -945,8 +945,8 @@
       {
         "kind": "ul",
         "items": [
-          "<b>Apple und Google</b> – zum Bestätigen und Verwalten von In-App-Abos.",
-          "<b>Stripe</b> – zur Abwicklung von Web-Abo-Zahlungen.",
+          "<b>App-Stores</b> — zur Prüfung und Verwaltung von In-App-Abonnements.",
+          "<b>Zahlungsdienstleister</b> — zur Abwicklung von Zahlungen für Web-Abonnements.",
           "<b>Sentry</b> – zum Empfang datenschutzbereinigter Absturz- und Fehlerberichte.",
           "<b>Infrastruktur- und Hosting-Anbieter</b> – zum Betrieb unserer Server und unseres Backends."
         ]

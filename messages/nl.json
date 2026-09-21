@@ -785,7 +785,7 @@
     "sections": [
       {
         "kind": "p",
-        "text": "{name} (\"{name}\", \"wij\", \"we\" of \"ons\") biedt een no-logs virtueel particulier netwerk (VPN) aan op iPhone, iPad, Android, Mac en Android TV. {name} is een handelsnaam van {legalName}, een bedrijf geregistreerd in {registeredIn} (bedrijfsnr. {companyNumber}), met ingeschreven kantoor te {registeredOffice}. {legalName} is de verwerkingsverantwoordelijke voor de doeleinden van dit Privacybeleid. Dit beleid legt uit wat we verzamelen, de dingen die we bewust <b>niet</b> verzamelen, hoe we informatie gebruiken en delen, en welke rechten je hebt over je gegevens. Het geldt voor onze apps, onze website en onze account- en abonnementssystemen."
+        "text": "{name} (\"{name}\", \"wij\", \"we\" of \"ons\") biedt een no-logs virtueel particulier netwerk (VPN) aan op mobiele apparaten, computers en tv's. {name} is een handelsnaam van {legalName}, een bedrijf geregistreerd in {registeredIn} (bedrijfsnr. {companyNumber}), met ingeschreven kantoor te {registeredOffice}. {legalName} is de verwerkingsverantwoordelijke voor de doeleinden van dit Privacybeleid. Dit beleid legt uit wat we verzamelen, de dingen die we bewust <b>niet</b> verzamelen, hoe we informatie gebruiken en delen, en welke rechten je hebt over je gegevens. Het geldt voor onze apps, onze website en onze account- en abonnementssystemen."
       },
       {
         "kind": "p",
@@ -852,7 +852,7 @@
       },
       {
         "kind": "p",
-        "text": "Abonnementen worden gekocht en beheerd via de <b>Apple App Store</b>, <b>Google Play</b> of — op het web — <b>Stripe</b>. We ontvangen een validatie van je abonnementsstatus (actief, verlopen, opgezegd) en een transactie-identificator. We ontvangen of bewaren je volledige kaartnummer of bankgegevens <b>niet</b>; die worden volledig afgehandeld door de store of betaalverwerker."
+        "text": "Abonnementen koop en beheer je in de appstore waaruit je de app hebt geïnstalleerd, of op het web via onze betaalprovider. Wij ontvangen een bevestiging van je abonnementsstatus (actief, verlopen, opgezegd) en een transactiekenmerk. We ontvangen en bewaren je volledige kaartnummer of bankgegevens <b>niet</b>; die worden volledig door de store of de betaalprovider afgehandeld."
       },
       {
         "kind": "h3",
@@ -932,7 +932,7 @@
       },
       {
         "kind": "p",
-        "text": "In-app-abonnementen worden verwerkt door de Apple App Store en Google Play onder hun eigen voorwaarden en privacybeleid. Webabonnementen worden verwerkt door Stripe. Betaalgegevens die je invoert worden afgehandeld door die aanbieders — {name} ziet nooit je volledige kaart- of bankgegevens. Je kunt een abonnement op elk moment bekijken, wijzigen of opzeggen vanuit je store-account of het accountportaal."
+        "text": "Abonnementen die je in de app afsluit worden verwerkt door de appstore waar je hebt gekocht, onder de eigen voorwaarden en het privacybeleid daarvan. Webabonnementen worden verwerkt door onze betaalprovider. De betaalgegevens die je invoert worden door die partijen verwerkt — {name} ziet je volledige kaart- of bankgegevens nooit. Je kunt een abonnement op elk moment bekijken, wijzigen of opzeggen via je storeaccount of het accountportaal."
       },
       {
         "kind": "h2",
@@ -945,8 +945,8 @@
       {
         "kind": "ul",
         "items": [
-          "<b>Apple en Google</b> — om in-app-abonnementen te valideren en te beheren.",
-          "<b>Stripe</b> — om webabonnementsbetalingen te verwerken.",
+          "<b>Appstores</b> — om abonnementen in de app te valideren en te beheren.",
+          "<b>Betaalproviders</b> — om betalingen voor webabonnementen te verwerken.",
           "<b>Sentry</b> — om privacygescrubde crash- en foutrapporten te ontvangen.",
           "<b>Infrastructuur- en hostingaanbieders</b> — om onze servers en backend te draaien."
         ]
