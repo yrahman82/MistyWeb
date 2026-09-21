@@ -164,7 +164,7 @@
       },
       {
         "q": "Gibt es eine Geld-zurück-Garantie?",
-        "a": "Ja – für jeden kostenpflichtigen Tarif gilt eine 14-tägige Geld-zurück-Garantie, ohne Wenn und Aber. In den ersten zwei Wochen nicht zufrieden? Schreiben Sie uns eine E-Mail und Sie erhalten den vollen Betrag zurück. Käufe über den App Store oder Google Play werden über den üblichen Prozess des jeweiligen Stores erstattet."
+        "a": "Auf dieser Website ja — für jeden hier gekauften Tarif gilt eine 14-tägige Geld-zurück-Garantie, ohne Nachfragen. In den ersten zwei Wochen nicht zufrieden? Schreiben Sie uns, und Sie bekommen den vollen Betrag zurück. Im App Store und bei Google Play läuft es anders: Dort beginnen die Tarife mit einer kostenlosen Testphase, Sie können den Dienst also vor der ersten Abbuchung ausprobieren — und nach Ablauf der Testphase entscheiden Apple oder Google nach ihren eigenen Richtlinien über Erstattungen."
       },
       {
         "q": "Enthält MistyVPN einen Passwort-Manager?",
@@ -1247,9 +1247,10 @@
         ]
       },
       {
-        "heading": "14 Tage Geld-zurück-Garantie",
+        "heading": "Kostenlose Testphase und Erstattungen",
         "paragraphs": [
-          "Für jeden kostenpflichtigen Tarif gilt eine 14-tägige Geld-zurück-Garantie. Wenn Sie innerhalb von 14 Tagen nach Ihrem Erstkauf nicht zufrieden sind, kontaktieren Sie uns unter {email} für eine volle Rückerstattung – ohne Wenn und Aber. Bei Käufen auf dieser Website erstatten wir das ursprüngliche Zahlungsmittel direkt. Bei Käufen über den Apple App Store oder Google Play werden Rückerstattungen über den jeweiligen Rückerstattungsprozess des Stores abgewickelt, wobei wir Ihnen helfen. Die Garantie gilt für Ihren ersten Kauf und nicht für nachfolgende Verlängerungen."
+          "Für Tarife, die auf dieser Website gekauft werden, gilt eine 14-tägige Geld-zurück-Garantie. Wenn Sie innerhalb von 14 Tagen nach Ihrem ersten Kauf nicht zufrieden sind, schreiben Sie uns an {email} — wir erstatten den vollen Betrag auf das ursprüngliche Zahlungsmittel, ohne Nachfragen. Die Garantie gilt für den ersten Kauf, nicht für spätere Verlängerungen.",
+          "Abonnements aus dem App Store von Apple oder aus Google Play funktionieren anders. Sie beginnen mit einer kostenlosen Testphase — derzeit 7 Tage, die genaue Dauer wird immer vor der Bestätigung angezeigt — damit Sie {name} ausprobieren können, bevor etwas abgebucht wird. Kündigen Sie vor Ende der Testphase, zahlen Sie nichts. Nach Ablauf der Testphase gibt es für Store-Käufe keine Geld-zurück-Garantie: Diese Zahlungen erreichen uns nie, und wir können sie nicht selbst erstatten. Erstattungen gewähren Apple oder Google nach ihren eigenen Richtlinien, und Sie beantragen sie direkt dort — über reportaproblem.apple.com für den App Store oder über Ihren Bestellverlauf in Google Play. Wir helfen Ihnen gern bei der Beantragung, die Entscheidung liegt aber bei ihnen."
         ]
       },
       {

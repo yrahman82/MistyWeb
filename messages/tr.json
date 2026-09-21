@@ -164,7 +164,7 @@
       },
       {
         "q": "Para iade garantisi var mı?",
-        "a": "Evet — her ücretli plan 14 gün para iade garantisi kapsamındadır, hiçbir soru sorulmaz. İlk iki hafta içinde memnun kalmadınız mı? Bize e-posta gönderin, tam iade yapalım. App Store ya da Google Play üzerinden yapılan satın alımlar mağazanın standart süreciyle iade edilir."
+        "a": "Bu sitede evet — buradan alınan her paket 14 günlük para iade garantisi kapsamında, hiçbir soru sorulmadan. İlk iki haftada beğenmediniz mi? Bize yazın, tamamını iade edelim. App Store ve Google Play farklı işler: orada paketler ücretsiz denemeyle başlar, yani tahsilat yapılmadan önce servisi deneyebilirsiniz; deneme bittikten sonra iadeler kendi politikaları çerçevesinde Apple veya Google tarafından ele alınır."
       },
       {
         "q": "MistyVPN parola yöneticisi içeriyor mu?",
@@ -1247,9 +1247,10 @@
         ]
       },
       {
-        "heading": "14 gün para iade garantisi",
+        "heading": "Ücretsiz deneme ve iadeler",
         "paragraphs": [
-          "Her ücretli plan 14 gün para iade garantisi kapsamındadır. İlk satın alımınızdan sonraki 14 gün içinde memnun kalmazsanız, tam iade için bize {email} adresinden ulaşın — hiçbir soru sorulmaz. Bu web sitesinde yapılan satın alımlarda, iadeyi doğrudan orijinal ödeme yöntemine yaparız. Apple App Store ya da Google Play üzerinden yapılan satın alımlarda iadeler ilgili mağazanın iade süreciyle işlenir; bu konuda size yardımcı oluruz. Garanti, ilk satın alımınız için geçerlidir, sonraki yenilemeler için geçerli değildir."
+          "Bu siteden alınan paketler 14 günlük para iade garantisi kapsamındadır. İlk alımınızdan sonraki 14 gün içinde memnun kalmazsanız {email} adresine yazın; ödediğiniz tutarın tamamını aynı ödeme yöntemine, hiçbir soru sormadan iade ederiz. Garanti ilk alım için geçerlidir, sonraki yenilemeler için değil.",
+          "Apple App Store veya Google Play üzerinden alınan abonelikler farklı işler. Bunlar ücretsiz denemeyle başlar — şu an 7 gün, kesin süre onaylamadan önce her zaman gösterilir — böylece hiçbir tahsilat yapılmadan {name} uygulamasını deneyebilirsiniz. Deneme bitmeden iptal ederseniz hiçbir şey ödemezsiniz. Deneme bittikten sonra mağaza alımlarında para iade garantisi yoktur: o ödemeler bize hiç ulaşmaz, dolayısıyla iade de edemeyiz. İadeleri kendi politikaları doğrultusunda Apple veya Google verir ve doğrudan onlardan istenir — App Store için reportaproblem.apple.com üzerinden, Google Play için sipariş geçmişinizden. Başvuruyu yapmanızda seve seve yardımcı oluruz ama karar onlarındır."
         ]
       },
       {

@@ -164,7 +164,7 @@
       },
       {
         "q": "Is er een niet-goed-geld-terug-garantie?",
-        "a": "Ja — elk betaald abonnement valt onder een 14 dagen niet-goed-geld-terug-garantie, geen vragen gesteld. Niet tevreden in je eerste twee weken? Mail ons voor volledige terugbetaling. Aankopen via de App Store of Google Play worden terugbetaald via de standaardprocedure van de store."
+        "a": "Op deze website wel — elk abonnement dat je hier koopt heeft een geld-terug-garantie van 14 dagen, zonder vragen. Niet tevreden in je eerste twee weken? Mail ons en je krijgt het volledige bedrag terug. De App Store en Google Play werken anders: daar beginnen abonnementen met een gratis proefperiode, dus je kunt de dienst uitproberen voordat er wordt afgeschreven, en daarna worden terugbetalingen afgehandeld door Apple of Google volgens hun eigen beleid."
       },
       {
         "q": "Zit er bij MistyVPN een wachtwoordmanager?",
@@ -1247,9 +1247,10 @@
         ]
       },
       {
-        "heading": "14 dagen niet-goed-geld-terug-garantie",
+        "heading": "Gratis proefperiode en terugbetalingen",
         "paragraphs": [
-          "Elk betaald abonnement valt onder een 14 dagen niet-goed-geld-terug-garantie. Ben je niet tevreden binnen 14 dagen na je eerste aankoop, neem dan contact met ons op via {email} voor volledige terugbetaling — geen vragen gesteld. Voor aankopen op deze website betalen we de oorspronkelijke betaalmethode rechtstreeks terug. Voor aankopen via de Apple App Store of Google Play worden terugbetalingen verwerkt via de terugbetalingsprocedure van de betreffende store, waarbij we je helpen. De garantie geldt voor je eerste aankoop en niet voor latere verlengingen."
+          "Voor abonnementen die je op deze website koopt geldt een niet-goed-geld-terug-garantie van 14 dagen. Ben je binnen 14 dagen na je eerste aankoop niet tevreden, mail ons dan op {email} — we betalen het volledige bedrag terug op hetzelfde betaalmiddel, zonder vragen. De garantie geldt voor je eerste aankoop, niet voor latere verlengingen.",
+          "Abonnementen die je via de App Store van Apple of via Google Play koopt werken anders. Die beginnen met een gratis proefperiode — op dit moment 7 dagen, en de precieze duur staat altijd op het scherm voordat je bevestigt — zodat je {name} kunt uitproberen voordat er iets wordt afgeschreven. Zeg je op voordat de proefperiode afloopt, dan betaal je niets. Daarna geldt er geen geld-terug-garantie op aankopen in de stores: die betalingen bereiken ons nooit en we kunnen ze niet zelf terugbetalen. Terugbetalingen worden toegekend door Apple of Google volgens hun eigen beleid, en je vraagt ze rechtstreeks aan — via reportaproblem.apple.com voor de App Store, of via je bestelgeschiedenis in Google Play. We helpen je graag met de aanvraag, maar de beslissing ligt bij hen."
         ]
       },
       {

@@ -164,7 +164,7 @@
       },
       {
         "q": "Y a-t-il une garantie satisfait ou remboursé ?",
-        "a": "Oui — chaque offre payante est couverte par une garantie satisfait ou remboursé de 14 jours, sans condition. Pas satisfait durant les deux premières semaines ? Écrivez-nous pour un remboursement intégral. Les achats effectués via l’App Store ou Google Play sont remboursés selon la procédure standard de la boutique."
+        "a": "Sur ce site, oui : toute formule achetée ici est couverte par une garantie de remboursement de 14 jours, sans questions. Pas convaincu pendant les deux premières semaines ? Écrivez-nous et nous vous remboursons intégralement. L'App Store et Google Play fonctionnent autrement : là-bas, les formules commencent par un essai gratuit, vous pouvez donc essayer le service avant d'être prélevé, et une fois l'essai terminé les remboursements sont traités par Apple ou Google selon leurs propres règles."
       },
       {
         "q": "MistyVPN inclut-il un gestionnaire de mots de passe ?",
@@ -1247,9 +1247,10 @@
         ]
       },
       {
-        "heading": "Garantie satisfait ou remboursé de 14 jours",
+        "heading": "Essais gratuits et remboursements",
         "paragraphs": [
-          "Chaque offre payante est couverte par une garantie satisfait ou remboursé de 14 jours. Si vous n’êtes pas satisfait dans les 14 jours suivant votre achat initial, contactez-nous à {email} pour un remboursement intégral — sans condition. Pour les achats effectués sur ce site web, nous remboursons directement le moyen de paiement d’origine. Pour les achats effectués via l’Apple App Store ou Google Play, les remboursements sont traités selon la procédure de remboursement de la boutique concernée, dans laquelle nous vous accompagnerons. La garantie s’applique à votre premier achat et non aux renouvellements ultérieurs."
+          "Les formules souscrites sur ce site sont couvertes par une garantie de remboursement de 14 jours. Si vous n'êtes pas satisfait dans les 14 jours suivant votre premier achat, écrivez-nous à {email} : nous remboursons l'intégralité sur le moyen de paiement d'origine, sans poser de questions. La garantie couvre le premier achat, pas les renouvellements suivants.",
+          "Les abonnements souscrits sur l'App Store d'Apple ou sur Google Play fonctionnent autrement. Ils commencent par un essai gratuit — 7 jours actuellement, la durée exacte étant toujours affichée avant confirmation — afin que vous puissiez essayer {name} avant tout prélèvement. Résiliez avant la fin de l'essai et vous ne payez rien. Une fois l'essai terminé, il n'y a pas de garantie de remboursement sur les achats effectués dans les boutiques : ces paiements ne nous parviennent jamais et nous ne pouvons pas les rembourser nous-mêmes. Les remboursements sont accordés par Apple ou Google selon leurs propres règles et se demandent directement auprès d'eux — sur reportaproblem.apple.com pour l'App Store, ou depuis votre historique de commandes dans Google Play. Nous vous aidons volontiers à faire la demande, mais la décision leur appartient."
         ]
       },
       {

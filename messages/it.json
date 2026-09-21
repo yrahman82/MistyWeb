@@ -164,7 +164,7 @@
       },
       {
         "q": "C'è una garanzia soddisfatti o rimborsati?",
-        "a": "Sì — ogni piano a pagamento è coperto da una garanzia soddisfatti o rimborsati di 14 giorni, senza domande. Non sei soddisfatto nelle prime due settimane? Scrivici per un rimborso completo. Gli acquisti effettuati tramite App Store o Google Play vengono rimborsati con la procedura standard dello store."
+        "a": "Su questo sito sì: ogni piano acquistato qui ha una garanzia di rimborso di 14 giorni, senza fare domande. Non ti convince nelle prime due settimane? Scrivici e ti restituiamo tutto. App Store e Google Play funzionano diversamente: lì i piani iniziano con una prova gratuita, quindi provi il servizio prima di essere addebitato, e una volta finita la prova i rimborsi li gestiscono Apple o Google secondo le loro regole."
       },
       {
         "q": "MistyVPN include un gestore password?",
@@ -1247,9 +1247,10 @@
         ]
       },
       {
-        "heading": "Garanzia soddisfatti o rimborsati di 14 giorni",
+        "heading": "Prova gratuita e rimborsi",
         "paragraphs": [
-          "Ogni piano a pagamento è coperto da una garanzia soddisfatti o rimborsati di 14 giorni. Se non sei soddisfatto entro 14 giorni dal tuo acquisto iniziale, contattaci all'indirizzo {email} per un rimborso completo — senza domande. Per gli acquisti effettuati su questo sito web rimborsiamo direttamente il metodo di pagamento originale. Per gli acquisti effettuati tramite l'Apple App Store o Google Play, i rimborsi sono elaborati con la procedura di rimborso del rispettivo store, e ti aiuteremo a completarla. La garanzia si applica al primo acquisto e non ai rinnovi successivi."
+          "I piani acquistati su questo sito sono coperti da una garanzia di rimborso di 14 giorni. Se non sei soddisfatto entro 14 giorni dal primo acquisto, scrivici a {email}: ti rimborsiamo l'intero importo sullo stesso metodo di pagamento, senza fare domande. La garanzia vale per il primo acquisto, non per i rinnovi successivi.",
+          "Gli abbonamenti acquistati sull'App Store di Apple o su Google Play funzionano diversamente. Iniziano con una prova gratuita — al momento di 7 giorni, e la durata esatta è sempre indicata prima della conferma — così puoi provare {name} prima che ti venga addebitato qualcosa. Se disdici prima della fine della prova non paghi nulla. Finita la prova non c'è alcuna garanzia di rimborso sugli acquisti fatti negli store: quei pagamenti non arrivano mai a noi e non possiamo rimborsarli. I rimborsi li concedono Apple o Google secondo le loro regole e vanno richiesti direttamente a loro — su reportaproblem.apple.com per l'App Store, o dalla cronologia ordini di Google Play. Ti aiutiamo volentieri a presentare la richiesta, ma la decisione spetta a loro."
         ]
       },
       {

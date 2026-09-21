@@ -96,13 +96,18 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
 
 // 14-day money-back guarantee — the trust promise, referenced across the site so the
 // wording (and the day count) live in exactly one place.
+//
+// IT APPLIES TO WEB PURCHASES ONLY. App Store and Google Play plans start with a free trial
+// instead (7 days), and once that trial ends there is no guarantee on them: we never receive
+// those payments, so we cannot refund them — only Apple or Google can, under their own policies.
+// The earlier fineprint claimed store purchases were "refunded via the store" as if that were
+// part of our guarantee, which promised something we have no power to deliver.
 export const moneyBack = {
   days: 14,
-  short: "14-day money-back guarantee",
+  short: "14-day money-back guarantee on web purchases",
   headline: "14-day money-back guarantee — no questions asked",
-  // Fine print: web (card) purchases are refunded by us directly; store purchases follow the store's flow.
   fineprint:
-    "Not happy in your first 14 days? Email us for a full refund — no questions asked. Purchases made through the App Store or Google Play are refunded via the store.",
+    "Not happy in your first 14 days? Email us for a full refund — no questions asked. Applies to plans bought on this website; App Store and Google Play plans come with a free trial instead, and refunds there are decided by Apple or Google.",
 } as const;
 
 // Headline stats for the hero trust strip.

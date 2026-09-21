@@ -164,7 +164,7 @@
       },
       {
         "q": "Is there a money-back guarantee?",
-        "a": "Yes — every paid plan is covered by a 14-day money-back guarantee, no questions asked. Not happy in your first two weeks? Email us for a full refund. Purchases made through the App Store or Google Play are refunded via the store's standard process."
+        "a": "On this website, yes — every plan bought here comes with a 14-day money-back guarantee, no questions asked. Not happy in your first two weeks? Email us for a full refund. The App Store and Google Play work differently: those plans start with a free trial, so you can try the service before you are charged, and once the trial ends refunds are handled by Apple or Google under their own policies."
       },
       {
         "q": "Does MistyVPN include a password manager?",
@@ -1247,9 +1247,10 @@
         ]
       },
       {
-        "heading": "14-day money-back guarantee",
+        "heading": "Free trials and refunds",
         "paragraphs": [
-          "Every paid plan is covered by a 14-day money-back guarantee. If you are not satisfied within 14 days of your initial purchase, contact us at {email} for a full refund — no questions asked. For purchases made on this website we refund the original payment method directly. For purchases made through the Apple App Store or Google Play, refunds are processed through the respective store's refund process, which we will help you with. The guarantee applies to your first purchase and not to subsequent renewals."
+          "Plans bought on this website come with a 14-day money-back guarantee. If you are not satisfied within 14 days of your first purchase, email us at {email} and we will refund the original payment method in full — no questions asked. The guarantee covers your first purchase, not later renewals.",
+          "Subscriptions bought through the Apple App Store or Google Play work differently. They begin with a free trial — 7 days at present, and the exact length is always shown before you confirm — so you can try {name} before anything is charged. Cancel before the trial ends and you pay nothing. Once the trial ends there is no money-back guarantee on store purchases: we never receive those payments and cannot refund them ourselves. Refunds are granted by Apple or Google under their own policies, and you request them directly — at reportaproblem.apple.com for the App Store, or from your order history in Google Play. We are glad to help you make the request, but the decision is theirs."
         ]
       },
       {

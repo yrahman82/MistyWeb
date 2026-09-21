@@ -164,7 +164,7 @@
       },
       {
         "q": "Tem garantia de reembolso?",
-        "a": "Sim — todo plano pago tem garantia de reembolso de 14 dias, sem perguntas. Não gostou nas duas primeiras semanas? Escreva pra gente e devolvemos o valor integral. Compras feitas pela App Store ou pelo Google Play são reembolsadas pelo processo padrão da loja."
+        "a": "Neste site, sim — todo plano comprado aqui tem garantia de reembolso de 14 dias, sem perguntas. Não gostou nas duas primeiras semanas? Escreva para nós e devolvemos tudo. A App Store e o Google Play funcionam de outro jeito: lá os planos começam com um período gratuito, então você experimenta o serviço antes de ser cobrado, e depois que ele termina os reembolsos ficam com a Apple ou o Google, conforme as políticas deles."
       },
       {
         "q": "A MistyVPN inclui um gerenciador de senhas?",
@@ -1247,9 +1247,10 @@
         ]
       },
       {
-        "heading": "Garantia de reembolso de 14 dias",
+        "heading": "Período gratuito e reembolsos",
         "paragraphs": [
-          "Todo plano pago tem garantia de reembolso de 14 dias. Se você não ficar satisfeito em até 14 dias da compra inicial, fale conosco em {email} para receber o reembolso integral — sem perguntas. Nas compras feitas neste site, reembolsamos a forma de pagamento original diretamente. Nas compras feitas pela Apple App Store ou pelo Google Play, os reembolsos são processados pelo processo de reembolso da respectiva loja, com o qual ajudaremos você. A garantia se aplica à sua primeira compra e não às renovações seguintes."
+          "Os planos comprados neste site têm garantia de reembolso de 14 dias. Se você não ficar satisfeito em até 14 dias da primeira compra, escreva para {email} e devolvemos o valor integral no mesmo meio de pagamento, sem perguntas. A garantia vale para a primeira compra, não para as renovações seguintes.",
+          "As assinaturas compradas pela App Store da Apple ou pelo Google Play funcionam de outro jeito. Elas começam com um período gratuito — hoje de 7 dias, e a duração exata sempre aparece antes de você confirmar — para que você experimente o {name} antes de qualquer cobrança. Cancele antes do fim do período gratuito e você não paga nada. Depois que ele termina, não há garantia de reembolso nas compras feitas nas lojas: esses pagamentos nunca chegam até nós e não podemos devolvê-los. Os reembolsos são concedidos pela Apple ou pelo Google conforme as políticas deles, e você pede diretamente a eles — em reportaproblem.apple.com para a App Store, ou pelo histórico de pedidos no Google Play. Ajudamos você a fazer o pedido com prazer, mas a decisão é deles."
         ]
       },
       {

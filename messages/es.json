@@ -164,7 +164,7 @@
       },
       {
         "q": "¿Hay garantía de devolución?",
-        "a": "Sí — todos los planes de pago están cubiertos por una garantía de devolución de 14 días, sin preguntas. ¿No estás contento en las dos primeras semanas? Escríbenos y te devolvemos todo. Las compras hechas a través del App Store o Google Play se reembolsan mediante el proceso estándar de la tienda."
+        "a": "En esta web sí: todos los planes comprados aquí tienen una garantía de devolución de 14 días, sin preguntas. ¿No te convence en las dos primeras semanas? Escríbenos y te devolvemos el dinero íntegro. La App Store y Google Play funcionan de otra manera: allí los planes empiezan con una prueba gratuita, así que puedes probar el servicio antes de que te cobren, y cuando termina la prueba los reembolsos los gestionan Apple o Google según sus propias políticas."
       },
       {
         "q": "¿MistyVPN incluye un gestor de contraseñas?",
@@ -1247,9 +1247,10 @@
         ]
       },
       {
-        "heading": "Garantía de devolución de 14 días",
+        "heading": "Pruebas gratuitas y reembolsos",
         "paragraphs": [
-          "Todos los planes de pago están cubiertos por una garantía de devolución de 14 días. Si no estás satisfecho en los 14 días siguientes a tu compra inicial, contáctanos en {email} para obtener un reembolso completo — sin preguntas. Para las compras hechas en este sitio web, reembolsamos directamente el método de pago original. Para las compras hechas a través de la Apple App Store o Google Play, los reembolsos se procesan mediante el proceso de reembolso de la tienda correspondiente, con el que te ayudaremos. La garantía se aplica a tu primera compra y no a las renovaciones posteriores."
+          "Los planes comprados en esta web están cubiertos por una garantía de devolución de 14 días. Si no estás satisfecho dentro de los 14 días siguientes a tu primera compra, escríbenos a {email} y te devolveremos el importe íntegro al mismo medio de pago, sin preguntas. La garantía cubre la primera compra, no las renovaciones posteriores.",
+          "Las suscripciones compradas en la App Store de Apple o en Google Play funcionan de otra manera. Empiezan con una prueba gratuita — ahora mismo de 7 días, y la duración exacta siempre se muestra antes de confirmar — para que puedas probar {name} antes de que se te cobre nada. Si cancelas antes de que termine la prueba, no pagas nada. Una vez terminada la prueba no hay garantía de devolución en las compras hechas en las tiendas: esos pagos nunca llegan a nosotros y no podemos reembolsarlos. Los reembolsos los conceden Apple o Google según sus propias políticas y se solicitan directamente a ellos — en reportaproblem.apple.com para la App Store, o desde tu historial de pedidos en Google Play. Te ayudamos encantados a presentar la solicitud, pero la decisión es suya."
         ]
       },
       {
