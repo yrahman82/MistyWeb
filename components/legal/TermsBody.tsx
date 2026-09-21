@@ -5,14 +5,14 @@ import { site } from "@/lib/site";
 
 type Section = { heading: string; paragraphs: string[] };
 
-// The Terms document itself, with no page chrome around it.
+// The WEBSITE Terms of Service: the full document covering every purchase rail — card checkout on
+// this site, the App Store, Google Play, Telegram Stars and crypto — because a web buyer needs all
+// of it. Rendered at /terms inside the marketing layout.
 //
-// It is rendered in TWO places from this one source: the public /terms page (inside the marketing
-// layout) and /legal/terms, the stripped copy the APPS link to. Apple guideline 3.1.2(c) requires a
-// functional Terms of Use link in the binary, but 3.1.1 forbids pointing users at an external
-// purchase path — and the marketing layout carries a header CTA and the announcement bar, which
-// advertises payment methods. Sending a reviewer there from the paywall would re-open the exact
-// rejection 1.0 already took. Hence one document, two wrappers.
+// The iOS app does NOT link here. It links /legal/ios/terms, a platform-scoped EULA, because
+// naming Google Play (guideline 2.3.10) or web card checkout (guideline 3.1.1) in a document a
+// reviewer reaches from the paywall is the kind of thing 1.0 was rejected for. See
+// components/legal/AppleEulaBody.tsx.
 export default async function TermsBody({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "termsPage" });
   const sections = t.raw("sections") as Section[];

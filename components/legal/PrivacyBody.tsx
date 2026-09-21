@@ -14,7 +14,7 @@ type Block =
   | { kind: "ul"; items: string[] };
 
 // Chrome-free, shared by the public /privacy page and the app-facing /legal/privacy copy.
-// See TermsBody for why the apps must not link into the marketing layout.
+// See AppleEulaBody for why the apps link platform-scoped legal pages, not the marketing ones.
 export default async function PrivacyBody({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "privacyPage" });
   const sections = t.raw("sections") as Block[];

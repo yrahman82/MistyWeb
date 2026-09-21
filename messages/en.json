@@ -1489,5 +1489,86 @@
     "afterPayingOpened": "Paste your code as soon as the bot sends it",
     "successTitle": "Subscription active",
     "done": "Done"
+  },
+  "appleEulaPage": {
+    "metaTitle": "End User Licence Agreement (iOS) — {name}",
+    "eyebrow": "iOS",
+    "h1": "End User Licence Agreement",
+    "lastUpdated": "Last updated {date}",
+    "lastUpdatedDate": "21 September 2026",
+    "intro": "These Terms govern your use of the {name} app for iPhone and iPad, operated by {legalName}, a company registered in {registeredIn} (company no. {companyNumber}), with its registered office at {registeredOffice}. By downloading or using the app you agree to these Terms.",
+    "sections": [
+      {
+        "heading": "Licence",
+        "paragraphs": [
+          "{legalName} grants you a personal, non-exclusive, non-transferable licence to install and use the {name} app on any Apple-branded device that you own or control, as permitted by the App Store Terms of Service, for as long as these Terms are in force. The app is licensed to you for use, not sold: we keep all rights in the software. You may not sell, rent or sublicense the app, or reverse-engineer it except to the extent the law expressly allows."
+        ]
+      },
+      {
+        "heading": "Apple's role",
+        "paragraphs": [
+          "This licence is between you and {legalName} alone. Apple is not a party to it. Apple has no obligation to provide any support or maintenance for the app. If the app fails to meet a warranty that applies to it, you may notify Apple and Apple will refund what you paid for the app; to the extent the law allows, that refund is Apple's only warranty obligation. {legalName}, not Apple, is responsible for the app and for handling any claim about it, including product liability claims, any claim that the app fails to conform to a legal or regulatory requirement, any claim arising under consumer protection or similar legislation, and any claim that the app infringes a third party's intellectual property rights. Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you."
+        ]
+      },
+      {
+        "heading": "Acceptable use",
+        "paragraphs": [
+          "{name} is intended to protect your privacy and security. You agree not to use the service for unlawful activity, to harm others, to send spam or malware, or to infringe intellectual property rights. You are responsible for complying with the laws that apply to you, including any local rules on VPN use. You also agree to comply with any third-party terms that apply when you use the app, and with all applicable export laws."
+        ]
+      },
+      {
+        "heading": "Accounts",
+        "paragraphs": [
+          "You are responsible for keeping your account credentials secure. Free access is provided on a limited basis; a paid subscription unlocks full access."
+        ]
+      },
+      {
+        "heading": "Subscriptions, billing and automatic renewal",
+        "paragraphs": [
+          "Subscriptions bought in this app are sold and billed by Apple. The title, length and price of each plan are shown before you confirm the purchase. Payment is charged to your Apple Account on confirmation, and your subscription renews automatically at the end of each billing period unless you turn off automatic renewal at least 24 hours before the current period ends. Manage or cancel your subscription in Settings, under your name, in Subscriptions.",
+          "If we change the price of a plan you are already on, we will tell you beforehand and you will be able to cancel before the new price applies."
+        ]
+      },
+      {
+        "heading": "Free trial and refunds",
+        "paragraphs": [
+          "Subscriptions begin with a free trial. Its exact length is shown before you confirm, and nothing is charged until the trial ends. Cancel before the trial ends and you pay nothing. Once the trial ends, refunds are handled by Apple under Apple's own policies and are requested directly from Apple at reportaproblem.apple.com. We are glad to help you make the request, but the decision is Apple's."
+        ]
+      },
+      {
+        "heading": "Privacy",
+        "paragraphs": [
+          "We do not keep logs of the sites you visit or the content of your traffic. Our privacy policy explains what we do and do not collect."
+        ]
+      },
+      {
+        "heading": "Service availability",
+        "paragraphs": [
+          "We work to keep the service reliable but do not guarantee uninterrupted access. Network conditions, third-party restrictions, and maintenance can affect availability."
+        ]
+      },
+      {
+        "heading": "Disclaimer and limitation of liability",
+        "paragraphs": [
+          "The service is provided \"as is\" without warranties of any kind to the extent permitted by law. To the maximum extent permitted by law, {legalName} is not liable for indirect or consequential damages arising from your use of the service."
+        ]
+      },
+      {
+        "heading": "Export compliance",
+        "paragraphs": [
+          "By using the app you confirm that you are not located in a country subject to a US Government embargo or designated by it as supporting terrorism, and that you are not on any US Government list of prohibited or restricted parties."
+        ]
+      },
+      {
+        "heading": "Changes to these terms",
+        "paragraphs": [
+          "We may update these Terms from time to time. Continued use after changes take effect constitutes acceptance."
+        ]
+      }
+    ],
+    "contact": {
+      "heading": "Contact",
+      "body": "Questions about these Terms? Email <link>{email}</link>."
+    }
   }
 }
