@@ -1232,6 +1232,21 @@
         ]
       },
       {
+        "heading": "Renovación automática",
+        "paragraphs": [
+          "Las suscripciones se renuevan automáticamente al final de cada período de facturación, salvo que las canceles antes. En las compras hechas a través de la App Store de Apple, se cobra a tu cuenta de Apple en cuanto se confirma la renovación; desactívala al menos 24 horas antes de que termine el período, en Ajustes › tu nombre › Suscripciones. En Google Play funciona igual, desde la pantalla de suscripciones de Play. Las suscripciones compradas en esta web se cancelan cuando quieras desde tu página de cuenta. Los pagos con Telegram Stars y con criptomonedas no se renuevan: compran un plazo fijo que simplemente termina.",
+          "La duración y el precio de tu plan se muestran antes de que confirmes la compra. Si alguna vez cambiamos el precio de un plan que ya tienes, te avisaremos con antelación y podrás cancelar antes de que se aplique el precio nuevo."
+        ]
+      },
+      {
+        "heading": "Tu licencia para usar las aplicaciones",
+        "paragraphs": [
+          "{company} te concede una licencia personal, no exclusiva e intransferible para instalar y usar las aplicaciones de {name} en dispositivos de tu propiedad o bajo tu control, mientras estos Términos estén vigentes. Las aplicaciones se te licencian para su uso, no se te venden: conservamos todos los derechos sobre el software. No puedes venderlas, alquilarlas ni sublicenciarlas, ni someterlas a ingeniería inversa salvo en la medida en que la ley lo permita expresamente.",
+          "Si instalaste una aplicación desde la App Store de Apple, esta licencia es únicamente entre tú y {company}: Apple no es parte de ella. Apple no tiene ninguna obligación de prestar soporte ni mantenimiento para las aplicaciones. Si una aplicación incumple alguna garantía que le sea aplicable, puedes comunicárselo a Apple y Apple te devolverá el precio que pagaste por ella; en la medida en que lo permita la ley, esa devolución es la única obligación de Apple. {company}, y no Apple, es responsable de las aplicaciones y de atender cualquier reclamación relativa a ellas, incluidas las de responsabilidad por producto y las que aleguen que una aplicación infringe derechos de propiedad intelectual de terceros. Apple y sus filiales son terceros beneficiarios de estos Términos y pueden hacerlos valer frente a ti.",
+          "Al usar las aplicaciones confirmas que no te encuentras en un país sometido a embargo por el Gobierno de los Estados Unidos ni designado por él como patrocinador del terrorismo, y que no figuras en ninguna lista del Gobierno de los Estados Unidos de partes prohibidas o restringidas."
+        ]
+      },
+      {
         "heading": "Garantía de devolución de 14 días",
         "paragraphs": [
           "Todos los planes de pago están cubiertos por una garantía de devolución de 14 días. Si no estás satisfecho en los 14 días siguientes a tu compra inicial, contáctanos en {email} para obtener un reembolso completo — sin preguntas. Para las compras hechas en este sitio web, reembolsamos directamente el método de pago original. Para las compras hechas a través de la Apple App Store o Google Play, los reembolsos se procesan mediante el proceso de reembolso de la tienda correspondiente, con el que te ayudaremos. La garantía se aplica a tu primera compra y no a las renovaciones posteriores."

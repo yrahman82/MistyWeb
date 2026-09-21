@@ -1232,6 +1232,21 @@
         ]
       },
       {
+        "heading": "Automatische Verlängerung",
+        "paragraphs": [
+          "Abonnements verlängern sich am Ende jedes Abrechnungszeitraums automatisch, sofern Sie nicht vorher kündigen. Bei Käufen über den App Store von Apple wird Ihr Apple-Account belastet, sobald die Verlängerung bestätigt ist; schalten Sie die Verlängerung spätestens 24 Stunden vor Ende des Zeitraums ab, unter Einstellungen › Ihr Name › Abonnements. Bei Google Play läuft es genauso, über die Abo-Seite von Play. Auf dieser Website abgeschlossene Abonnements können Sie jederzeit auf Ihrer Kontoseite kündigen. Zahlungen mit Telegram Stars und Kryptowährung verlängern sich nicht – damit kaufen Sie eine feste Laufzeit, die einfach ausläuft.",
+          "Laufzeit und Preis Ihres Tarifs werden angezeigt, bevor Sie den Kauf bestätigen. Sollten wir den Preis eines Tarifs ändern, den Sie bereits nutzen, sagen wir Ihnen vorher Bescheid, und Sie können vor Wirksamwerden des neuen Preises kündigen."
+        ]
+      },
+      {
+        "heading": "Ihre Lizenz zur Nutzung der Apps",
+        "paragraphs": [
+          "{company} gewährt Ihnen eine persönliche, nicht ausschließliche und nicht übertragbare Lizenz, die {name}-Apps auf Geräten zu installieren und zu nutzen, die Ihnen gehören oder von Ihnen kontrolliert werden, solange diese Bedingungen gelten. Die Apps werden Ihnen zur Nutzung lizenziert, nicht verkauft: Alle Rechte an der Software verbleiben bei uns. Sie dürfen die Apps weder verkaufen, vermieten noch unterlizenzieren und sie nur insoweit zurückentwickeln, wie das Gesetz es ausdrücklich erlaubt.",
+          "Wenn Sie eine App aus dem App Store von Apple installiert haben, besteht diese Lizenz ausschließlich zwischen Ihnen und {company} – Apple ist nicht Vertragspartei. Apple ist nicht verpflichtet, Support oder Wartung für die Apps zu leisten. Erfüllt eine App eine für sie geltende Gewährleistung nicht, können Sie sich an Apple wenden; Apple erstattet Ihnen dann den für die App gezahlten Preis. Soweit gesetzlich zulässig, ist dies Apples einzige Pflicht. Für die Apps und für die Bearbeitung jeglicher Ansprüche im Zusammenhang mit ihnen – einschließlich Produkthaftungsansprüchen und der Behauptung, eine App verletze Rechte Dritter am geistigen Eigentum – ist {company} verantwortlich, nicht Apple. Apple und seine Tochtergesellschaften sind Drittbegünstigte dieser Bedingungen und können sie Ihnen gegenüber durchsetzen.",
+          "Mit der Nutzung der Apps bestätigen Sie, dass Sie sich nicht in einem Land befinden, das einem Embargo der US-Regierung unterliegt oder von ihr als Unterstützer des Terrorismus eingestuft wird, und dass Sie auf keiner Liste der US-Regierung über verbotene oder beschränkte Parteien stehen."
+        ]
+      },
+      {
         "heading": "14 Tage Geld-zurück-Garantie",
         "paragraphs": [
           "Für jeden kostenpflichtigen Tarif gilt eine 14-tägige Geld-zurück-Garantie. Wenn Sie innerhalb von 14 Tagen nach Ihrem Erstkauf nicht zufrieden sind, kontaktieren Sie uns unter {email} für eine volle Rückerstattung – ohne Wenn und Aber. Bei Käufen auf dieser Website erstatten wir das ursprüngliche Zahlungsmittel direkt. Bei Käufen über den Apple App Store oder Google Play werden Rückerstattungen über den jeweiligen Rückerstattungsprozess des Stores abgewickelt, wobei wir Ihnen helfen. Die Garantie gilt für Ihren ersten Kauf und nicht für nachfolgende Verlängerungen."

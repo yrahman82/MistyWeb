@@ -1232,6 +1232,21 @@
         ]
       },
       {
+        "heading": "Rinnovo automatico",
+        "paragraphs": [
+          "Gli abbonamenti si rinnovano automaticamente alla fine di ogni periodo di fatturazione, salvo disdetta anticipata. Per gli acquisti effettuati sull'App Store di Apple l'addebito avviene sul tuo account Apple appena il rinnovo viene confermato; disattiva il rinnovo almeno 24 ore prima della fine del periodo, in Impostazioni › il tuo nome › Abbonamenti. Su Google Play il meccanismo è lo stesso, dalla schermata degli abbonamenti. Gli abbonamenti acquistati su questo sito si disdicono quando vuoi dalla pagina del tuo account. I pagamenti con Telegram Stars e in criptovaluta non si rinnovano: acquistano una durata fissa, che semplicemente finisce.",
+          "La durata e il prezzo del tuo piano vengono mostrati prima che tu confermi l'acquisto. Se dovessimo cambiare il prezzo di un piano che hai già, te lo comunicheremo in anticipo e potrai disdire prima che il nuovo prezzo entri in vigore."
+        ]
+      },
+      {
+        "heading": "La tua licenza d'uso delle app",
+        "paragraphs": [
+          "{company} ti concede una licenza personale, non esclusiva e non trasferibile per installare e usare le app {name} su dispositivi di tua proprietà o sotto il tuo controllo, per tutta la durata dei presenti Termini. Le app ti sono concesse in licenza, non vendute: tutti i diritti sul software restano nostri. Non puoi venderle, noleggiarle o concederle in sublicenza, né sottoporle a reverse engineering se non nei limiti espressamente consentiti dalla legge.",
+          "Se hai installato un'app dall'App Store di Apple, questa licenza è stipulata soltanto tra te e {company}: Apple non ne è parte. Apple non ha alcun obbligo di fornire assistenza o manutenzione per le app. Se un'app non rispetta una garanzia ad essa applicabile, puoi segnalarlo ad Apple, che ti rimborserà il prezzo pagato per quell'app; nei limiti consentiti dalla legge, tale rimborso è l'unico obbligo di Apple. Delle app e della gestione di qualsiasi reclamo che le riguardi — comprese le pretese di responsabilità da prodotto e quelle per presunta violazione della proprietà intellettuale altrui — risponde {company}, non Apple. Apple e le sue controllate sono terzi beneficiari dei presenti Termini e possono farli valere nei tuoi confronti.",
+          "Usando le app confermi di non trovarti in un Paese soggetto a embargo del governo degli Stati Uniti o da esso designato come sostenitore del terrorismo, e di non figurare in alcun elenco governativo statunitense di soggetti vietati o sottoposti a restrizioni."
+        ]
+      },
+      {
         "heading": "Garanzia soddisfatti o rimborsati di 14 giorni",
         "paragraphs": [
           "Ogni piano a pagamento è coperto da una garanzia soddisfatti o rimborsati di 14 giorni. Se non sei soddisfatto entro 14 giorni dal tuo acquisto iniziale, contattaci all'indirizzo {email} per un rimborso completo — senza domande. Per gli acquisti effettuati su questo sito web rimborsiamo direttamente il metodo di pagamento originale. Per gli acquisti effettuati tramite l'Apple App Store o Google Play, i rimborsi sono elaborati con la procedura di rimborso del rispettivo store, e ti aiuteremo a completarla. La garanzia si applica al primo acquisto e non ai rinnovi successivi."

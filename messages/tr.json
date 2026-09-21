@@ -1232,6 +1232,21 @@
         ]
       },
       {
+        "heading": "Otomatik yenileme",
+        "paragraphs": [
+          "Önceden iptal etmediğiniz sürece abonelikler her fatura döneminin sonunda kendiliğinden yenilenir. Apple App Store üzerinden yapılan alımlarda yenileme onaylandığı anda Apple hesabınızdan tahsilat yapılır; yenilemeyi dönem bitmeden en az 24 saat önce Ayarlar › adınız › Abonelikler bölümünden kapatın. Google Play'de de aynı şekilde, Play'in abonelikler ekranından. Bu siteden alınan abonelikleri dilediğiniz zaman hesap sayfanızdan iptal edebilirsiniz. Telegram Stars ve kripto ödemeleri yenilenmez: sabit bir süre satın alırsınız, süre dolunca biter.",
+          "Paketinizin süresi ve fiyatı, satın almayı onaylamadan önce gösterilir. Kullanmakta olduğunuz bir paketin fiyatını değiştirirsek önceden haber veririz ve yeni fiyat geçerli olmadan iptal edebilirsiniz."
+        ]
+      },
+      {
+        "heading": "Uygulamaları kullanma lisansınız",
+        "paragraphs": [
+          "{company}, bu Koşullar yürürlükte kaldığı sürece {name} uygulamalarını sahibi olduğunuz veya kontrolünüzdeki cihazlara kurup kullanmanız için size kişisel, münhasır olmayan ve devredilemez bir lisans verir. Uygulamalar size satılmaz, kullanmanız için lisanslanır: yazılım üzerindeki tüm haklar bizde kalır. Uygulamaları satamaz, kiralayamaz veya alt lisansla veremezsiniz; kanunun açıkça izin verdiği ölçü dışında tersine mühendislik de yapamazsınız.",
+          "Uygulamayı Apple App Store'dan kurduysanız bu lisans yalnızca sizinle {company} arasındadır; Apple tarafı değildir. Apple'ın uygulamalar için destek veya bakım sağlama yükümlülüğü yoktur. Bir uygulama kendisine uygulanan bir garantiyi karşılamazsa Apple'a bildirebilirsiniz; Apple o uygulama için ödediğiniz tutarı iade eder ve kanunun izin verdiği ölçüde Apple'ın tek yükümlülüğü budur. Uygulamalardan ve onlarla ilgili her türlü talebin — ürün sorumluluğu ve bir uygulamanın başkasının fikri mülkiyetini ihlal ettiği iddiası dâhil — karşılanmasından Apple değil {company} sorumludur. Apple ve bağlı şirketleri bu Koşulların üçüncü taraf lehtarıdır ve Koşulları size karşı ileri sürebilir.",
+          "Uygulamaları kullanarak, ABD hükümetinin ambargo uyguladığı ya da terörü desteklediğini bildirdiği bir ülkede bulunmadığınızı ve ABD hükümetinin yasaklı veya kısıtlı taraflar listelerinin hiçbirinde yer almadığınızı beyan edersiniz."
+        ]
+      },
+      {
         "heading": "14 gün para iade garantisi",
         "paragraphs": [
           "Her ücretli plan 14 gün para iade garantisi kapsamındadır. İlk satın alımınızdan sonraki 14 gün içinde memnun kalmazsanız, tam iade için bize {email} adresinden ulaşın — hiçbir soru sorulmaz. Bu web sitesinde yapılan satın alımlarda, iadeyi doğrudan orijinal ödeme yöntemine yaparız. Apple App Store ya da Google Play üzerinden yapılan satın alımlarda iadeler ilgili mağazanın iade süreciyle işlenir; bu konuda size yardımcı oluruz. Garanti, ilk satın alımınız için geçerlidir, sonraki yenilemeler için geçerli değildir."

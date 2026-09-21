@@ -1232,6 +1232,21 @@
         ]
       },
       {
+        "heading": "Automatic renewal",
+        "paragraphs": [
+          "Subscriptions renew automatically at the end of each billing period unless you cancel first. For purchases made through the Apple App Store, your Apple Account is charged as soon as the renewal is confirmed; turn renewal off at least 24 hours before the period ends, under Settings › your name › Subscriptions. Google Play works the same way, from Play's subscriptions screen. Subscriptions bought on this website can be cancelled any time from your account page. Telegram Stars and crypto payments do not renew — they buy a fixed term that simply ends.",
+          "The length and price of your plan are shown before you confirm the purchase. If we ever change the price of a plan you are already on, we will tell you beforehand and you will be able to cancel before the new price applies."
+        ]
+      },
+      {
+        "heading": "Your licence to use the apps",
+        "paragraphs": [
+          "{company} grants you a personal, non-exclusive, non-transferable licence to install and use the {name} apps on devices you own or control, for as long as these Terms are in force. The apps are licensed to you for use, not sold: we keep all rights in the software. You may not sell, rent or sublicense the apps, or reverse-engineer them except to the extent the law expressly allows.",
+          "If you installed an app from the Apple App Store, this licence is between you and {company} alone — Apple is not a party to it. Apple has no obligation to provide any support or maintenance for the apps. If an app fails to meet a warranty that applies to it, you may tell Apple and Apple will refund what you paid for that app; to the extent the law allows, that refund is Apple's only obligation. {company}, not Apple, is responsible for the apps and for handling any claim about them, including product liability claims and any claim that an app infringes someone else's intellectual property. Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you.",
+          "By using the apps you confirm that you are not located in a country subject to a US Government embargo or designated by it as supporting terrorism, and that you are not on any US Government list of prohibited or restricted parties."
+        ]
+      },
+      {
         "heading": "14-day money-back guarantee",
         "paragraphs": [
           "Every paid plan is covered by a 14-day money-back guarantee. If you are not satisfied within 14 days of your initial purchase, contact us at {email} for a full refund — no questions asked. For purchases made on this website we refund the original payment method directly. For purchases made through the Apple App Store or Google Play, refunds are processed through the respective store's refund process, which we will help you with. The guarantee applies to your first purchase and not to subsequent renewals."

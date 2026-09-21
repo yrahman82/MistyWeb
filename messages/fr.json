@@ -1232,6 +1232,21 @@
         ]
       },
       {
+        "heading": "Renouvellement automatique",
+        "paragraphs": [
+          "Les abonnements se renouvellent automatiquement à la fin de chaque période de facturation, sauf résiliation de votre part. Pour les achats effectués sur l'App Store d'Apple, votre compte Apple est débité dès la confirmation du renouvellement ; désactivez-le au moins 24 heures avant la fin de la période, dans Réglages › votre nom › Abonnements. Google Play fonctionne de la même façon, depuis l'écran des abonnements de Play. Les abonnements souscrits sur ce site se résilient à tout moment depuis votre page de compte. Les paiements en Telegram Stars et en cryptomonnaie ne se renouvellent pas : ils achètent une durée fixe, qui prend simplement fin.",
+          "La durée et le prix de votre formule sont affichés avant que vous ne confirmiez l'achat. Si nous modifions un jour le prix d'une formule à laquelle vous êtes déjà abonné, nous vous préviendrons à l'avance et vous pourrez résilier avant l'entrée en vigueur du nouveau prix."
+        ]
+      },
+      {
+        "heading": "Votre licence d'utilisation des applications",
+        "paragraphs": [
+          "{company} vous accorde une licence personnelle, non exclusive et non transférable pour installer et utiliser les applications {name} sur des appareils que vous possédez ou contrôlez, tant que les présentes Conditions sont en vigueur. Les applications vous sont concédées sous licence, elles ne vous sont pas vendues : nous conservons tous les droits sur le logiciel. Vous ne pouvez ni les vendre, ni les louer, ni les sous-licencier, ni procéder à leur ingénierie inverse, sauf dans la mesure où la loi l'autorise expressément.",
+          "Si vous avez installé une application depuis l'App Store d'Apple, cette licence est conclue entre vous et {company} uniquement : Apple n'y est pas partie. Apple n'est tenue à aucune obligation d'assistance ni de maintenance concernant les applications. Si une application ne respecte pas une garantie qui lui est applicable, vous pouvez en informer Apple, qui vous remboursera le prix payé pour cette application ; dans la limite autorisée par la loi, ce remboursement constitue la seule obligation d'Apple. C'est {company}, et non Apple, qui répond des applications et de toute réclamation les concernant, y compris en matière de responsabilité du fait des produits et en cas d'allégation d'atteinte aux droits de propriété intellectuelle d'un tiers. Apple et ses filiales sont tiers bénéficiaires des présentes Conditions et peuvent s'en prévaloir à votre encontre.",
+          "En utilisant les applications, vous confirmez que vous ne vous trouvez pas dans un pays soumis à un embargo du gouvernement des États-Unis ou désigné par celui-ci comme soutenant le terrorisme, et que vous ne figurez sur aucune liste du gouvernement des États-Unis de parties interdites ou soumises à restrictions."
+        ]
+      },
+      {
         "heading": "Garantie satisfait ou remboursé de 14 jours",
         "paragraphs": [
           "Chaque offre payante est couverte par une garantie satisfait ou remboursé de 14 jours. Si vous n’êtes pas satisfait dans les 14 jours suivant votre achat initial, contactez-nous à {email} pour un remboursement intégral — sans condition. Pour les achats effectués sur ce site web, nous remboursons directement le moyen de paiement d’origine. Pour les achats effectués via l’Apple App Store ou Google Play, les remboursements sont traités selon la procédure de remboursement de la boutique concernée, dans laquelle nous vous accompagnerons. La garantie s’applique à votre premier achat et non aux renouvellements ultérieurs."
